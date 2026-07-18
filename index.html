@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover your ideal career path, match your interests, learn in-demand skills, and consult with our virtual AI advisor on Pathfinder.">
+  <title>Pathfinder | Discover Careers & Learn Skills</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Decorative Glowing Blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Main App Shell -->
+  <div class="app-container">
+    
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="logo" id="navbar-logo">
+        🚀 Pathfinder<span>.</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a class="nav-item active" data-tab="home" id="nav-home">Home</a></li>
+          <li><a class="nav-item" data-tab="quiz" id="nav-quiz">Career Assessment</a></li>
+          <li><a class="nav-item" data-tab="explorer" id="nav-explorer">Career Explorer</a></li>
+          <li><a class="nav-item" data-tab="skills" id="nav-skills">Skills Hub</a></li>
+          <li><a class="nav-item" data-tab="advisor" id="nav-advisor">AI Advisor</a></li>
+          <li><a class="nav-item" data-tab="portfolio" id="nav-portfolio">My Portfolio</a></li>
+        </ul>
+      </nav>
+      <div class="user-profile-badge" id="user-profile-widget">
+        <div class="user-avatar" id="user-avatar-lbl">S</div>
+        <div class="user-xp" id="user-xp-val">0 XP</div>
+        
+        <!-- Profile Dropdown Menu -->
+        <div class="profile-dropdown" id="profile-dropdown">
+          <div class="dropdown-header">
+            <h5 id="dropdown-user-name">Guest Student</h5>
+            <span id="dropdown-user-email">guest@example.com</span>
+          </div>
+          <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 0.5rem 0;">
+          <div class="dropdown-item" style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Age: <strong id="dropdown-user-age">N/A</strong></div>
+          <button class="btn btn-secondary dropdown-logout-btn" id="logout-btn" style="width: 100%; padding: 0.35rem 0.7rem; font-size: 0.8rem;">Sign Out</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Panels -->
+    <main class="main-content">
+      
+      <!-- 1. HOME DASHBOARD VIEW -->
+      <section id="home-view" class="view-panel active">
+        <div class="hero-section">
+          <span class="hero-tag">Designed for School & College Students</span>
+          <h1 class="gradient-text">Shape Your Future & Learn Real-World Skills</h1>
+          <p>Confused about what career is right for you? Take our AI-backed career assessment, explore in-demand careers, track skill milestones, and chat with an advisor.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="start-quiz-hero">Find Your Match</button>
+            <button class="btn btn-secondary" id="start-skills-hero">Start Learning</button>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <!-- Card 1 -->
+          <div class="glass-card dashboard-card">
+            <h3>🎯 Match Interests</h3>
+            <p>Uncover which career fits your mindset, values, and problem-solving style by taking our interest assessment.</p>
+            <button class="btn btn-secondary" onclick="document.getElementById('nav-quiz').click()">Take Quiz</button>
+          </div>
+          <!-- Card 2 -->
+          <div class="glass-card dashboard-card">
+            <h3>🧭 Career Explorer</h3>
+            <p>Browse growth statistics, salaries, details, and step-by-step career path guides for in-demand roles.</p>
+            <button class="btn btn-secondary" onclick="document.getElementById('nav-explorer').click()">Browse Catalog</button>
+          </div>
+          <!-- Card 3 -->
+          <div class="glass-card dashboard-card">
+            <h3>🛠️ Skill Milestones</h3>
+            <p>Earn XP by starting guided visual learning roadmaps in Web Dev, Figma Design, or Python Data Science.</p>
+            <button class="btn btn-secondary" onclick="document.getElementById('nav-skills').click()">View Hub</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. CAREER ASSESSMENT VIEW -->
+      <section id="quiz-view" class="view-panel">
+        <div class="assessment-container">
+          <div class="glass-card quiz-card" id="quiz-card-wrapper">
+            <div id="quiz-dynamic-area">
+              <div class="results-icon">🎯</div>
+              <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Career Match Quiz</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+                Answer 4 simple questions about your favorite activities, work environments, and subjects to unlock your personalized recommendation dashboard.
+              </p>
+              <button class="btn btn-primary" id="start-quiz-btn">Start Assessment</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. CAREER EXPLORER VIEW -->
+      <section id="explorer-view" class="view-panel">
+        <div class="explorer-header">
+          <div>
+            <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Career Explorer</h2>
+            <p style="color: var(--text-secondary)">Discover path guidelines, entry-level salaries, and growth projections.</p>
+          </div>
+          <div class="search-filters">
+            <div class="search-input-wrapper">
+              <!-- SVG Search Icon -->
+              <svg class="search-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+              <input type="text" class="search-input" id="career-search" placeholder="Search careers (e.g. software, designer)...">
+            </div>
+            <select class="filter-select" id="career-filter">
+              <option value="all">All Categories</option>
+              <option value="tech">Technology</option>
+              <option value="creative">Creative & Design</option>
+              <option value="business">Business & Marketing</option>
+              <option value="science">Biotech & Science</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="careers-grid" id="careers-grid-container">
+          <!-- Dynamic career cards will be rendered here -->
+        </div>
+      </section>
+
+      <!-- 4. SKILLS HUB VIEW -->
+      <section id="skills-view" class="view-panel">
+        <div style="margin-bottom: 2.5rem;">
+          <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Skill Development Hub</h2>
+          <p style="color: var(--text-secondary)">Launch structured tracks, verify your progress, and level up your portfolio.</p>
+        </div>
+
+        <div class="skills-grid" id="skills-grid-container">
+          <!-- Dynamic skill cards will be rendered here -->
+        </div>
+      </section>
+
+      <!-- 5. AI ADVISOR CHAT VIEW -->
+      <section id="advisor-view" class="view-panel">
+        <div style="margin-bottom: 2.5rem;">
+          <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">AI Career Advisor</h2>
+          <p style="color: var(--text-secondary)">Chat with our simulated advisor to get instant tips on careers, salaries, and roadmaps.</p>
+        </div>
+
+        <div class="advisor-container">
+          <div class="advisor-sidebar">
+            <div class="glass-card suggested-prompts-card">
+              <h4>💡 Ask About...</h4>
+              <div class="suggested-prompt-list">
+                <button class="suggested-prompt-btn">"How do I start in coding?"</button>
+                <button class="suggested-prompt-btn">"What are the skills for UX design?"</button>
+                <button class="suggested-prompt-btn">"Tell me about AI careers"</button>
+                <button class="suggested-prompt-btn">"What salaries do tech roles pay?"</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass-card chat-card">
+            <div class="chat-messages" id="chat-messages">
+              <div class="chat-bubble bot">
+                👋 Hello! I'm your AI Career Advisor. Ask me any questions about careers, skill tracks, salaries, or pathways to get started!
+              </div>
+            </div>
+            <div class="chat-input-area">
+              <input type="text" class="chat-input" id="chat-input" placeholder="Type a message (e.g. 'coding', 'UX design', 'AI')...">
+              <button class="btn btn-primary" id="chat-send-btn">Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. MY PORTFOLIO VIEW -->
+      <section id="portfolio-view" class="view-panel">
+        <div class="portfolio-header">
+          <div class="portfolio-avatar" id="portfolio-avatar-circle">S</div>
+          <div style="flex: 1;">
+            <h2 id="portfolio-user-title">Student Explorer</h2>
+            <p style="color: var(--text-secondary)">Student Account Dashboard</p>
+          </div>
+          <div class="portfolio-stats">
+            <div class="stat-item">
+              <div class="stat-num" id="portfolio-xp">0</div>
+              <div class="stat-lbl">XP Earned</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" id="portfolio-skills-count">0</div>
+              <div class="stat-lbl">Completed Milestones</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" id="portfolio-careers-count">0</div>
+              <div class="stat-lbl">Bookmarked Paths</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-grid">
+          <div>
+            <h3 class="portfolio-section-title">⭐ Bookmarked Career Paths</h3>
+            <div class="portfolio-list" id="saved-careers-list">
+              <!-- Bookmarked careers list -->
+            </div>
+          </div>
+          <div>
+            <h3 class="portfolio-section-title">📈 Learning Roadmap Progress</h3>
+            <div class="portfolio-list" id="completed-skills-list">
+              <!-- Active skill roadmaps progress -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Dynamic Modal Overlay (Shared for Career Info & Skill Roadmaps) -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-content" id="modal-content-box">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">✕</button>
+      <div class="modal-body" id="modal-body">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Full-screen Auth Overlay (Sign In / Sign Up) -->
+  <div class="auth-overlay" id="auth-overlay">
+    <div class="auth-box glass-card">
+      <div class="auth-logo">
+        🚀 Pathfinder<span>.</span>
+      </div>
+      
+      <!-- Sign In Tab Panel -->
+      <div class="auth-panel" id="signin-panel">
+        <h2 class="gradient-text">Welcome Back</h2>
+        <p class="auth-sub" style="margin-bottom: 1.5rem; text-align: center; color: var(--text-secondary);">Log in to retrieve your career roadmaps and XP progress.</p>
+        <form id="signin-form" onsubmit="return false;">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="signin-email" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">Email Address</label>
+            <input type="email" id="signin-email" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="signin-password" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">Password</label>
+            <input type="password" id="signin-password" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 0.7rem;">Sign In</button>
+        </form>
+        <p class="auth-toggle-text" style="font-size: 0.85rem; text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Don't have an account? <span id="toggle-to-signup" class="auth-link" style="color: var(--color-primary); cursor: pointer; font-weight: 600; text-decoration: underline;">Sign Up</span></p>
+      </div>
+
+      <!-- Sign Up Tab Panel -->
+      <div class="auth-panel" id="signup-panel" style="display: none;">
+        <h2 class="gradient-text">Create Account</h2>
+        <p class="auth-sub" style="margin-bottom: 1.5rem; text-align: center; color: var(--text-secondary);">Start matching your interests and leveling up your skills.</p>
+        <form id="signup-form" onsubmit="return false;">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="signup-name" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">Full Name</label>
+            <input type="text" id="signup-name" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="John Doe" required>
+          </div>
+          <div class="form-group-row" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+            <div class="form-group" style="flex: 1;">
+              <label for="signup-age" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">Age</label>
+              <input type="number" id="signup-age" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="18" min="5" max="120" required>
+            </div>
+            <div class="form-group" style="flex: 2;">
+              <label for="signup-email" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">Email</label>
+              <input type="email" id="signup-email" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-group-row" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+            <div class="form-group" style="flex: 1;">
+              <label for="signup-password" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">Password</label>
+              <input type="password" id="signup-password" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="••••••••" required>
+            </div>
+            <div class="form-group" style="flex: 1;">
+              <label for="signup-confirm-password" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">Confirm</label>
+              <input type="password" id="signup-confirm-password" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="••••••••" required>
+            </div>
+          </div>
+          
+          <!-- Captcha Box -->
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">Verify You Are Not a Robot (Captcha)</label>
+            <div class="captcha-container" style="display: flex; gap: 0.5rem; align-items: center; background: rgba(255,255,255,0.05); padding: 0.4rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <canvas id="captcha-canvas" width="120" height="35" style="border-radius: 4px; background: #222; border: 1px solid rgba(255,255,255,0.1);"></canvas>
+              <button type="button" class="btn btn-secondary" id="captcha-reload-btn" title="Refresh Captcha" style="padding: 0.3rem 0.5rem; font-size: 0.8rem; line-height: 1;">🔄</button>
+              <input type="text" id="captcha-input" class="chat-input" placeholder="Type letters..." required style="flex: 1; padding: 0.4rem; border-radius: 6px; font-size: 0.85rem;">
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 0.7rem;">Create Account</button>
+        </form>
+        <p class="auth-toggle-text" style="font-size: 0.85rem; text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Already have an account? <span id="toggle-to-signin" class="auth-link" style="color: var(--color-primary); cursor: pointer; font-weight: 600; text-decoration: underline;">Sign In</span></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Import JS Scripts -->
+  <!-- Firebase Compat SDKs (Auto-Sync) -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
