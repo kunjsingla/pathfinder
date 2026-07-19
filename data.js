@@ -2197,7 +2197,7 @@ const data = {
     "id": "python-beginners",
     "title": "Python for Beginners (100 Days of Code)",
     "category": "tech",
-    "time": "100 Lessons (25 hours total)",
+    "time": "100 Lessons (30 hours total)",
     "rating": "4.9",
     "image": "\ud83d\udc0d",
     "modules": [
@@ -2907,7 +2907,7 @@ const data = {
     "id": "java-beginners",
     "title": "Java for Beginners (Java Full Course 2026)",
     "category": "tech",
-    "time": "57 Lessons (15 hours total)",
+    "time": "57 Lessons (75 hours total)",
     "rating": "4.8",
     "image": "\u2615",
     "modules": [
@@ -3704,7 +3704,7 @@ const data = {
     "id": "cpp-beginners",
     "title": "C++ Programming (Gate Smashers)",
     "category": "tech",
-    "time": "61 Lessons (16 hours total)",
+    "time": "61 Lessons (15 hours total)",
     "rating": "4.8",
     "image": "\ud83d\udcbb",
     "modules": [
@@ -4136,10 +4136,177 @@ const data = {
         "videoId": "qXmy-z4_1gg"
       }
     ]
+  },
+  {
+    "id": "arduino-beginners",
+    "title": "Arduino for Beginners",
+    "category": "tech",
+    "time": "7 Lessons (2.5 hours total)",
+    "rating": "4.8",
+    "image": "\ud83d\udd0c",
+    "modules": [
+      {
+        "id": "arduino-1",
+        "title": "Lesson 1: Introduction",
+        "desc": "Video lesson 1 of the Arduino Tutorial for Beginners. Master microcontrollers, LED circuits, and IDE setup.",
+        "checked": false,
+        "videoId": "JnJIKX5J0Cc"
+      },
+      {
+        "id": "arduino-2",
+        "title": "Lesson 2: Setting up the Arduino IDE for Absolute Beginners",
+        "desc": "Video lesson 2 of the Arduino Tutorial for Beginners. Master microcontrollers, LED circuits, and IDE setup.",
+        "checked": false,
+        "videoId": "SX8z3-BEuWQ"
+      },
+      {
+        "id": "arduino-3",
+        "title": "Lesson 3: Hello World",
+        "desc": "Video lesson 3 of the Arduino Tutorial for Beginners. Master microcontrollers, LED circuits, and IDE setup.",
+        "checked": false,
+        "videoId": "ynAvySNCi-0"
+      },
+      {
+        "id": "arduino-4",
+        "title": "Lesson 4: Program Structure",
+        "desc": "Video lesson 4 of the Arduino Tutorial for Beginners. Master microcontrollers, LED circuits, and IDE setup.",
+        "checked": false,
+        "videoId": "EVDnYnAyktw"
+      },
+      {
+        "id": "arduino-5",
+        "title": "Lesson 5: Variable",
+        "desc": "Video lesson 5 of the Arduino Tutorial for Beginners. Master microcontrollers, LED circuits, and IDE setup.",
+        "checked": false,
+        "videoId": "m8ov5S78AlY"
+      },
+      {
+        "id": "arduino-6",
+        "title": "Lesson 6: Digital Output 01 - LED Circuit",
+        "desc": "Video lesson 6 of the Arduino Tutorial for Beginners. Master microcontrollers, LED circuits, and IDE setup.",
+        "checked": false,
+        "videoId": "Q5A2vsa2B-g"
+      },
+      {
+        "id": "arduino-7",
+        "title": "Lesson 7: Digital Output 02 - Build a LED Circuit",
+        "desc": "Video lesson 7 of the Arduino Tutorial for Beginners. Master microcontrollers, LED circuits, and IDE setup.",
+        "checked": false,
+        "videoId": "oOBxocRbdbo"
+      }
+    ]
+  },
+  {
+    "id": "javascript-beginners",
+    "title": "JavaScript Full Course",
+    "category": "tech",
+    "time": "14 Lessons (12 hours total)",
+    "rating": "4.9",
+    "image": "\u26a1",
+    "modules": [
+      {
+        "id": "js-1",
+        "title": "JavaScript Full Course \u2764\ufe0f | Variables & Data Types | Lecture 1",
+        "desc": "Lecture 1 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "ajdRvxDWH4w"
+      },
+      {
+        "id": "js-2",
+        "title": "Lecture 2: Operators and Conditional Statements",
+        "desc": "Lecture 2 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "Zg4-uSjxosE"
+      },
+      {
+        "id": "js-3",
+        "title": "Lecture 3: Loops and Strings",
+        "desc": "Lecture 3 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "UmRtFFSDSFo"
+      },
+      {
+        "id": "js-4",
+        "title": "Lecture 4: Arrays",
+        "desc": "Lecture 4 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "gFWhbjzowrM"
+      },
+      {
+        "id": "js-5",
+        "title": "Lecture 5: Functions & Methods",
+        "desc": "Lecture 5 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "P0XMXqDGttU"
+      },
+      {
+        "id": "js-6",
+        "title": "Lecture 6: DOM - Document Object Model",
+        "desc": "Lecture 6 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "7zcXPCt8Ck0"
+      },
+      {
+        "id": "js-7",
+        "title": "Lecture 7: DOM (Part 2) | Document Object Model",
+        "desc": "Lecture 7 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "fXAGTOZ25H8"
+      },
+      {
+        "id": "js-8",
+        "title": "Lecture 8: Events in JavaScript",
+        "desc": "Lecture 8 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "_i-uLJAh79U"
+      },
+      {
+        "id": "js-9",
+        "title": "Special: JavaScript Course Update",
+        "desc": "Lecture 9 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "3rlEe1sP6N4"
+      },
+      {
+        "id": "js-10",
+        "title": "Lecture 9: Tic Tac Toe Game in JavaScript",
+        "desc": "Lecture 10 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "SqrppLEljkY"
+      },
+      {
+        "id": "js-11",
+        "title": "Lecture 10: MiniProject - Stone, Paper & Scissors Game",
+        "desc": "Lecture 11 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "_V33HCZWLDQ"
+      },
+      {
+        "id": "js-12",
+        "title": "Lecture 11: Classes & Objects",
+        "desc": "Lecture 12 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "N-O4w6PynGY"
+      },
+      {
+        "id": "js-13",
+        "title": "Lecture 12: Callbacks, Promises & Async Await",
+        "desc": "Lecture 13 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "d3jXofmQm44"
+      },
+      {
+        "id": "js-14",
+        "title": "Lecture 13: Fetch API with Project",
+        "desc": "Lecture 14 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
+        "checked": false,
+        "videoId": "CyGodpqcid4"
+      }
+    ]
   }
 ],
   botResponses: {
-  "default": "I'm your AI Career Advisor! You can ask me things like 'How to start in coding?', 'What skills are needed for UX Design?', or 'Tell me about Python, Java, and C++ courses'. What are you curious about today?",
+  "default": "I'm your AI Career Advisor! You can ask me things like 'How to start in coding?', 'What skills are needed for UX Design?', or 'Tell me about Python, Java, C++, Arduino, and JavaScript courses'. What are you curious about today?",
   "keywords": [
     {
       "keys": [
@@ -4150,7 +4317,7 @@ const data = {
         "developer",
         "programmer"
       ],
-      "response": "To get started in Software Development, I recommend learning Python, Java, or C++ first! We have perfect modular courses for Python, Java, and C++ in the Skills Hub tab."
+      "response": "To get started in Software Development, I recommend learning Python, Java, C++, Arduino, or JavaScript first! We have perfect modular courses for all these skills in the Skills Hub tab."
     },
     {
       "keys": [
@@ -4185,13 +4352,32 @@ const data = {
     },
     {
       "keys": [
+        "arduino",
+        "circuit",
+        "microcontroller",
+        "led"
+      ],
+      "response": "Our Arduino for Beginners course is an excellent 7-lesson introduction to microcontrollers, setting up the IDE, writing basic loops, and building LED circuits!"
+    },
+    {
+      "keys": [
+        "javascript",
+        "js",
+        "web",
+        "shradha",
+        "apna college"
+      ],
+      "response": "Apna College's JavaScript Full Course is an excellent 14-lesson tutorial covering JS variables, operators, loops, arrays, functions, DOM, events, classes, callbacks, promises, and Fetch API with mini-projects!"
+    },
+    {
+      "keys": [
         "design",
         "ui",
         "ux",
         "figma",
         "creative"
       ],
-      "response": "UI/UX Designers make digital interfaces user-friendly. Although we focus on Python, Java, and C++ in this Hub, you can study visual design principles and color theory to complement your tech skills!"
+      "response": "UI/UX Designers make digital interfaces user-friendly. Although we focus on programming in this Hub, you can study visual design principles and color theory to complement your tech skills!"
     },
     {
       "keys": [
@@ -4199,7 +4385,7 @@ const data = {
         "money",
         "pay"
       ],
-      "response": "Python, Java, and C++ developers are in extremely high demand, with entry-level software engineer salaries starting around $90k+ and data science roles going up to $150k+."
+      "response": "Python, Java, C++, Arduino, and JavaScript developers are in extremely high demand, with entry-level software engineer salaries starting around $90k+ and data science roles going up to $150k+."
     }
   ]
 }

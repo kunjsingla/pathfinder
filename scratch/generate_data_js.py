@@ -132,7 +132,7 @@ careers = [
       "salary": "$95,000 - $160,000",
       "growth": "High (25% growth forecast)",
       "difficulty": "Medium-Hard",
-      "shortDesc: "Design, build, and maintain software applications and computer systems.",
+      "shortDesc": "Design, build, and maintain software applications and computer systems.",
       "desc": "Software Engineers apply engineering principles to build software solutions. They write code, test applications, debug issues, and collaborate with teams to solve real-world problems through technology.",
       "skillsRequired": ["Problem Solving", "Data Structures", "JavaScript/Python/Java", "Git Version Control", "System Architecture"],
       "pathway": [
@@ -220,27 +220,61 @@ skills = [
         "rating": "4.9",
         "image": "🐍",
         "modules": modules
+    },
+    {
+        "id": "cpp-beginners",
+        "title": "C++ Programming (Gate Smashers)",
+        "category": "tech",
+        "time": "61 Lessons (16 hours total)",
+        "rating": "4.8",
+        "image": "💻",
+        "modules": cpp_modules
+    },
+    {
+        "id": "arduino-beginners",
+        "title": "Arduino for Beginners",
+        "category": "tech",
+        "time": "7 Lessons (2 hours total)",
+        "rating": "4.8",
+        "image": "🔌",
+        "modules": arduino_modules
     }
 ]
 
 bot_responses = {
-    "default": "I'm your AI Career Advisor! You can ask me things like 'How to start in coding?', 'What skills are needed for UX Design?', or 'Tell me about Python courses'. What are you curious about today?",
+    "default": "I'm your AI Career Advisor! You can ask me things like 'How to start in coding?', 'What skills are needed for UX Design?', or 'Tell me about Python, Java, C++, and Arduino courses'. What are you curious about today?",
     "keywords": [
       {
         "keys": ["code", "coding", "software", "program", "developer", "programmer"],
-        "response": "To get started in Software Development, I recommend learning Python first! The 'Python for Beginners (100 Days of Code)' course in the Skills Hub is the perfect step-by-step Hindi tutorial playlist by CodeWithHarry."
+        "response": "To get started in Software Development, I recommend learning Python, Java, C++, or Arduino first! We have perfect modular courses for all these skills in the Skills Hub tab."
       },
       {
         "keys": ["python", "harry", "100 days"],
         "response": "CodeWithHarry's 100 Days of Python course is fantastic. It covers fundamentals like print statements and variables, data structures, and advances all the way to OOP, file handling, and multithreading!"
       },
       {
+        "keys": ["english", "telusko", "navin"],
+        "response": "Telusko's Python for Beginners (English version) course is a great choice! It is a 54-lesson course starting from the basics, string operations, lists, tuples, dictionaries, functions, loops, modules, OOP, and DB connectivity."
+      },
+      {
+        "keys": ["java", "2026"],
+        "response": "The Java Full Course 2026 is an excellent 57-lesson course covering core Java, loops, arrays, OOP concepts, static/final, exception handling, nested classes, and more!"
+      },
+      {
+        "keys": ["c++", "cpp", "gate smashers"],
+        "response": "Gate Smashers' C++ Programming course is an amazing 61-lesson course covering basic structure, loops, constructors, operator overloading, and templates!"
+      },
+      {
+        "keys": ["arduino", "circuit", "microcontroller", "led"],
+        "response": "Our Arduino for Beginners course is an excellent 7-lesson introduction to microcontrollers, setting up the IDE, writing basic loops, and building LED circuits!"
+      },
+      {
         "keys": ["design", "ui", "ux", "figma", "creative"],
-        "response": "UI/UX Designers make digital interfaces user-friendly. Although we focus on Python programming in this course, you can study visual design principles and color theory to complement your tech skills!"
+        "response": "UI/UX Designers make digital interfaces user-friendly. Although we focus on Python, Java, C++, and Arduino in this Hub, you can study visual design principles and color theory to complement your tech skills!"
       },
       {
         "keys": ["salary", "money", "pay"],
-        "response": "Python developers are in extremely high demand, with entry-level software engineer salaries starting around $90k+ and data science roles going up to $150k+."
+        "response": "Python, Java, C++, and Arduino developers are in extremely high demand, with entry-level software engineer salaries starting around $90k+ and data science roles going up to $150k+."
       }
     ]
 }

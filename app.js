@@ -681,6 +681,10 @@ document.addEventListener('DOMContentLoaded', () => {
               iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLsyeobzWxl7omDoEYrrf3oXvXxa6MPgek&autoplay=1`;
             } else if (state.activeSkillId === 'cpp-beginners') {
               iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLxCzCOWd7aiF6yRNI5OHQsnUJQfl7Geqj&autoplay=1`;
+            } else if (state.activeSkillId === 'arduino-beginners') {
+              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLwWF-ICTWmB7-b9bsE3UcQzz-7ipI5tbR&autoplay=1`;
+            } else if (state.activeSkillId === 'javascript-beginners') {
+              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLGjplNEQ1it_oTvuLRNqXfz_v_0pq6unW&autoplay=1`;
             } else {
               iframe.src = `https://www.youtube.com/embed/${videoId}?start=${startTime}&autoplay=1`;
             }
