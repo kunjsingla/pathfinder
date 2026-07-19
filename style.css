@@ -1223,3 +1223,67 @@ h1, h2, h3, h4 {
   border-color: rgba(239, 68, 68, 0.3) !important;
 }
 
+/* Reviews and Suggestions styles */
+.rating-star {
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.rating-star:hover {
+  transform: scale(1.2);
+}
+
+.rating-star.selected {
+  color: #ffb703 !important;
+}
+
+.rating-star.hovered {
+  color: #ffdd57 !important;
+}
+
+.feedback-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.feedback-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-card-user {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.feedback-card-stars {
+  color: #ffb703;
+  font-size: 0.95rem;
+}
+
+.feedback-card-date {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.feedback-card-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  word-break: break-word;
+  white-space: pre-line;
+}
+
+

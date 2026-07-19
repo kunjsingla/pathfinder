@@ -32,6 +32,7 @@
           <li><a class="nav-item" data-tab="skills" id="nav-skills">Skills Hub</a></li>
           <li><a class="nav-item" data-tab="advisor" id="nav-advisor">AI Advisor</a></li>
           <li><a class="nav-item" data-tab="portfolio" id="nav-portfolio">My Portfolio</a></li>
+          <li><a class="nav-item" data-tab="feedback" id="nav-feedback">Reviews & Suggestions</a></li>
         </ul>
       </nav>
       <div class="user-profile-badge" id="user-profile-widget">
@@ -217,6 +218,57 @@
               <!-- Active skill roadmaps progress -->
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- 7. REVIEWS & SUGGESTIONS VIEW -->
+      <section id="feedback-view" class="view-panel">
+        <div style="margin-bottom: 2.5rem;">
+          <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Reviews & Suggestions</h2>
+          <p style="color: var(--text-secondary)">Share your learning experience, rate the platform, or suggest new roadmap features.</p>
+        </div>
+
+        <div class="feedback-container" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+          
+          <!-- Feedback Submission Form -->
+          <div class="glass-card feedback-form-card" style="flex: 1; min-width: 320px; padding: 2.0rem;">
+            <h3 style="margin-top: 0; margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 700; color: #fff;">Write a Review</h3>
+            <form id="feedback-form" onsubmit="return false;">
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label for="feedback-name" style="display: block; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Your Name</label>
+                <input type="text" id="feedback-name" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="Your Name" required>
+              </div>
+              
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label style="display: block; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Your Rating</label>
+                <div class="star-rating-selector" style="display: flex; gap: 0.5rem; font-size: 1.8rem; cursor: pointer; color: var(--text-muted);">
+                  <span class="rating-star" data-value="1">☆</span>
+                  <span class="rating-star" data-value="2">☆</span>
+                  <span class="rating-star" data-value="3">☆</span>
+                  <span class="rating-star" data-value="4">☆</span>
+                  <span class="rating-star" data-value="5">☆</span>
+                </div>
+                <input type="hidden" id="feedback-rating-val" value="0" required>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label for="feedback-text" style="display: block; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Review or Suggestion</label>
+                <textarea id="feedback-text" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.65rem; min-height: 120px; resize: vertical; font-family: inherit;" placeholder="What do you think of the pathways? What features should we add next?..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem;">Submit Review</button>
+            </form>
+          </div>
+
+          <!-- Reviews Timeline Feed -->
+          <div style="flex: 2; min-width: 320px; display: flex; flex-direction: column; gap: 1rem;">
+            <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: 700; color: #fff;">Community Reviews & Suggestions</h3>
+            <div id="reviews-feed" style="display: flex; flex-direction: column; gap: 1rem; max-height: 520px; overflow-y: auto; padding-right: 0.5rem;">
+              <!-- Review cards will be loaded here dynamically -->
+              <div style="color: var(--text-muted); font-size: 0.95rem; padding: 2rem 0; text-align: center;">Loading community feedback...</div>
+            </div>
+          </div>
+
         </div>
       </section>
 

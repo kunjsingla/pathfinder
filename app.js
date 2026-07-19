@@ -98,11 +98,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownEmail = document.getElementById('dropdown-user-email');
     const dropdownAge = document.getElementById('dropdown-user-age');
     const portfolioTitle = document.getElementById('portfolio-user-title');
+    const feedbackName = document.getElementById('feedback-name');
 
     if (dropdownName) dropdownName.textContent = userObj.name;
     if (dropdownEmail) dropdownEmail.textContent = userObj.email;
     if (dropdownAge) dropdownAge.textContent = userObj.age;
     if (portfolioTitle) portfolioTitle.textContent = userObj.name;
+    if (feedbackName && userObj.name && userObj.name !== 'Guest Student') {
+      feedbackName.value = userObj.name;
+    }
   }
 
   if (activeEmail) {
@@ -134,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSkillsHub();
     setupAIAdvisor();
     setupPortfolio();
+    setupFeedback();
 
     switchTab('home');
   }
@@ -1158,6 +1163,175 @@ document.addEventListener('DOMContentLoaded', () => {
         checkAuth();
       });
     }
+  }
+
+  // --- REVIEWS & SUGGESTIONS ENGINE ---
+  function setupFeedback() {
+    const stars = document.querySelectorAll('.rating-star');
+    const ratingInput = document.getElementById('feedback-rating-val');
+    
+    if (stars.length > 0 && ratingInput) {
+      stars.forEach(star => {
+        // Hover rating star
+        star.addEventListener('mouseover', () => {
+          const val = parseInt(star.getAttribute('data-value'));
+          stars.forEach(s => {
+            if (parseInt(s.getAttribute('data-value')) <= val) {
+              s.classList.add('hovered');
+            } else {
+              s.classList.remove('hovered');
+            }
+          });
+        });
+        
+        star.addEventListener('mouseout', () => {
+          stars.forEach(s => s.classList.remove('hovered'));
+        });
+        
+        // Select rating star
+        star.addEventListener('click', () => {
+          const val = parseInt(star.getAttribute('data-value'));
+          ratingInput.value = val;
+          stars.forEach(s => {
+            if (parseInt(s.getAttribute('data-value')) <= val) {
+              s.classList.add('selected');
+              s.textContent = '★';
+            } else {
+              s.classList.remove('selected');
+              s.textContent = '☆';
+            }
+          });
+        });
+      });
+    }
+
+    const resetStars = () => {
+      if (ratingInput) ratingInput.value = '0';
+      stars.forEach(s => {
+        s.classList.remove('selected');
+        s.textContent = '☆';
+      });
+    };
+
+    const feedbackForm = document.getElementById('feedback-form');
+    if (feedbackForm) {
+      feedbackForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('feedback-name').value.trim();
+        const rating = parseInt(ratingInput.value);
+        const text = document.getElementById('feedback-text').value.trim();
+        
+        if (rating === 0) {
+          alert("Please select a star rating!");
+          return;
+        }
+        
+        const reviewData = {
+          name,
+          rating,
+          text,
+          email: activeEmail || 'guest@example.com',
+          timestamp: Date.now()
+        };
+        
+        if (useFirebase) {
+          db.collection('reviews').add(reviewData)
+            .then(() => {
+              feedbackForm.reset();
+              resetStars();
+              // Re-fill name if logged in
+              const activeUser = localStorage.getItem('pathfinder_active_email');
+              if (activeUser && useFirebase) {
+                db.collection('users').doc(activeUser).get().then(doc => {
+                  if (doc.exists) {
+                    const feedbackName = document.getElementById('feedback-name');
+                    if (feedbackName) feedbackName.value = doc.data().name;
+                  }
+                });
+              }
+              alert("Thank you for your feedback!");
+            })
+            .catch(err => {
+              console.error("Error submitting review to Firebase:", err);
+              alert("Error submitting review: " + err.message);
+            });
+        } else {
+          // Local fallback
+          const reviews = JSON.parse(localStorage.getItem('pathfinder_reviews') || '[]');
+          reviews.unshift(reviewData);
+          localStorage.setItem('pathfinder_reviews', JSON.stringify(reviews));
+          feedbackForm.reset();
+          resetStars();
+          // Re-fill name if logged in
+          if (activeEmail && usersDb[activeEmail]) {
+            const feedbackName = document.getElementById('feedback-name');
+            if (feedbackName) feedbackName.value = usersDb[activeEmail].name;
+          }
+          alert("Thank you for your feedback!");
+          renderReviewsList();
+        }
+      });
+    }
+
+    // Load initial reviews list
+    if (useFirebase) {
+      db.collection('reviews').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
+        let reviewsList = [];
+        snapshot.forEach(doc => {
+          reviewsList.push(doc.data());
+        });
+        renderReviews(reviewsList);
+      }, err => {
+        console.error("Firestore reviews subscription error:", err);
+      });
+    } else {
+      renderReviewsList();
+    }
+  }
+
+  function renderReviewsList() {
+    const reviews = JSON.parse(localStorage.getItem('pathfinder_reviews') || '[]');
+    renderReviews(reviews);
+  }
+
+  function renderReviews(reviewsArray) {
+    const feed = document.getElementById('reviews-feed');
+    if (!feed) return;
+    
+    if (reviewsArray.length === 0) {
+      feed.innerHTML = `<div style="color: var(--text-muted); font-size: 0.95rem; padding: 2rem 0; text-align: center;">No reviews yet. Be the first to share your thoughts!</div>`;
+      return;
+    }
+    
+    let html = '';
+    reviewsArray.forEach(rev => {
+      const starStr = '★'.repeat(rev.rating) + '☆'.repeat(5 - rev.rating);
+      const dateStr = new Date(rev.timestamp).toLocaleDateString(undefined, {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+      
+      html += `
+        <div class="feedback-card" style="margin-bottom: 1rem;">
+          <div class="feedback-card-header">
+            <span class="feedback-card-user">${escapeHtml(rev.name)}</span>
+            <span class="feedback-card-stars">${starStr}</span>
+          </div>
+          <div class="feedback-card-date">${dateStr}</div>
+          <div class="feedback-card-text">${escapeHtml(rev.text)}</div>
+        </div>
+      `;
+    });
+    feed.innerHTML = html;
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   }
 
   // --- KICKSTART ---
