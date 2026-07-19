@@ -685,6 +685,10 @@ document.addEventListener('DOMContentLoaded', () => {
               iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLwWF-ICTWmB7-b9bsE3UcQzz-7ipI5tbR&autoplay=1`;
             } else if (state.activeSkillId === 'javascript-beginners') {
               iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLGjplNEQ1it_oTvuLRNqXfz_v_0pq6unW&autoplay=1`;
+            } else if (state.activeSkillId === 'web-dev-apna') {
+              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLfqMhTWNBTe0PY9xunOzsP5kmYIz2Hu7i&autoplay=1`;
+            } else if (state.activeSkillId === 'web-dev-delta') {
+              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLfqMhTWNBTe3H6c9OGXb5_6wcc1Mca52n&autoplay=1`;
             } else {
               iframe.src = `https://www.youtube.com/embed/${videoId}?start=${startTime}&autoplay=1`;
             }

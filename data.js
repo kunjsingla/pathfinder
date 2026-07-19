@@ -4303,10 +4303,555 @@ const data = {
         "videoId": "CyGodpqcid4"
       }
     ]
+  },
+  {
+    "id": "web-dev-apna",
+    "title": "Web Development Full Course",
+    "category": "tech",
+    "time": "18 Lessons (23 hours total)",
+    "rating": "4.9",
+    "image": "\ud83c\udf10",
+    "modules": [
+      {
+        "id": "webdev-1",
+        "title": "Lesson 1: Complete HTML for Beginners",
+        "desc": "Milestone 1 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "HcOc7P5BMi4"
+      },
+      {
+        "id": "webdev-2",
+        "title": "Lesson 2: Complete CSS for Beginners",
+        "desc": "Milestone 2 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "ESnrn1kAD4E"
+      },
+      {
+        "id": "webdev-3",
+        "title": "Lesson 3: Project - Building Amazon Clone",
+        "desc": "Milestone 3 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "nGhKIC_7Mkk"
+      },
+      {
+        "id": "webdev-4",
+        "title": "Lesson 4: Complete Git & GitHub Tutorial",
+        "desc": "Milestone 4 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "Ez8F0nW6S-w"
+      },
+      {
+        "id": "webdev-5",
+        "title": "Lesson 5: JavaScript Full Course \u2764\ufe0f | Variables & Data Types | Lecture 1",
+        "desc": "Milestone 5 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "ajdRvxDWH4w"
+      },
+      {
+        "id": "webdev-6",
+        "title": "Lesson 6: JS Lecture 2 - Operators and Conditional Statements",
+        "desc": "Milestone 6 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "Zg4-uSjxosE"
+      },
+      {
+        "id": "webdev-7",
+        "title": "Lesson 7: JS Lecture 3 - Loops and Strings",
+        "desc": "Milestone 7 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "UmRtFFSDSFo"
+      },
+      {
+        "id": "webdev-8",
+        "title": "Lesson 8: JS Lecture 4 - Arrays",
+        "desc": "Milestone 8 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "gFWhbjzowrM"
+      },
+      {
+        "id": "webdev-9",
+        "title": "Lesson 9: JS Lecture 5 - Functions & Methods",
+        "desc": "Milestone 9 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "P0XMXqDGttU"
+      },
+      {
+        "id": "webdev-10",
+        "title": "Lesson 10: JS Lecture 6 - DOM - Document Object Model",
+        "desc": "Milestone 10 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "7zcXPCt8Ck0"
+      },
+      {
+        "id": "webdev-11",
+        "title": "Lesson 11: JS Lecture 7 - DOM (Part 2) | Document Object Model",
+        "desc": "Milestone 11 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "fXAGTOZ25H8"
+      },
+      {
+        "id": "webdev-12",
+        "title": "Lesson 12: JS Lecture 8 - Events in JavaScript",
+        "desc": "Milestone 12 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "_i-uLJAh79U"
+      },
+      {
+        "id": "webdev-13",
+        "title": "Lesson 13: JS Lecture 9 - Tic Tac Toe Game in JavaScript",
+        "desc": "Milestone 13 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "SqrppLEljkY"
+      },
+      {
+        "id": "webdev-14",
+        "title": "Lesson 14: JS Lecture 10 - MiniProject - Stone, Paper & Scissors Game",
+        "desc": "Milestone 14 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "_V33HCZWLDQ"
+      },
+      {
+        "id": "webdev-15",
+        "title": "Lesson 15: JS Lecture 11 - Classes & Objects",
+        "desc": "Milestone 15 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "N-O4w6PynGY"
+      },
+      {
+        "id": "webdev-16",
+        "title": "Lesson 16: JS Lecture 12 - Callbacks, Promises & Async Await",
+        "desc": "Milestone 16 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "d3jXofmQm44"
+      },
+      {
+        "id": "webdev-17",
+        "title": "Lesson 17: JS Lecture 11 - Fetch API with Project",
+        "desc": "Milestone 17 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "CyGodpqcid4"
+      },
+      {
+        "id": "webdev-18",
+        "title": "Lesson 18: Web Development Roadmap",
+        "desc": "Milestone 18 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
+        "checked": false,
+        "videoId": "4WjtQjPQGIs"
+      }
+    ]
+  },
+  {
+    "id": "web-dev-delta",
+    "title": "Web Development Bootcamp (Delta Course)",
+    "category": "tech",
+    "time": "57 Lessons (40 hours total)",
+    "rating": "4.9",
+    "image": "\ud83d\udcbb",
+    "modules": [
+      {
+        "id": "delta-1",
+        "title": "Lesson 1: Introduction to Web Development",
+        "desc": "Lecture 1 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "l1EssrLxt7E"
+      },
+      {
+        "id": "delta-2",
+        "title": "Lecture 1: From Beginners to Advance Level",
+        "desc": "Lecture 2 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "Rek0NWPCNOc"
+      },
+      {
+        "id": "delta-3",
+        "title": "Lesson 3: World's most premiumLecture 2",
+        "desc": "Lecture 3 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "2QR11oDukn4"
+      },
+      {
+        "id": "delta-4",
+        "title": "Lecture 3: Media Elements",
+        "desc": "Lecture 4 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "jRAZlTEZi9I"
+      },
+      {
+        "id": "delta-5",
+        "title": "Lesson 5: HTML | Structuring a Mega Project",
+        "desc": "Lecture 5 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "61ppyY5rUB0"
+      },
+      {
+        "id": "delta-6",
+        "title": "Lesson 6: CSS - What is selectors?",
+        "desc": "Lecture 6 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "sqJ6xZ9mUwE"
+      },
+      {
+        "id": "delta-7",
+        "title": "Lesson 7: Properties in CSS",
+        "desc": "Lecture 7 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "4nC4VXHlys8"
+      },
+      {
+        "id": "delta-8",
+        "title": "Lesson 8: Understanding Box Model | Styling List and Tables | CSS Lecture 3",
+        "desc": "Lecture 8 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "C01LeeMhwHc"
+      },
+      {
+        "id": "delta-9",
+        "title": "Lesson 9: Understanding Cascading , Specificity and Inheritance | CSS Lecture 4",
+        "desc": "Lecture 9 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "wKPlQkOdpFQ"
+      },
+      {
+        "id": "delta-10",
+        "title": "Lesson 10: Styling Forms in CSS",
+        "desc": "Lecture 10 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "6Cpd63_WXdI"
+      },
+      {
+        "id": "delta-11",
+        "title": "Lesson 11: Challenge #1 for Web Development Course students | Forms",
+        "desc": "Lecture 11 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "bgKYobOXTZ0"
+      },
+      {
+        "id": "delta-12",
+        "title": "Lesson 12: Debugging in CSS",
+        "desc": "Lecture 12 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "l-EkcthUMl4"
+      },
+      {
+        "id": "delta-13",
+        "title": "Lesson 13: What is Responsiveness? CSS",
+        "desc": "Lecture 13 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "p870o46o1bM"
+      },
+      {
+        "id": "delta-14",
+        "title": "Lesson 14: Responsiveness Challenge | CSS",
+        "desc": "Lecture 14 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "2WMRDUS_b4E"
+      },
+      {
+        "id": "delta-15",
+        "title": "Lesson 15: Floats & Position Properties | CSS",
+        "desc": "Lecture 15 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "xpoWxFyGuC8"
+      },
+      {
+        "id": "delta-16",
+        "title": "Lesson 16: Challenge 3: Float",
+        "desc": "Lecture 16 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "lcPs2BbbI_M"
+      },
+      {
+        "id": "delta-17",
+        "title": "Lesson 17: Challenge #4 : Positions",
+        "desc": "Lecture 17 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "D_YpGeDy-i8"
+      },
+      {
+        "id": "delta-18",
+        "title": "Lesson 18: Learn Flexbox Under 25mins",
+        "desc": "Lecture 18 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "zts6uNVnCNs"
+      },
+      {
+        "id": "delta-19",
+        "title": "Lesson 19: Flexbox-1 Challenge | CSS",
+        "desc": "Lecture 19 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "OGkaHOD6CRU"
+      },
+      {
+        "id": "delta-20",
+        "title": "Lesson 20: Flexbox-2 Challenge | CSS",
+        "desc": "Lecture 20 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "hFvf0iPOjT8"
+      },
+      {
+        "id": "delta-21",
+        "title": "Lesson 21: Flexbox-3 Challenge | CSS",
+        "desc": "Lecture 21 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "eKtwlzRyuIc"
+      },
+      {
+        "id": "delta-22",
+        "title": "Lesson 22: CSS Grid",
+        "desc": "Lecture 22 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "xBSlwwitD5U"
+      },
+      {
+        "id": "delta-23",
+        "title": "Lesson 23: CSS Grid-1 Challenge #8",
+        "desc": "Lecture 23 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "8imJZHgf44E"
+      },
+      {
+        "id": "delta-24",
+        "title": "Lesson 24: CSS Grid -2 Challenge - 9",
+        "desc": "Lecture 24 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "KhPJ5xF4gIk"
+      },
+      {
+        "id": "delta-25",
+        "title": "Lesson 25: Learn Animations in CSS",
+        "desc": "Lecture 25 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "Xdhdgl0Ju4k"
+      },
+      {
+        "id": "delta-26",
+        "title": "Lesson 26: Adding CSS to Mega Project",
+        "desc": "Lecture 26 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "IZa8pbR8CWs"
+      },
+      {
+        "id": "delta-27",
+        "title": "Lesson 27: Updating Design of Mega Project",
+        "desc": "Lecture 27 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "ywK_wgQwKJY"
+      },
+      {
+        "id": "delta-28",
+        "title": "Lesson 28: Namaste World in Bootstrap",
+        "desc": "Lecture 28 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "DUiYVJIVNcA"
+      },
+      {
+        "id": "delta-29",
+        "title": "Lesson 29: Customization & Layout in Bootstrap",
+        "desc": "Lecture 29 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "ddWKdSS5TaQ"
+      },
+      {
+        "id": "delta-30",
+        "title": "Lesson 30: Bootstrap - Grid Layout",
+        "desc": "Lecture 30 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "5NxYn0GiApg"
+      },
+      {
+        "id": "delta-31",
+        "title": "Lesson 31: Bootstrap - Components",
+        "desc": "Lecture 31 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "IwlAhfeSnp8"
+      },
+      {
+        "id": "delta-32",
+        "title": "Lecture 1: Javascript Introduction",
+        "desc": "Lecture 32 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "B7wHpNUUT4Y"
+      },
+      {
+        "id": "delta-33",
+        "title": "Lecture 2: Javascript - First Program Namaste World",
+        "desc": "Lecture 33 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "j8fubBAFq_I"
+      },
+      {
+        "id": "delta-34",
+        "title": "Lesson 34: How JavaScript Works ? | Javascript - Lecture 3",
+        "desc": "Lecture 34 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "2lRQTdpwhFk"
+      },
+      {
+        "id": "delta-35",
+        "title": "Lesson 35: What is DOM (Document Object Model) ? | Javascript Lecture 4",
+        "desc": "Lecture 35 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "hRaDYCHqFQQ"
+      },
+      {
+        "id": "delta-36",
+        "title": "Lesson 36: Ways to add JavaScript to Web Pages? JavaScript : Lecture 5 @ApnaCollegeOfficial",
+        "desc": "Lecture 36 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "zSt-KI0HryY"
+      },
+      {
+        "id": "delta-37",
+        "title": "Lesson 37: Javascript | Lecture 6,7 & 8 Combined",
+        "desc": "Lecture 37 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "sTk5BxgxDDI"
+      },
+      {
+        "id": "delta-38",
+        "title": "Lesson 38: Javascript | Lecture 9 & 10 combined | If else and switch statements",
+        "desc": "Lecture 38 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "VsEfh-EqNT8"
+      },
+      {
+        "id": "delta-39",
+        "title": "Lesson 39: Loops in Javascript",
+        "desc": "Lecture 39 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "7xgJmIOG8GE"
+      },
+      {
+        "id": "delta-40",
+        "title": "Lesson 40: Basics of Functions in Javascript",
+        "desc": "Lecture 40 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "5kY4Th53w70"
+      },
+      {
+        "id": "delta-41",
+        "title": "Lesson 41: Strings in Javascript",
+        "desc": "Lecture 41 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "0hQPN4OQgU4"
+      },
+      {
+        "id": "delta-42",
+        "title": "Lesson 42: Reference Datatypes in JavaScript",
+        "desc": "Lecture 42 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "vCZqAriaPZw"
+      },
+      {
+        "id": "delta-43",
+        "title": "Lesson 43: Javascript : Top 10 Websites to practice",
+        "desc": "Lecture 43 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "vldRjjbcRXc"
+      },
+      {
+        "id": "delta-44",
+        "title": "Lesson 44: Coercion and Type Conversion | Javascript - Lecture 19",
+        "desc": "Lecture 44 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "4RjmmZnDFVA"
+      },
+      {
+        "id": "delta-45",
+        "title": "Lesson 45: Everything about Objects | Javascript Lecture  - 20 | Web Development Series",
+        "desc": "Lecture 45 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "LgZZLeWKGsI"
+      },
+      {
+        "id": "delta-46",
+        "title": "Lecture 21: Objects Exercise | JavaScript",
+        "desc": "Lecture 46 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "xw0J0v3Zkuo"
+      },
+      {
+        "id": "delta-47",
+        "title": "Lesson 47: What is a Class? Javascript Lecture 22",
+        "desc": "Lecture 47 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "0QSSUHTJ-sU"
+      },
+      {
+        "id": "delta-48",
+        "title": "Lesson 48: Everything about Arrays | Javascript Lecture 23",
+        "desc": "Lecture 48 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "QrFYRTcKXAU"
+      },
+      {
+        "id": "delta-49",
+        "title": "Lecture 25: How code gets executed in JavaScript?",
+        "desc": "Lecture 49 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "XrAyzuNanZo"
+      },
+      {
+        "id": "delta-50",
+        "title": "Lesson 50: Exercise for array \ufffd Lecture 24 \ufffd Javascript",
+        "desc": "Lecture 50 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "GXONlNAnmNU"
+      },
+      {
+        "id": "delta-51",
+        "title": "Lesson 51: Web Development Course | Scope in Javascript | In Depth",
+        "desc": "Lecture 51 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "7n8kPBPzy5I"
+      },
+      {
+        "id": "delta-52",
+        "title": "Lesson 52: What is Hoisting? | Javascript",
+        "desc": "Lecture 52 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "101q0HoCDKs"
+      },
+      {
+        "id": "delta-53",
+        "title": "Lesson 53: What is this keyword? | Javascript",
+        "desc": "Lecture 53 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "aHPK2rsonZA"
+      },
+      {
+        "id": "delta-54",
+        "title": "Lesson 54: Exercises for Objects | javascript",
+        "desc": "Lecture 54 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "4ZSL8_zlq9Y"
+      },
+      {
+        "id": "delta-55",
+        "title": "Lesson 55: DOM Manipulation | Javascript",
+        "desc": "Lecture 55 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "fYR3i0mcE5c"
+      },
+      {
+        "id": "delta-56",
+        "title": "Lesson 56: Creating a CRUD App | DOM Manipulation | Javascript",
+        "desc": "Lecture 56 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "XuGaq24wixg"
+      },
+      {
+        "id": "delta-57",
+        "title": "Lesson 57: How to Host a Static Website?",
+        "desc": "Lecture 57 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
+        "checked": false,
+        "videoId": "Dm0K3x9yCkg"
+      }
+    ]
   }
 ],
   botResponses: {
-  "default": "I'm your AI Career Advisor! You can ask me things like 'How to start in coding?', 'What skills are needed for UX Design?', or 'Tell me about Python, Java, C++, Arduino, and JavaScript courses'. What are you curious about today?",
+  "default": "I'm your AI Career Advisor! You can ask me things like 'How to start in coding?', 'What skills are needed for UX Design?', or 'Tell me about Python, Java, C++, Arduino, JavaScript, and Web Development courses'. What are you curious about today?",
   "keywords": [
     {
       "keys": [
@@ -4317,7 +4862,7 @@ const data = {
         "developer",
         "programmer"
       ],
-      "response": "To get started in Software Development, I recommend learning Python, Java, C++, Arduino, or JavaScript first! We have perfect modular courses for all these skills in the Skills Hub tab."
+      "response": "To get started in Software Development, I recommend learning Python, Java, C++, Arduino, JavaScript, or Web Development first! We have perfect modular courses for all these skills in the Skills Hub tab."
     },
     {
       "keys": [
@@ -4363,11 +4908,24 @@ const data = {
       "keys": [
         "javascript",
         "js",
-        "web",
         "shradha",
         "apna college"
       ],
       "response": "Apna College's JavaScript Full Course is an excellent 14-lesson tutorial covering JS variables, operators, loops, arrays, functions, DOM, events, classes, callbacks, promises, and Fetch API with mini-projects!"
+    },
+    {
+      "keys": [
+        "web development",
+        "web dev",
+        "html",
+        "css",
+        "git",
+        "github",
+        "frontend",
+        "apna college web",
+        "delta"
+      ],
+      "response": "We have two premium Web Development courses by Apna College: the 18-lesson Web Development Full Course (HTML, CSS, Git, JS, and Amazon clone) and the 57-lesson Delta Web Development Bootcamp (HTML, CSS, Git, and full stack JavaScript JS)!"
     },
     {
       "keys": [
@@ -4385,7 +4943,7 @@ const data = {
         "money",
         "pay"
       ],
-      "response": "Python, Java, C++, Arduino, and JavaScript developers are in extremely high demand, with entry-level software engineer salaries starting around $90k+ and data science roles going up to $150k+."
+      "response": "Python, Java, C++, Arduino, JavaScript, and Web developers are in extremely high demand, with entry-level software engineer salaries starting around $90k+ and data science/frontend roles going up to $150k+."
     }
   ]
 }
