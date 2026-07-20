@@ -26,13 +26,23 @@
       </div>
       <nav>
         <ul class="nav-links">
-          <li><a class="nav-item active" data-tab="home" id="nav-home">Home</a></li>
-          <li><a class="nav-item" data-tab="quiz" id="nav-quiz">Career Assessment</a></li>
-          <li><a class="nav-item" data-tab="explorer" id="nav-explorer">Career Explorer</a></li>
-          <li><a class="nav-item" data-tab="skills" id="nav-skills">Skills Hub</a></li>
-          <li><a class="nav-item" data-tab="advisor" id="nav-advisor">AI Advisor</a></li>
-          <li><a class="nav-item" data-tab="portfolio" id="nav-portfolio">My Portfolio</a></li>
-          <li><a class="nav-item" data-tab="feedback" id="nav-feedback">Reviews & Suggestions</a></li>
+          <li><a class="nav-item active" data-tab="home" id="nav-home" data-translate="nav_home">Home</a></li>
+          <li><a class="nav-item" data-tab="quiz" id="nav-quiz" data-translate="nav_quiz">Career Assessment</a></li>
+          <li><a class="nav-item" data-tab="explorer" id="nav-explorer" data-translate="nav_explorer">Career Explorer</a></li>
+          <li><a class="nav-item" data-tab="skills" id="nav-skills" data-translate="nav_skills">Skills Hub</a></li>
+          <li><a class="nav-item" data-tab="advisor" id="nav-advisor" data-translate="nav_advisor">AI Advisor</a></li>
+          <li><a class="nav-item" data-tab="portfolio" id="nav-portfolio" data-translate="nav_portfolio">My Portfolio</a></li>
+          <li><a class="nav-item" data-tab="feedback" id="nav-feedback" data-translate="nav_feedback">Reviews & Suggestions</a></li>
+          <li style="position: relative;" id="nav-more-wrapper">
+            <a class="nav-item" id="nav-more-btn" data-translate="nav_more" style="cursor: pointer;">More ▾</a>
+            <div class="profile-dropdown" id="more-menu-dropdown" style="width: 180px; top: 130%; right: 0;">
+              <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; letter-spacing: 0.5px; font-weight: 700;">Language / भाषा</div>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <button class="btn btn-secondary language-btn active" data-lang="en" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; justify-content: flex-start; width: 100%;">🇺🇸 English</button>
+                <button class="btn btn-secondary language-btn" data-lang="hi" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; justify-content: flex-start; width: 100%;">🇮🇳 हिन्दी (Hindi)</button>
+              </div>
+            </div>
+          </li>
         </ul>
       </nav>
       <div class="user-profile-badge" id="user-profile-widget">
@@ -42,12 +52,12 @@
         <!-- Profile Dropdown Menu -->
         <div class="profile-dropdown" id="profile-dropdown">
           <div class="dropdown-header">
-            <h5 id="dropdown-user-name">Guest Student</h5>
+            <h5 id="dropdown-user-name" data-translate="profile_guest">Guest Student</h5>
             <span id="dropdown-user-email">guest@example.com</span>
           </div>
           <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 0.5rem 0;">
-          <div class="dropdown-item" style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Age: <strong id="dropdown-user-age">N/A</strong></div>
-          <button class="btn btn-secondary dropdown-logout-btn" id="logout-btn" style="width: 100%; padding: 0.35rem 0.7rem; font-size: 0.8rem;">Sign Out</button>
+          <div class="dropdown-item" style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;"><span data-translate="profile_age">Age</span>: <strong id="dropdown-user-age">N/A</strong></div>
+          <button class="btn btn-secondary dropdown-logout-btn" id="logout-btn" style="width: 100%; padding: 0.35rem 0.7rem; font-size: 0.8rem;" data-translate="profile_logout">Sign Out</button>
         </div>
       </div>
     </header>
@@ -59,32 +69,32 @@
       <section id="home-view" class="view-panel active">
         <div class="hero-section">
           <span class="hero-tag">Designed for School & College Students</span>
-          <h1 class="gradient-text">Shape Your Future & Learn Real-World Skills</h1>
-          <p>Confused about what career is right for you? Take our AI-backed career assessment, explore in-demand careers, track skill milestones, and chat with an advisor.</p>
+          <h1 class="gradient-text" data-translate="hero_title">Shape Your Future & Learn Real-World Skills</h1>
+          <p data-translate="hero_subtitle">Confused about what career is right for you? Take our AI-backed career assessment, explore in-demand careers, track skill milestones, and chat with an advisor.</p>
           <div class="hero-actions">
-            <button class="btn btn-primary" id="start-quiz-hero">Find Your Match</button>
-            <button class="btn btn-secondary" id="start-skills-hero">Start Learning</button>
+            <button class="btn btn-primary" id="start-quiz-hero" data-translate="hero_btn_quiz">Find Your Match</button>
+            <button class="btn btn-secondary" id="start-skills-hero" data-translate="hero_btn_skills">Start Learning</button>
           </div>
         </div>
 
         <div class="dashboard-grid">
           <!-- Card 1 -->
           <div class="glass-card dashboard-card">
-            <h3>🎯 Match Interests</h3>
-            <p>Uncover which career fits your mindset, values, and problem-solving style by taking our interest assessment.</p>
-            <button class="btn btn-secondary" onclick="document.getElementById('nav-quiz').click()">Take Quiz</button>
+            <h3 data-translate="card_assessment_title">🎯 Match Interests</h3>
+            <p data-translate="card_assessment_desc">Uncover which career fits your mindset, values, and problem-solving style by taking our interest assessment.</p>
+            <button class="btn btn-secondary" onclick="document.getElementById('nav-quiz').click()" data-translate="quiz_start">Take Quiz</button>
           </div>
           <!-- Card 2 -->
           <div class="glass-card dashboard-card">
-            <h3>🧭 Career Explorer</h3>
-            <p>Browse growth statistics, salaries, details, and step-by-step career path guides for in-demand roles.</p>
-            <button class="btn btn-secondary" onclick="document.getElementById('nav-explorer').click()">Browse Catalog</button>
+            <h3 data-translate="card_skills_title">🧭 Career Explorer</h3>
+            <p data-translate="card_skills_desc">Browse growth statistics, salaries, details, and step-by-step career path guides for in-demand roles.</p>
+            <button class="btn btn-secondary" onclick="document.getElementById('nav-explorer').click()" data-translate="hero_btn_skills">Browse Catalog</button>
           </div>
           <!-- Card 3 -->
           <div class="glass-card dashboard-card">
-            <h3>🛠️ Skill Milestones</h3>
-            <p>Earn XP by starting guided visual learning roadmaps in Web Dev, Figma Design, or Python Data Science.</p>
-            <button class="btn btn-secondary" onclick="document.getElementById('nav-skills').click()">View Hub</button>
+            <h3 data-translate="card_advisor_title">🛠️ Skill Milestones</h3>
+            <p data-translate="card_advisor_desc">Earn XP by starting guided visual learning roadmaps in Web Dev, Figma Design, or Python Data Science.</p>
+            <button class="btn btn-secondary" onclick="document.getElementById('nav-skills').click()" data-translate="nav_skills">View Hub</button>
           </div>
         </div>
       </section>
@@ -95,11 +105,11 @@
           <div class="glass-card quiz-card" id="quiz-card-wrapper">
             <div id="quiz-dynamic-area">
               <div class="results-icon">🎯</div>
-              <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Career Match Quiz</h2>
-              <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+              <h2 style="font-size: 2.2rem; margin-bottom: 1rem;" data-translate="quiz_title">Career Match Quiz</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;" data-translate="quiz_desc">
                 Answer 4 simple questions about your favorite activities, work environments, and subjects to unlock your personalized recommendation dashboard.
               </p>
-              <button class="btn btn-primary" id="start-quiz-btn">Start Assessment</button>
+              <button class="btn btn-primary" id="start-quiz-btn" data-translate="quiz_start">Start Assessment</button>
             </div>
           </div>
         </div>
@@ -109,8 +119,8 @@
       <section id="explorer-view" class="view-panel">
         <div class="explorer-header">
           <div>
-            <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Career Explorer</h2>
-            <p style="color: var(--text-secondary)">Discover path guidelines, entry-level salaries, and growth projections.</p>
+            <h2 style="font-size: 2rem; margin-bottom: 0.5rem;" data-translate="explorer_title">Career Explorer</h2>
+            <p style="color: var(--text-secondary)" data-translate="explorer_desc">Discover path guidelines, entry-level salaries, and growth projections.</p>
           </div>
           <div class="search-filters">
             <div class="search-input-wrapper">
@@ -118,14 +128,14 @@
               <svg class="search-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
               </svg>
-              <input type="text" class="search-input" id="career-search" placeholder="Search careers (e.g. software, designer)...">
+              <input type="text" class="search-input" id="career-search" placeholder="Search careers (e.g. software, designer)..." data-translate-placeholder="explorer_search_placeholder">
             </div>
             <select class="filter-select" id="career-filter">
-              <option value="all">All Categories</option>
-              <option value="tech">Technology</option>
-              <option value="creative">Creative & Design</option>
-              <option value="business">Business & Marketing</option>
-              <option value="science">Biotech & Science</option>
+              <option value="all" data-translate="explorer_filter_all">All Categories</option>
+              <option value="tech" data-translate="explorer_filter_tech">Technology</option>
+              <option value="creative" data-translate="explorer_filter_creative">Creative & Design</option>
+              <option value="business" data-translate="explorer_filter_business">Business & Marketing</option>
+              <option value="science" data-translate="explorer_filter_science">Biotech & Science</option>
             </select>
           </div>
         </div>
@@ -138,8 +148,8 @@
       <!-- 4. SKILLS HUB VIEW -->
       <section id="skills-view" class="view-panel">
         <div style="margin-bottom: 2.5rem;">
-          <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Skill Development Hub</h2>
-          <p style="color: var(--text-secondary)">Launch structured tracks, verify your progress, and level up your portfolio.</p>
+          <h2 style="font-size: 2rem; margin-bottom: 0.5rem;" data-translate="skills_title">Modular Skills Hub</h2>
+          <p style="color: var(--text-secondary)" data-translate="skills_desc">Launch structured tracks, verify your progress, and level up your portfolio.</p>
         </div>
 
         <div class="skills-grid" id="skills-grid-container">
@@ -150,32 +160,32 @@
       <!-- 5. AI ADVISOR CHAT VIEW -->
       <section id="advisor-view" class="view-panel">
         <div style="margin-bottom: 2.5rem;">
-          <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">AI Career Advisor</h2>
-          <p style="color: var(--text-secondary)">Chat with our simulated advisor to get instant tips on careers, salaries, and roadmaps.</p>
+          <h2 style="font-size: 2rem; margin-bottom: 0.5rem;" data-translate="advisor_title">AI Career Advisor</h2>
+          <p style="color: var(--text-secondary)" data-translate="advisor_desc">Chat with our simulated advisor to get instant tips on careers, salaries, and roadmaps.</p>
         </div>
 
         <div class="advisor-container">
           <div class="advisor-sidebar">
             <div class="glass-card suggested-prompts-card">
-              <h4>💡 Ask About...</h4>
+              <h4 data-translate="advisor_suggested">💡 Ask About...</h4>
               <div class="suggested-prompt-list">
-                <button class="suggested-prompt-btn">"How do I start in coding?"</button>
-                <button class="suggested-prompt-btn">"What are the skills for UX design?"</button>
-                <button class="suggested-prompt-btn">"Tell me about AI careers"</button>
-                <button class="suggested-prompt-btn">"What salaries do tech roles pay?"</button>
+                <button class="suggested-prompt-btn" data-translate="prompt_coding">"How do I start in coding?"</button>
+                <button class="suggested-prompt-btn" data-translate="prompt_ux">"What are the skills for UX design?"</button>
+                <button class="suggested-prompt-btn" data-translate="prompt_ai">"Tell me about AI careers"</button>
+                <button class="suggested-prompt-btn" data-translate="prompt_salary">"What salaries do tech roles pay?"</button>
               </div>
             </div>
           </div>
           
           <div class="glass-card chat-card">
             <div class="chat-messages" id="chat-messages">
-              <div class="chat-bubble bot">
+              <div class="chat-bubble bot" id="chat-welcome-bubble">
                 👋 Hello! I'm your AI Career Advisor. Ask me any questions about careers, skill tracks, salaries, or pathways to get started!
               </div>
             </div>
             <div class="chat-input-area">
-              <input type="text" class="chat-input" id="chat-input" placeholder="Type a message (e.g. 'coding', 'UX design', 'AI')...">
-              <button class="btn btn-primary" id="chat-send-btn">Send</button>
+              <input type="text" class="chat-input" id="chat-input" placeholder="Type a message (e.g. 'coding', 'UX design', 'AI')..." data-translate-placeholder="advisor_chat_placeholder">
+              <button class="btn btn-primary" id="chat-send-btn" data-translate="advisor_send">Send</button>
             </div>
           </div>
         </div>
@@ -187,33 +197,33 @@
           <div class="portfolio-avatar" id="portfolio-avatar-circle">S</div>
           <div style="flex: 1;">
             <h2 id="portfolio-user-title">Student Explorer</h2>
-            <p style="color: var(--text-secondary)">Student Account Dashboard</p>
+            <p style="color: var(--text-secondary)" data-translate="portfolio_xp_rank">Student Account Dashboard</p>
           </div>
           <div class="portfolio-stats">
             <div class="stat-item">
               <div class="stat-num" id="portfolio-xp">0</div>
-              <div class="stat-lbl">XP Earned</div>
+              <div class="stat-lbl" data-translate="nav_skills">XP Earned</div>
             </div>
             <div class="stat-item">
               <div class="stat-num" id="portfolio-skills-count">0</div>
-              <div class="stat-lbl">Completed Milestones</div>
+              <div class="stat-lbl" data-translate="portfolio_completed">Completed Milestones</div>
             </div>
             <div class="stat-item">
               <div class="stat-num" id="portfolio-careers-count">0</div>
-              <div class="stat-lbl">Bookmarked Paths</div>
+              <div class="stat-lbl" data-translate="portfolio_bookmarked">Bookmarked Paths</div>
             </div>
           </div>
         </div>
 
         <div class="portfolio-grid">
           <div>
-            <h3 class="portfolio-section-title">⭐ Bookmarked Career Paths</h3>
+            <h3 class="portfolio-section-title" data-translate="portfolio_bookmarked">⭐ Bookmarked Career Paths</h3>
             <div class="portfolio-list" id="saved-careers-list">
               <!-- Bookmarked careers list -->
             </div>
           </div>
           <div>
-            <h3 class="portfolio-section-title">📈 Learning Roadmap Progress</h3>
+            <h3 class="portfolio-section-title" data-translate="portfolio_completed">📈 Learning Roadmap Progress</h3>
             <div class="portfolio-list" id="completed-skills-list">
               <!-- Active skill roadmaps progress -->
             </div>
@@ -224,23 +234,23 @@
       <!-- 7. REVIEWS & SUGGESTIONS VIEW -->
       <section id="feedback-view" class="view-panel">
         <div style="margin-bottom: 2.5rem;">
-          <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Reviews & Suggestions</h2>
-          <p style="color: var(--text-secondary)">Share your learning experience, rate the platform, or suggest new roadmap features.</p>
+          <h2 style="font-size: 2rem; margin-bottom: 0.5rem;" data-translate="reviews_title">Reviews & Suggestions</h2>
+          <p style="color: var(--text-secondary)" data-translate="reviews_desc">Share your learning experience, rate the platform, or suggest new roadmap features.</p>
         </div>
 
         <div class="feedback-container" style="display: flex; gap: 2rem; flex-wrap: wrap;">
           
           <!-- Feedback Submission Form -->
           <div class="glass-card feedback-form-card" style="flex: 1; min-width: 320px; padding: 2.0rem;">
-            <h3 style="margin-top: 0; margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 700; color: #fff;">Write a Review</h3>
+            <h3 style="margin-top: 0; margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 700; color: #fff;" data-translate="reviews_write">Write a Review</h3>
             <form id="feedback-form" onsubmit="return false;">
               <div class="form-group" style="margin-bottom: 1.25rem;">
-                <label for="feedback-name" style="display: block; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Your Name</label>
+                <label for="feedback-name" style="display: block; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-secondary);" data-translate="reviews_name_lbl">Your Name</label>
                 <input type="text" id="feedback-name" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="Your Name" required>
               </div>
               
               <div class="form-group" style="margin-bottom: 1.25rem;">
-                <label style="display: block; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Your Rating</label>
+                <label style="display: block; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-secondary);" data-translate="reviews_rating_lbl">Your Rating</label>
                 <div class="star-rating-selector" style="display: flex; gap: 0.5rem; font-size: 1.8rem; cursor: pointer; color: var(--text-muted);">
                   <span class="rating-star" data-value="1">☆</span>
                   <span class="rating-star" data-value="2">☆</span>
@@ -252,17 +262,17 @@
               </div>
 
               <div class="form-group" style="margin-bottom: 1.5rem;">
-                <label for="feedback-text" style="display: block; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Review or Suggestion</label>
-                <textarea id="feedback-text" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.65rem; min-height: 120px; resize: vertical; font-family: inherit;" placeholder="What do you think of the pathways? What features should we add next?..." required></textarea>
+                <label for="feedback-text" style="display: block; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-secondary);" data-translate="reviews_text_lbl">Review or Suggestion</label>
+                <textarea id="feedback-text" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.65rem; min-height: 120px; resize: vertical; font-family: inherit;" placeholder="What do you think of the pathways? What features should we add next?..." required data-translate-placeholder="reviews_placeholder"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem;">Submit Review</button>
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem;" data-translate="reviews_submit">Submit Review</button>
             </form>
           </div>
 
           <!-- Reviews Timeline Feed -->
           <div style="flex: 2; min-width: 320px; display: flex; flex-direction: column; gap: 1rem;">
-            <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: 700; color: #fff;">Community Reviews & Suggestions</h3>
+            <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: 700; color: #fff;" data-translate="reviews_community">Community Reviews & Suggestions</h3>
             <div id="reviews-feed" style="display: flex; flex-direction: column; gap: 1rem; max-height: 520px; overflow-y: auto; padding-right: 0.5rem;">
               <!-- Review cards will be loaded here dynamically -->
               <div style="color: var(--text-muted); font-size: 0.95rem; padding: 2rem 0; text-align: center;">Loading community feedback...</div>
@@ -304,6 +314,10 @@
           <div class="form-group" style="margin-bottom: 1rem;">
             <label for="signin-password" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">Password</label>
             <input type="password" id="signin-password" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="••••••••" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.03); padding: 0.6rem 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+            <input type="checkbox" id="signin-local-toggle" style="width: auto; cursor: pointer; transform: scale(1.15); margin: 0;">
+            <label for="signin-local-toggle" style="font-size: 0.8rem; color: var(--text-secondary); cursor: pointer; user-select: none; margin: 0; line-height: 1.2;">Use Local Offline Mode (LocalStorage)</label>
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 0.7rem;">Sign In</button>
         </form>
@@ -348,6 +362,11 @@
               <button type="button" class="btn btn-secondary" id="captcha-reload-btn" title="Refresh Captcha" style="padding: 0.3rem 0.5rem; font-size: 0.8rem; line-height: 1;">🔄</button>
               <input type="text" id="captcha-input" class="chat-input" placeholder="Type letters..." required style="flex: 1; padding: 0.4rem; border-radius: 6px; font-size: 0.85rem;">
             </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.03); padding: 0.6rem 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+            <input type="checkbox" id="signup-local-toggle" style="width: auto; cursor: pointer; transform: scale(1.15); margin: 0;">
+            <label for="signup-local-toggle" style="font-size: 0.8rem; color: var(--text-secondary); cursor: pointer; user-select: none; margin: 0; line-height: 1.2;">Use Local Offline Mode (LocalStorage)</label>
           </div>
           
           <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 0.7rem;">Create Account</button>

@@ -1286,4 +1286,209 @@ h1, h2, h3, h4 {
   white-space: pre-line;
 }
 
+/* --- MOBILE RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 768px) {
+  /* Navbar collapse & wrapping */
+  .navbar {
+    flex-direction: column !important;
+    gap: 1.25rem !important;
+    padding: 1rem !important;
+    align-items: center !important;
+  }
+  
+  .nav-links {
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 0.5rem 0.75rem !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .nav-item {
+    font-size: 0.85rem !important;
+    padding: 0.4rem 0.65rem !important;
+  }
+  
+  .user-profile-badge {
+    align-self: center !important;
+    margin-top: 0.25rem !important;
+  }
+
+  /* Main Container */
+  .main-content {
+    padding: 1.25rem 0.75rem !important;
+  }
+
+  /* Hero Section scaling */
+  .hero-section {
+    padding: 2rem 0.5rem 3rem 0.5rem !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .hero-section p {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .hero-actions {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    align-items: center !important;
+  }
+  
+  .hero-actions .btn {
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+
+  /* Grids & Cards fallback to single column */
+  .dashboard-grid, .careers-grid, .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .glass-card {
+    padding: 1.5rem 1.25rem !important;
+  }
+
+  /* Assessment formatting */
+  .quiz-card {
+    padding: 2rem 1.25rem !important;
+  }
+  
+  .quiz-question-text {
+    font-size: 1.35rem !important;
+  }
+  
+  .quiz-option-btn {
+    padding: 1rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* Chat Advisor styling */
+  .advisor-container {
+    grid-template-columns: 1fr !important;
+    height: calc(100vh - 180px) !important;
+    min-height: 450px !important;
+    gap: 1rem !important;
+  }
+  
+  .chat-card {
+    padding: 1rem !important;
+  }
+  
+  .chat-bubble {
+    max-width: 90% !important;
+    font-size: 0.85rem !important;
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .chat-input {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Feedback / Reviews container wrapping */
+  .feedback-container {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  .feedback-form-card {
+    min-width: unset !important;
+    width: 100% !important;
+    padding: 1.5rem 1.25rem !important;
+  }
+
+  /* Modal scaling */
+  .modal-overlay {
+    padding: 0.5rem !important;
+  }
+
+  .modal-content {
+    max-height: 90vh !important;
+    border-radius: 16px !important;
+  }
+
+  .modal-body {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .modal-title {
+    font-size: 1.4rem !important;
+    margin-top: 1rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .modal-subtitle {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .resources-list {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  .resource-link {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  /* Portfolio View */
+  .portfolio-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1.5rem 1rem !important;
+    gap: 1rem !important;
+  }
+
+  .portfolio-stats {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.25rem !important;
+  }
+  
+  .nav-links {
+    gap: 0.35rem 0.5rem !important;
+  }
+  
+  .nav-item {
+    font-size: 0.8rem !important;
+    padding: 0.35rem 0.5rem !important;
+  }
+
+  .auth-box {
+    padding: 1.5rem 1.25rem !important;
+  }
+
+  .auth-logo {
+    font-size: 1.8rem !important;
+  }
+
+  .auth-panel h2 {
+    font-size: 1.4rem !important;
+  }
+  
+  .star-rating-selector {
+    font-size: 1.5rem !important;
+  }
+}
+
 

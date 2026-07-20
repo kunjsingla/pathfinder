@@ -2,440 +2,264 @@ const data = {
   quizQuestions: [
   {
     "id": 1,
-    "text": "What kind of projects or tasks excite you the most?",
+    "text": "What kind of activities do you enjoy most?",
     "options": [
       {
-        "text": "Writing code, solving math puzzles, or building software.",
+        "text": "Playing with electronics, writing code, or building websites.",
         "category": "tech"
       },
       {
-        "text": "Designing layouts, creating art, or editing videos.",
+        "text": "Drawing, painting, making videos, or designing posters.",
         "category": "creative"
       },
       {
-        "text": "Analyzing markets, budgeting, or planning business strategies.",
+        "text": "Selling things, planning events, or managing a pocket-money budget.",
         "category": "business"
       },
       {
-        "text": "Conducting lab experiments, studying plants/animals, or researching chemistry.",
+        "text": "Doing science experiments, studying plants/animals, or stargazing.",
         "category": "science"
       }
     ]
   },
   {
     "id": 2,
-    "text": "How do you prefer to solve problems?",
+    "text": "If a toy or gadget breaks, how do you fix it?",
     "options": [
       {
-        "text": "Through logical algorithms, debugging, and step-by-step logic.",
+        "text": "I look at the wiring, buttons, or software settings.",
         "category": "tech"
       },
       {
-        "text": "By brainstorming creative visuals, storytelling, and user-centric designs.",
+        "text": "I paint it, decorate it, or remake its visual parts.",
         "category": "creative"
       },
       {
-        "text": "By looking at financial sheets, marketing statistics, and business growth charts.",
+        "text": "I calculate if it is cheaper to buy a new one or sell the spare parts.",
         "category": "business"
       },
       {
-        "text": "By researching medical studies, analyzing data, and applying scientific methods.",
+        "text": "I study how the mechanism works internally to find the root cause.",
         "category": "science"
       }
     ]
   },
   {
     "id": 3,
-    "text": "Which environment would you feel most comfortable working in?",
+    "text": "Where would you like to work one day?",
     "options": [
       {
-        "text": "A tech workspace, collaborating with engineers on digital products.",
+        "text": "At a computer software company working on apps or games.",
         "category": "tech"
       },
       {
-        "text": "An agency, studio, or remote creative workspace focused on brand design.",
+        "text": "In an art studio, film set, or design agency.",
         "category": "creative"
       },
       {
-        "text": "A corporate office, startup hub, or investment firm managing projects.",
+        "text": "In an office leading a team or starting my own shop.",
         "category": "business"
       },
       {
-        "text": "A laboratory, healthcare clinic, or field research environment.",
+        "text": "In a lab, clinic, or outdoor nature reserve.",
         "category": "science"
       }
     ]
   },
   {
     "id": 4,
-    "text": "Which of the following classes sounds most interesting to you?",
+    "text": "What is your favorite subject in school?",
     "options": [
       {
-        "text": "Introduction to Computer Science & Python programming.",
+        "text": "Computer science or programming classes.",
         "category": "tech"
       },
       {
-        "text": "Visual Arts, Graphic Design, or Creative Writing.",
+        "text": "Art, music, drama, or English writing.",
         "category": "creative"
       },
       {
-        "text": "Entrepreneurship, Microeconomics, or Marketing 101.",
+        "text": "Math, public speaking, or social studies.",
         "category": "business"
       },
       {
-        "text": "Advanced Biology, Organic Chemistry, or Environmental Science.",
+        "text": "Biology, chemistry, physics, or earth science.",
         "category": "science"
       }
     ]
   },
   {
     "id": 5,
-    "text": "If you had a free weekend, which of these would you rather do?",
+    "text": "What do you like doing in your free time?",
     "options": [
       {
-        "text": "Build a custom website, game, or automation script.",
+        "text": "Building a game, playing with robotic kits, or customizing tech.",
         "category": "tech"
       },
       {
-        "text": "Paint, draw, edit a video, or design a new interface.",
+        "text": "Making digital art, writing stories, or editing photos.",
         "category": "creative"
       },
       {
-        "text": "Learn about investments, pitch a startup idea, or design a business model.",
+        "text": "Learning about stocks, watching business ideas, or organizing a club.",
         "category": "business"
       },
       {
-        "text": "Do a home science experiment, read research articles, or study nature.",
+        "text": "Reading science books, searching space facts, or caring for pets.",
         "category": "science"
       }
     ]
   },
   {
     "id": 6,
-    "text": "What kind of impact do you want to make on the world?",
+    "text": "How do you want to help people?",
     "options": [
       {
-        "text": "Create tools and software that make life easier for millions of users.",
+        "text": "By building useful apps and websites that solve daily problems.",
         "category": "tech"
       },
       {
-        "text": "Inspire people through art, storytelling, and beautiful visual designs.",
+        "text": "By creating beautiful designs, animations, or books that inspire them.",
         "category": "creative"
       },
       {
-        "text": "Build high-growth companies, create jobs, and manage global brands.",
+        "text": "By creating new businesses, selling products, and creating jobs.",
         "category": "business"
       },
       {
-        "text": "Discover new cures, protect ecosystems, or unlock secrets of the universe.",
+        "text": "By finding cures for illnesses or protecting the environment.",
         "category": "science"
       }
     ]
   },
   {
     "id": 7,
-    "text": "What category of books, articles, or documentaries do you read?",
+    "text": "What kind of books or videos do you watch online?",
     "options": [
       {
-        "text": "Tech blogs, programming tutorials, or future software trends.",
+        "text": "Videos about new gadgets, coding tutorials, or future tech.",
         "category": "tech"
       },
       {
-        "text": "Art history, visual style guides, photography, or movie reviews.",
+        "text": "Videos about graphic design tips, drawing tutorials, or movie reviews.",
         "category": "creative"
       },
       {
-        "text": "Business biographies, stock markets, startups, or negotiation tactics.",
+        "text": "Success stories of famous startups, marketing tricks, or how money works.",
         "category": "business"
       },
       {
-        "text": "Science magazines, medical research, biology papers, or environmental science.",
+        "text": "Documentaries about space, animals, medicine, or nature.",
         "category": "science"
       }
     ]
   },
   {
     "id": 8,
-    "text": "In a group project, what is your go-to role?",
+    "text": "In a group project, what is your favorite job?",
     "options": [
       {
-        "text": "Building the system framework, coding the mechanics, or setting up tech.",
+        "text": "Setting up the slides, making the interactive demo, or handling tech.",
         "category": "tech"
       },
       {
-        "text": "Making the presentation look stunning, designing graphics, or writing scripts.",
+        "text": "Designing the layout, choosing the colors, and picking images.",
         "category": "creative"
       },
       {
-        "text": "Presenting the project, managing the timeline, or leading the strategy.",
+        "text": "Being the leader, giving the speech, or keeping track of time.",
         "category": "business"
       },
       {
-        "text": "Conducting the data analysis, research, and collecting logical proof.",
+        "text": "Doing the background research and fact-checking the details.",
         "category": "science"
       }
     ]
   },
   {
     "id": 9,
-    "text": "What type of tools do you enjoy using the most?",
+    "text": "What is your favorite tool?",
     "options": [
       {
-        "text": "Keyboards, IDEs (VS Code), command line tools, and software APIs.",
+        "text": "A computer keyboard, coding editor, or electronic kit.",
         "category": "tech"
       },
       {
-        "text": "Design tools (Figma, Photoshop), cameras, tablets, and color wheels.",
+        "text": "A drawing tablet, camera, pencil, or design software.",
         "category": "creative"
       },
       {
-        "text": "Spreadsheets (Excel), marketing dashboards, and financial models.",
+        "text": "A planner, calendar, notepad, or budgeting spreadsheet.",
         "category": "business"
       },
       {
-        "text": "Microscopes, data models, laboratory kits, and scientific calculators.",
+        "text": "A magnifying glass, calculator, microscope, or test tube.",
         "category": "science"
       }
     ]
   },
   {
     "id": 10,
-    "text": "How do you learn new concepts best?",
+    "text": "How do you learn a new game best?",
     "options": [
       {
-        "text": "By writing scripts, breaking code, and running logical tests.",
+        "text": "By looking at the rules and experimenting step-by-step.",
         "category": "tech"
       },
       {
-        "text": "By looking at visual maps, sketches, and reference designs.",
+        "text": "By looking at the visual design, characters, and story.",
         "category": "creative"
       },
       {
-        "text": "By studying case studies of successful startups and marketing strategies.",
+        "text": "By planning a strategy to win against other players.",
         "category": "business"
       },
       {
-        "text": "By reviewing research papers, formulas, and empirical test data.",
+        "text": "By analyzing the statistics and learning which moves are mathematically best.",
         "category": "science"
       }
     ]
   },
   {
     "id": 11,
-    "text": "When faced with a complex challenge, what is your initial step?",
+    "text": "What is the most annoying thing to you?",
     "options": [
       {
-        "text": "Break the problem into sub-algorithms and log inputs/outputs.",
+        "text": "A website that has bugs, lags, or does not work correctly.",
         "category": "tech"
       },
       {
-        "text": "Sketch a layout of options and visualize different paths.",
+        "text": "Boring, plain designs with ugly fonts and colors.",
         "category": "creative"
       },
       {
-        "text": "Check resource constraints, costs, and strategic advantages.",
+        "text": "Wasting time or money because of a bad plan.",
         "category": "business"
       },
       {
-        "text": "Formulate a hypothesis and search for empirical data or test trials.",
+        "text": "People sharing fake facts without real science proof.",
         "category": "science"
       }
     ]
   },
   {
     "id": 12,
-    "text": "What type of games or puzzles appeal to you?",
+    "text": "What type of movie or show is your favorite?",
     "options": [
       {
-        "text": "Logic gates, coding games, and complex strategy simulators.",
+        "text": "Sci-fi movies, hacker films, or tech history documentaries.",
         "category": "tech"
       },
       {
-        "text": "Open-world building, character design, and puzzle games with rich visuals.",
+        "text": "Animated movies, cartoons, or design shows.",
         "category": "creative"
       },
       {
-        "text": "Business tycoon games, city builders, and resource trade games.",
+        "text": "Shows about entrepreneurs pitching ideas or biographies of leaders.",
         "category": "business"
       },
       {
-        "text": "Science trivia, biology quizzes, and deduction murder mysteries.",
-        "category": "science"
-      }
-    ]
-  },
-  {
-    "id": 13,
-    "text": "Who is your role model or person you admire?",
-    "options": [
-      {
-        "text": "Linus Torvalds, Alan Turing, or top open-source engineers.",
-        "category": "tech"
-      },
-      {
-        "text": "Don Norman, Steve Jobs (design focus), or visual artists.",
-        "category": "creative"
-      },
-      {
-        "text": "Elon Musk, Warren Buffett, or successful startup founders.",
-        "category": "business"
-      },
-      {
-        "text": "Albert Einstein, Marie Curie, or medical researchers.",
-        "category": "science"
-      }
-    ]
-  },
-  {
-    "id": 14,
-    "text": "What is your biggest pet peeve or source of frustration?",
-    "options": [
-      {
-        "text": "Code bugs, illogical software processes, and repetitive manual tasks.",
-        "category": "tech"
-      },
-      {
-        "text": "Boring, uninspiring visuals and hard-to-use digital layouts.",
-        "category": "creative"
-      },
-      {
-        "text": "Inefficient business operations, wasted budgets, and poor marketing.",
-        "category": "business"
-      },
-      {
-        "text": "Pseudo-science, lack of scientific evidence, and unverified data claims.",
-        "category": "science"
-      }
-    ]
-  },
-  {
-    "id": 15,
-    "text": "What sounds like your ideal daily work schedule?",
-    "options": [
-      {
-        "text": "Deep hours of solo focus coding, followed by system checkups.",
-        "category": "tech"
-      },
-      {
-        "text": "Dynamic brainstorming, visual asset design, and creative sketch reviews.",
-        "category": "creative"
-      },
-      {
-        "text": "Leading team syncs, pitching clients, and reviewing growth metrics.",
-        "category": "business"
-      },
-      {
-        "text": "Running laboratory trials, analyzing test results, and writing reports.",
-        "category": "science"
-      }
-    ]
-  },
-  {
-    "id": 16,
-    "text": "How do you like to organize your notes?",
-    "options": [
-      {
-        "text": "Nested files, markdown documentation, or structured databases.",
-        "category": "tech"
-      },
-      {
-        "text": "Visual mind maps, color-coded sticky notes, or scrapbooks.",
-        "category": "creative"
-      },
-      {
-        "text": "Clear action item lists, spreadsheets, and project boards.",
-        "category": "business"
-      },
-      {
-        "text": "Categorized scientific logs, observation tables, and data charts.",
-        "category": "science"
-      }
-    ]
-  },
-  {
-    "id": 17,
-    "text": "What genre of movies or TV shows do you watch?",
-    "options": [
-      {
-        "text": "Sci-fi movies, hacker thrillers, or tech history documentaries.",
-        "category": "tech"
-      },
-      {
-        "text": "Animation masterpieces, cinematography-heavy movies, or design docs.",
-        "category": "creative"
-      },
-      {
-        "text": "Wall Street dramas, entrepreneur competition shows, or startup biopics.",
-        "category": "business"
-      },
-      {
-        "text": "Nature documentaries, medical dramas, or physics explanation videos.",
-        "category": "science"
-      }
-    ]
-  },
-  {
-    "id": 18,
-    "text": "What type of internship would be most rewarding for you?",
-    "options": [
-      {
-        "text": "Developing software tools or fixing database issues at a tech firm.",
-        "category": "tech"
-      },
-      {
-        "text": "Crafting marketing mockups or UI wireframes at a design agency.",
-        "category": "creative"
-      },
-      {
-        "text": "Helping run startup campaigns or budgeting projects at an accelerator.",
-        "category": "business"
-      },
-      {
-        "text": "Assisting in clinical research or biology research at a research lab.",
-        "category": "science"
-      }
-    ]
-  },
-  {
-    "id": 19,
-    "text": "What makes you the most curious?",
-    "options": [
-      {
-        "text": "How computer networks, databases, and software loops communicate.",
-        "category": "tech"
-      },
-      {
-        "text": "How typography, color selection, and visuals impact human feelings.",
-        "category": "creative"
-      },
-      {
-        "text": "How consumer psychology drives purchases and startups scale.",
-        "category": "business"
-      },
-      {
-        "text": "How chemical bonds, biology genomes, and natural systems interact.",
-        "category": "science"
-      }
-    ]
-  },
-  {
-    "id": 20,
-    "text": "How do you brainstorm new ideas?",
-    "options": [
-      {
-        "text": "By sketching logic flows, flowcharts, and system inputs/outputs.",
-        "category": "tech"
-      },
-      {
-        "text": "By free-sketching, mood boarding, and collecting styles.",
-        "category": "creative"
-      },
-      {
-        "text": "By calculating market demand, revenue targets, and customer needs.",
-        "category": "business"
-      },
-      {
-        "text": "By cross-referencing research literature and outlining hypotheses.",
+        "text": "Shows about dinosaurs, medicine, wild animals, or physics secrets.",
         "category": "science"
       }
     ]
@@ -4848,10 +4672,2052 @@ const data = {
         "videoId": "Dm0K3x9yCkg"
       }
     ]
+  },
+  {
+    "id": "react-beginners",
+    "title": "React.js Mastery Course",
+    "category": "tech",
+    "time": "78 Lessons (32 hours total)",
+    "rating": "4.9",
+    "image": "\u269b\ufe0f",
+    "modules": [
+      {
+        "id": "react-1",
+        "title": "Lesson 1: Introduction to React Js + Installation | Complete React Course in Hindi #1",
+        "desc": "Lesson 1 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "-mJFZp84TIY"
+      },
+      {
+        "id": "react-2",
+        "title": "Lesson 2: Creating our first react app using create-react-app | Complete React Course in Hindi #2",
+        "desc": "Lesson 2 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "hnVOvvbQrwA"
+      },
+      {
+        "id": "react-3",
+        "title": "Lesson 3: JavaScript Refresher | Complete React Course in Hindi #3",
+        "desc": "Lesson 3 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "kFe-RRaOy48"
+      },
+      {
+        "id": "react-4",
+        "title": "Lesson 4: Understanding JSX | Complete React Course in Hindi #4",
+        "desc": "Lesson 4 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "JvC7aA24m4Q"
+      },
+      {
+        "id": "react-5",
+        "title": "Lesson 5: Project 1: Setup + Adding Bootstrap to React | Complete React Course in Hindi #5",
+        "desc": "Lesson 5 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "wa0IVAIqbo0"
+      },
+      {
+        "id": "react-6",
+        "title": "Lesson 6: Understanding Props and PropTypes in React | Complete React Course in Hindi #6",
+        "desc": "Lesson 6 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "xvm3X1oyTL8"
+      },
+      {
+        "id": "react-7",
+        "title": "Lesson 7: Understanding State & Handling Events in React | Complete React Course in Hindi #7",
+        "desc": "Lesson 7 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "leBpCqU8wdg"
+      },
+      {
+        "id": "react-8",
+        "title": "Lesson 8: Adding more Logic to TextUtils | Complete React Course in Hindi #8",
+        "desc": "Lesson 8 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "7BsjAdjx2Z0"
+      },
+      {
+        "id": "react-9",
+        "title": "Lesson 9: Exercise 1: Enhancing TextUtils | Complete React Course in Hindi #9",
+        "desc": "Lesson 9 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "KislX1yzZOQ"
+      },
+      {
+        "id": "react-10",
+        "title": "Lesson 10: Creating \"Enable Dark Mode\" Button Using useState Hook  | Complete React Course in Hindi #10",
+        "desc": "Lesson 10 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "Sx2y4TjRZ9g"
+      },
+      {
+        "id": "react-11",
+        "title": "Lesson 11: Exercise 1: Solutions + Shoutouts | Complete React Course in Hindi #11",
+        "desc": "Lesson 11 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "9pqQZqcgkeg"
+      },
+      {
+        "id": "react-12",
+        "title": "Lesson 12: Improving Dark Mode & Refactoring App Component | Complete React Course in Hindi #12",
+        "desc": "Lesson 12 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "vEzt66n2LZY"
+      },
+      {
+        "id": "react-13",
+        "title": "Lesson 13: Adding + Auto Dismissing Alert Messages | Complete React Course in Hindi #13",
+        "desc": "Lesson 13 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "n_KtBVxBTb4"
+      },
+      {
+        "id": "react-14",
+        "title": "Lesson 14: Exercise 2: Adding Custom Color Theme to TextUtils | Complete React Course in Hindi #14",
+        "desc": "Lesson 14 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "hWo5-vkJsj0"
+      },
+      {
+        "id": "react-15",
+        "title": "Lesson 15: Changing title dynamically & adding favicons to TextUtils | Complete React Course in Hindi #15",
+        "desc": "Lesson 15 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "8eSQ1o6zir0"
+      },
+      {
+        "id": "react-16",
+        "title": "Lesson 16: React Router Setup + Usage | Complete React Course in Hindi #16",
+        "desc": "Lesson 16 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "WNU1BEZIjxg"
+      },
+      {
+        "id": "react-17",
+        "title": "Lesson 17: [Free] Building + Hosting React App For free on Github Pages | Complete React Course in Hindi #17",
+        "desc": "Lesson 17 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "Fi75tq9JikI"
+      },
+      {
+        "id": "react-18",
+        "title": "Lesson 18: Purchasing a Domain + Hosting TextUtils on a VPS | Complete React Course in Hindi #18",
+        "desc": "Lesson 18 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "YYVY1bPHaWE"
+      },
+      {
+        "id": "react-19",
+        "title": "Lesson 19: Fixing Issues & Wrapping up TextUtils | Complete React Course in Hindi #19",
+        "desc": "Lesson 19 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "kEvfVw5Sq5c"
+      },
+      {
+        "id": "react-20",
+        "title": "Lesson 20: Exercise 2: Solutions + Shoutouts | Complete React Course in Hindi #20",
+        "desc": "Lesson 20 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "Ghp1Mi43dxQ"
+      },
+      {
+        "id": "react-21",
+        "title": "Lesson 21: Fixing few more Textutils Issues | Complete React Course in Hindi #21",
+        "desc": "Lesson 21 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "tBaCrmZ_e80"
+      },
+      {
+        "id": "react-22",
+        "title": "Lesson 22: Project 2 Setup + Introduction to Class based components | Complete React Course in Hindi #22",
+        "desc": "Lesson 22 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "x9p-4QGh-OI"
+      },
+      {
+        "id": "react-23",
+        "title": "Lesson 23: Component Structure of our NewsMonkey React App | Complete React Course in Hindi #23",
+        "desc": "Lesson 23 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "9xjuIe4KM-4"
+      },
+      {
+        "id": "react-24",
+        "title": "Lesson 24: Fetching API Key from News API | Complete React Course in Hindi #24",
+        "desc": "Lesson 24 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "fSFlvm56JwM"
+      },
+      {
+        "id": "react-25",
+        "title": "Lesson 25: Understanding state in class based components  | Complete React Course in Hindi #25",
+        "desc": "Lesson 25 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "OmoRSF1Ta6A"
+      },
+      {
+        "id": "react-26",
+        "title": "Lesson 26: Looping through an array in JSX to display NewsItems from state | Complete React Course in Hindi #26",
+        "desc": "Lesson 26 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "ANKGfdi8Ki4"
+      },
+      {
+        "id": "react-27",
+        "title": "Lesson 27: Using Fetch API in React to populate NewsItems | Complete React Course in Hindi #27",
+        "desc": "Lesson 27 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "cIqgQn-XBIQ"
+      },
+      {
+        "id": "react-28",
+        "title": "Lesson 28: Adding Previous & Next Buttons to populate NewsItems | Complete React Course in Hindi #28",
+        "desc": "Lesson 28 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "FOjrXXdiCMs"
+      },
+      {
+        "id": "react-29",
+        "title": "Lesson 29: Adding loading spinner & variable pageSize to NewsMonkey | Complete React Course in Hindi #29",
+        "desc": "Lesson 29 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "sUGwamqnJnY"
+      },
+      {
+        "id": "react-30",
+        "title": "Lesson 30: Adding Categories & propTypes to NewsMonkey React App | Complete React Course in Hindi #30",
+        "desc": "Lesson 30 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "L3zCEwGpK9I"
+      },
+      {
+        "id": "react-31",
+        "title": "Lesson 31: Fetching News category wise in NewsMonkey React App | Complete React Course in Hindi #31",
+        "desc": "Lesson 31 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "y9ns0Cpp2do"
+      },
+      {
+        "id": "react-32",
+        "title": "Lesson 32: Adding time, author and news source to News React App | Complete React Course in Hindi #32",
+        "desc": "Lesson 32 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "tEm62tTwZE0"
+      },
+      {
+        "id": "react-33",
+        "title": "Lesson 33: Refactoring News component to use the same function  | Complete React Course in Hindi #33",
+        "desc": "Lesson 33 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "ZJMd2mN0sbs"
+      },
+      {
+        "id": "react-34",
+        "title": "Lesson 34: React Component Lifecycle & Lifecycle methods  | Complete React Course in Hindi #34",
+        "desc": "Lesson 34 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "abjeWy4sZiU"
+      },
+      {
+        "id": "react-35",
+        "title": "Lesson 35: Adding Infinite Scroll to NewsMonkey | Complete React Course in Hindi #35",
+        "desc": "Lesson 35 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "yLox5lhwaEU"
+      },
+      {
+        "id": "react-36",
+        "title": "Lesson 36: Adding a top loading bar to NewsMonkey | Complete React Course in Hindi #36",
+        "desc": "Lesson 36 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "j_Gk58cOB2A"
+      },
+      {
+        "id": "react-37",
+        "title": "Lesson 37: Hiding API Key by Adding Custom Environment Variables | Complete React Course in Hindi #37",
+        "desc": "Lesson 37 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "fg_Rc5cBAK8"
+      },
+      {
+        "id": "react-38",
+        "title": "Lesson 38: Introduction to React Hooks | Complete React Course in Hindi #38",
+        "desc": "Lesson 38 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "esrFnNV5Btc"
+      },
+      {
+        "id": "react-39",
+        "title": "Lesson 39: Changing Class based NewsMonkey components to Functional based | Complete React Course in Hindi #39",
+        "desc": "Lesson 39 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "aSSVGdVk6fo"
+      },
+      {
+        "id": "react-40",
+        "title": "Lesson 40: Sticky Navbar & NewsMonkey bug fixes | Complete React Course in Hindi #40",
+        "desc": "Lesson 40 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "7lrneLoa72s"
+      },
+      {
+        "id": "react-41",
+        "title": "Lesson 41: Introduction to MERN stack | Complete React Course in Hindi #41",
+        "desc": "Lesson 41 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "YhJ-lPiCfyc"
+      },
+      {
+        "id": "react-42",
+        "title": "Lesson 42: Project 3: iNotebook backend and React frontend setup | Complete React Course in Hindi #42",
+        "desc": "Lesson 42 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "kZbaAVJHdZw"
+      },
+      {
+        "id": "react-43",
+        "title": "Lesson 43: iNotebook db & Express Server Setup | Complete React Course in Hindi #43",
+        "desc": "Lesson 43 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "jWIeK3ueOm8"
+      },
+      {
+        "id": "react-44",
+        "title": "Lesson 44: Creating Routes & Schema for Storing Notes & Users | Complete React Course in Hindi #44",
+        "desc": "Lesson 44 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "HpszyPglBtQ"
+      },
+      {
+        "id": "react-45",
+        "title": "Lesson 45: Storing Data into the Database Using Mongoose Model | Complete React Course in Hindi #45",
+        "desc": "Lesson 45 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "weIrv6WbIec"
+      },
+      {
+        "id": "react-46",
+        "title": "Lesson 46: Adding Data Validation Using express-validator | Complete React Course in Hindi #46",
+        "desc": "Lesson 46 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "N4GHLaCSXUg"
+      },
+      {
+        "id": "react-47",
+        "title": "Lesson 47: Creating ThunderClient Collections to Manage Requests | Complete React Course in Hindi #47",
+        "desc": "Lesson 47 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "vqCirjK61HI"
+      },
+      {
+        "id": "react-48",
+        "title": "Lesson 48: Understanding Password Hashing, Salt & Pepper | Complete React Course in Hindi #48",
+        "desc": "Lesson 48 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "inEhzp3nD0M"
+      },
+      {
+        "id": "react-49",
+        "title": "Lesson 49: Hashing Passwords using bcryptjs in NodeJs | Complete React Course in Hindi #49",
+        "desc": "Lesson 49 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "nSIo0kHZcic"
+      },
+      {
+        "id": "react-50",
+        "title": "Lesson 50: Creating Login Endpoint & sending auth token| Complete React Course in Hindi #50",
+        "desc": "Lesson 50 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "j9fcNuNx-DA"
+      },
+      {
+        "id": "react-51",
+        "title": "Lesson 51: Creating a middleware to decode user from a JWT | Complete React Course in Hindi #51",
+        "desc": "Lesson 51 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "qY0PZ-z61EQ"
+      },
+      {
+        "id": "react-52",
+        "title": "Lesson 52: Fetching all notes & Adding a Note | Complete React Course in Hindi #52",
+        "desc": "Lesson 52 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "nXKUJipczn0"
+      },
+      {
+        "id": "react-53",
+        "title": "Lesson 53: Updating an existing Note | Complete React Course in Hindi #53",
+        "desc": "Lesson 53 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "2rwfG4H2FCk"
+      },
+      {
+        "id": "react-54",
+        "title": "Lesson 54: Endpoint for deleting a Note | Complete React Course in Hindi #54",
+        "desc": "Lesson 54 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "vdfCuvV9WaE"
+      },
+      {
+        "id": "react-55",
+        "title": "Lesson 55: iNotebook React Project Setup | Complete React Course in Hindi #55",
+        "desc": "Lesson 55 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "hfjQLssL0hs"
+      },
+      {
+        "id": "react-56",
+        "title": "Lesson 56: Creating Navbar and Routes | Complete React Course in Hindi #56",
+        "desc": "Lesson 56 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "x1Zs1kPqyxQ"
+      },
+      {
+        "id": "react-57",
+        "title": "Lesson 57: Introduction to React Context API | Complete React Course in Hindi #57",
+        "desc": "Lesson 57 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "3u9GZQN7ZUQ"
+      },
+      {
+        "id": "react-58",
+        "title": "Lesson 58: useContext hook: Using React Context API | Complete React Course in Hindi #58",
+        "desc": "Lesson 58 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "coM0JK6o3mo"
+      },
+      {
+        "id": "react-59",
+        "title": "Lesson 59: useLocation Hook in React | Complete React Course in Hindi #59",
+        "desc": "Lesson 59 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "fqIZnugmDhY"
+      },
+      {
+        "id": "react-60",
+        "title": "Lesson 60: iNotebook: Fetching Notes from Context | Complete React Course in Hindi #60",
+        "desc": "Lesson 60 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "94BdnDVHrP0"
+      },
+      {
+        "id": "react-61",
+        "title": "Lesson 61: iNotebook: Adding NoteItem in a Separate Note component | Complete React Course in Hindi #61",
+        "desc": "Lesson 61 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "GsVXwTeMn4o"
+      },
+      {
+        "id": "react-62",
+        "title": "Lesson 62: Adding font awesome icons to iNotebook | Complete React Course in Hindi #62",
+        "desc": "Lesson 62 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "pH37pK7kalA"
+      },
+      {
+        "id": "react-63",
+        "title": "Lesson 63: Adding AddNote component to iNotebook | Complete React Course in Hindi #63",
+        "desc": "Lesson 63 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "EseqvMqulAQ"
+      },
+      {
+        "id": "react-64",
+        "title": "Lesson 64: Adding \"delete note\" functionality to iNotebook | Complete React Course in Hindi #64",
+        "desc": "Lesson 64 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "MQpI6pc6J6s"
+      },
+      {
+        "id": "react-65",
+        "title": "Lesson 65: Adding \"fetch notes\" functionality to iNotebook | Complete React Course in Hindi #65",
+        "desc": "Lesson 65 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "x-mYMGf7P6M"
+      },
+      {
+        "id": "react-66",
+        "title": "Lesson 66: Adding a Modal for Editing Notes | Complete React Course in Hindi #66",
+        "desc": "Lesson 66 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "J5hGX5_XZDk"
+      },
+      {
+        "id": "react-67",
+        "title": "Lesson 67: Updating Notes on edit in the UI using React | Complete React Course in Hindi #67",
+        "desc": "Lesson 67 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "lcJXF2Svo-c"
+      },
+      {
+        "id": "react-68",
+        "title": "Lesson 68: Adding Frontend Validation + Few Fixes in iNotebook | Complete React Course in Hindi #68",
+        "desc": "Lesson 68 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "W8SmVTL-ToY"
+      },
+      {
+        "id": "react-69",
+        "title": "Lesson 69: Adding Login Component to iNotebook | Complete React Course in Hindi #69",
+        "desc": "Lesson 69 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "S0nmMn2n82k"
+      },
+      {
+        "id": "react-70",
+        "title": "Lesson 70: Adding SignUp Component to iNotebook | Complete React Course in Hindi #70",
+        "desc": "Lesson 70 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "rw5NZB4P_0Q"
+      },
+      {
+        "id": "react-71",
+        "title": "Lesson 71: Adding Alerts to Login, Signup & Notes Component of iNotebook | Complete React Course in Hindi #71",
+        "desc": "Lesson 71 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "1mH7SPeFwbg"
+      },
+      {
+        "id": "react-72",
+        "title": "Lesson 72: Fetching User Specific Notes in iNotebook | Complete React Course in Hindi #72",
+        "desc": "Lesson 72 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "MP-_pkakBao"
+      },
+      {
+        "id": "react-73",
+        "title": "Lesson 73: Introduction to Redux | Complete React Course in Hindi #73",
+        "desc": "Lesson 73 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "JZQWKYjfZlQ"
+      },
+      {
+        "id": "react-74",
+        "title": "Lesson 74: Setting up a React Application for Redux | Complete React Course in Hindi #74",
+        "desc": "Lesson 74 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "hFyLMMj8Ncg"
+      },
+      {
+        "id": "react-75",
+        "title": "Lesson 75: Creating a Reducer & Action Creator in Redux | Complete React Course in Hindi #75",
+        "desc": "Lesson 75 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "jGCW8ZUrcqE"
+      },
+      {
+        "id": "react-76",
+        "title": "Lesson 76: Creating a Redux Store | Complete React Course in Hindi #76",
+        "desc": "Lesson 76 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "-uqTWF0GfxA"
+      },
+      {
+        "id": "react-77",
+        "title": "Lesson 77: Accessing State in Redux | Complete React Course in Hindi #77",
+        "desc": "Lesson 77 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "TQGmTwrp_60"
+      },
+      {
+        "id": "react-78",
+        "title": "Lesson 78: Updating state from a different component in Redux | Complete React Course in Hindi #78",
+        "desc": "Lesson 78 of the React JS Tutorials by CodeWithHarry. Learn components, props, state, hooks, routing, and deployment.",
+        "checked": false,
+        "videoId": "UX6Kf48qCvs"
+      }
+    ]
+  },
+  {
+    "id": "dbms-gate",
+    "title": "Database Management (DBMS) & SQL",
+    "category": "tech",
+    "time": "100 Lectures (20 hours total)",
+    "rating": "4.8",
+    "image": "\ud83d\uddc4\ufe0f",
+    "modules": [
+      {
+        "id": "dbms-1",
+        "title": "Lecture 1: DBMS Syllabus for GATE, UGCNET, NIELIT, DSSSB etc.",
+        "desc": "Lecture 1 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "kBdlM6hNDAE"
+      },
+      {
+        "id": "dbms-2",
+        "title": "Lecture 2: Introduction to DBMS (Database Management System) With Real life examples",
+        "desc": "Lecture 2 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "3EJlovevfcA"
+      },
+      {
+        "id": "dbms-3",
+        "title": "Lecture 3: File  System vs DBMS",
+        "desc": "Lecture 3 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "ZtVw2iuFI2w"
+      },
+      {
+        "id": "dbms-4",
+        "title": "Lecture 4: 2 tier and 3 tier Architecture with real life examples",
+        "desc": "Lecture 4 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "VyvTabQHevw"
+      },
+      {
+        "id": "dbms-5",
+        "title": "Lecture 5: What is Schema",
+        "desc": "Lecture 5 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "pDX4NR4eY3A"
+      },
+      {
+        "id": "dbms-6",
+        "title": "Lecture 6: Three Schema Architecture",
+        "desc": "Lecture 6 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "5fs1ldO6B5c"
+      },
+      {
+        "id": "dbms-7",
+        "title": "Lecture 7: What is Data Independence",
+        "desc": "Lecture 7 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "upUSGUSK5k0"
+      },
+      {
+        "id": "dbms-8",
+        "title": "Lecture 8: Integrity Constraints in Database with Examples",
+        "desc": "Lecture 8 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "YTJdBA9wZro"
+      },
+      {
+        "id": "dbms-9",
+        "title": "Lecture 9: What is CANDIDATE KEY  and PRIMARY key",
+        "desc": "Lecture 9 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "mMxjKFiIKxs"
+      },
+      {
+        "id": "dbms-10",
+        "title": "Lecture 10: What is Primary Key in DBMS",
+        "desc": "Lecture 10 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "Tp37HXfekNo"
+      },
+      {
+        "id": "dbms-11",
+        "title": "Lecture 11: Foreign Key in DBMS",
+        "desc": "Lecture 11 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "UyqpQ3D2yCw"
+      },
+      {
+        "id": "dbms-12",
+        "title": "Lecture 12: Insert, Update & Delete from Foreign Key table",
+        "desc": "Lecture 12 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "DM2lAomoDrg"
+      },
+      {
+        "id": "dbms-13",
+        "title": "Lecture 13: Question on Foreign Key",
+        "desc": "Lecture 13 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "KknAgz0xGSU"
+      },
+      {
+        "id": "dbms-14",
+        "title": "Lecture 14: Foreign Key\ud83d\udd11 with On Delete Cascade with Execution",
+        "desc": "Lecture 14 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "Br2FInlVKcs"
+      },
+      {
+        "id": "dbms-15",
+        "title": "Lecture 15: Super key in DBMS in HINDI",
+        "desc": "Lecture 15 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "QQqGfScdlzA"
+      },
+      {
+        "id": "dbms-16",
+        "title": "Lecture 16: Introduction to ER model",
+        "desc": "Lecture 16 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "gbVev8RuZLg"
+      },
+      {
+        "id": "dbms-17",
+        "title": "Lecture 17: Types of Attributes in ER Model",
+        "desc": "Lecture 17 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "WEo3g6Ir-vA"
+      },
+      {
+        "id": "dbms-18",
+        "title": "Lecture 18: One to One relationship in DBMS in Hindi",
+        "desc": "Lecture 18 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "s6MH7f3SnsY"
+      },
+      {
+        "id": "dbms-19",
+        "title": "Lecture 19: One to Many Relationship in DBMS in Hindi",
+        "desc": "Lecture 19 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "rZxETdO_KUQ"
+      },
+      {
+        "id": "dbms-20",
+        "title": "Lecture 20: Many to Many Relationship in DBMS",
+        "desc": "Lecture 20 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "onR_sLhbZ4w"
+      },
+      {
+        "id": "dbms-21",
+        "title": "Lecture 21: Introduction to Weak Entity Set with Example",
+        "desc": "Lecture 21 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "QP1w30bgcH0"
+      },
+      {
+        "id": "dbms-22",
+        "title": "Lecture 22: Question on Minimize tables in ER Model",
+        "desc": "Lecture 22 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "Nxdq8RZ7Ayg"
+      },
+      {
+        "id": "dbms-23",
+        "title": "Lecture 23: Important Question explanation on ER Model",
+        "desc": "Lecture 23 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "ibRwG8Pm-vI"
+      },
+      {
+        "id": "dbms-24",
+        "title": "Lecture 24: Introduction to Normalization",
+        "desc": "Lecture 24 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "5GDTIUVlHB8"
+      },
+      {
+        "id": "dbms-25",
+        "title": "Lecture 25: First Normal form in DBMS in HINDI",
+        "desc": "Lecture 25 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "NlgZy30Dv9A"
+      },
+      {
+        "id": "dbms-26",
+        "title": "Lecture 26: Finding Closure of Functional dependency in DBMS",
+        "desc": "Lecture 26 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "bSdvM_0hzgc"
+      },
+      {
+        "id": "dbms-27",
+        "title": "Lecture 27: Functional Dependency & its properties in DBMS in HINDI",
+        "desc": "Lecture 27 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "qn5neFBpU40"
+      },
+      {
+        "id": "dbms-28",
+        "title": "Lecture 28: Second Normal Form",
+        "desc": "Lecture 28 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "tkbAA--wKOc"
+      },
+      {
+        "id": "dbms-29",
+        "title": "Lecture 29: Third Normal Form in dbms with examples in Hindi",
+        "desc": "Lecture 29 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "IeSai2JVm78"
+      },
+      {
+        "id": "dbms-30",
+        "title": "Lecture 30: Boyce Codd Normal Form #BCNF #DBMS #Normalization with best examples",
+        "desc": "Lecture 30 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "mf_PbWPo7VM"
+      },
+      {
+        "id": "dbms-31",
+        "title": "Lecture 31: BCNF Always Ensures Dependency Preserving Decomposition?? Normalization Examples",
+        "desc": "Lecture 31 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "qwI0oe3-g9g"
+      },
+      {
+        "id": "dbms-32",
+        "title": "Lecture 32: Lossless and Lossy Decomposition",
+        "desc": "Lecture 32 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "Sabwow_e2-M"
+      },
+      {
+        "id": "dbms-33",
+        "title": "Lecture 33: All Normal Forms with Real life examples",
+        "desc": "Lecture 33 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "EGEwkad_llA"
+      },
+      {
+        "id": "dbms-34",
+        "title": "Lecture 34: Minimal Cover in DBMS With Example",
+        "desc": "Lecture 34 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "sS-LJMTVVj8"
+      },
+      {
+        "id": "dbms-35",
+        "title": "Lecture 35: Practice Question on Normalization",
+        "desc": "Lecture 35 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "4h8VoRnRvnE"
+      },
+      {
+        "id": "dbms-36",
+        "title": "Lecture 36: How to find out the Normal form of a Relation",
+        "desc": "Lecture 36 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "wTJjpH2RUcQ"
+      },
+      {
+        "id": "dbms-37",
+        "title": "Lecture 37: How to Solve Normalization Questions",
+        "desc": "Lecture 37 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "1yUkun2r0N4"
+      },
+      {
+        "id": "dbms-38",
+        "title": "Lecture 38: Important Question Explanation on Normalization",
+        "desc": "Lecture 38 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "EFdvRm5nse0"
+      },
+      {
+        "id": "dbms-39",
+        "title": "Lecture 39: Important Question on Normalization (Schemas) Explanation",
+        "desc": "Lecture 39 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "vYsVVM4TOLk"
+      },
+      {
+        "id": "dbms-40",
+        "title": "Lecture 40: Cover and Equivalence of Functional Dependencies",
+        "desc": "Lecture 40 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "eIXC6NfKno4"
+      },
+      {
+        "id": "dbms-41",
+        "title": "Lecture 41: Dependency Preserving Decomposition in DBMS with Examples in Hindi",
+        "desc": "Lecture 41 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "0oeap0QDslY"
+      },
+      {
+        "id": "dbms-42",
+        "title": "Lecture 42: Dependency Preserving Decomposition in DBMS",
+        "desc": "Lecture 42 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "jxENwUU9j7w"
+      },
+      {
+        "id": "dbms-43",
+        "title": "Lecture 43: Introduction to Joins and its types",
+        "desc": "Lecture 43 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "zYH-e6tUYbw"
+      },
+      {
+        "id": "dbms-44",
+        "title": "Lecture 44: Natural Join operation with Example",
+        "desc": "Lecture 44 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "jRxEjmjIIFs"
+      },
+      {
+        "id": "dbms-45",
+        "title": "Lecture 45: Self Join operation with Example",
+        "desc": "Lecture 45 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "6DQpvfdj6EE"
+      },
+      {
+        "id": "dbms-46",
+        "title": "Lecture 46: Equi Join operation with Example",
+        "desc": "Lecture 46 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "lUiPjkOQG9w"
+      },
+      {
+        "id": "dbms-47",
+        "title": "Lecture 47: Left Outer Join operation with Example",
+        "desc": "Lecture 47 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "unxn0KnzBzk"
+      },
+      {
+        "id": "dbms-48",
+        "title": "Lecture 48: Right Outer Join operation with Example",
+        "desc": "Lecture 48 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "t7J__TGqoQs"
+      },
+      {
+        "id": "dbms-49",
+        "title": "Lecture 49: Question on Inner, Left, Right & Full Outer Joins Explanation",
+        "desc": "Lecture 49 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "Cu9-mNbXkww"
+      },
+      {
+        "id": "dbms-50",
+        "title": "Lecture 50: Introduction to Relational Algebra",
+        "desc": "Lecture 50 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "4YilEjkNPrQ"
+      },
+      {
+        "id": "dbms-51",
+        "title": "Lecture 51: Projection in Relational Algebra",
+        "desc": "Lecture 51 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "G9ixeTIyg8s"
+      },
+      {
+        "id": "dbms-52",
+        "title": "Lecture 52: Selection in Relational Algebra",
+        "desc": "Lecture 52 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "2hUVf17DHVs"
+      },
+      {
+        "id": "dbms-53",
+        "title": "Lecture 53: Cross/Cartesian Product in  Relational Algebra",
+        "desc": "Lecture 53 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "F6MBz_h3Uj8"
+      },
+      {
+        "id": "dbms-54",
+        "title": "Lecture 54: Set Difference in Relational Algebra",
+        "desc": "Lecture 54 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "evDqDiJpw5k"
+      },
+      {
+        "id": "dbms-55",
+        "title": "Lecture 55: Union Operation in Relational Algebra",
+        "desc": "Lecture 55 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "b0zitqncxP8"
+      },
+      {
+        "id": "dbms-56",
+        "title": "Lecture 56: Division Operation in Relational Algebra",
+        "desc": "Lecture 56 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "lbvCaETL2FI"
+      },
+      {
+        "id": "dbms-57",
+        "title": "Lecture 57: Rename Operator in Relational Algebra",
+        "desc": "Lecture 57 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "2Q3B2mrrpAw"
+      },
+      {
+        "id": "dbms-58",
+        "title": "Lecture 58: Tuple Calculus in DBMS with examples",
+        "desc": "Lecture 58 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "SnsrohgiPo0"
+      },
+      {
+        "id": "dbms-59",
+        "title": "Lecture 59: Introduction to Structured Query Language",
+        "desc": "Lecture 59 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "323H_mOOWQ4"
+      },
+      {
+        "id": "dbms-60",
+        "title": "Lecture 60: All Types of SQL Commands with Example",
+        "desc": "Lecture 60 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "vUj-kUEC_oA"
+      },
+      {
+        "id": "dbms-61",
+        "title": "Lecture 61: Create table in SQL with execution",
+        "desc": "Lecture 61 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "R6Ps7aUNPE4"
+      },
+      {
+        "id": "dbms-62",
+        "title": "Lecture 62: CREATE Command (DDL) in SQL with Implementation on ORACLE",
+        "desc": "Lecture 62 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "Nsv0MX3IDJE"
+      },
+      {
+        "id": "dbms-63",
+        "title": "Lecture 63: ALTER Command (DDL) in SQL with Implementation on ORACLE",
+        "desc": "Lecture 63 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "NA3b8JRUmww"
+      },
+      {
+        "id": "dbms-64",
+        "title": "Lecture 64: Difference between Alter and Update in SQL with examples in Hindi",
+        "desc": "Lecture 64 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "x56CHpL4GBE"
+      },
+      {
+        "id": "dbms-65",
+        "title": "Lecture 65: Difference between Delete, Drop & Truncate in SQL",
+        "desc": "Lecture 65 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "_m1aJdD-oD8"
+      },
+      {
+        "id": "dbms-66",
+        "title": "Lecture 66: Constraints in SQL in Hindi",
+        "desc": "Lecture 66 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "PcMr6xoundk"
+      },
+      {
+        "id": "dbms-67",
+        "title": "Lecture 67: SQL Queries and Subqueries (part-1)",
+        "desc": "Lecture 67 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "_yog7h4BokQ"
+      },
+      {
+        "id": "dbms-68",
+        "title": "Lecture 68: SQL Queries and Subqueries (part-2)",
+        "desc": "Lecture 68 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "9lLpe_detTY"
+      },
+      {
+        "id": "dbms-69",
+        "title": "Lecture 69: SQL Queries and Subqueries (part-3)",
+        "desc": "Lecture 69 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "apNmMWgFFRg"
+      },
+      {
+        "id": "dbms-70",
+        "title": "Lecture 70: WITH Clause in SQL",
+        "desc": "Lecture 70 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "0vpzgsIS5Lg"
+      },
+      {
+        "id": "dbms-71",
+        "title": "Lecture 71: SQL Queries and Subqueries (part-4)",
+        "desc": "Lecture 71 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "iPEmGpI3OGU"
+      },
+      {
+        "id": "dbms-72",
+        "title": "Lecture 72: SQL Queries and Subqueries (part-5)",
+        "desc": "Lecture 72 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "4uOwq0ASCtc"
+      },
+      {
+        "id": "dbms-73",
+        "title": "Lecture 73: SQL Queries and Subqueries (part-6)",
+        "desc": "Lecture 73 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "jEqi2tpI4eE"
+      },
+      {
+        "id": "dbms-74",
+        "title": "Lecture 74: SQL Queries and Subqueries (part-7)",
+        "desc": "Lecture 74 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "JNCHZlRqZUU"
+      },
+      {
+        "id": "dbms-75",
+        "title": "Lecture 75: EXIST and NOT EXIST Subqueries(part-8)",
+        "desc": "Lecture 75 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "wA9GJZcB618"
+      },
+      {
+        "id": "dbms-76",
+        "title": "Lecture 76: Like Command in SQL with example in Hindi",
+        "desc": "Lecture 76 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "iug2vvLQ9B8"
+      },
+      {
+        "id": "dbms-77",
+        "title": "Lecture 77: SEQUENCE in SQL with Syntax & Examples",
+        "desc": "Lecture 77 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "EDZMYBNj7wM"
+      },
+      {
+        "id": "dbms-78",
+        "title": "Lecture 78: How SQL Query executes?? Order of SQL Query Execution\u23f3\ud83d\udd04",
+        "desc": "Lecture 78 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "wP2giPPgwqI"
+      },
+      {
+        "id": "dbms-79",
+        "title": "Lecture 79: SQL Aggregate Functions - SUM, AVG(n), COUNT, MIN, MAX Functions",
+        "desc": "Lecture 79 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "Yr4pHPZCshA"
+      },
+      {
+        "id": "dbms-80",
+        "title": "Lecture 80: How Aggregate Functions work on NULL Values",
+        "desc": "Lecture 80 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "pn9OI3sSKFE"
+      },
+      {
+        "id": "dbms-81",
+        "title": "Lecture 81: Correlated Subquery in SQL with Example",
+        "desc": "Lecture 81 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "0d419Vo2Po4"
+      },
+      {
+        "id": "dbms-82",
+        "title": "Lecture 82: Non Correlated Subquery in SQL",
+        "desc": "Lecture 82 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "kexRg0O2ir4"
+      },
+      {
+        "id": "dbms-83",
+        "title": "Lecture 83: Difference between Joins, Nested Subquery and Correlated Subquery",
+        "desc": "Lecture 83 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "bonJEipf3VU"
+      },
+      {
+        "id": "dbms-84",
+        "title": "Lecture 84: Find Nth(1st,2nd,3rd....N) Highest Salary in SQL",
+        "desc": "Lecture 84 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "fh4yBn0oTaM"
+      },
+      {
+        "id": "dbms-85",
+        "title": "Lecture 85: 3 Imp Questions on SQL basic Concepts",
+        "desc": "Lecture 85 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "BKQcn0sLZGM"
+      },
+      {
+        "id": "dbms-86",
+        "title": "Lecture 86: Introduction to PL-SQL in DBMS",
+        "desc": "Lecture 86 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "iyJxCc9XRxU"
+      },
+      {
+        "id": "dbms-87",
+        "title": "Lecture 87: Introduction to Transaction Concurrency in HINDI",
+        "desc": "Lecture 87 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "t5hsV9lC1rU"
+      },
+      {
+        "id": "dbms-88",
+        "title": "Lecture 88: ACID Properties of a Transaction",
+        "desc": "Lecture 88 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "-GS0OxFJsYQ"
+      },
+      {
+        "id": "dbms-89",
+        "title": "Lecture 89: Transaction States",
+        "desc": "Lecture 89 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "ObwYFVLB_VI"
+      },
+      {
+        "id": "dbms-90",
+        "title": "Lecture 90: What is Schedule",
+        "desc": "Lecture 90 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "1cbmhsSJRWc"
+      },
+      {
+        "id": "dbms-91",
+        "title": "Lecture 91: All Concurrency Problems",
+        "desc": "Lecture 91 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "oP8yLMjmszE"
+      },
+      {
+        "id": "dbms-92",
+        "title": "Lecture 92: Write-Read Conflict or Dirty Read Problem",
+        "desc": "Lecture 92 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "r_oI0jLqlVY"
+      },
+      {
+        "id": "dbms-93",
+        "title": "Lecture 93: Read-Write Conflict or Unrepeatable Read Problem",
+        "desc": "Lecture 93 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "vwIeKYGXmjI"
+      },
+      {
+        "id": "dbms-94",
+        "title": "Lecture 94: Irrecoverable Vs Recoverable Schedules in Transactions",
+        "desc": "Lecture 94 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "g2gZKA8E1yA"
+      },
+      {
+        "id": "dbms-95",
+        "title": "Lecture 95: Cascading vs Cascadeless Schedule with Example",
+        "desc": "Lecture 95 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "Fxt1pk5LEBU"
+      },
+      {
+        "id": "dbms-96",
+        "title": "Lecture 96: Introduction to Serializability",
+        "desc": "Lecture 96 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "s8QlJoL1G6w"
+      },
+      {
+        "id": "dbms-97",
+        "title": "Lecture 97: Conflict Equivalent Schedules with Example",
+        "desc": "Lecture 97 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "ckqDozxECp0"
+      },
+      {
+        "id": "dbms-98",
+        "title": "Lecture 98: Conflict Serializability",
+        "desc": "Lecture 98 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "zv0ba0Iok1Y"
+      },
+      {
+        "id": "dbms-99",
+        "title": "Lecture 99: Why View Serializability is Used",
+        "desc": "Lecture 99 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "8LKM_RWeroM"
+      },
+      {
+        "id": "dbms-100",
+        "title": "Lecture 100: Shared Exclusive Locking Protocol with Example",
+        "desc": "Lecture 100 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
+        "checked": false,
+        "videoId": "94C0V7f2zm4"
+      }
+    ]
+  },
+  {
+    "id": "dsa-gate",
+    "title": "Data Structures & Algorithms (DSA)",
+    "category": "tech",
+    "time": "66 Lectures (16 hours total)",
+    "rating": "4.9",
+    "image": "\ud83d\udcca",
+    "modules": [
+      {
+        "id": "dsa-1",
+        "title": "Lecture 1: Roadmap \ud83d\udee3\ufe0f of DSA",
+        "desc": "Lecture 1 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "qNGyI95E5AE"
+      },
+      {
+        "id": "dsa-2",
+        "title": "Lecture 2: Introduction to Data Structure with real life examples by #Naina Mam",
+        "desc": "Lecture 2 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "3cU__spdMIw"
+      },
+      {
+        "id": "dsa-3",
+        "title": "Lecture 3: Arrays in Data Structure by #Naina Mam",
+        "desc": "Lecture 3 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "6e6yKtr2VGI"
+      },
+      {
+        "id": "dsa-4",
+        "title": "Lecture 4: Types of Array",
+        "desc": "Lecture 4 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "lAEmhJA-tVw"
+      },
+      {
+        "id": "dsa-5",
+        "title": "Lecture 5: Addressing in One Dimensional Array by #Naina Mam",
+        "desc": "Lecture 5 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "JTfPmCiLhz0"
+      },
+      {
+        "id": "dsa-6",
+        "title": "Lecture 6: 2D Arrays",
+        "desc": "Lecture 6 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "BNA6Sb1wM8E"
+      },
+      {
+        "id": "dsa-7",
+        "title": "Lecture 7: 3D Arrays",
+        "desc": "Lecture 7 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "mzfhcfa0Ra0"
+      },
+      {
+        "id": "dsa-8",
+        "title": "Lecture 8: Addressing in Lower Triangular Matrix",
+        "desc": "Lecture 8 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "X-vk__Y1Tgk"
+      },
+      {
+        "id": "dsa-9",
+        "title": "Lecture 9: Find 2nd Largest2\ufe0f\u20e3 Number in Array",
+        "desc": "Lecture 9 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "eIm9ODShmCI"
+      },
+      {
+        "id": "dsa-10",
+        "title": "Lecture 10: Two 2\ufe0f\u20e3 Pointer\ud83d\udc46 Technique",
+        "desc": "Lecture 10 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "B2L4mAglJZA"
+      },
+      {
+        "id": "dsa-11",
+        "title": "Lecture 11: Maximum Sum Subarray Problem",
+        "desc": "Lecture 11 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "9N3hDuS28EI"
+      },
+      {
+        "id": "dsa-12",
+        "title": "Lecture 12: Sliding Window \ud83e\ude9f Technique",
+        "desc": "Lecture 12 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "uqGxFk0cEdI"
+      },
+      {
+        "id": "dsa-13",
+        "title": "Lecture 13: Remove Duplicate Elements in Sorted Array",
+        "desc": "Lecture 13 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "f1BTfBv22og"
+      },
+      {
+        "id": "dsa-14",
+        "title": "Lecture 14: Linear Search in Data Structure by #Naina Mam",
+        "desc": "Lecture 14 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "t9gErvSVid0"
+      },
+      {
+        "id": "dsa-15",
+        "title": "Lecture 15: Binary Search in Data Structure by #Naina Mam",
+        "desc": "Lecture 15 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "9HlbVEVt_Y0"
+      },
+      {
+        "id": "dsa-16",
+        "title": "Lecture 16: Introduction to Linked List",
+        "desc": "Lecture 16 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "Y3Ckd3OW0_g"
+      },
+      {
+        "id": "dsa-17",
+        "title": "Lecture 17: Arrays vs Linked Lists",
+        "desc": "Lecture 17 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "d4pp0noHOB8"
+      },
+      {
+        "id": "dsa-18",
+        "title": "Lecture 18: Single Linked List in Data Structures",
+        "desc": "Lecture 18 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "M1SlAsRCZvM"
+      },
+      {
+        "id": "dsa-19",
+        "title": "Lecture 19: The Basic Operations of Linked List",
+        "desc": "Lecture 19 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "0XKlbNJLvjs"
+      },
+      {
+        "id": "dsa-20",
+        "title": "Lecture 20: Traversing in Linked list",
+        "desc": "Lecture 20 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "I16sYpAwBEg"
+      },
+      {
+        "id": "dsa-21",
+        "title": "Lecture 21: Insert a node at the beginning of Linked list",
+        "desc": "Lecture 21 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "v5QzD4Rkar8"
+      },
+      {
+        "id": "dsa-22",
+        "title": "Lecture 22: Insert a node at the end of Linked List",
+        "desc": "Lecture 22 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "ZTTy6jTTJUI"
+      },
+      {
+        "id": "dsa-23",
+        "title": "Lecture 23: Insert a node after a given node in Linked List",
+        "desc": "Lecture 23 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "B6_uo7KA20M"
+      },
+      {
+        "id": "dsa-24",
+        "title": "Lecture 24: Delete a node from the beginning of Linked List",
+        "desc": "Lecture 24 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "bGU37FZnN7c"
+      },
+      {
+        "id": "dsa-25",
+        "title": "Lecture 25: Delete a node from the end of Linked List",
+        "desc": "Lecture 25 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "dzmnI9hCk6E"
+      },
+      {
+        "id": "dsa-26",
+        "title": "Lecture 26: Deletion after a given node in Linked List",
+        "desc": "Lecture 26 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "n8kLcrzsuec"
+      },
+      {
+        "id": "dsa-27",
+        "title": "Lecture 27: Deleting Entire Linked List\ud83d\udd17",
+        "desc": "Lecture 27 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "-AXzieE0umw"
+      },
+      {
+        "id": "dsa-28",
+        "title": "Lecture 28: Introduction to Doubly Linked List",
+        "desc": "Lecture 28 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "818gGdKTB_U"
+      },
+      {
+        "id": "dsa-29",
+        "title": "Lecture 29: How to find a Cycle in Linked List",
+        "desc": "Lecture 29 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "f-JWjs8NtFQ"
+      },
+      {
+        "id": "dsa-30",
+        "title": "Lecture 30: Introduction to Stack",
+        "desc": "Lecture 30 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "HRDHgKrYHgU"
+      },
+      {
+        "id": "dsa-31",
+        "title": "Lecture 31: PUSH operation using Array",
+        "desc": "Lecture 31 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "rR0WheIxDC0"
+      },
+      {
+        "id": "dsa-32",
+        "title": "Lecture 32: POP operation using Array",
+        "desc": "Lecture 32 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "k8gKrc_aaQc"
+      },
+      {
+        "id": "dsa-33",
+        "title": "Lecture 33: PUSH operation using Linked List",
+        "desc": "Lecture 33 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "S0Z7K-5HG_Y"
+      },
+      {
+        "id": "dsa-34",
+        "title": "Lecture 34: POP operation using Linked List",
+        "desc": "Lecture 34 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "Ava0zesUeik"
+      },
+      {
+        "id": "dsa-35",
+        "title": "Lecture 35: Recursion vs Loop",
+        "desc": "Lecture 35 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "J4ucdS7uvls"
+      },
+      {
+        "id": "dsa-36",
+        "title": "Lecture 36: Infix, Prefix & Postfix\ud83d\udc69\u200d\ud83d\udd27 with examples",
+        "desc": "Lecture 36 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "vtyuftvugXY"
+      },
+      {
+        "id": "dsa-37",
+        "title": "Lecture 37: Infix to prefix Conversion",
+        "desc": "Lecture 37 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "f6xHar7x_SQ"
+      },
+      {
+        "id": "dsa-38",
+        "title": "Lecture 38: Infix to Postfix Conversion",
+        "desc": "Lecture 38 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "41FCbf7IbUY"
+      },
+      {
+        "id": "dsa-39",
+        "title": "Lecture 39: Infix to Prefix conversion using Stack",
+        "desc": "Lecture 39 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "E0QGRN-zi_c"
+      },
+      {
+        "id": "dsa-40",
+        "title": "Lecture 40: Infix to postfix Conversion using Stack",
+        "desc": "Lecture 40 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "N1Sr-j-cf4c"
+      },
+      {
+        "id": "dsa-41",
+        "title": "Lecture 41: Practice question on Infix to postfix notation",
+        "desc": "Lecture 41 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "aOa9Jo2Msnk"
+      },
+      {
+        "id": "dsa-42",
+        "title": "Lecture 42: Postfix Expression Evaluation",
+        "desc": "Lecture 42 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "dc4bfoxIbu8"
+      },
+      {
+        "id": "dsa-43",
+        "title": "Lecture 43: Practice question on Postfix Evaluation",
+        "desc": "Lecture 43 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "a9IXpAy827c"
+      },
+      {
+        "id": "dsa-44",
+        "title": "Lecture 44: Understanding Call Stack with example",
+        "desc": "Lecture 44 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "x9yuHFyuWZg"
+      },
+      {
+        "id": "dsa-45",
+        "title": "Lecture 45: The Magic of Recursion: Understanding the Power of Recursive Functions",
+        "desc": "Lecture 45 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "E3i5Tm9k38s"
+      },
+      {
+        "id": "dsa-46",
+        "title": "Lecture 46: Introduction to Queue Data structure with real life example",
+        "desc": "Lecture 46 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "YMzZTTO2MpE"
+      },
+      {
+        "id": "dsa-47",
+        "title": "Lecture 47: Enqueue(), Dequeue() & other Operations on Queue",
+        "desc": "Lecture 47 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "jvSdGoNnQo4"
+      },
+      {
+        "id": "dsa-48",
+        "title": "Lecture 48: Dequeue() in Queue using Array",
+        "desc": "Lecture 48 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "PpfHfB8CSWc"
+      },
+      {
+        "id": "dsa-49",
+        "title": "Lecture 49: isfull() and isempty() in queue",
+        "desc": "Lecture 49 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "2K1qUZy-hAw"
+      },
+      {
+        "id": "dsa-50",
+        "title": "Lecture 50: Implementation of Queue using Array",
+        "desc": "Lecture 50 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "hGbphQIOHYs"
+      },
+      {
+        "id": "dsa-51",
+        "title": "Lecture 51: Implementation of Queue using Linked List",
+        "desc": "Lecture 51 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "XqtbBB-Y-Zs"
+      },
+      {
+        "id": "dsa-52",
+        "title": "Lecture 52: Introduction to Trees",
+        "desc": "Lecture 52 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "z0Vnno96_MA"
+      },
+      {
+        "id": "dsa-53",
+        "title": "Lecture 53: Binary Search Tree in Data Structure",
+        "desc": "Lecture 53 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "sXABdGalFNg"
+      },
+      {
+        "id": "dsa-54",
+        "title": "Lecture 54: Deletion from Binary Search Tree(BST) with Example",
+        "desc": "Lecture 54 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "hL9RUD33nYs"
+      },
+      {
+        "id": "dsa-55",
+        "title": "Lecture 55: Find Preorder, Postorder & Inorder of Binary Search Tree(BST) in Data Structure",
+        "desc": "Lecture 55 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "uI77Ij5Kiic"
+      },
+      {
+        "id": "dsa-56",
+        "title": "Lecture 56: Preorder, Inorder and Postorder in 5 minute",
+        "desc": "Lecture 56 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "XRcC7bAtL3c"
+      },
+      {
+        "id": "dsa-57",
+        "title": "Lecture 57: Imp Question on Binary Search Tree",
+        "desc": "Lecture 57 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "XU2YE1CLDMk"
+      },
+      {
+        "id": "dsa-58",
+        "title": "Lecture 58: Introduction to AVL Tree in Data Structure with Examples",
+        "desc": "Lecture 58 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "E9DOBLNB-aE"
+      },
+      {
+        "id": "dsa-59",
+        "title": "Lecture 59: How to Create AVL tree",
+        "desc": "Lecture 59 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "vEZ3-bdPdUQ"
+      },
+      {
+        "id": "dsa-60",
+        "title": "Lecture 60: AVL Tree Creation in Data Structure",
+        "desc": "Lecture 60 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "VKV8PYhcQoo"
+      },
+      {
+        "id": "dsa-61",
+        "title": "Lecture 61: Time Complexities of All Trees",
+        "desc": "Lecture 61 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "-qqGce9Cijw"
+      },
+      {
+        "id": "dsa-62",
+        "title": "Lecture 62: Introduction to Red-Black Tree",
+        "desc": "Lecture 62 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "hq_3iqS0Hq0"
+      },
+      {
+        "id": "dsa-63",
+        "title": "Lecture 63: Insertion in Red Black Tree",
+        "desc": "Lecture 63 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "tvY0Xv5dVuc"
+      },
+      {
+        "id": "dsa-64",
+        "title": "Lecture 64: Topological Order/ Sort in DAG(Direct Acyclic Graph)",
+        "desc": "Lecture 64 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "ChxA6H2253I"
+      },
+      {
+        "id": "dsa-65",
+        "title": "Lecture 65: LEC-65 : How to Find Cycle in Undirected Graph using DFS",
+        "desc": "Lecture 65 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "w4IL_mRd-cY"
+      },
+      {
+        "id": "dsa-66",
+        "title": "Lecture 66: LEC-66 : How to Find Cycle in Directed Graph using DFS",
+        "desc": "Lecture 66 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
+        "checked": false,
+        "videoId": "sLtMwI1ty2E"
+      }
+    ]
+  },
+  {
+    "id": "ml-beginners",
+    "title": "Machine Learning with Python",
+    "category": "tech",
+    "time": "42 Lessons (14 hours total)",
+    "rating": "4.8",
+    "image": "\ud83e\udd16",
+    "modules": [
+      {
+        "id": "ml-1",
+        "title": "Lesson 1: Machine Learning Tutorial Python -1: What is Machine Learning?",
+        "desc": "Lesson 1 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "gmvvaobm7eQ"
+      },
+      {
+        "id": "ml-2",
+        "title": "Lesson 2: Machine Learning Tutorial Python - 2: Linear Regression Single Variable",
+        "desc": "Lesson 2 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "8jazNUpO3lQ"
+      },
+      {
+        "id": "ml-3",
+        "title": "Lesson 3: Machine Learning Tutorial Python - 3: Linear Regression Multiple Variables",
+        "desc": "Lesson 3 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "J_LnPL3Qg70"
+      },
+      {
+        "id": "ml-4",
+        "title": "Lesson 4: Machine Learning Tutorial Python - 4: Gradient Descent and Cost Function",
+        "desc": "Lesson 4 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "vsWrXfO3wWw"
+      },
+      {
+        "id": "ml-5",
+        "title": "Lesson 5: Machine Learning Tutorial Python - 5: Save Model Using Joblib And Pickle",
+        "desc": "Lesson 5 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "KfnhNlD8WZI"
+      },
+      {
+        "id": "ml-6",
+        "title": "Lesson 6: Machine Learning Tutorial Python - 6: Dummy Variables & One Hot Encoding",
+        "desc": "Lesson 6 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "9yl6-HEY7_s"
+      },
+      {
+        "id": "ml-7",
+        "title": "Lesson 7: Machine Learning Tutorial Python - 7: Training and Testing Data",
+        "desc": "Lesson 7 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "fwY9Qv96DJY"
+      },
+      {
+        "id": "ml-8",
+        "title": "Lesson 8: Machine Learning Tutorial Python - 8:  Logistic Regression (Binary Classification)",
+        "desc": "Lesson 8 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "zM4VZR0px8E"
+      },
+      {
+        "id": "ml-9",
+        "title": "Lesson 9: Machine Learning Tutorial Python - 8  Logistic Regression (Multiclass Classification)",
+        "desc": "Lesson 9 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "J5bXOOmkopc"
+      },
+      {
+        "id": "ml-10",
+        "title": "Lesson 10: Machine Learning Tutorial Python - 9  Decision Tree",
+        "desc": "Lesson 10 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "PHxYNGo8NcI"
+      },
+      {
+        "id": "ml-11",
+        "title": "Lesson 11: Machine Learning Tutorial Python - 10  Support Vector Machine (SVM)",
+        "desc": "Lesson 11 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "FB5EdxAGxQg"
+      },
+      {
+        "id": "ml-12",
+        "title": "Lesson 12: Machine Learning Tutorial Python - 11  Random Forest",
+        "desc": "Lesson 12 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "ok2s1vV9XW0"
+      },
+      {
+        "id": "ml-13",
+        "title": "Lesson 13: Machine Learning Tutorial Python 12 - K Fold Cross Validation",
+        "desc": "Lesson 13 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "gJo0uNL-5Qw"
+      },
+      {
+        "id": "ml-14",
+        "title": "Lesson 14: Machine Learning Tutorial Python - 13:  K Means Clustering Algorithm",
+        "desc": "Lesson 14 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "EItlUEPCIzM"
+      },
+      {
+        "id": "ml-15",
+        "title": "Lesson 15: Machine Learning Tutorial Python - 14: Naive Bayes Classifier Algorithm Part 1",
+        "desc": "Lesson 15 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "PPeaRc-r1OI"
+      },
+      {
+        "id": "ml-16",
+        "title": "Lesson 16: Machine Learning Tutorial Python - 15:  Naive Bayes Classifier Algorithm Part 2",
+        "desc": "Lesson 16 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "nHIUYwN-5rM"
+      },
+      {
+        "id": "ml-17",
+        "title": "Lesson 17: Machine Learning Tutorial Python - 16: Hyper parameter Tuning (GridSearchCV)",
+        "desc": "Lesson 17 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "HdlDYng8g9s"
+      },
+      {
+        "id": "ml-18",
+        "title": "Lesson 18: Machine Learning Tutorial Python - 17: L1 and L2 Regularization | Lasso, Ridge Regression",
+        "desc": "Lesson 18 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "VqKq78PVO9g"
+      },
+      {
+        "id": "ml-19",
+        "title": "Lesson 19: Machine Learning Tutorial Python - 18: K nearest neighbors classification with python code",
+        "desc": "Lesson 19 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "CQveSaMyEwM"
+      },
+      {
+        "id": "ml-20",
+        "title": "Lesson 20: Machine Learning Tutorial Python - 19: Principal Component Analysis (PCA) with Python Code",
+        "desc": "Lesson 20 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "8klqIM9UvAc"
+      },
+      {
+        "id": "ml-21",
+        "title": "Lesson 21: Machine Learning Tutorial Python - 20: Bias vs Variance In Machine Learning",
+        "desc": "Lesson 21 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "B01qMFMAgUQ"
+      },
+      {
+        "id": "ml-22",
+        "title": "Lesson 22: Machine Learning Tutorial Python - 21: Ensemble Learning - Bagging",
+        "desc": "Lesson 22 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "RtrBtAKwcxQ"
+      },
+      {
+        "id": "ml-23",
+        "title": "Lesson 23: Machine Learning & Data Science Project - 1 : Introduction (Real Estate Price Prediction Project)",
+        "desc": "Lesson 23 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "rdfbcdP75KI"
+      },
+      {
+        "id": "ml-24",
+        "title": "Lesson 24: Machine Learning & Data Science Project - 2 : Data Cleaning (Real Estate Price Prediction Project)",
+        "desc": "Lesson 24 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "_drqJ9SFCgU"
+      },
+      {
+        "id": "ml-25",
+        "title": "Lesson 25: Machine Learning & Data Science Project - 3 : Feature Engineering (Real Estate Price Prediction)",
+        "desc": "Lesson 25 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "gMoJIH0prL4"
+      },
+      {
+        "id": "ml-26",
+        "title": "Lesson 26: Machine Learning & Data Science Project - 4 : Outlier Removal (Real Estate Price Prediction Project)",
+        "desc": "Lesson 26 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "cbqZa_1vzcg"
+      },
+      {
+        "id": "ml-27",
+        "title": "Lesson 27: Machine Learning & Data Science Project - 5 : Model Building (Real Estate Price Prediction Project)",
+        "desc": "Lesson 27 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "oCiRv94GMEc"
+      },
+      {
+        "id": "ml-28",
+        "title": "Lesson 28: Machine Learning & Data Science Project - 6 : Python Flask Server (Real Estate Price Prediction)",
+        "desc": "Lesson 28 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "Q5JyawS8f5Q"
+      },
+      {
+        "id": "ml-29",
+        "title": "Lesson 29: Machine Learning & Data Science Project - 7 : Website or UI (Real Estate Price Prediction Project)",
+        "desc": "Lesson 29 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "rD2xumR98w8"
+      },
+      {
+        "id": "ml-30",
+        "title": "Lesson 30: Deploy machine learning model to production AWS (Amazon EC2 instance)",
+        "desc": "Lesson 30 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "q8NOmLD5pTU"
+      },
+      {
+        "id": "ml-31",
+        "title": "Lesson 31: Data Science & Machine Learning Project - Part 1 Introduction | Image Classification",
+        "desc": "Lesson 31 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "qWXXHjV3JHI"
+      },
+      {
+        "id": "ml-32",
+        "title": "Lesson 32: Data Science & Machine Learning Project - Part 2 Data Collection | Image Classification",
+        "desc": "Lesson 32 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "m1dQ38qDABw"
+      },
+      {
+        "id": "ml-33",
+        "title": "Lesson 33: Data Science & Machine Learning Project - Part 3 Data Cleaning | Image Classification",
+        "desc": "Lesson 33 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "kwKfWBb6frs"
+      },
+      {
+        "id": "ml-34",
+        "title": "Lesson 34: Data Science & Machine Learning Project - Part 4 Feature Engineering | Image Classification",
+        "desc": "Lesson 34 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "sWAPtaBZKBQ"
+      },
+      {
+        "id": "ml-35",
+        "title": "Lesson 35: Data Science & Machine Learning Project - Part 5 Training a Model | Image Classification",
+        "desc": "Lesson 35 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "5Uc_m9CRWro"
+      },
+      {
+        "id": "ml-36",
+        "title": "Lesson 36: Data Science & Machine Learning Project - Part 6 Flask Server | Image Classification",
+        "desc": "Lesson 36 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "NtNl97LlpOk"
+      },
+      {
+        "id": "ml-37",
+        "title": "Lesson 37: Data Science & Machine Learning Project - Part 7 Build Website | Image Classification",
+        "desc": "Lesson 37 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "idMKTkfeo4A"
+      },
+      {
+        "id": "ml-38",
+        "title": "Lesson 38: Data Science & Machine Learning Project - Part 8 Deployment & Exercise | Image Classification",
+        "desc": "Lesson 38 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "W-PmvEeHioQ"
+      },
+      {
+        "id": "ml-39",
+        "title": "Lesson 39: What is feature engineering | Feature Engineering Tutorial Python # 1",
+        "desc": "Lesson 39 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "pYVScuY-GPk"
+      },
+      {
+        "id": "ml-40",
+        "title": "Lesson 40: Outlier detection and removal using percentile | Feature engineering tutorial python # 2",
+        "desc": "Lesson 40 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "7sJaRHF03K8"
+      },
+      {
+        "id": "ml-41",
+        "title": "Lesson 41: Outlier detection and removal: z score, standard deviation | Feature engineering tutorial python # 3",
+        "desc": "Lesson 41 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "KFuEAGR3HS4"
+      },
+      {
+        "id": "ml-42",
+        "title": "Lesson 42: Outlier detection and removal using IQR | Feature engineering tutorial python # 4",
+        "desc": "Lesson 42 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
+        "checked": false,
+        "videoId": "A3gClkblXK8"
+      }
+    ]
   }
 ],
   botResponses: {
-  "default": "I'm your AI Career Advisor! You can ask me things like 'How to start in coding?', 'What skills are needed for UX Design?', or 'Tell me about Python, Java, C++, Arduino, JavaScript, and Web Development courses'. What are you curious about today?",
+  "default": "I'm your AI Career Advisor! You can ask me things like 'How to start in coding?', 'What skills are needed for UX Design?', or 'Tell me about Python, Java, C++, React, SQL, and DSA courses'. What are you curious about today?",
   "keywords": [
     {
       "keys": [
@@ -4862,7 +6728,7 @@ const data = {
         "developer",
         "programmer"
       ],
-      "response": "To get started in Software Development, I recommend learning Python, Java, C++, Arduino, JavaScript, or Web Development first! We have perfect modular courses for all these skills in the Skills Hub tab."
+      "response": "To get started in Software Development, I recommend learning Python, Java, C++, JavaScript, React, DBMS/SQL, or DSA first! We have perfect modular courses for all these skills in the Skills Hub tab."
     },
     {
       "keys": [
@@ -4912,6 +6778,49 @@ const data = {
         "apna college"
       ],
       "response": "Apna College's JavaScript Full Course is an excellent 14-lesson tutorial covering JS variables, operators, loops, arrays, functions, DOM, events, classes, callbacks, promises, and Fetch API with mini-projects!"
+    },
+    {
+      "keys": [
+        "react",
+        "react.js",
+        "framework",
+        "component"
+      ],
+      "response": "CodeWithHarry's React JS Mastery Course is a 78-lesson tutorial covering React components, props, state, hooks (useState, useEffect), custom routing, building a news application project, and React deployment!"
+    },
+    {
+      "keys": [
+        "dbms",
+        "sql",
+        "database",
+        "query",
+        "normalization",
+        "acid"
+      ],
+      "response": "Gate Smashers' DBMS & SQL course is a complete 100-lecture series covering ER diagrams, database normalization, relational algebra, SQL query optimization, transactions, locking, and ACID properties!"
+    },
+    {
+      "keys": [
+        "dsa",
+        "data structures",
+        "algorithms",
+        "stacks",
+        "queues",
+        "sorting",
+        "graphs"
+      ],
+      "response": "Gate Smashers' Data Structures & Algorithms (DSA) course covers time complexity analysis, arrays, stacks, queues, linked lists, binary trees, AVL trees, heap structures, sorting/search algorithms, and graph theory!"
+    },
+    {
+      "keys": [
+        "machine learning",
+        "ml",
+        "artificial intelligence",
+        "ai",
+        "regression",
+        "codebasics"
+      ],
+      "response": "Codebasics' Machine Learning with Python course is a hands-on 42-lesson course covering linear regression, decision trees, random forests, SVM, K-Means clustering, neural networks, and model deployment!"
     },
     {
       "keys": [
