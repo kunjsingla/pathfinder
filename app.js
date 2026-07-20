@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const appData = window.appData;
 
   // --- DOM ELEMENTS ---
-  const navItems = document.querySelectorAll('.nav-item');
+  const navItems = document.querySelectorAll('.nav-item[data-tab]');
   const viewPanels = document.querySelectorAll('.view-panel');
   const xpBadge = document.getElementById('user-xp-val');
   const logo = document.getElementById('navbar-logo');
@@ -703,7 +703,9 @@ document.addEventListener('DOMContentLoaded', () => {
     navItems.forEach(item => {
       item.addEventListener('click', () => {
         const tab = item.getAttribute('data-tab');
-        switchTab(tab);
+        if (tab) {
+          switchTab(tab);
+        }
       });
     });
 
@@ -726,6 +728,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function switchTab(tabId) {
+    if (!tabId) return;
     state.currentTab = tabId;
 
     navItems.forEach(item => {
@@ -751,6 +754,8 @@ document.addEventListener('DOMContentLoaded', () => {
       renderSkillsHub();
     } else if (tabId === 'explorer') {
       renderCareers();
+    } else if (tabId === 'community') {
+      renderCommunity();
     }
   }
 
