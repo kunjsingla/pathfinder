@@ -2246,6 +2246,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- COMMUNITY NETWORK & PROFILE SHOWCASE ENGINE ---
   let communitySearchQuery = '';
   let communityCategoryFilter = 'all';
+  let firebaseProfilesMap = {};
+  let firebaseUsersMap = {};
 
   let customUserProjects = JSON.parse(localStorage.getItem('pathfinder_user_projects') || '[]');
   let userProfileData = JSON.parse(localStorage.getItem('pathfinder_user_profile') || 'null') || {
@@ -2284,6 +2286,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    // Subscribe to Firebase Firestore real-time profile & user collections
+    if (useFirebase && db) {
+      db.collection('profiles').onSnapshot(snapshot => {
+        snapshot.forEach(doc => {
+          firebaseProfilesMap[doc.id] = doc.data();
+        });
+        renderCommunity();
+      }, err => {
+        console.error("Firebase Profiles fetch error:", err);
+      });
+
+      db.collection('users').onSnapshot(snapshot => {
+        snapshot.forEach(doc => {
+          firebaseUsersMap[doc.id] = doc.data();
+        });
+        renderCommunity();
+      }, err => {
+        console.error("Firebase Users fetch error:", err);
+      });
+    }
+
     renderCommunity();
   }
 
@@ -2293,21 +2316,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const isHindi = (state.language === 'hi');
     const currentUserEmail = activeEmail || 'guest@example.com';
-    const currentUserName = (usersDb[currentUserEmail] && usersDb[currentUserEmail].name) || 'Kunj Singla';
+    const currentUserName = (usersDb[currentUserEmail] && usersDb[currentUserEmail].name) || (firebaseUsersMap[currentUserEmail] && firebaseUsersMap[currentUserEmail].name) || 'Kunj Singla';
 
-    // Retrieve all real community profiles from localStorage
+    let mergedProfilesMap = {};
+
+    // 1. Merge Local Storage profiles
     let storedProfilesMap = JSON.parse(localStorage.getItem('pathfinder_community_profiles') || '{}');
-    let allProfiles = [];
-
     Object.values(storedProfilesMap).forEach(p => {
       if (p && p.isPublic !== false) {
-        allProfiles.push(p);
+        mergedProfilesMap[p.id || p.email] = p;
       }
     });
 
-    // If active user's profile is public and not yet in stored profiles, include it dynamically
-    const hasSelfInStored = allProfiles.some(p => p.id === currentUserEmail);
-    if (!hasSelfInStored && userProfileData && userProfileData.isPublic !== false) {
+    // 2. Merge Firebase Registered Users (creates standard profile card for registered users)
+    Object.keys(firebaseUsersMap).forEach(email => {
+      const uData = firebaseUsersMap[email];
+      if (!mergedProfilesMap[email]) {
+        mergedProfilesMap[email] = {
+          id: email,
+          name: uData.name || 'Student Explorer',
+          title: 'Student & Career Explorer',
+          category: 'tech',
+          bio: 'Learning new skills and exploring career roadmaps on Pathfinder.',
+          skills: ['Web Dev', 'Python', 'HTML/CSS'],
+          github: '',
+          linkedin: '',
+          isPublic: true,
+          likes: 0,
+          dislikes: 0,
+          projects: []
+        };
+      } else if (uData.name) {
+        mergedProfilesMap[email].name = uData.name;
+      }
+    });
+
+    // 3. Merge Firebase Detailed Profiles (highest priority)
+    Object.keys(firebaseProfilesMap).forEach(email => {
+      const pData = firebaseProfilesMap[email];
+      if (pData && pData.isPublic !== false) {
+        mergedProfilesMap[email] = {
+          ...mergedProfilesMap[email],
+          ...pData,
+          id: email
+        };
+      }
+    });
+
+    let allProfiles = Object.values(mergedProfilesMap);
+
+    // If active user is not yet in merged profiles and is public, include self card
+    const hasSelfInMerged = allProfiles.some(p => p.id === currentUserEmail || p.email === currentUserEmail);
+    if (!hasSelfInMerged && userProfileData && userProfileData.isPublic !== false) {
       const skillsArray = typeof userProfileData.skills === 'string'
         ? userProfileData.skills.split(',').map(s => s.trim()).filter(Boolean)
         : (userProfileData.skills || []);
@@ -2331,7 +2391,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mark self card
     allProfiles.forEach(p => {
-      if (p.id === currentUserEmail) {
+      if (p.id === currentUserEmail || p.email === currentUserEmail) {
         p.isSelf = true;
       }
     });
@@ -2363,7 +2423,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let cardsHtml = '';
     filtered.forEach(p => {
-      const initials = p.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+      const initials = p.name ? p.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() : 'PS';
       const userVote = communityVotes[p.id] || null;
 
       let likeCount = p.likes || 0;
@@ -2589,7 +2649,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('pathfinder_user_projects', JSON.stringify(customUserProjects));
 
     const currentUserEmail = activeEmail || 'guest@example.com';
-    const currentUserName = (usersDb[currentUserEmail] && usersDb[currentUserEmail].name) || 'Kunj Singla';
+    const currentUserName = (usersDb[currentUserEmail] && usersDb[currentUserEmail].name) || (firebaseUsersMap[currentUserEmail] && firebaseUsersMap[currentUserEmail].name) || 'Kunj Singla';
     const skillsArray = typeof userProfileData.skills === 'string'
       ? userProfileData.skills.split(',').map(s => s.trim()).filter(Boolean)
       : (userProfileData.skills || []);
@@ -2610,8 +2670,29 @@ document.addEventListener('DOMContentLoaded', () => {
         dislikes: userProfileData.dislikes || 0,
         projects: customUserProjects
       };
+
+      if (useFirebase && db) {
+        db.collection('profiles').doc(currentUserEmail).set({
+          id: currentUserEmail,
+          email: currentUserEmail,
+          name: currentUserName,
+          title: userProfileData.title,
+          category: userProfileData.category,
+          bio: userProfileData.bio,
+          skills: skillsArray,
+          github: userProfileData.github,
+          linkedin: userProfileData.linkedin,
+          isPublic: true,
+          likes: userProfileData.likes || 0,
+          dislikes: userProfileData.dislikes || 0,
+          projects: customUserProjects
+        }).catch(err => console.error("Error saving profile to Firebase:", err));
+      }
     } else {
       delete storedProfilesMap[currentUserEmail];
+      if (useFirebase && db) {
+        db.collection('profiles').doc(currentUserEmail).delete().catch(err => console.error("Error deleting profile from Firebase:", err));
+      }
     }
     localStorage.setItem('pathfinder_community_profiles', JSON.stringify(storedProfilesMap));
 
