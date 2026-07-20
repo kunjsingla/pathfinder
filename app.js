@@ -2249,113 +2249,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let customUserProjects = JSON.parse(localStorage.getItem('pathfinder_user_projects') || '[]');
   let userProfileData = JSON.parse(localStorage.getItem('pathfinder_user_profile') || 'null') || {
-    title: "Software Engineer & Learner",
+    title: "Full Stack Web Developer & Learner",
     category: "tech",
-    bio: "Exploring career pathways and mastering modern web development & programming concepts.",
-    skills: "JavaScript, HTML, CSS, Git",
-    github: "",
+    bio: "Building innovative web applications and mastering modern web technologies on Pathfinder.",
+    skills: "JavaScript, HTML5, CSS3, Python, Git",
+    github: "https://github.com/kunjsingla",
     linkedin: "",
     isPublic: true,
-    likes: 5,
+    likes: 0,
     dislikes: 0
   };
 
   let communityVotes = JSON.parse(localStorage.getItem('pathfinder_community_votes') || '{}');
-
-  const sampleCommunityProfiles = [
-    {
-      id: "comp_1",
-      name: "Rohan Sharma",
-      title: "Full Stack Web Developer & AI Enthusiast",
-      category: "tech",
-      bio: "Passionate CS undergrad building modern React web apps and exploring Python machine learning pipelines. Open to collaboration on open-source projects!",
-      skills: ["React.js", "Node.js", "Python", "Tailwind CSS", "MongoDB"],
-      github: "https://github.com/rohansharma",
-      linkedin: "https://linkedin.com",
-      likes: 24,
-      dislikes: 1,
-      projects: [
-        { title: "DevFlow - Developer Community Q&A", desc: "A full-stack Q&A platform built with Next.js & Server Actions.", link: "https://github.com" },
-        { title: "AI Image Synthesizer", desc: "Python app converting text prompts into neural art using PyTorch.", link: "https://github.com" }
-      ]
-    },
-    {
-      id: "comp_2",
-      name: "Ananya Verma",
-      title: "UI/UX Product Designer & Visual Artist",
-      category: "creative",
-      bio: "Crafting intuitive digital experiences and minimalist mobile interface designs. Passionate about user research and color typography balance.",
-      skills: ["Figma", "UI/UX Design", "Wireframing", "Prototyping", "Adobe XD"],
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      likes: 38,
-      dislikes: 0,
-      projects: [
-        { title: "FinTech Mobile Banking Redesign", desc: "Redesigned digital wallet app focused on Gen-Z financial literacy.", link: "https://figma.com" },
-        { title: "EcoTrack - Sustainability App Design", desc: "Interactive mobile wireframe for tracking carbon footprint.", link: "https://figma.com" }
-      ]
-    },
-    {
-      id: "comp_3",
-      name: "Priya Patel",
-      title: "Data Scientist & Biotech Researcher",
-      category: "science",
-      bio: "Analyzing complex biological datasets and genomic sequences using Python and R. Exploring data visualization in medical research.",
-      skills: ["Python", "Data Analysis", "R", "SQL", "Machine Learning"],
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      likes: 19,
-      dislikes: 0,
-      projects: [
-        { title: "Genomic Sequence Alignment Toolkit", desc: "Python script suite for fast DNA pattern matching.", link: "https://github.com" }
-      ]
-    },
-    {
-      id: "comp_4",
-      name: "Vikram Singh",
-      title: "Growth Hacker & Digital Product Strategist",
-      category: "business",
-      bio: "Helping early-stage startups build scalable go-to-market strategies, manage SEO optimization, and execute targeted Google & Meta campaigns.",
-      skills: ["Digital Marketing", "SEO", "Google Analytics", "Content Strategy"],
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      likes: 15,
-      dislikes: 2,
-      projects: [
-        { title: "SaaS Launch Strategy Blueprint", desc: "Comprehensive case study on reaching 10k MRR in 6 months.", link: "https://linkedin.com" }
-      ]
-    },
-    {
-      id: "comp_5",
-      name: "Aarav Gupta",
-      title: "Cybersecurity Analyst & Ethical Hacker",
-      category: "tech",
-      bio: "Focusing on network security audits, vulnerability assessment, and Linux systems hardening. CTF participant.",
-      skills: ["Network Security", "Linux", "Ethical Hacking", "Python", "Wireshark"],
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      likes: 31,
-      dislikes: 1,
-      projects: [
-        { title: "Network Packet Analyzer Tool", desc: "Lightweight CLI packet inspector written in Python.", link: "https://github.com" }
-      ]
-    },
-    {
-      id: "comp_6",
-      name: "Sneha Reddy",
-      title: "3D Animator & Motion Graphics Designer",
-      category: "creative",
-      bio: "Creating 3D character animations, Blender assets, and visual FX for gaming and video marketing media.",
-      skills: ["Blender", "3D Animation", "After Effects", "Premiere Pro"],
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      likes: 27,
-      dislikes: 0,
-      projects: [
-        { title: "Sci-Fi Cyberpunk Alley 3D Render", desc: "High-detail 3D environment modeled and lit in Blender 4.0.", link: "https://artstation.com" }
-      ]
-    }
-  ];
 
   function setupCommunity() {
     const searchInput = document.getElementById('community-search-input');
@@ -2386,46 +2291,73 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('community-grid-container');
     if (!container) return;
 
-    let allProfiles = [...sampleCommunityProfiles];
-
     const isHindi = (state.language === 'hi');
     const currentUserEmail = activeEmail || 'guest@example.com';
-    const currentUserName = (usersDb[currentUserEmail] && usersDb[currentUserEmail].name) || 'Guest Student';
+    const currentUserName = (usersDb[currentUserEmail] && usersDb[currentUserEmail].name) || 'Kunj Singla';
 
-    if (userProfileData && userProfileData.isPublic !== false) {
+    // Retrieve all real community profiles from localStorage
+    let storedProfilesMap = JSON.parse(localStorage.getItem('pathfinder_community_profiles') || '{}');
+    let allProfiles = [];
+
+    Object.values(storedProfilesMap).forEach(p => {
+      if (p && p.isPublic !== false) {
+        allProfiles.push(p);
+      }
+    });
+
+    // If active user's profile is public and not yet in stored profiles, include it dynamically
+    const hasSelfInStored = allProfiles.some(p => p.id === currentUserEmail);
+    if (!hasSelfInStored && userProfileData && userProfileData.isPublic !== false) {
       const skillsArray = typeof userProfileData.skills === 'string'
         ? userProfileData.skills.split(',').map(s => s.trim()).filter(Boolean)
         : (userProfileData.skills || []);
 
       const userCardObj = {
-        id: "user_self_card",
+        id: currentUserEmail,
         name: currentUserName,
-        title: userProfileData.title || "Student Explorer",
+        title: userProfileData.title || "Full Stack Web Developer & Learner",
         category: userProfileData.category || "tech",
-        bio: userProfileData.bio || "Building my learning portfolio on Pathfinder.",
-        skills: skillsArray.length > 0 ? skillsArray : ["HTML", "JavaScript", "Python"],
-        github: userProfileData.github || "",
+        bio: userProfileData.bio || "Building innovative web applications and mastering modern web technologies.",
+        skills: skillsArray.length > 0 ? skillsArray : ["JavaScript", "HTML5", "CSS3", "Python"],
+        github: userProfileData.github || "https://github.com/kunjsingla",
         linkedin: userProfileData.linkedin || "",
-        likes: userProfileData.likes || 12,
+        likes: userProfileData.likes || 0,
         dislikes: userProfileData.dislikes || 0,
         projects: customUserProjects,
         isSelf: true
       };
-
       allProfiles.unshift(userCardObj);
     }
 
+    // Mark self card
+    allProfiles.forEach(p => {
+      if (p.id === currentUserEmail) {
+        p.isSelf = true;
+      }
+    });
+
+    // Filter profiles
     const filtered = allProfiles.filter(p => {
+      const pSkills = Array.isArray(p.skills) ? p.skills : (typeof p.skills === 'string' ? p.skills.split(',').map(s=>s.trim()) : []);
       const matchesSearch = p.name.toLowerCase().includes(communitySearchQuery) ||
         p.title.toLowerCase().includes(communitySearchQuery) ||
-        p.skills.some(sk => sk.toLowerCase().includes(communitySearchQuery));
+        p.bio.toLowerCase().includes(communitySearchQuery) ||
+        pSkills.some(sk => sk.toLowerCase().includes(communitySearchQuery));
       const matchesCat = (communityCategoryFilter === 'all' || p.category === communityCategoryFilter);
       return matchesSearch && matchesCat;
     });
 
     if (filtered.length === 0) {
-      const noMatchMsg = isHindi ? "कोई भी प्रोफ़ाइल आपकी खोज से मेल नहीं खाती है।" : "No profiles match your search criteria.";
-      container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-secondary); padding: 3rem;">${noMatchMsg}</div>`;
+      const emptyTitle = isHindi ? "अभी तक कोई सार्वजनिक प्रोफ़ाइल नहीं है।" : "No public community profiles found.";
+      const emptySub = isHindi ? "ऊपर 'मेरी प्रोफ़ाइल और काम संपादित करें' पर क्लिक करके अपनी वास्तविक प्रोफ़ाइल प्रकाशित करने वाले पहले व्यक्ति बनें!" : "Be the first to publish your real profile and professional works by clicking 'Edit My Profile & Works' above!";
+
+      container.innerHTML = `
+        <div style="grid-column: 1/-1; text-align: center; color: var(--text-secondary); padding: 4rem 1rem; background: rgba(255,255,255,0.02); border: 1px dashed var(--border-color); border-radius: 12px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">👤</div>
+          <h3 style="color: #fff; margin-bottom: 0.5rem;">${emptyTitle}</h3>
+          <p style="max-width: 500px; margin: 0 auto 1.5rem auto; font-size: 0.9rem; color: var(--text-muted);">${emptySub}</p>
+        </div>
+      `;
       return;
     }
 
@@ -2434,18 +2366,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const initials = p.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
       const userVote = communityVotes[p.id] || null;
 
-      let likeCount = p.likes;
-      let dislikeCount = p.dislikes;
+      let likeCount = p.likes || 0;
+      let dislikeCount = p.dislikes || 0;
       if (userVote === 'like') likeCount += 1;
       if (userVote === 'dislike') dislikeCount += 1;
 
-      const skillsChips = p.skills.map(sk => `<span class="skill-chip">${escapeHtml(sk)}</span>`).join('');
+      const pSkills = Array.isArray(p.skills) ? p.skills : (typeof p.skills === 'string' ? p.skills.split(',').map(s=>s.trim()).filter(Boolean) : []);
+      const skillsChips = pSkills.map(sk => `<span class="skill-chip">${escapeHtml(sk)}</span>`).join('');
 
       let projectsHtml = '';
       if (p.projects && p.projects.length > 0) {
         projectsHtml += `<div class="community-projects-box">
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.35rem;">💼 ${isHindi ? 'विशेष कार्य' : 'Featured Works'}</div>`;
-        p.projects.slice(0, 2).forEach(proj => {
+        p.projects.slice(0, 3).forEach(proj => {
           projectsHtml += `
             <div class="community-project-chip">
               <span style="font-weight: 600; color: #fff; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 200px;">${escapeHtml(proj.title)}</span>
@@ -2641,19 +2574,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const publicCheckbox = document.getElementById('edit-profile-public');
 
     userProfileData = {
-      title: titleInput ? titleInput.value.trim() : "Student Explorer",
+      title: titleInput ? titleInput.value.trim() : "Full Stack Web Developer & Learner",
       category: catSelect ? catSelect.value : "tech",
       bio: bioInput ? bioInput.value.trim() : "",
       skills: skillsInput ? skillsInput.value.trim() : "",
       github: githubInput ? githubInput.value.trim() : "",
       linkedin: linkedinInput ? linkedinInput.value.trim() : "",
       isPublic: publicCheckbox ? publicCheckbox.checked : true,
-      likes: userProfileData.likes || 5,
+      likes: userProfileData.likes || 0,
       dislikes: userProfileData.dislikes || 0
     };
 
     localStorage.setItem('pathfinder_user_profile', JSON.stringify(userProfileData));
     localStorage.setItem('pathfinder_user_projects', JSON.stringify(customUserProjects));
+
+    const currentUserEmail = activeEmail || 'guest@example.com';
+    const currentUserName = (usersDb[currentUserEmail] && usersDb[currentUserEmail].name) || 'Kunj Singla';
+    const skillsArray = typeof userProfileData.skills === 'string'
+      ? userProfileData.skills.split(',').map(s => s.trim()).filter(Boolean)
+      : (userProfileData.skills || []);
+
+    let storedProfilesMap = JSON.parse(localStorage.getItem('pathfinder_community_profiles') || '{}');
+    if (userProfileData.isPublic) {
+      storedProfilesMap[currentUserEmail] = {
+        id: currentUserEmail,
+        name: currentUserName,
+        title: userProfileData.title,
+        category: userProfileData.category,
+        bio: userProfileData.bio,
+        skills: skillsArray,
+        github: userProfileData.github,
+        linkedin: userProfileData.linkedin,
+        isPublic: true,
+        likes: userProfileData.likes || 0,
+        dislikes: userProfileData.dislikes || 0,
+        projects: customUserProjects
+      };
+    } else {
+      delete storedProfilesMap[currentUserEmail];
+    }
+    localStorage.setItem('pathfinder_community_profiles', JSON.stringify(storedProfilesMap));
 
     state.userXP += 30;
     saveState();
