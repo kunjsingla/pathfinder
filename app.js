@@ -199,7 +199,23 @@ document.addEventListener('DOMContentLoaded', () => {
       prompt_coding: '"How do I start in coding?"',
       prompt_ux: '"What are the skills for UX design?"',
       prompt_ai: '"Tell me about AI careers"',
-      prompt_salary: '"What salaries do tech roles pay?"'
+      prompt_salary: '"What salaries do tech roles pay?"',
+
+      nav_community: "Community",
+      community_title: "Student & Professional Network",
+      community_desc: "Connect with fellow learners, explore creative & technical works, and share your professional portfolio.",
+      community_edit_btn: "Edit My Profile & Works",
+      community_search_placeholder: "Search profiles, skills, or titles...",
+      
+      editor_modal_title: "Edit Profile & Works Portfolio",
+      editor_modal_subtitle: "Customize your public card, showcase your professional projects, and share your skills with the community.",
+      editor_title_lbl: "Target Career / Professional Title",
+      editor_category_lbl: "Primary Domain",
+      editor_bio_lbl: "Short Bio / Tagline",
+      editor_skills_lbl: "Key Skills (Comma Separated)",
+      editor_works_heading: "💼 Professional Works & Projects",
+      editor_public_lbl: "Publish Profile to Community Showcase",
+      editor_save_btn: "Save Profile & Publish Changes"
     },
     hi: {
       nav_home: "होम (Home)",
@@ -265,7 +281,23 @@ document.addEventListener('DOMContentLoaded', () => {
       prompt_coding: '"मैं कोडिंग में शुरुआत कैसे करूं?"',
       prompt_ux: '"UX डिज़ाइन के लिए क्या कौशल चाहिए?"',
       prompt_ai: '"AI करियर के बारे में बताएं"',
-      prompt_salary: '"टेक नौकरियों में कितना वेतन मिलता है?"'
+      prompt_salary: '"टेक नौकरियों में कितना वेतन मिलता है?"',
+
+      nav_community: "सामुदायिक नेटवर्क",
+      community_title: "छात्र और पेशेवर नेटवर्क",
+      community_desc: "साथी शिक्षार्थियों से जुड़ें, रचनात्मक और तकनीकी कार्यों का पता लगाएं, और अपना पेशेवर पोर्टफोलियो साझा करें।",
+      community_edit_btn: "मेरी प्रोफ़ाइल और काम संपादित करें",
+      community_search_placeholder: "प्रोफ़ाइल, कौशल या शीर्षक खोजें...",
+      
+      editor_modal_title: "प्रोफ़ाइल और कार्य पोर्टफोलियो संपादित करें",
+      editor_modal_subtitle: "अपने सार्वजनिक कार्ड को अनुकूलित करें, अपनी पेशेवर परियोजनाओं का प्रदर्शन करें, और समुदाय के साथ अपने कौशल साझा करें।",
+      editor_title_lbl: "लक्ष्य करियर / व्यावसायिक शीर्षक",
+      editor_category_lbl: "प्राथमिक क्षेत्र",
+      editor_bio_lbl: "संक्षिप्त बायो / टैगलाइन",
+      editor_skills_lbl: "मुख्य कौशल (कॉमा द्वारा अलग)",
+      editor_works_heading: "💼 व्यावसायिक कार्य और परियोजनाएं",
+      editor_public_lbl: "सामुदायिक शोकेस में प्रोफ़ाइल प्रकाशित करें",
+      editor_save_btn: "प्रोफ़ाइल सहेजें और परिवर्तन प्रकाशित करें"
     }
   };
 
@@ -595,6 +627,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof renderCareers === 'function') renderCareers();
     if (typeof renderSkillsHub === 'function') renderSkillsHub();
     if (typeof setupPortfolio === 'function') setupPortfolio();
+    if (typeof renderCommunity === 'function') renderCommunity();
     
     const quizQuestionText = document.querySelector('.quiz-question-text');
     if (quizQuestionText && typeof showQuizQuestion === 'function') {
@@ -614,6 +647,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setupAIAdvisor();
     setupPortfolio();
     setupFeedback();
+    setupCommunity();
+    setupProfileEditor();
 
     // Initialize local/cloud toggles
     const signinLocalToggle = document.getElementById('signin-local-toggle');
@@ -2201,6 +2236,428 @@ document.addEventListener('DOMContentLoaded', () => {
     const div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
+  }
+
+  // --- COMMUNITY NETWORK & PROFILE SHOWCASE ENGINE ---
+  let communitySearchQuery = '';
+  let communityCategoryFilter = 'all';
+
+  let customUserProjects = JSON.parse(localStorage.getItem('pathfinder_user_projects') || '[]');
+  let userProfileData = JSON.parse(localStorage.getItem('pathfinder_user_profile') || 'null') || {
+    title: "Software Engineer & Learner",
+    category: "tech",
+    bio: "Exploring career pathways and mastering modern web development & programming concepts.",
+    skills: "JavaScript, HTML, CSS, Git",
+    github: "",
+    linkedin: "",
+    isPublic: true,
+    likes: 5,
+    dislikes: 0
+  };
+
+  let communityVotes = JSON.parse(localStorage.getItem('pathfinder_community_votes') || '{}');
+
+  const sampleCommunityProfiles = [
+    {
+      id: "comp_1",
+      name: "Rohan Sharma",
+      title: "Full Stack Web Developer & AI Enthusiast",
+      category: "tech",
+      bio: "Passionate CS undergrad building modern React web apps and exploring Python machine learning pipelines. Open to collaboration on open-source projects!",
+      skills: ["React.js", "Node.js", "Python", "Tailwind CSS", "MongoDB"],
+      github: "https://github.com/rohansharma",
+      linkedin: "https://linkedin.com",
+      likes: 24,
+      dislikes: 1,
+      projects: [
+        { title: "DevFlow - Developer Community Q&A", desc: "A full-stack Q&A platform built with Next.js & Server Actions.", link: "https://github.com" },
+        { title: "AI Image Synthesizer", desc: "Python app converting text prompts into neural art using PyTorch.", link: "https://github.com" }
+      ]
+    },
+    {
+      id: "comp_2",
+      name: "Ananya Verma",
+      title: "UI/UX Product Designer & Visual Artist",
+      category: "creative",
+      bio: "Crafting intuitive digital experiences and minimalist mobile interface designs. Passionate about user research and color typography balance.",
+      skills: ["Figma", "UI/UX Design", "Wireframing", "Prototyping", "Adobe XD"],
+      github: "https://github.com",
+      linkedin: "https://linkedin.com",
+      likes: 38,
+      dislikes: 0,
+      projects: [
+        { title: "FinTech Mobile Banking Redesign", desc: "Redesigned digital wallet app focused on Gen-Z financial literacy.", link: "https://figma.com" },
+        { title: "EcoTrack - Sustainability App Design", desc: "Interactive mobile wireframe for tracking carbon footprint.", link: "https://figma.com" }
+      ]
+    },
+    {
+      id: "comp_3",
+      name: "Priya Patel",
+      title: "Data Scientist & Biotech Researcher",
+      category: "science",
+      bio: "Analyzing complex biological datasets and genomic sequences using Python and R. Exploring data visualization in medical research.",
+      skills: ["Python", "Data Analysis", "R", "SQL", "Machine Learning"],
+      github: "https://github.com",
+      linkedin: "https://linkedin.com",
+      likes: 19,
+      dislikes: 0,
+      projects: [
+        { title: "Genomic Sequence Alignment Toolkit", desc: "Python script suite for fast DNA pattern matching.", link: "https://github.com" }
+      ]
+    },
+    {
+      id: "comp_4",
+      name: "Vikram Singh",
+      title: "Growth Hacker & Digital Product Strategist",
+      category: "business",
+      bio: "Helping early-stage startups build scalable go-to-market strategies, manage SEO optimization, and execute targeted Google & Meta campaigns.",
+      skills: ["Digital Marketing", "SEO", "Google Analytics", "Content Strategy"],
+      github: "https://github.com",
+      linkedin: "https://linkedin.com",
+      likes: 15,
+      dislikes: 2,
+      projects: [
+        { title: "SaaS Launch Strategy Blueprint", desc: "Comprehensive case study on reaching 10k MRR in 6 months.", link: "https://linkedin.com" }
+      ]
+    },
+    {
+      id: "comp_5",
+      name: "Aarav Gupta",
+      title: "Cybersecurity Analyst & Ethical Hacker",
+      category: "tech",
+      bio: "Focusing on network security audits, vulnerability assessment, and Linux systems hardening. CTF participant.",
+      skills: ["Network Security", "Linux", "Ethical Hacking", "Python", "Wireshark"],
+      github: "https://github.com",
+      linkedin: "https://linkedin.com",
+      likes: 31,
+      dislikes: 1,
+      projects: [
+        { title: "Network Packet Analyzer Tool", desc: "Lightweight CLI packet inspector written in Python.", link: "https://github.com" }
+      ]
+    },
+    {
+      id: "comp_6",
+      name: "Sneha Reddy",
+      title: "3D Animator & Motion Graphics Designer",
+      category: "creative",
+      bio: "Creating 3D character animations, Blender assets, and visual FX for gaming and video marketing media.",
+      skills: ["Blender", "3D Animation", "After Effects", "Premiere Pro"],
+      github: "https://github.com",
+      linkedin: "https://linkedin.com",
+      likes: 27,
+      dislikes: 0,
+      projects: [
+        { title: "Sci-Fi Cyberpunk Alley 3D Render", desc: "High-detail 3D environment modeled and lit in Blender 4.0.", link: "https://artstation.com" }
+      ]
+    }
+  ];
+
+  function setupCommunity() {
+    const searchInput = document.getElementById('community-search-input');
+    const filterBtns = document.querySelectorAll('#community-category-filters .filter-btn');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        communitySearchQuery = e.target.value.toLowerCase().trim();
+        renderCommunity();
+      });
+    }
+
+    if (filterBtns.length > 0) {
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          communityCategoryFilter = btn.getAttribute('data-category');
+          renderCommunity();
+        });
+      });
+    }
+
+    renderCommunity();
+  }
+
+  function renderCommunity() {
+    const container = document.getElementById('community-grid-container');
+    if (!container) return;
+
+    let allProfiles = [...sampleCommunityProfiles];
+
+    const isHindi = (state.language === 'hi');
+    const currentUserEmail = activeEmail || 'guest@example.com';
+    const currentUserName = (usersDb[currentUserEmail] && usersDb[currentUserEmail].name) || 'Guest Student';
+
+    if (userProfileData && userProfileData.isPublic !== false) {
+      const skillsArray = typeof userProfileData.skills === 'string'
+        ? userProfileData.skills.split(',').map(s => s.trim()).filter(Boolean)
+        : (userProfileData.skills || []);
+
+      const userCardObj = {
+        id: "user_self_card",
+        name: currentUserName,
+        title: userProfileData.title || "Student Explorer",
+        category: userProfileData.category || "tech",
+        bio: userProfileData.bio || "Building my learning portfolio on Pathfinder.",
+        skills: skillsArray.length > 0 ? skillsArray : ["HTML", "JavaScript", "Python"],
+        github: userProfileData.github || "",
+        linkedin: userProfileData.linkedin || "",
+        likes: userProfileData.likes || 12,
+        dislikes: userProfileData.dislikes || 0,
+        projects: customUserProjects,
+        isSelf: true
+      };
+
+      allProfiles.unshift(userCardObj);
+    }
+
+    const filtered = allProfiles.filter(p => {
+      const matchesSearch = p.name.toLowerCase().includes(communitySearchQuery) ||
+        p.title.toLowerCase().includes(communitySearchQuery) ||
+        p.skills.some(sk => sk.toLowerCase().includes(communitySearchQuery));
+      const matchesCat = (communityCategoryFilter === 'all' || p.category === communityCategoryFilter);
+      return matchesSearch && matchesCat;
+    });
+
+    if (filtered.length === 0) {
+      const noMatchMsg = isHindi ? "कोई भी प्रोफ़ाइल आपकी खोज से मेल नहीं खाती है।" : "No profiles match your search criteria.";
+      container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-secondary); padding: 3rem;">${noMatchMsg}</div>`;
+      return;
+    }
+
+    let cardsHtml = '';
+    filtered.forEach(p => {
+      const initials = p.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+      const userVote = communityVotes[p.id] || null;
+
+      let likeCount = p.likes;
+      let dislikeCount = p.dislikes;
+      if (userVote === 'like') likeCount += 1;
+      if (userVote === 'dislike') dislikeCount += 1;
+
+      const skillsChips = p.skills.map(sk => `<span class="skill-chip">${escapeHtml(sk)}</span>`).join('');
+
+      let projectsHtml = '';
+      if (p.projects && p.projects.length > 0) {
+        projectsHtml += `<div class="community-projects-box">
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.35rem;">💼 ${isHindi ? 'विशेष कार्य' : 'Featured Works'}</div>`;
+        p.projects.slice(0, 2).forEach(proj => {
+          projectsHtml += `
+            <div class="community-project-chip">
+              <span style="font-weight: 600; color: #fff; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 200px;">${escapeHtml(proj.title)}</span>
+              ${proj.link ? `<a href="${proj.link}" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline; font-size: 0.75rem;">${isHindi ? 'देखें ↗' : 'View ↗'}</a>` : ''}
+            </div>
+          `;
+        });
+        projectsHtml += `</div>`;
+      }
+
+      cardsHtml += `
+        <div class="glass-card community-card" data-id="${p.id}">
+          <div>
+            <div class="community-card-header">
+              <div class="community-avatar-ring">${initials}</div>
+              <div class="community-user-info">
+                <h3 class="community-user-name">${escapeHtml(p.name)} ${p.isSelf ? '<span style="font-size: 0.7rem; background: var(--color-primary); padding: 0.15rem 0.4rem; border-radius: 4px; color: #fff; margin-left: 0.3rem;">YOU</span>' : ''}</h3>
+                <p class="community-user-role">${escapeHtml(p.title)}</p>
+              </div>
+            </div>
+            <p class="community-bio">${escapeHtml(p.bio)}</p>
+            <div class="community-skills-tags">
+              ${skillsChips}
+            </div>
+            ${projectsHtml}
+          </div>
+
+          <div class="community-card-footer">
+            <div class="vote-group">
+              <button class="vote-btn like-btn ${userVote === 'like' ? 'active-like' : ''}" data-id="${p.id}" data-type="like">
+                👍 <span>${likeCount}</span>
+              </button>
+              <button class="vote-btn dislike-btn ${userVote === 'dislike' ? 'active-dislike' : ''}" data-id="${p.id}" data-type="dislike">
+                👎 <span>${dislikeCount}</span>
+              </button>
+            </div>
+            ${(p.github || p.linkedin) ? `
+              <div style="display: flex; gap: 0.5rem;">
+                ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 0.35rem 0.6rem; font-size: 0.75rem;">GitHub</a>` : ''}
+                ${p.linkedin ? `<a href="${p.linkedin}" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 0.35rem 0.6rem; font-size: 0.75rem;">LinkedIn</a>` : ''}
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `;
+    });
+
+    container.innerHTML = cardsHtml;
+
+    container.querySelectorAll('.vote-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const profileId = btn.getAttribute('data-id');
+        const voteType = btn.getAttribute('data-type');
+        handleProfileVote(profileId, voteType);
+      });
+    });
+  }
+
+  function handleProfileVote(profileId, voteType) {
+    const currentVote = communityVotes[profileId] || null;
+    if (currentVote === voteType) {
+      delete communityVotes[profileId];
+    } else {
+      communityVotes[profileId] = voteType;
+    }
+    localStorage.setItem('pathfinder_community_votes', JSON.stringify(communityVotes));
+    renderCommunity();
+  }
+
+  // --- PROFILE & WORKS EDITOR ---
+  function setupProfileEditor() {
+    const openBtn = document.getElementById('open-profile-editor-btn');
+    const closeBtn = document.getElementById('profile-editor-close');
+    const modal = document.getElementById('profile-editor-modal');
+    const form = document.getElementById('profile-editor-form');
+    const addProjectBtn = document.getElementById('add-project-btn');
+
+    if (openBtn && modal) {
+      openBtn.addEventListener('click', () => {
+        populateProfileEditorFields();
+        modal.style.display = 'flex';
+      });
+    }
+
+    if (closeBtn && modal) {
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+    }
+
+    if (addProjectBtn) {
+      addProjectBtn.addEventListener('click', () => {
+        customUserProjects.push({
+          title: "New Project",
+          desc: "Brief project description...",
+          link: "https://"
+        });
+        renderEditorProjects();
+      });
+    }
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        saveUserProfile();
+      });
+    }
+  }
+
+  function populateProfileEditorFields() {
+    const titleInput = document.getElementById('edit-profile-title');
+    const catSelect = document.getElementById('edit-profile-category');
+    const bioInput = document.getElementById('edit-profile-bio');
+    const skillsInput = document.getElementById('edit-profile-skills');
+    const githubInput = document.getElementById('edit-profile-github');
+    const linkedinInput = document.getElementById('edit-profile-linkedin');
+    const publicCheckbox = document.getElementById('edit-profile-public');
+
+    if (titleInput) titleInput.value = userProfileData.title || '';
+    if (catSelect) catSelect.value = userProfileData.category || 'tech';
+    if (bioInput) bioInput.value = userProfileData.bio || '';
+    if (skillsInput) skillsInput.value = userProfileData.skills || '';
+    if (githubInput) githubInput.value = userProfileData.github || '';
+    if (linkedinInput) linkedinInput.value = userProfileData.linkedin || '';
+    if (publicCheckbox) publicCheckbox.checked = userProfileData.isPublic !== false;
+
+    renderEditorProjects();
+  }
+
+  function renderEditorProjects() {
+    const listContainer = document.getElementById('editor-projects-list');
+    if (!listContainer) return;
+
+    if (customUserProjects.length === 0) {
+      listContainer.innerHTML = `<div style="font-size: 0.85rem; color: var(--text-muted); padding: 0.5rem 0;">No projects added yet. Click "+ Add Project" above!</div>`;
+      return;
+    }
+
+    let html = '';
+    customUserProjects.forEach((proj, idx) => {
+      html += `
+        <div class="editor-project-card">
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" class="chat-input proj-title-input" data-idx="${idx}" value="${escapeHtml(proj.title)}" placeholder="Project Title" style="flex: 2; padding: 0.45rem; font-size: 0.85rem; border-radius: 6px;">
+            <input type="url" class="chat-input proj-link-input" data-idx="${idx}" value="${escapeHtml(proj.link || '')}" placeholder="https://..." style="flex: 1; padding: 0.45rem; font-size: 0.85rem; border-radius: 6px;">
+            <button type="button" class="remove-btn remove-proj-btn" data-idx="${idx}" style="padding: 0.45rem 0.7rem; font-size: 0.8rem;">✕</button>
+          </div>
+          <input type="text" class="chat-input proj-desc-input" data-idx="${idx}" value="${escapeHtml(proj.desc || '')}" placeholder="Short description..." style="width: 100%; padding: 0.45rem; font-size: 0.85rem; border-radius: 6px;">
+        </div>
+      `;
+    });
+
+    listContainer.innerHTML = html;
+
+    listContainer.querySelectorAll('.proj-title-input').forEach(inp => {
+      inp.addEventListener('input', (e) => {
+        const i = parseInt(inp.getAttribute('data-idx'));
+        customUserProjects[i].title = e.target.value;
+      });
+    });
+
+    listContainer.querySelectorAll('.proj-desc-input').forEach(inp => {
+      inp.addEventListener('input', (e) => {
+        const i = parseInt(inp.getAttribute('data-idx'));
+        customUserProjects[i].desc = e.target.value;
+      });
+    });
+
+    listContainer.querySelectorAll('.proj-link-input').forEach(inp => {
+      inp.addEventListener('input', (e) => {
+        const i = parseInt(inp.getAttribute('data-idx'));
+        customUserProjects[i].link = e.target.value;
+      });
+    });
+
+    listContainer.querySelectorAll('.remove-proj-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const i = parseInt(btn.getAttribute('data-idx'));
+        customUserProjects.splice(i, 1);
+        renderEditorProjects();
+      });
+    });
+  }
+
+  function saveUserProfile() {
+    const titleInput = document.getElementById('edit-profile-title');
+    const catSelect = document.getElementById('edit-profile-category');
+    const bioInput = document.getElementById('edit-profile-bio');
+    const skillsInput = document.getElementById('edit-profile-skills');
+    const githubInput = document.getElementById('edit-profile-github');
+    const linkedinInput = document.getElementById('edit-profile-linkedin');
+    const publicCheckbox = document.getElementById('edit-profile-public');
+
+    userProfileData = {
+      title: titleInput ? titleInput.value.trim() : "Student Explorer",
+      category: catSelect ? catSelect.value : "tech",
+      bio: bioInput ? bioInput.value.trim() : "",
+      skills: skillsInput ? skillsInput.value.trim() : "",
+      github: githubInput ? githubInput.value.trim() : "",
+      linkedin: linkedinInput ? linkedinInput.value.trim() : "",
+      isPublic: publicCheckbox ? publicCheckbox.checked : true,
+      likes: userProfileData.likes || 5,
+      dislikes: userProfileData.dislikes || 0
+    };
+
+    localStorage.setItem('pathfinder_user_profile', JSON.stringify(userProfileData));
+    localStorage.setItem('pathfinder_user_projects', JSON.stringify(customUserProjects));
+
+    state.userXP += 30;
+    saveState();
+
+    const modal = document.getElementById('profile-editor-modal');
+    if (modal) modal.style.display = 'none';
+
+    renderCommunity();
+    alert(state.language === 'hi' ? 'आपकी प्रोफ़ाइल और काम सफलतापूर्वक सहेजे गए!' : 'Your profile & works portfolio saved successfully!');
   }
 
   // --- KICKSTART ---

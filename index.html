@@ -33,6 +33,7 @@
           <li><a class="nav-item" data-tab="skills" id="nav-skills" data-translate="nav_skills">Skills Hub</a></li>
           <li><a class="nav-item" data-tab="advisor" id="nav-advisor" data-translate="nav_advisor">AI Advisor</a></li>
           <li><a class="nav-item" data-tab="portfolio" id="nav-portfolio" data-translate="nav_portfolio">My Portfolio</a></li>
+          <li><a class="nav-item" data-tab="community" id="nav-community" data-translate="nav_community">Community</a></li>
           <li><a class="nav-item" data-tab="feedback" id="nav-feedback" data-translate="nav_feedback">Reviews & Suggestions</a></li>
           <li style="position: relative;" id="nav-more-wrapper">
             <a class="nav-item" id="nav-more-btn" data-translate="nav_more" style="cursor: pointer;">More ▾</a>
@@ -283,6 +284,36 @@
         </div>
       </section>
 
+      <!-- 7. COMMUNITY NETWORK & PRO SHOWCASE VIEW -->
+      <section id="community-view" class="view-panel">
+        <div class="view-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+          <div>
+            <h1 class="gradient-text" data-translate="community_title">Student & Professional Network</h1>
+            <p data-translate="community_desc">Connect with fellow learners, explore creative & technical works, and share your professional portfolio.</p>
+          </div>
+          <button class="btn btn-primary" id="open-profile-editor-btn" style="padding: 0.65rem 1.25rem; font-size: 0.9rem;">
+            ✏️ <span data-translate="community_edit_btn">Edit My Profile & Works</span>
+          </button>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="explorer-controls" style="margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <input type="text" id="community-search-input" class="chat-input" placeholder="Search profiles or skills..." style="flex: 1; min-width: 240px; border-radius: 8px; padding: 0.65rem 1rem;" data-translate-placeholder="community_search_placeholder">
+          <div class="category-filters" id="community-category-filters" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="filter-btn active" data-category="all" data-translate="explorer_filter_all">All Categories</button>
+            <button class="filter-btn" data-category="tech" data-translate="explorer_filter_tech">Technology</button>
+            <button class="filter-btn" data-category="creative" data-translate="explorer_filter_creative">Creative & Design</button>
+            <button class="filter-btn" data-category="business" data-translate="explorer_filter_business">Business & Marketing</button>
+            <button class="filter-btn" data-category="science" data-translate="explorer_filter_science">Biotech & Science</button>
+          </div>
+        </div>
+
+        <!-- Community Grid Container -->
+        <div id="community-grid-container" class="explorer-grid">
+          <!-- Dynamically populated profiles -->
+        </div>
+      </section>
+
     </main>
   </div>
 
@@ -292,6 +323,74 @@
       <button class="modal-close-btn" id="modal-close" aria-label="Close modal">✕</button>
       <div class="modal-body" id="modal-body">
         <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile & Works Editor Modal -->
+  <div class="modal-overlay" id="profile-editor-modal">
+    <div class="modal-content" style="max-width: 680px; width: 92%;">
+      <button class="modal-close-btn" id="profile-editor-close">✕</button>
+      <div class="modal-body" style="padding-top: 0.5rem;">
+        <h2 class="modal-title" data-translate="editor_modal_title">Edit Profile & Works Portfolio</h2>
+        <div class="modal-subtitle" data-translate="editor_modal_subtitle">Customize your public card, showcase your professional projects, and share your skills with the community.</div>
+
+        <form id="profile-editor-form" onsubmit="return false;">
+          <div class="form-group-row" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+            <div class="form-group" style="flex: 2;">
+              <label for="edit-profile-title" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);" data-translate="editor_title_lbl">Target Career / Professional Title</label>
+              <input type="text" id="edit-profile-title" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="e.g. Software Engineer, UI/UX Designer" required>
+            </div>
+            <div class="form-group" style="flex: 1;">
+              <label for="edit-profile-category" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);" data-translate="editor_category_lbl">Primary Domain</label>
+              <select id="edit-profile-category" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem; background: #1a1a24; color: #fff;">
+                <option value="tech">Technology</option>
+                <option value="creative">Creative & Design</option>
+                <option value="business">Business & Marketing</option>
+                <option value="science">Biotech & Science</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="edit-profile-bio" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);" data-translate="editor_bio_lbl">Short Bio / Tagline</label>
+            <textarea id="edit-profile-bio" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem; min-height: 70px; resize: vertical;" placeholder="Tell the community about yourself and your passions..."></textarea>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="edit-profile-skills" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);" data-translate="editor_skills_lbl">Key Skills (Comma Separated)</label>
+            <input type="text" id="edit-profile-skills" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="e.g. Python, React, Figma, Data Analysis">
+          </div>
+
+          <div class="form-group-row" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <div class="form-group" style="flex: 1;">
+              <label for="edit-profile-github" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">GitHub / Portfolio Link</label>
+              <input type="url" id="edit-profile-github" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="https://github.com/username">
+            </div>
+            <div class="form-group" style="flex: 1;">
+              <label for="edit-profile-linkedin" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">LinkedIn / Social Link</label>
+              <input type="url" id="edit-profile-linkedin" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="https://linkedin.com/in/username">
+            </div>
+          </div>
+
+          <!-- Professional Works Section -->
+          <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1.5rem 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h4 style="margin: 0; font-size: 1rem; font-weight: 700; color: var(--color-primary);" data-translate="editor_works_heading">💼 Professional Works & Projects</h4>
+            <button type="button" class="btn btn-secondary" id="add-project-btn" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">+ Add Project</button>
+          </div>
+
+          <div id="editor-projects-list" style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem;">
+            <!-- Dynamically populated user project items -->
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.03); padding: 0.6rem 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+            <input type="checkbox" id="edit-profile-public" style="width: auto; cursor: pointer; transform: scale(1.15); margin: 0;" checked>
+            <label for="edit-profile-public" style="font-size: 0.8rem; color: var(--text-secondary); cursor: pointer; margin: 0;" data-translate="editor_public_lbl">Publish Profile to Community Showcase</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="save-profile-btn" style="width: 100%; padding: 0.75rem;" data-translate="editor_save_btn">Save Profile & Publish Changes</button>
+        </form>
       </div>
     </div>
   </div>
