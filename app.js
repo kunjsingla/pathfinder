@@ -269,8 +269,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  };
-
   const skillTranslations = {
     "Python for Beginners (100 Days of Code)": "शुरुआती लोगों के लिए पायथन (100 दिन का कोड)",
     "Java for Beginners (Java Full Course 2026)": "शुरुआती लोगों के लिए जावा (जावा फुल कोर्स 2026)",
