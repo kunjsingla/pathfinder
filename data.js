@@ -2023,7 +2023,7 @@ const data = {
     "category": "tech",
     "time": "100 Lessons (30 hours total)",
     "rating": "4.9",
-    "image": "\ud83d\udc0d",
+    "image": "🐍",
     "modules": [
       {
         "id": "py-1",
@@ -2733,7 +2733,7 @@ const data = {
     "category": "tech",
     "time": "57 Lessons (75 hours total)",
     "rating": "4.8",
-    "image": "\u2615",
+    "image": "☕",
     "modules": [
       {
         "id": "java-1",
@@ -3142,7 +3142,7 @@ const data = {
     "category": "tech",
     "time": "54 Lessons (14 hours total)",
     "rating": "4.8",
-    "image": "\ud83d\udc0d",
+    "image": "🐍",
     "modules": [
       {
         "id": "pyeng-1",
@@ -3530,7 +3530,7 @@ const data = {
     "category": "tech",
     "time": "61 Lessons (15 hours total)",
     "rating": "4.8",
-    "image": "\ud83d\udcbb",
+    "image": "💻",
     "modules": [
       {
         "id": "cpp-1",
@@ -3835,7 +3835,7 @@ const data = {
       },
       {
         "id": "cpp-44",
-        "title": "Lesson 44: Access\ud83d\udd12Specifiers in C++ OOP",
+        "title": "Lesson 44: Access🔒Specifiers in C++ OOP",
         "desc": "Video lesson 44 of the C++ Full Course by Gate Smashers. Master C++ loops, arrays, OOP, and constructors.",
         "checked": false,
         "videoId": "f6cbB42yf6c"
@@ -3849,7 +3849,7 @@ const data = {
       },
       {
         "id": "cpp-46",
-        "title": "Lesson 46: Constructors in OOPs \ud83d\ude4a C++ with Examples",
+        "title": "Lesson 46: Constructors in OOPs 🙊 C++ with Examples",
         "desc": "Video lesson 46 of the C++ Full Course by Gate Smashers. Master C++ loops, arrays, OOP, and constructors.",
         "checked": false,
         "videoId": "aD6uxHWec-E"
@@ -3947,7 +3947,7 @@ const data = {
       },
       {
         "id": "cpp-60",
-        "title": "Lesson 60: Use of \u201cfinal\u201d Keyword in C++ vs Java",
+        "title": "Lesson 60: Use of “final” Keyword in C++ vs Java",
         "desc": "Video lesson 60 of the C++ Full Course by Gate Smashers. Master C++ loops, arrays, OOP, and constructors.",
         "checked": false,
         "videoId": "cs8zXqEgIpg"
@@ -3967,7 +3967,7 @@ const data = {
     "category": "tech",
     "time": "7 Lessons (2.5 hours total)",
     "rating": "4.8",
-    "image": "\ud83d\udd0c",
+    "image": "🔌",
     "modules": [
       {
         "id": "arduino-1",
@@ -4026,11 +4026,11 @@ const data = {
     "category": "tech",
     "time": "14 Lessons (12 hours total)",
     "rating": "4.9",
-    "image": "\u26a1",
+    "image": "⚡",
     "modules": [
       {
         "id": "js-1",
-        "title": "JavaScript Full Course \u2764\ufe0f | Variables & Data Types | Lecture 1",
+        "title": "JavaScript Full Course ❤️ | Variables & Data Types | Lecture 1",
         "desc": "Lecture 1 of the JavaScript Full Course by Apna College. Learn JS variables, arrays, DOM, projects, and Async Await.",
         "checked": false,
         "videoId": "ajdRvxDWH4w"
@@ -4134,7 +4134,7 @@ const data = {
     "category": "tech",
     "time": "18 Lessons (23 hours total)",
     "rating": "4.9",
-    "image": "\ud83c\udf10",
+    "image": "🌐",
     "modules": [
       {
         "id": "webdev-1",
@@ -4166,7 +4166,7 @@ const data = {
       },
       {
         "id": "webdev-5",
-        "title": "Lesson 5: JavaScript Full Course \u2764\ufe0f | Variables & Data Types | Lecture 1",
+        "title": "Lesson 5: JavaScript Full Course ❤️ | Variables & Data Types | Lecture 1",
         "desc": "Milestone 5 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
         "videoId": "ajdRvxDWH4w"
@@ -4270,7 +4270,7 @@ const data = {
     "category": "tech",
     "time": "57 Lessons (40 hours total)",
     "rating": "4.9",
-    "image": "\ud83d\udcbb",
+    "image": "💻",
     "modules": [
       {
         "id": "delta-1",
@@ -4617,7 +4617,7 @@ const data = {
       },
       {
         "id": "delta-50",
-        "title": "Lesson 50: Exercise for array \ufffd Lecture 24 \ufffd Javascript",
+        "title": "Lesson 50: Exercise for array � Lecture 24 � Javascript",
         "desc": "Lecture 50 of the Delta Web Development Bootcamp by Apna College. Learn frontend HTML, CSS, Git, and full stack JS.",
         "checked": false,
         "videoId": "GXONlNAnmNU"
@@ -4679,7 +4679,7 @@ const data = {
     "category": "tech",
     "time": "78 Lessons (32 hours total)",
     "rating": "4.9",
-    "image": "\u269b\ufe0f",
+    "image": "⚛️",
     "modules": [
       {
         "id": "react-1",
@@ -5235,7 +5235,7 @@ const data = {
     "category": "tech",
     "time": "100 Lectures (20 hours total)",
     "rating": "4.8",
-    "image": "\ud83d\uddc4\ufe0f",
+    "image": "🗄️",
     "modules": [
       {
         "id": "dbms-1",
@@ -5330,7 +5330,7 @@ const data = {
       },
       {
         "id": "dbms-14",
-        "title": "Lecture 14: Foreign Key\ud83d\udd11 with On Delete Cascade with Execution",
+        "title": "Lecture 14: Foreign Key🔑 with On Delete Cascade with Execution",
         "desc": "Lecture 14 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
         "checked": false,
         "videoId": "Br2FInlVKcs"
@@ -5778,7 +5778,7 @@ const data = {
       },
       {
         "id": "dbms-78",
-        "title": "Lecture 78: How SQL Query executes?? Order of SQL Query Execution\u23f3\ud83d\udd04",
+        "title": "Lecture 78: How SQL Query executes?? Order of SQL Query Execution⏳🔄",
         "desc": "Lecture 78 of the DBMS Complete Course by Gate Smashers. Master relational algebra, SQL, normal forms, and transaction ACID properties.",
         "checked": false,
         "videoId": "wP2giPPgwqI"
@@ -5945,11 +5945,11 @@ const data = {
     "category": "tech",
     "time": "66 Lectures (16 hours total)",
     "rating": "4.9",
-    "image": "\ud83d\udcca",
+    "image": "📊",
     "modules": [
       {
         "id": "dsa-1",
-        "title": "Lecture 1: Roadmap \ud83d\udee3\ufe0f of DSA",
+        "title": "Lecture 1: Roadmap 🛣️ of DSA",
         "desc": "Lecture 1 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
         "checked": false,
         "videoId": "qNGyI95E5AE"
@@ -6005,14 +6005,14 @@ const data = {
       },
       {
         "id": "dsa-9",
-        "title": "Lecture 9: Find 2nd Largest2\ufe0f\u20e3 Number in Array",
+        "title": "Lecture 9: Find 2nd Largest2️⃣ Number in Array",
         "desc": "Lecture 9 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
         "checked": false,
         "videoId": "eIm9ODShmCI"
       },
       {
         "id": "dsa-10",
-        "title": "Lecture 10: Two 2\ufe0f\u20e3 Pointer\ud83d\udc46 Technique",
+        "title": "Lecture 10: Two 2️⃣ Pointer👆 Technique",
         "desc": "Lecture 10 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
         "checked": false,
         "videoId": "B2L4mAglJZA"
@@ -6026,7 +6026,7 @@ const data = {
       },
       {
         "id": "dsa-12",
-        "title": "Lecture 12: Sliding Window \ud83e\ude9f Technique",
+        "title": "Lecture 12: Sliding Window 🪟 Technique",
         "desc": "Lecture 12 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
         "checked": false,
         "videoId": "uqGxFk0cEdI"
@@ -6131,7 +6131,7 @@ const data = {
       },
       {
         "id": "dsa-27",
-        "title": "Lecture 27: Deleting Entire Linked List\ud83d\udd17",
+        "title": "Lecture 27: Deleting Entire Linked List🔗",
         "desc": "Lecture 27 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
         "checked": false,
         "videoId": "-AXzieE0umw"
@@ -6194,7 +6194,7 @@ const data = {
       },
       {
         "id": "dsa-36",
-        "title": "Lecture 36: Infix, Prefix & Postfix\ud83d\udc69\u200d\ud83d\udd27 with examples",
+        "title": "Lecture 36: Infix, Prefix & Postfix👩‍🔧 with examples",
         "desc": "Lecture 36 of the Data Structures Course by Gate Smashers. Master stacks, queues, trees, graphs, sorting, and search algorithms.",
         "checked": false,
         "videoId": "vtyuftvugXY"
@@ -6417,7 +6417,7 @@ const data = {
     "category": "tech",
     "time": "42 Lessons (14 hours total)",
     "rating": "4.8",
-    "image": "\ud83e\udd16",
+    "image": "🤖",
     "modules": [
       {
         "id": "ml-1",
@@ -6712,6 +6712,246 @@ const data = {
         "desc": "Lesson 42 of the Machine Learning Course by Codebasics. Master linear regression, decision trees, random forests, and Python models.",
         "checked": false,
         "videoId": "A3gClkblXK8"
+      }
+    ]
+  },
+  {
+    "id": "figma-ui-ux",
+    "title": "UI/UX Design & Figma Mastery",
+    "category": "creative",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.9",
+    "image": "🎨",
+    "modules": [
+      {
+        "id": "fig-1",
+        "title": "Lesson 1: Introduction to UI/UX Design & Design Thinking",
+        "desc": "Understand user experience principles, UI visual fundamentals, and the double-diamond design process.",
+        "checked": false,
+        "videoId": "c9Wg6Cb_YlU"
+      },
+      {
+        "id": "fig-2",
+        "title": "Lesson 2: Wireframing & Low-Fidelity Layouts in Figma",
+        "desc": "Learn how to sketch user flows and construct clear low-fidelity wireframes in Figma.",
+        "checked": false,
+        "videoId": "c9Wg6Cb_YlU"
+      },
+      {
+        "id": "fig-3",
+        "title": "Lesson 3: Master Auto-Layout, Constraints & Responsive Frames",
+        "desc": "Create fluid, responsive design layouts using Figma Auto-Layout 5.0 and alignment constraints.",
+        "checked": false,
+        "videoId": "c9Wg6Cb_YlU"
+      },
+      {
+        "id": "fig-4",
+        "title": "Lesson 4: Design Systems: Components, Variants & Typography",
+        "desc": "Build reusable UI component libraries, variant states, color styles, and typography scales.",
+        "checked": false,
+        "videoId": "c9Wg6Cb_YlU"
+      },
+      {
+        "id": "fig-5",
+        "title": "Lesson 5: Color Theory, Contrast Ratios & Visual Hierarchy",
+        "desc": "Master color harmony, WCAG accessibility contrast, and strong visual hierarchy in interface design.",
+        "checked": false,
+        "videoId": "c9Wg6Cb_YlU"
+      },
+      {
+        "id": "fig-6",
+        "title": "Lesson 6: Interactive Prototyping & Smooth Micro-Animations",
+        "desc": "Add smart animate transitions, interactive component states, and realistic screen prototyping.",
+        "checked": false,
+        "videoId": "c9Wg6Cb_YlU"
+      },
+      {
+        "id": "fig-7",
+        "title": "Lesson 7: Mobile App UI Design Masterclass",
+        "desc": "Design a complete iOS and Android mobile app interface from scratch with modern glassmorphism.",
+        "checked": false,
+        "videoId": "c9Wg6Cb_YlU"
+      },
+      {
+        "id": "fig-8",
+        "title": "Lesson 8: User Research, Personas & Usability Testing",
+        "desc": "Conduct target audience interviews, build empathy maps, and test interactive prototypes with users.",
+        "checked": false,
+        "videoId": "c9Wg6Cb_YlU"
+      },
+      {
+        "id": "fig-9",
+        "title": "Lesson 9: Handoff to Developers & Essential Figma Plugins",
+        "desc": "Prepare design tokens, inspect CSS specs, export assets, and boost productivity with top Figma plugins.",
+        "checked": false,
+        "videoId": "c9Wg6Cb_YlU"
+      },
+      {
+        "id": "fig-10",
+        "title": "Lesson 10: Building & Publishing Your UI/UX Design Portfolio",
+        "desc": "Structure case studies, document your design decisions, and publish a job-ready portfolio.",
+        "checked": false,
+        "videoId": "c9Wg6Cb_YlU"
+      }
+    ]
+  },
+  {
+    "id": "ai-prompt-engineering",
+    "title": "AI & Prompt Engineering Masterclass",
+    "category": "tech",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.9",
+    "image": "🤖",
+    "modules": [
+      {
+        "id": "ai-1",
+        "title": "Lesson 1: Fundamentals of Large Language Models (LLMs)",
+        "desc": "Explore how transformer architectures, tokenization, and neural networks power modern AI models like GPT-4.",
+        "checked": false,
+        "videoId": "jkrNwuXpC5M"
+      },
+      {
+        "id": "ai-2",
+        "title": "Lesson 2: Effective Prompt Writing & Zero-Shot/Few-Shot Prompting",
+        "desc": "Master systemic prompt structure, role-based prompting, context framing, and few-shot examples.",
+        "checked": false,
+        "videoId": "jkrNwuXpC5M"
+      },
+      {
+        "id": "ai-3",
+        "title": "Lesson 3: Advanced Prompting: Chain-of-Thought & Tree-of-Thought",
+        "desc": "Learn complex reasoning techniques, self-consistency prompting, and multi-step problem decomposition.",
+        "checked": false,
+        "videoId": "jkrNwuXpC5M"
+      },
+      {
+        "id": "ai-4",
+        "title": "Lesson 4: Building Custom AI Chatbots with OpenAI API",
+        "desc": "Use Python and JavaScript to make API calls, manage message history, and configure system personas.",
+        "checked": false,
+        "videoId": "jkrNwuXpC5M"
+      },
+      {
+        "id": "ai-5",
+        "title": "Lesson 5: Introduction to LangChain & Vector Databases (RAG)",
+        "desc": "Connect LLMs to external data sources using embeddings, Pinecone/ChromaDB vector stores, and RAG pipelines.",
+        "checked": false,
+        "videoId": "jkrNwuXpC5M"
+      },
+      {
+        "id": "ai-6",
+        "title": "Lesson 6: AI Image Generation: Midjourney & Stable Diffusion",
+        "desc": "Craft artistic prompts, control aspect ratios, manage negative prompts, and generate commercial visual assets.",
+        "checked": false,
+        "videoId": "jkrNwuXpC5M"
+      },
+      {
+        "id": "ai-7",
+        "title": "Lesson 7: Automating Workflows with AI Agents & Tools",
+        "desc": "Build autonomous agents using AutoGPT, CrewAI, and function calling to automate repetitive tasks.",
+        "checked": false,
+        "videoId": "jkrNwuXpC5M"
+      },
+      {
+        "id": "ai-8",
+        "title": "Lesson 8: Fine-Tuning Models & Domain Adaptation",
+        "desc": "Prepare custom datasets, fine-tune open-source models (Llama 3), and evaluate task accuracy.",
+        "checked": false,
+        "videoId": "jkrNwuXpC5M"
+      },
+      {
+        "id": "ai-9",
+        "title": "Lesson 9: AI Ethics, Bias, Safety & Guardrails",
+        "desc": "Understand hallucination mitigation, prompt injection defense, copyright considerations, and AI safety.",
+        "checked": false,
+        "videoId": "jkrNwuXpC5M"
+      },
+      {
+        "id": "ai-10",
+        "title": "Lesson 10: Building & Deploying Full AI Applications",
+        "desc": "Deploy full-stack AI web applications with Vercel, Streamlit, and modern cloud infrastructure.",
+        "checked": false,
+        "videoId": "jkrNwuXpC5M"
+      }
+    ]
+  },
+  {
+    "id": "digital-marketing-growth",
+    "title": "Digital Marketing & Growth Strategy",
+    "category": "business",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.8",
+    "image": "📈",
+    "modules": [
+      {
+        "id": "dm-1",
+        "title": "Lesson 1: Fundamentals of Digital Marketing & Sales Funnels",
+        "desc": "Understand customer acquisition stages, buyer personas, and high-converting marketing funnels.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "dm-2",
+        "title": "Lesson 2: SEO Essentials: On-Page, Off-Page & Keyword Research",
+        "desc": "Master search engine optimization, technical site audits, keyword clustering, and backlink strategies.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "dm-3",
+        "title": "Lesson 3: Content Marketing & Social Media Strategy",
+        "desc": "Create engaging content calendars, viral short-form video hooks, and brand storytelling across social media.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "dm-4",
+        "title": "Lesson 4: Google Ads & Performance Search Marketing",
+        "desc": "Set up targeted search campaigns, write high-CTR ad copy, set bidding strategies, and track conversions.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "dm-5",
+        "title": "Lesson 5: Meta (Facebook & Instagram) Ad Campaigns",
+        "desc": "Build custom audience lookalikes, structure A/B ad creative tests, and optimize ROAS on Meta Business Suite.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "dm-6",
+        "title": "Lesson 6: Email Marketing & Lead Nurturing Automation",
+        "desc": "Design automated drip sequences, newsletter campaigns, lead magnets, and open-rate optimization.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "dm-7",
+        "title": "Lesson 7: Google Analytics 4 (GA4) & Data Insights",
+        "desc": "Track user events, custom conversion events, traffic acquisition reports, and user retention metrics.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "dm-8",
+        "title": "Lesson 8: Conversion Rate Optimization (CRO) & A/B Testing",
+        "desc": "Analyze heatmaps, run landing page split tests, remove checkout friction, and boost conversion rates.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "dm-9",
+        "title": "Lesson 9: Growth Hacking Frameworks for Startups",
+        "desc": "Implement the AARRR Pirate Metrics model, viral referral loops, and rapid experimentation tactics.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "dm-10",
+        "title": "Lesson 10: Launching Your First Full Digital Marketing Campaign",
+        "desc": "Plan, budget, execute, and present a complete multi-channel growth marketing strategy case study.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
       }
     ]
   }

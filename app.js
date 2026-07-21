@@ -313,7 +313,10 @@ document.addEventListener('DOMContentLoaded', () => {
     "React.js Mastery Course": "रिएक्ट.जेएस मास्टरी कोर्स",
     "Database Management (DBMS) & SQL": "डेटाबेस प्रबंधन (DBMS) और SQL",
     "Data Structures & Algorithms (DSA)": "डेटा स्ट्रक्चर्स एंड एल्गोरिथम्स (DSA)",
-    "Machine Learning with Python": "पायथन के साथ मशीन लर्निंग"
+    "Machine Learning with Python": "पायथन के साथ मशीन लर्निंग",
+    "UI/UX Design & Figma Mastery": "यूआई/यूएक्स डिजाइन और फिग्मा मास्टरी",
+    "AI & Prompt Engineering Masterclass": "एआई और प्रॉम्प्ट इंजीनियरिंग मास्टरक्लास",
+    "Digital Marketing & Growth Strategy": "डिजिटल मार्केटिंग और ग्रोथ स्ट्रेटजी"
   };
 
   const careerTranslations = {
