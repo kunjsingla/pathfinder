@@ -322,7 +322,12 @@ document.addEventListener('DOMContentLoaded', () => {
     "Machine Learning with Python": "पायथन के साथ मशीन लर्निंग",
     "UI/UX Design & Figma Mastery": "यूआई/यूएक्स डिजाइन और फिग्मा मास्टरी",
     "AI & Prompt Engineering Masterclass": "एआई और प्रॉम्प्ट इंजीनियरिंग मास्टरक्लास",
-    "Digital Marketing & Growth Strategy": "डिजिटल मार्केटिंग और ग्रोथ स्ट्रेटजी"
+    "Digital Marketing & Growth Strategy": "डिजिटल मार्केटिंग और ग्रोथ स्ट्रेटजी",
+    "Node.js & Backend Development": "नोड.जेएस और बैकएंड डेवलपमेंट",
+    "Flutter & Mobile App Development": "फ्लटर और मोबाइल ऐप डेवलपमेंट",
+    "Cloud Computing & DevOps Essentials": "क्लाउड कंप्यूटिंग और डेवऑप्स एसेंशियल",
+    "Financial Literacy & Investing": "वित्तीय साक्षरता और निवेश",
+    "Biotechnology & Bioinformatics": "बायोटेक्नोलॉजी और बायोइंफॉर्मेटिक्स"
   };
 
   const careerTranslations = {

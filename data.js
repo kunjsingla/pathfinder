@@ -6954,6 +6954,406 @@ const data = {
         "videoId": "bIXHAAG58Xk"
       }
     ]
+  },
+  {
+    "id": "nodejs-backend",
+    "title": "Node.js & Backend Development",
+    "category": "tech",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.9",
+    "image": "🟢",
+    "modules": [
+      {
+        "id": "node-1",
+        "title": "Lesson 1: Introduction to Node.js & Event Loop Architecture",
+        "desc": "Understand asynchronous non-blocking I/O, Node runtime environment, and single-threaded event loop.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "node-2",
+        "title": "Lesson 2: Node.js Core Modules & npm Package Management",
+        "desc": "Master file system (fs), path, http core modules, package.json configuration, and npm scripts.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "node-3",
+        "title": "Lesson 3: Building Web Servers with Express.js",
+        "desc": "Set up Express server routes, request parameters, response formatting, and static asset serving.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "node-4",
+        "title": "Lesson 4: RESTful API Architecture & Design Best Practices",
+        "desc": "Design REST endpoints, HTTP status codes, CRUD operations, and JSON payload handling.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "node-5",
+        "title": "Lesson 5: Express Middleware & User Authentication (JWT)",
+        "desc": "Implement custom middleware, password hashing with bcrypt, and JSON Web Token (JWT) authentication.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "node-6",
+        "title": "Lesson 6: Database Integration: MongoDB & Mongoose ODM",
+        "desc": "Connect Express apps to MongoDB Atlas, define schemas, data validation, and aggregation pipelines.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "node-7",
+        "title": "Lesson 7: Centralized Error Handling & Input Validation",
+        "desc": "Create custom error handling classes, async wrappers, and schema validation with Joi/Zod.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "node-8",
+        "title": "Lesson 8: File Uploads & Cloud Storage Integration",
+        "desc": "Handle multipart form data using Multer and upload images to Cloudinary / AWS S3 storage.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "node-9",
+        "title": "Lesson 9: Real-time Communication with WebSockets & Socket.io",
+        "desc": "Build real-time bidirectional chat and notification servers using Socket.io and Node.js.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "node-10",
+        "title": "Lesson 10: Testing, Security & Production Deployment",
+        "desc": "Secure Node apps with Helmet & Rate-Limiting, run unit tests with Jest, and deploy on cloud servers.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      }
+    ]
+  },
+  {
+    "id": "flutter-mobile-dev",
+    "title": "Flutter & Mobile App Development",
+    "category": "tech",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.8",
+    "image": "📱",
+    "modules": [
+      {
+        "id": "flut-1",
+        "title": "Lesson 1: Introduction to Dart Programming & Flutter Framework",
+        "desc": "Learn Dart language basics, object-oriented concepts, sound null safety, and Flutter SDK setup.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "flut-2",
+        "title": "Lesson 2: Stateless vs Stateful Widgets & Basic Layouts",
+        "desc": "Understand widget trees, Container, Column, Row, ListView, and UI rendering mechanics.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "flut-3",
+        "title": "Lesson 3: Responsive & Adaptive UI Design in Flutter",
+        "desc": "Build multi-screen layouts that adapt across mobile devices, tablets, and web viewports.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "flut-4",
+        "title": "Lesson 4: Navigation, Named Routes & Screen Transitions",
+        "desc": "Manage app navigation stacks, pass arguments between screens, and apply smooth transitions.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "flut-5",
+        "title": "Lesson 5: State Management with Provider & Riverpod",
+        "desc": "Master clean architecture state management, reactive streams, and scalable app state separation.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "flut-6",
+        "title": "Lesson 6: Networking: Fetching REST APIs & JSON Parsing",
+        "desc": "Use HTTP & Dio packages to connect to remote APIs, deserialize JSON data, and handle offline states.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "flut-7",
+        "title": "Lesson 7: Firebase Integration: Authentication & Cloud Firestore",
+        "desc": "Integrate Firebase Auth, Google Sign-in, real-time database sync, and push notifications.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "flut-8",
+        "title": "Lesson 8: Local Storage & Offline Data Persistence",
+        "desc": "Store user preferences and offline app state using Shared Preferences and Hive database.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "flut-9",
+        "title": "Lesson 9: Custom Animations & Interactive Micro-UI",
+        "desc": "Create implicit/explicit animations, Hero transitions, and smooth gesture controllers.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "flut-10",
+        "title": "Lesson 10: App Store & Google Play Store Publishing Guide",
+        "desc": "Configure app icons, build release APKs/IPAs, write privacy policies, and submit to app stores.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      }
+    ]
+  },
+  {
+    "id": "cloud-devops-essentials",
+    "title": "Cloud Computing & DevOps Essentials",
+    "category": "tech",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.9",
+    "image": "☁️",
+    "modules": [
+      {
+        "id": "devops-1",
+        "title": "Lesson 1: Cloud Computing Fundamentals & AWS Core Services",
+        "desc": "Understand IaaS, PaaS, SaaS models, AWS EC2 compute instances, S3 storage, and Virtual Private Clouds.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "devops-2",
+        "title": "Lesson 2: Linux Command Line & Bash Shell Scripting",
+        "desc": "Master essential Linux sysadmin commands, file permissions, process management, and automated bash scripts.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "devops-3",
+        "title": "Lesson 3: Containerization with Docker & Docker Compose",
+        "desc": "Write Dockerfiles, build lightweight container images, manage volumes, and run multi-container apps.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "devops-4",
+        "title": "Lesson 4: Container Orchestration with Kubernetes (k8s)",
+        "desc": "Deploy containerized applications to Kubernetes clusters using Pods, Deployments, Services, and Ingress.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "devops-5",
+        "title": "Lesson 5: Continuous Integration & Delivery (CI/CD) with GitHub Actions",
+        "desc": "Automate code testing, linting, Docker image builds, and automated deployment pipelines.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "devops-6",
+        "title": "Lesson 6: Infrastructure as Code (IaC) with Terraform",
+        "desc": "Provision reproducible cloud infrastructure using declarative Terraform configuration files.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "devops-7",
+        "title": "Lesson 7: Cloud Security, IAM & Key Management",
+        "desc": "Configure IAM roles, principle of least privilege, SSL/TLS certificates, and secret management.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "devops-8",
+        "title": "Lesson 8: Monitoring & Observability with Prometheus & Grafana",
+        "desc": "Set up real-time server metrics monitoring, log aggregation, and customized alert dashboards.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "devops-9",
+        "title": "Lesson 9: Serverless Architecture & Cloud Functions",
+        "desc": "Build event-driven serverless backends using AWS Lambda and API Gateway.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "devops-10",
+        "title": "Lesson 10: Real-World DevOps Pipeline Capstone Project",
+        "desc": "Architect, containerize, test, and deploy a complete production web application to cloud infrastructure.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      }
+    ]
+  },
+  {
+    "id": "finance-investing-basics",
+    "title": "Financial Literacy & Investing",
+    "category": "business",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.8",
+    "image": "💰",
+    "modules": [
+      {
+        "id": "fin-1",
+        "title": "Lesson 1: Personal Finance Fundamentals & Smart Budgeting",
+        "desc": "Master the 50/30/20 budgeting rule, emergency fund creation, and income allocation strategies.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "fin-2",
+        "title": "Lesson 2: Understanding Interest Rates, Compound Growth & Inflation",
+        "desc": "Learn how compound interest builds wealth over time and strategies to beat economic inflation.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "fin-3",
+        "title": "Lesson 3: Stock Market Fundamentals & How Exchanges Work",
+        "desc": "Understand equity shares, market orders, bulls/bears, market capitalization, and stock exchanges.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "fin-4",
+        "title": "Lesson 4: Mutual Funds, Index Funds & ETFs Demystified",
+        "desc": "Explore passive vs active investing, SIP investments, expense ratios, and low-cost index tracking.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "fin-5",
+        "title": "Lesson 5: Fundamental Analysis: Reading Financial Statements",
+        "desc": "Analyze company Balance Sheets, P&L statements, P/E ratios, debt-to-equity, and free cash flows.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "fin-6",
+        "title": "Lesson 6: Risk Management & Asset Allocation Strategies",
+        "desc": "Diversify investments across asset classes (stocks, bonds, gold, real estate) to mitigate downside risk.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "fin-7",
+        "title": "Lesson 7: Tax Planning & Legitimate Saving Strategies",
+        "desc": "Optimize tax liabilities, understand capital gains tax rules, and utilize tax-deferred investment accounts.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "fin-8",
+        "title": "Lesson 8: Cryptocurrencies & Digital Asset Ecosystem Primer",
+        "desc": "Understand blockchain technology, Bitcoin, Ethereum, decentralized finance (DeFi), and crypto risks.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "fin-9",
+        "title": "Lesson 9: Generating Passive Income & Dividend Investing",
+        "desc": "Build recurring passive revenue streams through dividend stocks, REITs, and automated investments.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "fin-10",
+        "title": "Lesson 10: Building a Lifetime Wealth & Financial Independence Plan",
+        "desc": "Create your personalized 10-year investment roadmap towards long-term financial freedom.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      }
+    ]
+  },
+  {
+    "id": "biotech-bioinformatics",
+    "title": "Biotechnology & Bioinformatics",
+    "category": "science",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.9",
+    "image": "🧬",
+    "modules": [
+      {
+        "id": "bio-1",
+        "title": "Lesson 1: Principles of Genetics & Molecular Biology",
+        "desc": "Understand DNA replication, RNA transcription, translation mechanisms, and cellular genetics.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "bio-2",
+        "title": "Lesson 2: Recombinant DNA Technology & Gene Cloning",
+        "desc": "Explore restriction enzymes, plasmid vectors, transformation techniques, and gene cloning applications.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "bio-3",
+        "title": "Lesson 3: Introduction to Bioinformatics Databases (NCBI & UniProt)",
+        "desc": "Navigate genomic and protein sequence repositories, accession numbers, and biological metadata.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "bio-4",
+        "title": "Lesson 4: Sequence Alignment Tools: BLAST & Pairwise Alignment",
+        "desc": "Master BLAST searching, Needleman-Wunsch global alignment, and Smith-Waterman local alignment algorithms.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "bio-5",
+        "title": "Lesson 5: Protein Structure Prediction & Molecular Docking",
+        "desc": "Explore 3D protein visualization (PyMOL), drug-target binding interactions, and AI structural biology.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "bio-6",
+        "title": "Lesson 6: Polymerase Chain Reaction (PCR) & Gene Editing (CRISPR/Cas9)",
+        "desc": "Learn qPCR amplification techniques, guide RNA design, and targeted genome editing in modern medicine.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "bio-7",
+        "title": "Lesson 7: Bioprocess Engineering & Industrial Fermentation",
+        "desc": "Understand bioreactor operation, cell culture media, downstream processing, and biomanufacturing.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "bio-8",
+        "title": "Lesson 8: Python for Biological Data Science (Biopython)",
+        "desc": "Use Python and Biopython libraries to parse FASTA files, analyze GC content, and automate genomic workflows.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "bio-9",
+        "title": "Lesson 9: Medical Biotechnology, Vaccines & Targeted Therapies",
+        "desc": "Explore mRNA vaccine technology, monoclonal antibodies, gene therapy vectors, and personalized healthcare.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      },
+      {
+        "id": "bio-10",
+        "title": "Lesson 10: Bioethics, Biosafety & Future Trends in Biotechnology",
+        "desc": "Evaluate ethical guidelines, biosecurity standards, synthetic biology, and future frontiers in life sciences.",
+        "checked": false,
+        "videoId": "bIXHAAG58Xk"
+      }
+    ]
   }
 ],
   botResponses: {
