@@ -1286,6 +1286,86 @@ h1, h2, h3, h4 {
   white-space: pre-line;
 }
 
+.feedback-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+.feedback-reply-btn {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.feedback-reply-btn:hover {
+  text-decoration: underline;
+}
+
+.replies-container {
+  margin-top: 0.75rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reply-card {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.reply-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.reply-card-user {
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.reply-card-date {
+  color: var(--text-muted);
+}
+
+.reply-card-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.reply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding-left: 1rem;
+}
+
+.reply-input {
+  width: 100%;
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.85rem;
+}
+
 /* --- MOBILE RESPONSIVE MEDIA QUERIES --- */
 @media (max-width: 768px) {
   /* Navbar collapse & wrapping */

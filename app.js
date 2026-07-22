@@ -192,6 +192,9 @@ document.addEventListener('DOMContentLoaded', () => {
       reviews_placeholder: "What do you think of the pathways? What features should we add next?...",
       reviews_submit: "Submit Review",
       reviews_community: "Community Reviews & Suggestions",
+      reviews_reply_action: "Reply",
+      reviews_submit_reply: "Post Reply",
+      reviews_placeholder_reply: "Write your reply...",
       
       profile_logout: "Sign Out",
       profile_age: "Age",
@@ -274,6 +277,9 @@ document.addEventListener('DOMContentLoaded', () => {
       reviews_placeholder: "आप इन करियर पथों के बारे में क्या सोचते हैं? हमें आगे कौन सी सुविधाएं जोड़नी चाहिए?...",
       reviews_submit: "समीक्षा सबमिट करें",
       reviews_community: "सामुदायिक समीक्षाएं और सुझाव",
+      reviews_reply_action: "जवाब दें",
+      reviews_submit_reply: "जवाब पोस्ट करें",
+      reviews_placeholder_reply: "अपना जवाब लिखें...",
       
       profile_logout: "लॉग आउट करें",
       profile_age: "उम्र",
@@ -2139,19 +2145,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         const reviewData = {
+          id: 'rev_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
           name,
           rating,
           text,
           email: activeEmail || 'guest@example.com',
-          timestamp: Date.now()
+          timestamp: Date.now(),
+          likes: 0,
+          dislikes: 0,
+          replies: []
         };
         
         if (useFirebase) {
-          db.collection('reviews').add(reviewData)
+          db.collection('reviews').doc(reviewData.id).set(reviewData)
             .then(() => {
               feedbackForm.reset();
               resetStars();
-              // Re-fill name if logged in
               const activeUser = localStorage.getItem('pathfinder_active_email');
               if (activeUser && useFirebase) {
                 db.collection('users').doc(activeUser).get().then(doc => {
@@ -2168,13 +2177,11 @@ document.addEventListener('DOMContentLoaded', () => {
               alert("Error submitting review: " + err.message);
             });
         } else {
-          // Local fallback
           const reviews = JSON.parse(localStorage.getItem('pathfinder_reviews') || '[]');
           reviews.unshift(reviewData);
           localStorage.setItem('pathfinder_reviews', JSON.stringify(reviews));
           feedbackForm.reset();
           resetStars();
-          // Re-fill name if logged in
           if (activeEmail && usersDb[activeEmail]) {
             const feedbackName = document.getElementById('feedback-name');
             if (feedbackName) feedbackName.value = usersDb[activeEmail].name;
@@ -2190,7 +2197,11 @@ document.addEventListener('DOMContentLoaded', () => {
       db.collection('reviews').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
         let reviewsList = [];
         snapshot.forEach(doc => {
-          reviewsList.push(doc.data());
+          const rData = doc.data();
+          reviewsList.push({
+            id: doc.id,
+            ...rData
+          });
         });
         renderReviews(reviewsList);
       }, err => {
@@ -2215,6 +2226,13 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     
+    const isHindi = (state.language === 'hi');
+    const labelReply = isHindi ? 'जवाब दें' : 'Reply';
+    const labelPostReply = isHindi ? 'जवाब पोस्ट करें' : 'Post Reply';
+    const labelPlaceholder = isHindi ? 'अपना जवाब लिखें...' : 'Write your reply...';
+
+    let reviewVotes = JSON.parse(localStorage.getItem('pathfinder_review_votes') || '{}');
+    
     let html = '';
     reviewsArray.forEach(rev => {
       const starStr = '★'.repeat(rev.rating) + '☆'.repeat(5 - rev.rating);
@@ -2226,6 +2244,35 @@ document.addEventListener('DOMContentLoaded', () => {
         minute: '2-digit'
       });
       
+      const userVote = reviewVotes[rev.id] || null;
+      const likeCount = rev.likes || 0;
+      const dislikeCount = rev.dislikes || 0;
+      const replies = rev.replies || [];
+
+      let repliesHtml = '';
+      if (replies.length > 0) {
+        repliesHtml += `<div class="replies-container">`;
+        replies.forEach(rep => {
+          const repDate = new Date(rep.timestamp).toLocaleDateString(undefined, {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          });
+          repliesHtml += `
+            <div class="reply-card">
+              <div class="reply-card-header">
+                <span class="reply-card-user">${escapeHtml(rep.name)}</span>
+                <span class="reply-card-date">${repDate}</span>
+              </div>
+              <div class="reply-card-text">${escapeHtml(rep.text)}</div>
+            </div>
+          `;
+        });
+        repliesHtml += `</div>`;
+      }
+
       html += `
         <div class="feedback-card" style="margin-bottom: 1rem;">
           <div class="feedback-card-header">
@@ -2234,11 +2281,152 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="feedback-card-date">${dateStr}</div>
           <div class="feedback-card-text">${escapeHtml(rev.text)}</div>
+          
+          <div class="feedback-card-footer">
+            <div class="vote-group">
+              <button class="vote-btn like-btn ${userVote === 'like' ? 'active-like' : ''}" onclick="handleReviewVote('${rev.id}', 'like')">
+                👍 <span>${likeCount}</span>
+              </button>
+              <button class="vote-btn dislike-btn ${userVote === 'dislike' ? 'active-dislike' : ''}" onclick="handleReviewVote('${rev.id}', 'dislike')">
+                👎 <span>${dislikeCount}</span>
+              </button>
+            </div>
+            <button class="feedback-reply-btn" onclick="toggleReplyForm('${rev.id}')">
+              💬 ${labelReply} (${replies.length})
+            </button>
+          </div>
+
+          <div class="reply-form" id="reply-form-${rev.id}" style="display: none; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem;">
+            <textarea class="chat-input reply-input" id="reply-text-${rev.id}" placeholder="${labelPlaceholder}" style="resize: vertical; min-height: 60px;"></textarea>
+            <button class="btn btn-primary" onclick="submitReviewReply('${rev.id}')" style="align-self: flex-end; padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+              ${labelPostReply}
+            </button>
+          </div>
+          
+          ${repliesHtml}
         </div>
       `;
     });
     feed.innerHTML = html;
   }
+
+  window.toggleReplyForm = function(reviewId) {
+    const formDiv = document.getElementById(`reply-form-${reviewId}`);
+    if (formDiv) {
+      formDiv.style.display = formDiv.style.display === 'none' ? 'flex' : 'none';
+    }
+  };
+
+  window.submitReviewReply = function(reviewId) {
+    const replyTextInp = document.getElementById(`reply-text-${reviewId}`);
+    if (!replyTextInp) return;
+    const replyText = replyTextInp.value.trim();
+    if (!replyText) return;
+
+    const currentUserEmail = activeEmail || 'guest@example.com';
+    const currentUserName = (usersDb[currentUserEmail] && usersDb[currentUserEmail].name) || (firebaseUsersMap[currentUserEmail] && firebaseUsersMap[currentUserEmail].name) || 'Kunj Singla';
+
+    const replyObj = {
+      name: currentUserName,
+      text: replyText,
+      timestamp: Date.now()
+    };
+
+    if (useFirebase && db) {
+      const docRef = db.collection('reviews').doc(reviewId);
+      docRef.get().then(doc => {
+        if (!doc.exists) return;
+        const data = doc.data();
+        let replies = data.replies || [];
+        replies.push(replyObj);
+        docRef.update({ replies }).then(() => {
+          replyTextInp.value = '';
+          const formDiv = document.getElementById(`reply-form-${reviewId}`);
+          if (formDiv) formDiv.style.display = 'none';
+        });
+      });
+    } else {
+      let reviews = JSON.parse(localStorage.getItem('pathfinder_reviews') || '[]');
+      const revIndex = reviews.findIndex(r => r.id === reviewId);
+      if (revIndex !== -1) {
+        let replies = reviews[revIndex].replies || [];
+        replies.push(replyObj);
+        reviews[revIndex].replies = replies;
+        localStorage.setItem('pathfinder_reviews', JSON.stringify(reviews));
+        replyTextInp.value = '';
+        const formDiv = document.getElementById(`reply-form-${reviewId}`);
+        if (formDiv) formDiv.style.display = 'none';
+        renderReviewsList();
+      }
+    }
+  };
+
+  window.handleReviewVote = function(reviewId, voteType) {
+    let reviewVotes = JSON.parse(localStorage.getItem('pathfinder_review_votes') || '{}');
+    const currentVote = reviewVotes[reviewId] || null;
+
+    if (useFirebase && db) {
+      const docRef = db.collection('reviews').doc(reviewId);
+      docRef.get().then(doc => {
+        if (!doc.exists) return;
+        const data = doc.data();
+        let newLikes = data.likes || 0;
+        let newDislikes = data.dislikes || 0;
+
+        // Remove previous vote
+        if (currentVote === 'like') newLikes = Math.max(0, newLikes - 1);
+        if (currentVote === 'dislike') newDislikes = Math.max(0, newDislikes - 1);
+
+        // Apply new vote
+        if (currentVote !== voteType) {
+          if (voteType === 'like') {
+            newLikes += 1;
+            reviewVotes[reviewId] = 'like';
+          } else if (voteType === 'dislike') {
+            newDislikes += 1;
+            reviewVotes[reviewId] = 'dislike';
+          }
+        } else {
+          delete reviewVotes[reviewId];
+        }
+
+        localStorage.setItem('pathfinder_review_votes', JSON.stringify(reviewVotes));
+        docRef.update({
+          likes: newLikes,
+          dislikes: newDislikes
+        });
+      });
+    } else {
+      let reviews = JSON.parse(localStorage.getItem('pathfinder_reviews') || '[]');
+      const revIndex = reviews.findIndex(r => r.id === reviewId);
+      if (revIndex !== -1) {
+        let rev = reviews[revIndex];
+        let newLikes = rev.likes || 0;
+        let newDislikes = rev.dislikes || 0;
+
+        if (currentVote === 'like') newLikes = Math.max(0, newLikes - 1);
+        if (currentVote === 'dislike') newDislikes = Math.max(0, newDislikes - 1);
+
+        if (currentVote !== voteType) {
+          if (voteType === 'like') {
+            newLikes += 1;
+            reviewVotes[reviewId] = 'like';
+          } else if (voteType === 'dislike') {
+            newDislikes += 1;
+            reviewVotes[reviewId] = 'dislike';
+          }
+        } else {
+          delete reviewVotes[reviewId];
+        }
+
+        reviews[revIndex].likes = newLikes;
+        reviews[revIndex].dislikes = newDislikes;
+        localStorage.setItem('pathfinder_reviews', JSON.stringify(reviews));
+        localStorage.setItem('pathfinder_review_votes', JSON.stringify(reviewVotes));
+        renderReviewsList();
+      }
+    }
+  };
 
   function escapeHtml(str) {
     const div = document.createElement('div');
