@@ -412,7 +412,10 @@
             <input type="email" id="signin-email" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="you@example.com" required>
           </div>
           <div class="form-group" style="margin-bottom: 1rem;">
-            <label for="signin-password" style="display: block; font-size: 0.8rem; margin-bottom: 0.35rem; color: var(--text-secondary);">Password</label>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+              <label for="signin-password" style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">Password</label>
+              <button type="button" id="forgot-password-btn" style="background: none; border: none; color: var(--color-primary); font-size: 0.75rem; font-weight: 600; cursor: pointer; text-decoration: underline; padding: 0;">Forgot Password?</button>
+            </div>
             <input type="password" id="signin-password" class="chat-input" style="width: 100%; border-radius: 8px; padding: 0.6rem;" placeholder="••••••••" required>
           </div>
           <div class="form-group" style="margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.03); padding: 0.6rem 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">

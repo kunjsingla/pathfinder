@@ -1953,6 +1953,59 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    const forgotPassBtn = document.getElementById('forgot-password-btn');
+    if (forgotPassBtn) {
+      forgotPassBtn.addEventListener('click', () => {
+        const emailInput = document.getElementById('signin-email');
+        let email = emailInput ? emailInput.value.trim().toLowerCase() : '';
+        const isHindi = (state.language === 'hi');
+
+        if (!email) {
+          const promptMsg = isHindi 
+            ? 'पासवर्ड रीसेट करने के लिए कृपया अपना ईमेल पता दर्ज करें:' 
+            : 'Please enter your registered email address to reset your password:';
+          email = prompt(promptMsg);
+          if (email) email = email.trim().toLowerCase();
+        }
+
+        if (!email) return;
+
+        if (useFirebase && state.authMode === 'firebase') {
+          auth.sendPasswordResetEmail(email)
+            .then(() => {
+              const successMsg = isHindi
+                ? `पासवर्ड रीसेट लिंक आपके ईमेल (${email}) पर भेज दिया गया है। कृपया अपना इनबॉक्स या स्पैम फ़ोल्डर जांचें।`
+                : `A password reset link has been sent to ${email}. Please check your email inbox or spam folder.`;
+              alert(successMsg);
+            })
+            .catch((err) => {
+              console.error("Firebase Password Reset Error:", err);
+              const errMsg = isHindi
+                ? "पासवर्ड रीसेट भेजने में त्रुटि: " + err.message
+                : "Error sending password reset email: " + err.message;
+              alert(errMsg);
+            });
+        } else {
+          // Local Fallback Reset
+          if (!usersDb[email]) {
+            alert(isHindi ? "इस ईमेल पते वाला कोई स्थानीय खाता नहीं मिला।" : "No account found with this email address in Local Mode.");
+            return;
+          }
+          const promptNewPass = isHindi
+            ? `${email} के लिए नया स्थानीय पासवर्ड दर्ज करें:`
+            : `Reset Local Password for ${email}:\nEnter a new password (min 4 chars):`;
+          const newPass = prompt(promptNewPass);
+          if (newPass && newPass.trim().length >= 4) {
+            usersDb[email].password = newPass.trim();
+            localStorage.setItem('pathfinder_users', JSON.stringify(usersDb));
+            alert(isHindi ? "आपका स्थानीय पासवर्ड सफलतापूर्वक रीसेट हो गया है! अब आप साइन इन कर सकते हैं।" : "Your local password has been successfully reset! You can now sign in.");
+          } else if (newPass !== null) {
+            alert(isHindi ? "पासवर्ड कम से कम 4 अक्षरों का होना चाहिए।" : "Password must be at least 4 characters.");
+          }
+        }
+      });
+    }
+
     const signupForm = document.getElementById('signup-form');
     if (signupForm) {
       signupForm.addEventListener('submit', (e) => {
