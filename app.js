@@ -332,7 +332,9 @@ document.addEventListener('DOMContentLoaded', () => {
     "Cybersecurity & Ethical Hacking": "साइबर सुरक्षा और एथिकल हैकिंग",
     "TypeScript & Type-Safe JavaScript": "टाइपस्क्रिप्ट और टाइप-सेफ जावास्क्रिप्ट",
     "Data Science & Analysis with Python": "पायथन के साथ डेटा साइंस और विश्लेषण",
-    "Game Development with C# & Unity": "C# और यूनिटी के साथ गेम डेवलपमेंट"
+    "Game Development with C# & Unity": "C# और यूनिटी के साथ गेम डेवलपमेंट",
+    "Git & GitHub Version Control Mastery": "गिट और गिटहब वर्जन कंट्रोल मास्टरी",
+    "Problem Solving & Algorithmic Thinking": "प्रॉब्लम सॉल्विंग और एल्गोरिद्मिक थिंकिंग"
   };
 
   const careerTranslations = {

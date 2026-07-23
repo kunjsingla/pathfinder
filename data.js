@@ -7971,6 +7971,166 @@ const data = {
         "videoId": "7wnove7K-ZQ"
       }
     ]
+  },
+  {
+    "id": "git-github-mastery",
+    "title": "Git & GitHub Version Control Mastery",
+    "category": "tech",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.9",
+    "image": "🐙",
+    "modules": [
+      {
+        "id": "git-1",
+        "title": "Lesson 1: Introduction to Version Control & Git Architecture",
+        "desc": "Understand distributed version control systems, working trees, staging areas, and local repositories.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "git-2",
+        "title": "Lesson 2: Git Setup, Configuration & Basic Commands",
+        "desc": "Configure user credentials, initialize repositories, track files, stage changes, and write clean commit messages.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "git-3",
+        "title": "Lesson 3: Navigating Git History, Logs, Diffing & Resetting",
+        "desc": "Inspect commit logs, compare file diffs, unstage files, and understand git checkout, revert, and reset.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "git-4",
+        "title": "Lesson 4: Branching Strategies & Feature Workflow",
+        "desc": "Create, switch, rename, and delete branches to isolate feature development without breaking main code.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "git-5",
+        "title": "Lesson 5: Resolving Merge Conflicts & Rebase vs Merge",
+        "desc": "Identify merge conflict markers, resolve code collisions manually, and understand git rebase workflows.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "git-6",
+        "title": "Lesson 6: GitHub Remote Repositories, Push, Pull & Fetch",
+        "desc": "Connect local repos to GitHub, configure SSH keys, push local commits, and fetch/pull remote updates.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "git-7",
+        "title": "Lesson 7: Open Source Collaboration: Forking & Pull Requests (PRs)",
+        "desc": "Fork open-source projects, open feature Pull Requests, address code review feedback, and merge PRs.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "git-8",
+        "title": "Lesson 8: Advanced Git Tools: Stashing, Cherry-Picking & Bisecting",
+        "desc": "Temporarily stash uncommitted work, cherry-pick specific commits across branches, and find bugs with bisect.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "git-9",
+        "title": "Lesson 9: GitHub Actions CI/CD & Repository Security",
+        "desc": "Set up automated test workflows, configure branch protection rules, and scan repos for secret leaks.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "git-10",
+        "title": "Lesson 10: Building & Hosting Live Websites with GitHub Pages",
+        "desc": "Deploy static web applications, set up custom domains, and showcase projects on your developer profile.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      }
+    ]
+  },
+  {
+    "id": "problem-solving-logic",
+    "title": "Problem Solving & Algorithmic Thinking",
+    "category": "tech",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.9",
+    "image": "💡",
+    "modules": [
+      {
+        "id": "ps-1",
+        "title": "Lesson 1: Introduction to Computational Thinking & Problem Decomposition",
+        "desc": "Learn how to break down complex problems into sub-problems, define inputs/outputs, and write clear pseudocode.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ps-2",
+        "title": "Lesson 2: Analyzing Time & Space Complexity (Big-O Notation)",
+        "desc": "Evaluate algorithm efficiency: O(1), O(log N), O(N), O(N log N), O(N^2), and memory space trade-offs.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ps-3",
+        "title": "Lesson 3: Two Pointers & Sliding Window Problem Patterns",
+        "desc": "Solve array and string problems using left/right pointer convergence and dynamic sliding window windows.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ps-4",
+        "title": "Lesson 4: Fast & Slow Pointers & In-Place Array Operations",
+        "desc": "Detect cycles in linked lists/arrays and optimize space complexity through in-place array manipulation.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ps-5",
+        "title": "Lesson 5: Recursion Fundamentals & Call Stack Tracing",
+        "desc": "Master base cases, recursive calls, call stack execution, and avoid stack overflow exceptions.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ps-6",
+        "title": "Lesson 6: Backtracking Algorithms: Subsets, Permutations & N-Queens",
+        "desc": "Explore search trees, decision spaces, pruning invalid states, and generating all valid combinations.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ps-7",
+        "title": "Lesson 7: Binary Search & Monotonic Search Space Problems",
+        "desc": "Apply binary search beyond sorted arrays to find optimal answers in continuous monotonic search spaces.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ps-8",
+        "title": "Lesson 8: Greedy Algorithms & Dynamic Programming Overlap",
+        "desc": "Recognize local optimal choices vs global optimality, memoization, and top-down vs bottom-up DP.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ps-9",
+        "title": "Lesson 9: Graph & Tree Traversal Logic (BFS vs DFS)",
+        "desc": "Traverse non-linear data structures using Breadth-First Search (shortest path) and Depth-First Search.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ps-10",
+        "title": "Lesson 10: Technical Interview Problem-Solving Strategy & Mock Practice",
+        "desc": "Learn UMPIRE framework (Understand, Match, Plan, Implement, Review, Evaluate) for technical coding interviews.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      }
+    ]
   }
 ],
   botResponses: {
