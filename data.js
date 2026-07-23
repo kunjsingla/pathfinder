@@ -4358,126 +4358,126 @@ const data = {
         "title": "Lesson 1: Complete HTML for Beginners",
         "desc": "Milestone 1 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "HcOc7P5BMi4"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-2",
         "title": "Lesson 2: Complete CSS for Beginners",
         "desc": "Milestone 2 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "ESnrn1kAD4E"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-3",
         "title": "Lesson 3: Project - Building Amazon Clone",
         "desc": "Milestone 3 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "nGhKIC_7Mkk"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-4",
         "title": "Lesson 4: Complete Git & GitHub Tutorial",
         "desc": "Milestone 4 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "Ez8F0nW6S-w"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-5",
         "title": "Lesson 5: JavaScript Full Course ❤️ | Variables & Data Types | Lecture 1",
         "desc": "Milestone 5 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "ajdRvxDWH4w"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-6",
         "title": "Lesson 6: JS Lecture 2 - Operators and Conditional Statements",
         "desc": "Milestone 6 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "Zg4-uSjxosE"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-7",
         "title": "Lesson 7: JS Lecture 3 - Loops and Strings",
         "desc": "Milestone 7 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "UmRtFFSDSFo"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-8",
         "title": "Lesson 8: JS Lecture 4 - Arrays",
         "desc": "Milestone 8 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "gFWhbjzowrM"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-9",
         "title": "Lesson 9: JS Lecture 5 - Functions & Methods",
         "desc": "Milestone 9 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "P0XMXqDGttU"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-10",
         "title": "Lesson 10: JS Lecture 6 - DOM - Document Object Model",
         "desc": "Milestone 10 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "7zcXPCt8Ck0"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-11",
         "title": "Lesson 11: JS Lecture 7 - DOM (Part 2) | Document Object Model",
         "desc": "Milestone 11 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "fXAGTOZ25H8"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-12",
         "title": "Lesson 12: JS Lecture 8 - Events in JavaScript",
         "desc": "Milestone 12 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "_i-uLJAh79U"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-13",
         "title": "Lesson 13: JS Lecture 9 - Tic Tac Toe Game in JavaScript",
         "desc": "Milestone 13 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "SqrppLEljkY"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-14",
         "title": "Lesson 14: JS Lecture 10 - MiniProject - Stone, Paper & Scissors Game",
         "desc": "Milestone 14 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "_V33HCZWLDQ"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-15",
         "title": "Lesson 15: JS Lecture 11 - Classes & Objects",
         "desc": "Milestone 15 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "N-O4w6PynGY"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-16",
         "title": "Lesson 16: JS Lecture 12 - Callbacks, Promises & Async Await",
         "desc": "Milestone 16 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "d3jXofmQm44"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-17",
         "title": "Lesson 17: JS Lecture 11 - Fetch API with Project",
         "desc": "Milestone 17 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "CyGodpqcid4"
+        "videoId": "VlPiVmYjv0s"
       },
       {
         "id": "webdev-18",
         "title": "Lesson 18: Web Development Roadmap",
         "desc": "Milestone 18 of the Web Development Course by Apna College. Study HTML, CSS, Git, and JS backend integrations.",
         "checked": false,
-        "videoId": "4WjtQjPQGIs"
+        "videoId": "VlPiVmYjv0s"
       }
     ]
   },
@@ -7185,70 +7185,70 @@ const data = {
         "title": "Lesson 1: Introduction to Node.js & Event Loop Architecture",
         "desc": "Understand asynchronous non-blocking I/O, Node runtime environment, and single-threaded event loop.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "Oe421EPjeBE"
       },
       {
         "id": "node-2",
         "title": "Lesson 2: Node.js Core Modules & npm Package Management",
         "desc": "Master file system (fs), path, http core modules, package.json configuration, and npm scripts.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "Oe421EPjeBE"
       },
       {
         "id": "node-3",
         "title": "Lesson 3: Building Web Servers with Express.js",
         "desc": "Set up Express server routes, request parameters, response formatting, and static asset serving.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "Oe421EPjeBE"
       },
       {
         "id": "node-4",
         "title": "Lesson 4: RESTful API Architecture & Design Best Practices",
         "desc": "Design REST endpoints, HTTP status codes, CRUD operations, and JSON payload handling.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "Oe421EPjeBE"
       },
       {
         "id": "node-5",
         "title": "Lesson 5: Express Middleware & User Authentication (JWT)",
         "desc": "Implement custom middleware, password hashing with bcrypt, and JSON Web Token (JWT) authentication.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "Oe421EPjeBE"
       },
       {
         "id": "node-6",
         "title": "Lesson 6: Database Integration: MongoDB & Mongoose ODM",
         "desc": "Connect Express apps to MongoDB Atlas, define schemas, data validation, and aggregation pipelines.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "Oe421EPjeBE"
       },
       {
         "id": "node-7",
         "title": "Lesson 7: Centralized Error Handling & Input Validation",
         "desc": "Create custom error handling classes, async wrappers, and schema validation with Joi/Zod.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "Oe421EPjeBE"
       },
       {
         "id": "node-8",
         "title": "Lesson 8: File Uploads & Cloud Storage Integration",
         "desc": "Handle multipart form data using Multer and upload images to Cloudinary / AWS S3 storage.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "Oe421EPjeBE"
       },
       {
         "id": "node-9",
         "title": "Lesson 9: Real-time Communication with WebSockets & Socket.io",
         "desc": "Build real-time bidirectional chat and notification servers using Socket.io and Node.js.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "Oe421EPjeBE"
       },
       {
         "id": "node-10",
         "title": "Lesson 10: Testing, Security & Production Deployment",
         "desc": "Secure Node apps with Helmet & Rate-Limiting, run unit tests with Jest, and deploy on cloud servers.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "Oe421EPjeBE"
       }
     ]
   },
@@ -7265,70 +7265,70 @@ const data = {
         "title": "Lesson 1: Introduction to Dart Programming & Flutter Framework",
         "desc": "Learn Dart language basics, object-oriented concepts, sound null safety, and Flutter SDK setup.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "VPvVD8t0EdE"
       },
       {
         "id": "flut-2",
         "title": "Lesson 2: Stateless vs Stateful Widgets & Basic Layouts",
         "desc": "Understand widget trees, Container, Column, Row, ListView, and UI rendering mechanics.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "VPvVD8t0EdE"
       },
       {
         "id": "flut-3",
         "title": "Lesson 3: Responsive & Adaptive UI Design in Flutter",
         "desc": "Build multi-screen layouts that adapt across mobile devices, tablets, and web viewports.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "VPvVD8t0EdE"
       },
       {
         "id": "flut-4",
         "title": "Lesson 4: Navigation, Named Routes & Screen Transitions",
         "desc": "Manage app navigation stacks, pass arguments between screens, and apply smooth transitions.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "VPvVD8t0EdE"
       },
       {
         "id": "flut-5",
         "title": "Lesson 5: State Management with Provider & Riverpod",
         "desc": "Master clean architecture state management, reactive streams, and scalable app state separation.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "VPvVD8t0EdE"
       },
       {
         "id": "flut-6",
         "title": "Lesson 6: Networking: Fetching REST APIs & JSON Parsing",
         "desc": "Use HTTP & Dio packages to connect to remote APIs, deserialize JSON data, and handle offline states.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "VPvVD8t0EdE"
       },
       {
         "id": "flut-7",
         "title": "Lesson 7: Firebase Integration: Authentication & Cloud Firestore",
         "desc": "Integrate Firebase Auth, Google Sign-in, real-time database sync, and push notifications.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "VPvVD8t0EdE"
       },
       {
         "id": "flut-8",
         "title": "Lesson 8: Local Storage & Offline Data Persistence",
         "desc": "Store user preferences and offline app state using Shared Preferences and Hive database.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "VPvVD8t0EdE"
       },
       {
         "id": "flut-9",
         "title": "Lesson 9: Custom Animations & Interactive Micro-UI",
         "desc": "Create implicit/explicit animations, Hero transitions, and smooth gesture controllers.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "VPvVD8t0EdE"
       },
       {
         "id": "flut-10",
         "title": "Lesson 10: App Store & Google Play Store Publishing Guide",
         "desc": "Configure app icons, build release APKs/IPAs, write privacy policies, and submit to app stores.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "VPvVD8t0EdE"
       }
     ]
   },
@@ -7345,70 +7345,70 @@ const data = {
         "title": "Lesson 1: Cloud Computing Fundamentals & AWS Core Services",
         "desc": "Understand IaaS, PaaS, SaaS models, AWS EC2 compute instances, S3 storage, and Virtual Private Clouds.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "hQcFE0RD0cQ"
       },
       {
         "id": "devops-2",
         "title": "Lesson 2: Linux Command Line & Bash Shell Scripting",
         "desc": "Master essential Linux sysadmin commands, file permissions, process management, and automated bash scripts.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "hQcFE0RD0cQ"
       },
       {
         "id": "devops-3",
         "title": "Lesson 3: Containerization with Docker & Docker Compose",
         "desc": "Write Dockerfiles, build lightweight container images, manage volumes, and run multi-container apps.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "hQcFE0RD0cQ"
       },
       {
         "id": "devops-4",
         "title": "Lesson 4: Container Orchestration with Kubernetes (k8s)",
         "desc": "Deploy containerized applications to Kubernetes clusters using Pods, Deployments, Services, and Ingress.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "hQcFE0RD0cQ"
       },
       {
         "id": "devops-5",
         "title": "Lesson 5: Continuous Integration & Delivery (CI/CD) with GitHub Actions",
         "desc": "Automate code testing, linting, Docker image builds, and automated deployment pipelines.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "hQcFE0RD0cQ"
       },
       {
         "id": "devops-6",
         "title": "Lesson 6: Infrastructure as Code (IaC) with Terraform",
         "desc": "Provision reproducible cloud infrastructure using declarative Terraform configuration files.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "hQcFE0RD0cQ"
       },
       {
         "id": "devops-7",
         "title": "Lesson 7: Cloud Security, IAM & Key Management",
         "desc": "Configure IAM roles, principle of least privilege, SSL/TLS certificates, and secret management.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "hQcFE0RD0cQ"
       },
       {
         "id": "devops-8",
         "title": "Lesson 8: Monitoring & Observability with Prometheus & Grafana",
         "desc": "Set up real-time server metrics monitoring, log aggregation, and customized alert dashboards.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "hQcFE0RD0cQ"
       },
       {
         "id": "devops-9",
         "title": "Lesson 9: Serverless Architecture & Cloud Functions",
         "desc": "Build event-driven serverless backends using AWS Lambda and API Gateway.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "hQcFE0RD0cQ"
       },
       {
         "id": "devops-10",
         "title": "Lesson 10: Real-World DevOps Pipeline Capstone Project",
         "desc": "Architect, containerize, test, and deploy a complete production web application to cloud infrastructure.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "hQcFE0RD0cQ"
       }
     ]
   },
@@ -7425,70 +7425,70 @@ const data = {
         "title": "Lesson 1: Personal Finance Fundamentals & Smart Budgeting",
         "desc": "Master the 50/30/20 budgeting rule, emergency fund creation, and income allocation strategies.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "gFQNPmLK01g"
       },
       {
         "id": "fin-2",
         "title": "Lesson 2: Understanding Interest Rates, Compound Growth & Inflation",
         "desc": "Learn how compound interest builds wealth over time and strategies to beat economic inflation.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "gFQNPmLK01g"
       },
       {
         "id": "fin-3",
         "title": "Lesson 3: Stock Market Fundamentals & How Exchanges Work",
         "desc": "Understand equity shares, market orders, bulls/bears, market capitalization, and stock exchanges.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "gFQNPmLK01g"
       },
       {
         "id": "fin-4",
         "title": "Lesson 4: Mutual Funds, Index Funds & ETFs Demystified",
         "desc": "Explore passive vs active investing, SIP investments, expense ratios, and low-cost index tracking.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "gFQNPmLK01g"
       },
       {
         "id": "fin-5",
         "title": "Lesson 5: Fundamental Analysis: Reading Financial Statements",
         "desc": "Analyze company Balance Sheets, P&L statements, P/E ratios, debt-to-equity, and free cash flows.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "gFQNPmLK01g"
       },
       {
         "id": "fin-6",
         "title": "Lesson 6: Risk Management & Asset Allocation Strategies",
         "desc": "Diversify investments across asset classes (stocks, bonds, gold, real estate) to mitigate downside risk.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "gFQNPmLK01g"
       },
       {
         "id": "fin-7",
         "title": "Lesson 7: Tax Planning & Legitimate Saving Strategies",
         "desc": "Optimize tax liabilities, understand capital gains tax rules, and utilize tax-deferred investment accounts.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "gFQNPmLK01g"
       },
       {
         "id": "fin-8",
         "title": "Lesson 8: Cryptocurrencies & Digital Asset Ecosystem Primer",
         "desc": "Understand blockchain technology, Bitcoin, Ethereum, decentralized finance (DeFi), and crypto risks.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "gFQNPmLK01g"
       },
       {
         "id": "fin-9",
         "title": "Lesson 9: Generating Passive Income & Dividend Investing",
         "desc": "Build recurring passive revenue streams through dividend stocks, REITs, and automated investments.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "gFQNPmLK01g"
       },
       {
         "id": "fin-10",
         "title": "Lesson 10: Building a Lifetime Wealth & Financial Independence Plan",
         "desc": "Create your personalized 10-year investment roadmap towards long-term financial freedom.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "gFQNPmLK01g"
       }
     ]
   },
@@ -7505,70 +7505,70 @@ const data = {
         "title": "Lesson 1: Principles of Genetics & Molecular Biology",
         "desc": "Understand DNA replication, RNA transcription, translation mechanisms, and cellular genetics.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "p96-n7sYv_Q"
       },
       {
         "id": "bio-2",
         "title": "Lesson 2: Recombinant DNA Technology & Gene Cloning",
         "desc": "Explore restriction enzymes, plasmid vectors, transformation techniques, and gene cloning applications.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "p96-n7sYv_Q"
       },
       {
         "id": "bio-3",
         "title": "Lesson 3: Introduction to Bioinformatics Databases (NCBI & UniProt)",
         "desc": "Navigate genomic and protein sequence repositories, accession numbers, and biological metadata.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "p96-n7sYv_Q"
       },
       {
         "id": "bio-4",
         "title": "Lesson 4: Sequence Alignment Tools: BLAST & Pairwise Alignment",
         "desc": "Master BLAST searching, Needleman-Wunsch global alignment, and Smith-Waterman local alignment algorithms.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "p96-n7sYv_Q"
       },
       {
         "id": "bio-5",
         "title": "Lesson 5: Protein Structure Prediction & Molecular Docking",
         "desc": "Explore 3D protein visualization (PyMOL), drug-target binding interactions, and AI structural biology.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "p96-n7sYv_Q"
       },
       {
         "id": "bio-6",
         "title": "Lesson 6: Polymerase Chain Reaction (PCR) & Gene Editing (CRISPR/Cas9)",
         "desc": "Learn qPCR amplification techniques, guide RNA design, and targeted genome editing in modern medicine.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "p96-n7sYv_Q"
       },
       {
         "id": "bio-7",
         "title": "Lesson 7: Bioprocess Engineering & Industrial Fermentation",
         "desc": "Understand bioreactor operation, cell culture media, downstream processing, and biomanufacturing.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "p96-n7sYv_Q"
       },
       {
         "id": "bio-8",
         "title": "Lesson 8: Python for Biological Data Science (Biopython)",
         "desc": "Use Python and Biopython libraries to parse FASTA files, analyze GC content, and automate genomic workflows.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "p96-n7sYv_Q"
       },
       {
         "id": "bio-9",
         "title": "Lesson 9: Medical Biotechnology, Vaccines & Targeted Therapies",
         "desc": "Explore mRNA vaccine technology, monoclonal antibodies, gene therapy vectors, and personalized healthcare.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "p96-n7sYv_Q"
       },
       {
         "id": "bio-10",
         "title": "Lesson 10: Bioethics, Biosafety & Future Trends in Biotechnology",
         "desc": "Evaluate ethical guidelines, biosecurity standards, synthetic biology, and future frontiers in life sciences.",
         "checked": false,
-        "videoId": "bIXHAAG58Xk"
+        "videoId": "p96-n7sYv_Q"
       }
     ]
   },
@@ -7585,70 +7585,70 @@ const data = {
         "title": "Lesson 1: Introduction to Rust, Cargo & Hello World",
         "desc": "Install Rust toolchain (rustup), understand Cargo package manager, and compile your first Rust binary.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "zF34dRivLOw"
       },
       {
         "id": "rust-2",
         "title": "Lesson 2: Variables, Mutability & Fundamental Data Types",
         "desc": "Master immutable/mutable variables, scalar types, tuples, arrays, and type inference in Rust.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "zF34dRivLOw"
       },
       {
         "id": "rust-3",
         "title": "Lesson 3: The Ownership System, Move Semantics & Memory",
         "desc": "Understand Rust's core memory model, stack vs heap, ownership rules, and value drops without Garbage Collection.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "zF34dRivLOw"
       },
       {
         "id": "rust-4",
         "title": "Lesson 4: Borrowing, References & Lifetime Annotations",
         "desc": "Learn mutable and immutable references, borrowing rules, and explicit lifetime specifiers (&'a).",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "zF34dRivLOw"
       },
       {
         "id": "rust-5",
         "title": "Lesson 5: Structs, Methods & Associated Functions",
         "desc": "Define custom data structures, implement method blocks (impl), and construct factory functions.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "zF34dRivLOw"
       },
       {
         "id": "rust-6",
         "title": "Lesson 6: Enums, Pattern Matching & The Option/Result Types",
         "desc": "Use powerful match expressions, destructuring, Option<T> for null-safety, and Result<T, E> for errors.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "zF34dRivLOw"
       },
       {
         "id": "rust-7",
         "title": "Lesson 7: Traits, Generics & Abstract Behavior",
         "desc": "Define shared interfaces using Traits, generic functions, trait bounds, and derive macros.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "zF34dRivLOw"
       },
       {
         "id": "rust-8",
         "title": "Lesson 8: Fearless Concurrency: Threads, Channels & Mutexes",
         "desc": "Spawn native OS threads, communicate via mpsc channels, and safely share state with Arc and Mutex.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "zF34dRivLOw"
       },
       {
         "id": "rust-9",
         "title": "Lesson 9: Error Handling, Panic Recovery & Custom Errors",
         "desc": "Handle unrecoverable panics, propagate errors with the ? operator, and design custom error types.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "zF34dRivLOw"
       },
       {
         "id": "rust-10",
         "title": "Lesson 10: Building a Fast Command Line (CLI) Application",
         "desc": "Combine Clap, Serde, and Tokio async runtime to build and package a high-performance CLI tool.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "zF34dRivLOw"
       }
     ]
   },
@@ -7665,70 +7665,70 @@ const data = {
         "title": "Lesson 1: Fundamentals of Cybersecurity & Information Security",
         "desc": "Understand the CIA triad (Confidentiality, Integrity, Availability), threat actors, and security policies.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "3Kq1MIfTWCE"
       },
       {
         "id": "cyber-2",
         "title": "Lesson 2: Computer Networking Protocols & Traffic Analysis",
         "desc": "Analyze TCP/IP, OSI model layers, DNS, HTTP/S headers, and packet inspection using Wireshark.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "3Kq1MIfTWCE"
       },
       {
         "id": "cyber-3",
         "title": "Lesson 3: Network Reconnaissance & Port Scanning with Nmap",
         "desc": "Perform passive footprinting, active host discovery, port scanning techniques, and OS detection with Nmap.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "3Kq1MIfTWCE"
       },
       {
         "id": "cyber-4",
         "title": "Lesson 4: Web Application Security & OWASP Top 10",
         "desc": "Identify web vulnerabilities: SQL Injection, Cross-Site Scripting (XSS), CSRF, and Broken Authentication.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "3Kq1MIfTWCE"
       },
       {
         "id": "cyber-5",
         "title": "Lesson 5: Intercepting Proxies & Exploitation with Burp Suite",
         "desc": "Intercept and modify HTTP requests, brute-force form endpoints, and automate vulnerability scanning.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "3Kq1MIfTWCE"
       },
       {
         "id": "cyber-6",
         "title": "Lesson 6: Cryptography, Hashing & Public Key Infrastructure (PKI)",
         "desc": "Learn symmetric vs asymmetric encryption (AES, RSA), SHA hashing, digital signatures, and TLS certificates.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "3Kq1MIfTWCE"
       },
       {
         "id": "cyber-7",
         "title": "Lesson 7: Penetration Testing Frameworks & Metasploit Basics",
         "desc": "Explore penetration testing methodologies, payload creation, listener setup, and exploitation with Metasploit.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "3Kq1MIfTWCE"
       },
       {
         "id": "cyber-8",
         "title": "Lesson 8: Linux Hardening & Privilege Escalation",
         "desc": "Audit SUID binaries, misconfigured sudo permissions, cron jobs, and secure Linux server configurations.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "3Kq1MIfTWCE"
       },
       {
         "id": "cyber-9",
         "title": "Lesson 9: Defensive Security, Firewalls & Intrusion Detection (IDS)",
         "desc": "Configure Snort IDS/IPS rules, UFW firewalls, fail2ban brute-force protection, and SIEM log monitoring.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "3Kq1MIfTWCE"
       },
       {
         "id": "cyber-10",
         "title": "Lesson 10: Ethical Hacking Capstone & Capture-The-Flag (CTF)",
         "desc": "Solve real-world CTF challenges on vulnerable machines, write security reports, and patch vulnerabilities.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "3Kq1MIfTWCE"
       }
     ]
   },
@@ -7745,70 +7745,70 @@ const data = {
         "title": "Lesson 1: Introduction to TypeScript & tsconfig.json Setup",
         "desc": "Understand why TypeScript exists, install the tsc compiler, and configure compiler strictness options.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "d56mG7DezGs"
       },
       {
         "id": "ts-2",
         "title": "Lesson 2: Primitive Types, Type Inference & Type Annotations",
         "desc": "Master string, number, boolean, array, tuple, enum, any, unknown, and never types.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "d56mG7DezGs"
       },
       {
         "id": "ts-3",
         "title": "Lesson 3: Interfaces vs Type Aliases & Object Shapes",
         "desc": "Define reusable contract shapes, optional properties, readonly fields, interface inheritance, and union types.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "d56mG7DezGs"
       },
       {
         "id": "ts-4",
         "title": "Lesson 4: Functions, Overloads & Type Narrowing",
         "desc": "Type function parameters, return values, function signatures, and control-flow type narrowing.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "d56mG7DezGs"
       },
       {
         "id": "ts-5",
         "title": "Lesson 5: Generics: Building Reusable & Scalable Code",
         "desc": "Master generic functions, generic interfaces, class constraints, and default type parameters.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "d56mG7DezGs"
       },
       {
         "id": "ts-6",
         "title": "Lesson 6: Built-in Utility Types (Partial, Required, Pick, Omit)",
         "desc": "Transform existing types using Partial<T>, Required<T>, Readonly<T>, Record<K, T>, Pick, and Omit.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "d56mG7DezGs"
       },
       {
         "id": "ts-7",
         "title": "Lesson 7: Advanced Types: Conditional Types, Mapped Types & infer",
         "desc": "Write complex type computations using conditional types T extends U ? X : Y, template literal types, and infer.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "d56mG7DezGs"
       },
       {
         "id": "ts-8",
         "title": "Lesson 8: React with TypeScript: Props, State & Event Typing",
         "desc": "Type React components (FC/PropsWithChildren), useState, useRef, useReducer, and synthetic DOM events.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "d56mG7DezGs"
       },
       {
         "id": "ts-9",
         "title": "Lesson 9: Node.js & Express REST APIs with TypeScript",
         "desc": "Build a backend server using Express, custom Request/Response type definitions, and DTO validation.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "d56mG7DezGs"
       },
       {
         "id": "ts-10",
         "title": "Lesson 10: Building & Publishing Type-Safe NPM Packages",
         "desc": "Generate .d.ts type declaration files, configure build targets, and bundle zero-dependency TS libraries.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "d56mG7DezGs"
       }
     ]
   },
@@ -7825,70 +7825,70 @@ const data = {
         "title": "Lesson 1: Introduction to Data Science & Environment Setup",
         "desc": "Set up Jupyter Notebooks, Anaconda environment, VS Code Data Science tools, and basic workflow.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "lhNDJw-D45g"
       },
       {
         "id": "ds-2",
         "title": "Lesson 2: Numerical Computing with NumPy Arrays",
         "desc": "Master multidimensional arrays, vectorization, broadcasting, matrix arithmetic, and mathematical slicing.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "lhNDJw-D45g"
       },
       {
         "id": "ds-3",
         "title": "Lesson 3: Data Analysis with Pandas DataFrames & Series",
         "desc": "Load CSV/Excel/JSON data, inspect DataFrames, select columns with loc/iloc, and apply filtering conditions.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "lhNDJw-D45g"
       },
       {
         "id": "ds-4",
         "title": "Lesson 4: Data Cleaning, Imputation & Handling Missing Values",
         "desc": "Detect null values, apply fillna/dropna, fix data types, remove duplicates, and clean messy datasets.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "lhNDJw-D45g"
       },
       {
         "id": "ds-5",
         "title": "Lesson 5: Data Aggregation, GroupBy & Pivot Tables",
         "desc": "Group data by categories, compute aggregate statistics (mean, median, std), and build pivot tables.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "lhNDJw-D45g"
       },
       {
         "id": "ds-6",
         "title": "Lesson 6: Data Visualization with Matplotlib & Seaborn",
         "desc": "Plot bar charts, line plots, histograms, scatter plots, heatmaps, and format publication-ready graphics.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "lhNDJw-D45g"
       },
       {
         "id": "ds-7",
         "title": "Lesson 7: Exploratory Data Analysis (EDA) Masterclass",
         "desc": "Uncover patterns, correlations, distributions, outliers, and insights from real-world business datasets.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "lhNDJw-D45g"
       },
       {
         "id": "ds-8",
         "title": "Lesson 8: SQL & Database Querying for Data Analysts",
         "desc": "Connect Python to SQLite/PostgreSQL, execute SQL SELECT queries, JOINs, and extract data into Pandas.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "lhNDJw-D45g"
       },
       {
         "id": "ds-9",
         "title": "Lesson 9: Statistical Hypothesis Testing & A/B Testing",
         "desc": "Understand p-values, t-tests, chi-square tests, confidence intervals, and evaluate A/B test experiments.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "lhNDJw-D45g"
       },
       {
         "id": "ds-10",
         "title": "Lesson 10: End-to-End Data Analytics Portfolio Project",
         "desc": "Clean a raw dataset, perform exploratory analysis, generate interactive visual dashboards, and present findings.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "lhNDJw-D45g"
       }
     ]
   },
@@ -7905,70 +7905,70 @@ const data = {
         "title": "Lesson 1: Introduction to Unity Engine & C# Scripting",
         "desc": "Navigate Unity Editor interface, understand GameObjects, Transforms, and write your first C# MonoBehaviour script.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "gB1F9G0JXOo"
       },
       {
         "id": "game-2",
         "title": "Lesson 2: Physics Engine, Rigidbody & Collision Detection",
         "desc": "Apply gravity, forces, velocity, OnCollisionEnter vs OnTriggerEnter events, and physical materials.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "gB1F9G0JXOo"
       },
       {
         "id": "game-3",
         "title": "Lesson 3: 2D & 3D Player Controllers & Input System",
         "desc": "Implement smooth character movement, jumping mechanics, camera tracking, and Unity's New Input System.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "gB1F9G0JXOo"
       },
       {
         "id": "game-4",
         "title": "Lesson 4: Prefabs, Spawning & Instantiation Mechanics",
         "desc": "Create reusable Prefabs, dynamically instantiate projectiles/enemies, and manage scene object pools.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "gB1F9G0JXOo"
       },
       {
         "id": "game-5",
         "title": "Lesson 5: UI Canva System, Health Bars & Scoreboards",
         "desc": "Design responsive HUD elements, text, buttons, sliders, health bars, and event-driven UI updates.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "gB1F9G0JXOo"
       },
       {
         "id": "game-6",
         "title": "Lesson 6: Audio Controllers, Sound Effects & Background Music",
         "desc": "Add AudioSources, AudioListeners, 3D spatial sound, volume mixers, and trigger-based SFX playback.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "gB1F9G0JXOo"
       },
       {
         "id": "game-7",
         "title": "Lesson 7: Animation Controllers, State Machines & Blend Trees",
         "desc": "Import character sprites/models, set up Animator controllers, transition parameters, and blend trees.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "gB1F9G0JXOo"
       },
       {
         "id": "game-8",
         "title": "Lesson 8: Enemy AI, Pathfinding & NavMesh Navigation",
         "desc": "Bake NavMesh geometry, program AI enemy agents to chase players, patrol waypoints, and attack.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "gB1F9G0JXOo"
       },
       {
         "id": "game-9",
         "title": "Lesson 9: Game State Management, Save Systems & Level Transitions",
         "desc": "Implement game managers, singleton patterns, JSON save/load systems, and scene loading managers.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "gB1F9G0JXOo"
       },
       {
         "id": "game-10",
         "title": "Lesson 10: Building & Exporting Games to WebGL & PC",
         "desc": "Optimize graphics settings, build standalone PC executables, and export playable browser WebGL builds.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "gB1F9G0JXOo"
       }
     ]
   },
@@ -7985,70 +7985,70 @@ const data = {
         "title": "Lesson 1: Introduction to Version Control & Git Architecture",
         "desc": "Understand distributed version control systems, working trees, staging areas, and local repositories.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "RGOj5yH7evE"
       },
       {
         "id": "git-2",
         "title": "Lesson 2: Git Setup, Configuration & Basic Commands",
         "desc": "Configure user credentials, initialize repositories, track files, stage changes, and write clean commit messages.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "RGOj5yH7evE"
       },
       {
         "id": "git-3",
         "title": "Lesson 3: Navigating Git History, Logs, Diffing & Resetting",
         "desc": "Inspect commit logs, compare file diffs, unstage files, and understand git checkout, revert, and reset.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "RGOj5yH7evE"
       },
       {
         "id": "git-4",
         "title": "Lesson 4: Branching Strategies & Feature Workflow",
         "desc": "Create, switch, rename, and delete branches to isolate feature development without breaking main code.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "RGOj5yH7evE"
       },
       {
         "id": "git-5",
         "title": "Lesson 5: Resolving Merge Conflicts & Rebase vs Merge",
         "desc": "Identify merge conflict markers, resolve code collisions manually, and understand git rebase workflows.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "RGOj5yH7evE"
       },
       {
         "id": "git-6",
         "title": "Lesson 6: GitHub Remote Repositories, Push, Pull & Fetch",
         "desc": "Connect local repos to GitHub, configure SSH keys, push local commits, and fetch/pull remote updates.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "RGOj5yH7evE"
       },
       {
         "id": "git-7",
         "title": "Lesson 7: Open Source Collaboration: Forking & Pull Requests (PRs)",
         "desc": "Fork open-source projects, open feature Pull Requests, address code review feedback, and merge PRs.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "RGOj5yH7evE"
       },
       {
         "id": "git-8",
         "title": "Lesson 8: Advanced Git Tools: Stashing, Cherry-Picking & Bisecting",
         "desc": "Temporarily stash uncommitted work, cherry-pick specific commits across branches, and find bugs with bisect.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "RGOj5yH7evE"
       },
       {
         "id": "git-9",
         "title": "Lesson 9: GitHub Actions CI/CD & Repository Security",
         "desc": "Set up automated test workflows, configure branch protection rules, and scan repos for secret leaks.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "RGOj5yH7evE"
       },
       {
         "id": "git-10",
         "title": "Lesson 10: Building & Hosting Live Websites with GitHub Pages",
         "desc": "Deploy static web applications, set up custom domains, and showcase projects on your developer profile.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "RGOj5yH7evE"
       }
     ]
   },
@@ -8065,70 +8065,70 @@ const data = {
         "title": "Lesson 1: Introduction to Computational Thinking & Problem Decomposition",
         "desc": "Learn how to break down complex problems into sub-problems, define inputs/outputs, and write clear pseudocode.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "8hly31xKLI0"
       },
       {
         "id": "ps-2",
         "title": "Lesson 2: Analyzing Time & Space Complexity (Big-O Notation)",
         "desc": "Evaluate algorithm efficiency: O(1), O(log N), O(N), O(N log N), O(N^2), and memory space trade-offs.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "8hly31xKLI0"
       },
       {
         "id": "ps-3",
         "title": "Lesson 3: Two Pointers & Sliding Window Problem Patterns",
         "desc": "Solve array and string problems using left/right pointer convergence and dynamic sliding window windows.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "8hly31xKLI0"
       },
       {
         "id": "ps-4",
         "title": "Lesson 4: Fast & Slow Pointers & In-Place Array Operations",
         "desc": "Detect cycles in linked lists/arrays and optimize space complexity through in-place array manipulation.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "8hly31xKLI0"
       },
       {
         "id": "ps-5",
         "title": "Lesson 5: Recursion Fundamentals & Call Stack Tracing",
         "desc": "Master base cases, recursive calls, call stack execution, and avoid stack overflow exceptions.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "8hly31xKLI0"
       },
       {
         "id": "ps-6",
         "title": "Lesson 6: Backtracking Algorithms: Subsets, Permutations & N-Queens",
         "desc": "Explore search trees, decision spaces, pruning invalid states, and generating all valid combinations.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "8hly31xKLI0"
       },
       {
         "id": "ps-7",
         "title": "Lesson 7: Binary Search & Monotonic Search Space Problems",
         "desc": "Apply binary search beyond sorted arrays to find optimal answers in continuous monotonic search spaces.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "8hly31xKLI0"
       },
       {
         "id": "ps-8",
         "title": "Lesson 8: Greedy Algorithms & Dynamic Programming Overlap",
         "desc": "Recognize local optimal choices vs global optimality, memoization, and top-down vs bottom-up DP.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "8hly31xKLI0"
       },
       {
         "id": "ps-9",
         "title": "Lesson 9: Graph & Tree Traversal Logic (BFS vs DFS)",
         "desc": "Traverse non-linear data structures using Breadth-First Search (shortest path) and Depth-First Search.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "8hly31xKLI0"
       },
       {
         "id": "ps-10",
         "title": "Lesson 10: Technical Interview Problem-Solving Strategy & Mock Practice",
         "desc": "Learn UMPIRE framework (Understand, Match, Plan, Implement, Review, Evaluate) for technical coding interviews.",
         "checked": false,
-        "videoId": "7wnove7K-ZQ"
+        "videoId": "8hly31xKLI0"
       }
     ]
   }
