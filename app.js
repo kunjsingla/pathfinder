@@ -1261,11 +1261,6 @@ document.addEventListener('DOMContentLoaded', () => {
       pathwayListHtml += `<li>${displayPathStep}</li>`;
     });
 
-    let resourcesHtml = '';
-    career.resources.forEach(r => {
-      resourcesHtml += `<a href="${r.url}" target="_blank" rel="noopener" class="resource-link">${r.title} ↗</a>`;
-    });
-
     const categoryTranslations = {
       tech: isHindi ? "प्रौद्योगिकी (Tech)" : "TECH",
       creative: isHindi ? "क्रिएटिव" : "CREATIVE",
@@ -1304,7 +1299,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const labelDifficulty = isHindi ? "कठिनाई स्तर:" : "Path Difficulty:";
     const labelSkills = isHindi ? "आवश्यक मुख्य कौशल" : "Key Skills Required";
     const labelPath = isHindi ? "अनुशंसित करियर पथ" : "Recommended Career Path";
-    const labelResources = isHindi ? "बाहरी अध्ययन संसाधन" : "External Study Resources";
     
     let bookmarkText = isBookmarked ? '★ Bookmarked' : '☆ Bookmark';
     if (isHindi) {
@@ -1371,13 +1365,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <ul class="detail-list" style="display: flex; flex-direction: column; gap: 0.75rem;">
           ${pathwayListHtml}
         </ul>
-      </div>
-
-      <div class="detail-section">
-        <h5>${labelResources}</h5>
-        <div class="resources-list">
-          ${resourcesHtml}
-        </div>
       </div>
     `;
 
