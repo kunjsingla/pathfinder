@@ -965,15 +965,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Filter recommended careers for this category
-    const matchedCareers = appData.careers.filter(c => c.category === matchCat).slice(0, 3);
+    // Filter recommended careers for this category that have matching website skills
+    const validCategoryCareers = appData.careers.filter(c => {
+      if (c.category !== matchCat) return false;
+      const recSkills = c.recommendedSkills || [];
+      return recSkills.some(skId => appData.skills.some(s => s.id === skId));
+    });
+    const matchedCareers = validCategoryCareers.slice(0, 3);
 
-    // Choose recommended skill based on category
+    // Dynamically choose recommended skill from the top matched career's website skills
     let recSkillId = 'python-beginners';
-    if (matchCat === 'creative') {
-      recSkillId = 'python-english';
-    } else if (matchCat === 'tech') {
-      recSkillId = 'java-beginners';
+    if (matchedCareers.length > 0 && matchedCareers[0].recommendedSkills && matchedCareers[0].recommendedSkills.length > 0) {
+      recSkillId = matchedCareers[0].recommendedSkills[0];
     }
     const recommendedSkill = appData.skills.find(s => s.id === recSkillId) || appData.skills[0];
 
@@ -1001,7 +1004,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `आपकी पसंद के आधार पर, आपका मजबूत रुझान <strong>${matchCatName}</strong> पथ की ओर है।` 
       : `Based on your choices, you have strong alignment with the <strong>${matchCat.toUpperCase()}</strong> path.`;
 
-    const recCareersLabel = isHindi ? "अनुशंसित करियर जिन पर आप आगे बढ़ सकते हैं:" : "Recommended Careers to Follow:";
+    const recCareersLabel = isHindi ? "अनुशंसित करियर (हमारे कौशल पाठ्यक्रमों से जुड़े):" : "Recommended Careers (Linked to Website Skills):";
     const recSkillLabel = isHindi ? "🎯 सीखने के लिए अनुशंसित पहला कौशल:" : "🎯 Recommended Skill to Learn First:";
     const recSkillDesc = isHindi 
       ? `${matchCatName} करियर के लिए कोडिंग एक आवश्यक महाशक्ति है। अपने पोर्टफोलियो को बेहतर बनाने के लिए अभी यह रोडमैप शुरू करें!` 
@@ -1022,11 +1025,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const displayTitle = (isHindi && careerTranslations[c.title]) ? careerTranslations[c.title].title : c.title;
       const displayShortDesc = (isHindi && careerTranslations[c.title]) ? careerTranslations[c.title].shortDesc : c.shortDesc;
 
+      // Find matching website skills for this career
+      let skillChips = '';
+      const recSkills = c.recommendedSkills || [];
+      const matchingSkills = appData.skills.filter(s => recSkills.includes(s.id));
+      if (matchingSkills.length > 0) {
+        skillChips += `<div style="margin-top: 0.35rem; display: flex; flex-wrap: wrap; gap: 0.3rem;">`;
+        matchingSkills.slice(0, 3).forEach(sk => {
+          const skTitle = (isHindi && skillTranslations[sk.title]) ? skillTranslations[sk.title] : sk.title;
+          skillChips += `<span style="font-size: 0.68rem; background: rgba(108, 99, 255, 0.15); border: 1px solid rgba(108, 99, 255, 0.3); color: #fff; padding: 0.15rem 0.4rem; border-radius: 4px;">${sk.image} ${skTitle}</span>`;
+        });
+        skillChips += `</div>`;
+      }
+
       careersHtml += `
         <div class="matched-career-box" style="margin-bottom: 0.75rem; text-align: left; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02); display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
           <div style="flex: 1; min-width: 0;">
             <h5 style="margin: 0 0 0.25rem 0; font-size: 0.95rem; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${displayTitle}</h5>
             <p style="margin: 0; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${displayShortDesc}</p>
+            ${skillChips}
           </div>
           <button class="btn btn-secondary view-path-btn" data-id="${c.id}" style="padding: 0.35rem 0.7rem; font-size: 0.75rem; white-space: nowrap;">${exploreText}</button>
         </div>
@@ -1294,6 +1311,31 @@ document.addEventListener('DOMContentLoaded', () => {
       bookmarkText = isBookmarked ? '★ बुकमार्क' : '☆ बुकमार्क';
     }
 
+    // Website skills related to this career
+    let websiteSkillsSectionHtml = '';
+    const recSkillIds = career.recommendedSkills || [];
+    const matchingWebsiteSkills = appData.skills.filter(s => recSkillIds.includes(s.id));
+    if (matchingWebsiteSkills.length > 0) {
+      const labelWebsiteCourses = isHindi ? "🎓 पाथफाइंडर पर उपलब्ध कौशल पाठ्यक्रम" : "🎓 Available Skill Courses on Pathfinder";
+      websiteSkillsSectionHtml = `
+        <div class="detail-section" style="background: rgba(108, 99, 255, 0.05); border: 1px solid rgba(108, 99, 255, 0.2); padding: 1rem; border-radius: 8px;">
+          <h5 style="color: var(--color-secondary); margin-bottom: 0.75rem;">${labelWebsiteCourses}</h5>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+      `;
+      matchingWebsiteSkills.forEach(sk => {
+        const skTitle = (isHindi && skillTranslations[sk.title]) ? skillTranslations[sk.title] : sk.title;
+        websiteSkillsSectionHtml += `
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.6rem 0.8rem; display: flex; justify-content: space-between; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 0.85rem; font-weight: 600; color: #fff;">${sk.image} ${skTitle}</span>
+            <button class="btn btn-primary start-career-skill-btn" data-skill-id="${sk.id}" style="padding: 0.35rem 0.75rem; font-size: 0.75rem; white-space: nowrap;">
+              ${isHindi ? 'कौशल सीखें →' : 'Learn Skill →'}
+            </button>
+          </div>
+        `;
+      });
+      websiteSkillsSectionHtml += `</div></div>`;
+    }
+
     modalBody.innerHTML = `
       <h2 class="modal-title">${displayTitle}</h2>
       <div class="modal-subtitle" style="display: flex; justify-content: space-between; align-items: center;">
@@ -1314,6 +1356,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <p><strong>${labelOutlook}</strong> ${displayGrowth}</p>
         <p><strong>${labelDifficulty}</strong> ${displayDifficulty}</p>
       </div>
+
+      ${websiteSkillsSectionHtml}
 
       <div class="detail-section">
         <h5>${labelSkills}</h5>
@@ -1336,6 +1380,17 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     `;
+
+    modalBody.querySelectorAll('.start-career-skill-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const skId = btn.getAttribute('data-skill-id');
+        closeModal();
+        switchTab('skills');
+        setTimeout(() => {
+          openSkillRoadmapModal(skId);
+        }, 150);
+      });
+    });
 
     document.getElementById('modal-bookmark-toggle').addEventListener('click', (e) => {
       const id = e.target.getAttribute('data-id');

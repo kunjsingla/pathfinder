@@ -297,6 +297,13 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "python-beginners",
+      "java-beginners",
+      "cpp-beginners",
+      "dsa-gate",
+      "rust-programming"
     ]
   },
   {
@@ -330,6 +337,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "ml-beginners",
+      "ai-prompt-engineering",
+      "python-beginners"
     ]
   },
   {
@@ -363,6 +375,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "cybersecurity-ethical-hacking",
+      "cloud-devops-essentials",
+      "python-beginners"
     ]
   },
   {
@@ -396,6 +413,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "cloud-devops-essentials",
+      "nodejs-backend"
     ]
   },
   {
@@ -429,6 +450,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "dbms-gate",
+      "data-science-pandas",
+      "python-beginners"
     ]
   },
   {
@@ -462,6 +488,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "cloud-devops-essentials",
+      "nodejs-backend"
     ]
   },
   {
@@ -495,6 +525,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "flutter-mobile-dev",
+      "javascript-beginners",
+      "typescript-mastery"
     ]
   },
   {
@@ -528,6 +563,13 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "web-dev-delta",
+      "javascript-beginners",
+      "react-beginners",
+      "nodejs-backend",
+      "typescript-mastery"
     ]
   },
   {
@@ -561,6 +603,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "dbms-gate",
+      "python-beginners"
     ]
   },
   {
@@ -594,6 +640,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "cloud-devops-essentials",
+      "cybersecurity-ethical-hacking",
+      "arduino-beginners"
     ]
   },
   {
@@ -627,6 +678,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "rust-programming",
+      "typescript-mastery",
+      "cpp-beginners"
     ]
   },
   {
@@ -660,6 +716,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "game-dev-unity",
+      "cpp-beginners"
     ]
   },
   {
@@ -693,6 +753,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "python-beginners",
+      "javascript-beginners",
+      "dsa-gate"
     ]
   },
   {
@@ -726,6 +791,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "figma-ui-ux"
     ]
   },
   {
@@ -759,6 +827,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "figma-ui-ux"
     ]
   },
   {
@@ -792,6 +863,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "game-dev-unity",
+      "figma-ui-ux"
     ]
   },
   {
@@ -825,6 +900,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "figma-ui-ux",
+      "digital-marketing-growth"
     ]
   },
   {
@@ -858,6 +937,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "game-dev-unity",
+      "figma-ui-ux"
     ]
   },
   {
@@ -891,6 +974,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "figma-ui-ux"
     ]
   },
   {
@@ -924,6 +1010,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "figma-ui-ux"
     ]
   },
   {
@@ -957,6 +1046,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "figma-ui-ux"
     ]
   },
   {
@@ -990,6 +1082,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "figma-ui-ux"
     ]
   },
   {
@@ -1023,6 +1118,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "web-dev-apna",
+      "figma-ui-ux",
+      "javascript-beginners"
     ]
   },
   {
@@ -1056,6 +1156,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "figma-ui-ux",
+      "digital-marketing-growth"
     ]
   },
   {
@@ -1089,6 +1193,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "digital-marketing-growth",
+      "ai-prompt-engineering"
     ]
   },
   {
@@ -1122,6 +1230,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "game-dev-unity"
     ]
   },
   {
@@ -1155,6 +1266,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "digital-marketing-growth",
+      "ai-prompt-engineering"
     ]
   },
   {
@@ -1188,6 +1303,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "figma-ui-ux",
+      "digital-marketing-growth",
+      "finance-investing-basics"
     ]
   },
   {
@@ -1221,6 +1341,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "data-science-pandas",
+      "dbms-gate",
+      "finance-investing-basics"
     ]
   },
   {
@@ -1254,6 +1379,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "finance-investing-basics",
+      "data-science-pandas"
     ]
   },
   {
@@ -1287,6 +1416,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "digital-marketing-growth",
+      "finance-investing-basics"
     ]
   },
   {
@@ -1320,6 +1453,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "digital-marketing-growth"
     ]
   },
   {
@@ -1353,6 +1489,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "digital-marketing-growth",
+      "finance-investing-basics"
     ]
   },
   {
@@ -1386,6 +1526,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "digital-marketing-growth",
+      "finance-investing-basics"
     ]
   },
   {
@@ -1419,6 +1563,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "digital-marketing-growth"
     ]
   },
   {
@@ -1452,6 +1599,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "digital-marketing-growth",
+      "ai-prompt-engineering"
     ]
   },
   {
@@ -1485,6 +1636,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "data-science-pandas",
+      "dbms-gate",
+      "finance-investing-basics"
     ]
   },
   {
@@ -1518,6 +1674,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "digital-marketing-growth",
+      "ai-prompt-engineering"
     ]
   },
   {
@@ -1551,6 +1711,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "digital-marketing-growth"
     ]
   },
   {
@@ -1584,6 +1747,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics",
+      "python-beginners"
     ]
   },
   {
@@ -1617,6 +1784,12 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "data-science-pandas",
+      "ml-beginners",
+      "python-beginners",
+      "dbms-gate"
     ]
   },
   {
@@ -1650,6 +1823,11 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics",
+      "python-beginners",
+      "data-science-pandas"
     ]
   },
   {
@@ -1683,6 +1861,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics"
     ]
   },
   {
@@ -1716,6 +1897,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics"
     ]
   },
   {
@@ -1749,6 +1933,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics",
+      "data-science-pandas"
     ]
   },
   {
@@ -1782,6 +1970,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics"
     ]
   },
   {
@@ -1815,6 +2006,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics"
     ]
   },
   {
@@ -1848,6 +2042,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics",
+      "python-beginners"
     ]
   },
   {
@@ -1881,6 +2079,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics",
+      "ai-prompt-engineering"
     ]
   },
   {
@@ -1914,6 +2116,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics",
+      "cybersecurity-ethical-hacking"
     ]
   },
   {
@@ -1947,6 +2153,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics",
+      "data-science-pandas"
     ]
   },
   {
@@ -1980,6 +2190,10 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics",
+      "data-science-pandas"
     ]
   },
   {
@@ -2013,6 +2227,9 @@ const data = {
         "title": "Coursera Global Industry Skills Reports",
         "url": "https://www.coursera.org"
       }
+    ],
+    "recommendedSkills": [
+      "biotech-bioinformatics"
     ]
   }
 ],
