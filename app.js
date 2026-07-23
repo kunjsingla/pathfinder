@@ -327,7 +327,12 @@ document.addEventListener('DOMContentLoaded', () => {
     "Flutter & Mobile App Development": "फ्लटर और मोबाइल ऐप डेवलपमेंट",
     "Cloud Computing & DevOps Essentials": "क्लाउड कंप्यूटिंग और डेवऑप्स एसेंशियल",
     "Financial Literacy & Investing": "वित्तीय साक्षरता और निवेश",
-    "Biotechnology & Bioinformatics": "बायोटेक्नोलॉजी और बायोइंफॉर्मेटिक्स"
+    "Biotechnology & Bioinformatics": "बायोटेक्नोलॉजी और बायोइंफॉर्मेटिक्स",
+    "Rust Systems Programming & Memory Safety": "रस्ट सिस्टम्स प्रोग्रामिंग और मेमोरी सेफ्टी",
+    "Cybersecurity & Ethical Hacking": "साइबर सुरक्षा और एथिकल हैकिंग",
+    "TypeScript & Type-Safe JavaScript": "टाइपस्क्रिप्ट और टाइप-सेफ जावास्क्रिप्ट",
+    "Data Science & Analysis with Python": "पायथन के साथ डेटा साइंस और विश्लेषण",
+    "Game Development with C# & Unity": "C# और यूनिटी के साथ गेम डेवलपमेंट"
   };
 
   const careerTranslations = {

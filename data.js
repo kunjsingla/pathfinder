@@ -7354,6 +7354,406 @@ const data = {
         "videoId": "bIXHAAG58Xk"
       }
     ]
+  },
+  {
+    "id": "rust-programming",
+    "title": "Rust Systems Programming & Memory Safety",
+    "category": "tech",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.9",
+    "image": "🦀",
+    "modules": [
+      {
+        "id": "rust-1",
+        "title": "Lesson 1: Introduction to Rust, Cargo & Hello World",
+        "desc": "Install Rust toolchain (rustup), understand Cargo package manager, and compile your first Rust binary.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "rust-2",
+        "title": "Lesson 2: Variables, Mutability & Fundamental Data Types",
+        "desc": "Master immutable/mutable variables, scalar types, tuples, arrays, and type inference in Rust.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "rust-3",
+        "title": "Lesson 3: The Ownership System, Move Semantics & Memory",
+        "desc": "Understand Rust's core memory model, stack vs heap, ownership rules, and value drops without Garbage Collection.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "rust-4",
+        "title": "Lesson 4: Borrowing, References & Lifetime Annotations",
+        "desc": "Learn mutable and immutable references, borrowing rules, and explicit lifetime specifiers (&'a).",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "rust-5",
+        "title": "Lesson 5: Structs, Methods & Associated Functions",
+        "desc": "Define custom data structures, implement method blocks (impl), and construct factory functions.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "rust-6",
+        "title": "Lesson 6: Enums, Pattern Matching & The Option/Result Types",
+        "desc": "Use powerful match expressions, destructuring, Option<T> for null-safety, and Result<T, E> for errors.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "rust-7",
+        "title": "Lesson 7: Traits, Generics & Abstract Behavior",
+        "desc": "Define shared interfaces using Traits, generic functions, trait bounds, and derive macros.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "rust-8",
+        "title": "Lesson 8: Fearless Concurrency: Threads, Channels & Mutexes",
+        "desc": "Spawn native OS threads, communicate via mpsc channels, and safely share state with Arc and Mutex.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "rust-9",
+        "title": "Lesson 9: Error Handling, Panic Recovery & Custom Errors",
+        "desc": "Handle unrecoverable panics, propagate errors with the ? operator, and design custom error types.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "rust-10",
+        "title": "Lesson 10: Building a Fast Command Line (CLI) Application",
+        "desc": "Combine Clap, Serde, and Tokio async runtime to build and package a high-performance CLI tool.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      }
+    ]
+  },
+  {
+    "id": "cybersecurity-ethical-hacking",
+    "title": "Cybersecurity & Ethical Hacking",
+    "category": "tech",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.9",
+    "image": "🛡️",
+    "modules": [
+      {
+        "id": "cyber-1",
+        "title": "Lesson 1: Fundamentals of Cybersecurity & Information Security",
+        "desc": "Understand the CIA triad (Confidentiality, Integrity, Availability), threat actors, and security policies.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "cyber-2",
+        "title": "Lesson 2: Computer Networking Protocols & Traffic Analysis",
+        "desc": "Analyze TCP/IP, OSI model layers, DNS, HTTP/S headers, and packet inspection using Wireshark.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "cyber-3",
+        "title": "Lesson 3: Network Reconnaissance & Port Scanning with Nmap",
+        "desc": "Perform passive footprinting, active host discovery, port scanning techniques, and OS detection with Nmap.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "cyber-4",
+        "title": "Lesson 4: Web Application Security & OWASP Top 10",
+        "desc": "Identify web vulnerabilities: SQL Injection, Cross-Site Scripting (XSS), CSRF, and Broken Authentication.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "cyber-5",
+        "title": "Lesson 5: Intercepting Proxies & Exploitation with Burp Suite",
+        "desc": "Intercept and modify HTTP requests, brute-force form endpoints, and automate vulnerability scanning.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "cyber-6",
+        "title": "Lesson 6: Cryptography, Hashing & Public Key Infrastructure (PKI)",
+        "desc": "Learn symmetric vs asymmetric encryption (AES, RSA), SHA hashing, digital signatures, and TLS certificates.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "cyber-7",
+        "title": "Lesson 7: Penetration Testing Frameworks & Metasploit Basics",
+        "desc": "Explore penetration testing methodologies, payload creation, listener setup, and exploitation with Metasploit.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "cyber-8",
+        "title": "Lesson 8: Linux Hardening & Privilege Escalation",
+        "desc": "Audit SUID binaries, misconfigured sudo permissions, cron jobs, and secure Linux server configurations.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "cyber-9",
+        "title": "Lesson 9: Defensive Security, Firewalls & Intrusion Detection (IDS)",
+        "desc": "Configure Snort IDS/IPS rules, UFW firewalls, fail2ban brute-force protection, and SIEM log monitoring.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "cyber-10",
+        "title": "Lesson 10: Ethical Hacking Capstone & Capture-The-Flag (CTF)",
+        "desc": "Solve real-world CTF challenges on vulnerable machines, write security reports, and patch vulnerabilities.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      }
+    ]
+  },
+  {
+    "id": "typescript-mastery",
+    "title": "TypeScript & Type-Safe JavaScript",
+    "category": "tech",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.9",
+    "image": "🔷",
+    "modules": [
+      {
+        "id": "ts-1",
+        "title": "Lesson 1: Introduction to TypeScript & tsconfig.json Setup",
+        "desc": "Understand why TypeScript exists, install the tsc compiler, and configure compiler strictness options.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ts-2",
+        "title": "Lesson 2: Primitive Types, Type Inference & Type Annotations",
+        "desc": "Master string, number, boolean, array, tuple, enum, any, unknown, and never types.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ts-3",
+        "title": "Lesson 3: Interfaces vs Type Aliases & Object Shapes",
+        "desc": "Define reusable contract shapes, optional properties, readonly fields, interface inheritance, and union types.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ts-4",
+        "title": "Lesson 4: Functions, Overloads & Type Narrowing",
+        "desc": "Type function parameters, return values, function signatures, and control-flow type narrowing.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ts-5",
+        "title": "Lesson 5: Generics: Building Reusable & Scalable Code",
+        "desc": "Master generic functions, generic interfaces, class constraints, and default type parameters.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ts-6",
+        "title": "Lesson 6: Built-in Utility Types (Partial, Required, Pick, Omit)",
+        "desc": "Transform existing types using Partial<T>, Required<T>, Readonly<T>, Record<K, T>, Pick, and Omit.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ts-7",
+        "title": "Lesson 7: Advanced Types: Conditional Types, Mapped Types & infer",
+        "desc": "Write complex type computations using conditional types T extends U ? X : Y, template literal types, and infer.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ts-8",
+        "title": "Lesson 8: React with TypeScript: Props, State & Event Typing",
+        "desc": "Type React components (FC/PropsWithChildren), useState, useRef, useReducer, and synthetic DOM events.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ts-9",
+        "title": "Lesson 9: Node.js & Express REST APIs with TypeScript",
+        "desc": "Build a backend server using Express, custom Request/Response type definitions, and DTO validation.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ts-10",
+        "title": "Lesson 10: Building & Publishing Type-Safe NPM Packages",
+        "desc": "Generate .d.ts type declaration files, configure build targets, and bundle zero-dependency TS libraries.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      }
+    ]
+  },
+  {
+    "id": "data-science-pandas",
+    "title": "Data Science & Analysis with Python",
+    "category": "tech",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.8",
+    "image": "📊",
+    "modules": [
+      {
+        "id": "ds-1",
+        "title": "Lesson 1: Introduction to Data Science & Environment Setup",
+        "desc": "Set up Jupyter Notebooks, Anaconda environment, VS Code Data Science tools, and basic workflow.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ds-2",
+        "title": "Lesson 2: Numerical Computing with NumPy Arrays",
+        "desc": "Master multidimensional arrays, vectorization, broadcasting, matrix arithmetic, and mathematical slicing.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ds-3",
+        "title": "Lesson 3: Data Analysis with Pandas DataFrames & Series",
+        "desc": "Load CSV/Excel/JSON data, inspect DataFrames, select columns with loc/iloc, and apply filtering conditions.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ds-4",
+        "title": "Lesson 4: Data Cleaning, Imputation & Handling Missing Values",
+        "desc": "Detect null values, apply fillna/dropna, fix data types, remove duplicates, and clean messy datasets.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ds-5",
+        "title": "Lesson 5: Data Aggregation, GroupBy & Pivot Tables",
+        "desc": "Group data by categories, compute aggregate statistics (mean, median, std), and build pivot tables.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ds-6",
+        "title": "Lesson 6: Data Visualization with Matplotlib & Seaborn",
+        "desc": "Plot bar charts, line plots, histograms, scatter plots, heatmaps, and format publication-ready graphics.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ds-7",
+        "title": "Lesson 7: Exploratory Data Analysis (EDA) Masterclass",
+        "desc": "Uncover patterns, correlations, distributions, outliers, and insights from real-world business datasets.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ds-8",
+        "title": "Lesson 8: SQL & Database Querying for Data Analysts",
+        "desc": "Connect Python to SQLite/PostgreSQL, execute SQL SELECT queries, JOINs, and extract data into Pandas.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ds-9",
+        "title": "Lesson 9: Statistical Hypothesis Testing & A/B Testing",
+        "desc": "Understand p-values, t-tests, chi-square tests, confidence intervals, and evaluate A/B test experiments.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "ds-10",
+        "title": "Lesson 10: End-to-End Data Analytics Portfolio Project",
+        "desc": "Clean a raw dataset, perform exploratory analysis, generate interactive visual dashboards, and present findings.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      }
+    ]
+  },
+  {
+    "id": "game-dev-unity",
+    "title": "Game Development with C# & Unity",
+    "category": "creative",
+    "time": "10 Lessons (8 hours total)",
+    "rating": "4.9",
+    "image": "🎮",
+    "modules": [
+      {
+        "id": "game-1",
+        "title": "Lesson 1: Introduction to Unity Engine & C# Scripting",
+        "desc": "Navigate Unity Editor interface, understand GameObjects, Transforms, and write your first C# MonoBehaviour script.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "game-2",
+        "title": "Lesson 2: Physics Engine, Rigidbody & Collision Detection",
+        "desc": "Apply gravity, forces, velocity, OnCollisionEnter vs OnTriggerEnter events, and physical materials.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "game-3",
+        "title": "Lesson 3: 2D & 3D Player Controllers & Input System",
+        "desc": "Implement smooth character movement, jumping mechanics, camera tracking, and Unity's New Input System.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "game-4",
+        "title": "Lesson 4: Prefabs, Spawning & Instantiation Mechanics",
+        "desc": "Create reusable Prefabs, dynamically instantiate projectiles/enemies, and manage scene object pools.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "game-5",
+        "title": "Lesson 5: UI Canva System, Health Bars & Scoreboards",
+        "desc": "Design responsive HUD elements, text, buttons, sliders, health bars, and event-driven UI updates.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "game-6",
+        "title": "Lesson 6: Audio Controllers, Sound Effects & Background Music",
+        "desc": "Add AudioSources, AudioListeners, 3D spatial sound, volume mixers, and trigger-based SFX playback.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "game-7",
+        "title": "Lesson 7: Animation Controllers, State Machines & Blend Trees",
+        "desc": "Import character sprites/models, set up Animator controllers, transition parameters, and blend trees.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "game-8",
+        "title": "Lesson 8: Enemy AI, Pathfinding & NavMesh Navigation",
+        "desc": "Bake NavMesh geometry, program AI enemy agents to chase players, patrol waypoints, and attack.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "game-9",
+        "title": "Lesson 9: Game State Management, Save Systems & Level Transitions",
+        "desc": "Implement game managers, singleton patterns, JSON save/load systems, and scene loading managers.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      },
+      {
+        "id": "game-10",
+        "title": "Lesson 10: Building & Exporting Games to WebGL & PC",
+        "desc": "Optimize graphics settings, build standalone PC executables, and export playable browser WebGL builds.",
+        "checked": false,
+        "videoId": "7wnove7K-ZQ"
+      }
+    ]
   }
 ],
   botResponses: {
