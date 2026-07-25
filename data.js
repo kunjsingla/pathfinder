@@ -8065,70 +8065,70 @@ const data = {
         "title": "Lesson 1: Introduction to Computational Thinking & Problem Decomposition",
         "desc": "Learn how to break down complex problems into sub-problems, define inputs/outputs, and write clear pseudocode.",
         "checked": false,
-        "videoId": "8hly31xKLI0"
+        "videoId": "8m9oSM3L8pk"
       },
       {
         "id": "ps-2",
         "title": "Lesson 2: Analyzing Time & Space Complexity (Big-O Notation)",
         "desc": "Evaluate algorithm efficiency: O(1), O(log N), O(N), O(N log N), O(N^2), and memory space trade-offs.",
         "checked": false,
-        "videoId": "8hly31xKLI0"
+        "videoId": "8m9oSM3L8pk"
       },
       {
         "id": "ps-3",
         "title": "Lesson 3: Two Pointers & Sliding Window Problem Patterns",
         "desc": "Solve array and string problems using left/right pointer convergence and dynamic sliding window windows.",
         "checked": false,
-        "videoId": "8hly31xKLI0"
+        "videoId": "8m9oSM3L8pk"
       },
       {
         "id": "ps-4",
         "title": "Lesson 4: Fast & Slow Pointers & In-Place Array Operations",
         "desc": "Detect cycles in linked lists/arrays and optimize space complexity through in-place array manipulation.",
         "checked": false,
-        "videoId": "8hly31xKLI0"
+        "videoId": "8m9oSM3L8pk"
       },
       {
         "id": "ps-5",
         "title": "Lesson 5: Recursion Fundamentals & Call Stack Tracing",
         "desc": "Master base cases, recursive calls, call stack execution, and avoid stack overflow exceptions.",
         "checked": false,
-        "videoId": "8hly31xKLI0"
+        "videoId": "8m9oSM3L8pk"
       },
       {
         "id": "ps-6",
         "title": "Lesson 6: Backtracking Algorithms: Subsets, Permutations & N-Queens",
         "desc": "Explore search trees, decision spaces, pruning invalid states, and generating all valid combinations.",
         "checked": false,
-        "videoId": "8hly31xKLI0"
+        "videoId": "8m9oSM3L8pk"
       },
       {
         "id": "ps-7",
         "title": "Lesson 7: Binary Search & Monotonic Search Space Problems",
         "desc": "Apply binary search beyond sorted arrays to find optimal answers in continuous monotonic search spaces.",
         "checked": false,
-        "videoId": "8hly31xKLI0"
+        "videoId": "8m9oSM3L8pk"
       },
       {
         "id": "ps-8",
         "title": "Lesson 8: Greedy Algorithms & Dynamic Programming Overlap",
         "desc": "Recognize local optimal choices vs global optimality, memoization, and top-down vs bottom-up DP.",
         "checked": false,
-        "videoId": "8hly31xKLI0"
+        "videoId": "8m9oSM3L8pk"
       },
       {
         "id": "ps-9",
         "title": "Lesson 9: Graph & Tree Traversal Logic (BFS vs DFS)",
         "desc": "Traverse non-linear data structures using Breadth-First Search (shortest path) and Depth-First Search.",
         "checked": false,
-        "videoId": "8hly31xKLI0"
+        "videoId": "8m9oSM3L8pk"
       },
       {
         "id": "ps-10",
         "title": "Lesson 10: Technical Interview Problem-Solving Strategy & Mock Practice",
         "desc": "Learn UMPIRE framework (Understand, Match, Plan, Implement, Review, Evaluate) for technical coding interviews.",
         "checked": false,
-        "videoId": "8hly31xKLI0"
+        "videoId": "8m9oSM3L8pk"
       }
     ]
   }
