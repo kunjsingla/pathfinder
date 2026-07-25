@@ -1237,6 +1237,28 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCareers();
   }
 
+  function calculateCareerReadiness(career) {
+    const recSkillIds = career.recommendedSkills || [];
+    const matchingSkills = appData.skills.filter(s => recSkillIds.includes(s.id));
+    if (matchingSkills.length === 0) return { percent: 100, completed: 0, total: 0, missing: [] };
+
+    let completedCount = 0;
+    let missingSkills = [];
+
+    matchingSkills.forEach(sk => {
+      const totalMods = sk.modules.length;
+      const doneMods = sk.modules.filter(m => state.completedModules.includes(m.id)).length;
+      if (totalMods > 0 && doneMods === totalMods) {
+        completedCount++;
+      } else {
+        missingSkills.push(sk);
+      }
+    });
+
+    const percent = Math.round((completedCount / matchingSkills.length) * 100);
+    return { percent, completed: completedCount, total: matchingSkills.length, missing: missingSkills };
+  }
+
   function renderCareers() {
     const grid = document.getElementById('careers-grid-container');
     if (!grid) return;
@@ -1259,6 +1281,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const labelSalary = isHindi ? "अनुमानित वेतन" : "Est. Salary";
     const labelGrowth = isHindi ? "नौकरी में विकास" : "Job Growth";
     const labelViewPath = isHindi ? "पथ देखें →" : "View Path →";
+    const labelReadiness = isHindi ? "कौशल तैयारी" : "Skill Readiness";
+
     const categoryTranslations = {
       tech: isHindi ? "प्रौद्योगिकी (Tech)" : "tech",
       creative: isHindi ? "क्रिएटिव" : "creative",
@@ -1277,6 +1301,23 @@ document.addEventListener('DOMContentLoaded', () => {
       const displayTitle = (isHindi && careerTranslations[career.title]) ? careerTranslations[career.title].title : career.title;
       const displayShortDesc = (isHindi && careerTranslations[career.title]) ? careerTranslations[career.title].shortDesc : career.shortDesc;
 
+      const readiness = calculateCareerReadiness(career);
+      let readinessBadgeColor = 'var(--color-primary)';
+      if (readiness.percent >= 80) readinessBadgeColor = 'var(--color-success)';
+      else if (readiness.percent >= 40) readinessBadgeColor = '#ffe066';
+
+      const readinessHtml = `
+        <div style="margin-top: 0.65rem; margin-bottom: 0.85rem; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.5rem 0.75rem;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.75rem; margin-bottom: 0.35rem;">
+            <span style="color: var(--text-secondary); font-weight: 600;">⚡ ${labelReadiness}</span>
+            <span style="font-weight: 800; color: ${readinessBadgeColor};">${readiness.percent}%</span>
+          </div>
+          <div style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden;">
+            <div style="width: ${readiness.percent}%; height: 100%; background: ${readinessBadgeColor}; transition: width 0.3s ease;"></div>
+          </div>
+        </div>
+      `;
+
       cardsHtml += `
         <div class="glass-card career-card" data-id="${career.id}">
           <span class="career-tag">${categoryTranslations[career.category] || career.category}</span>
@@ -1292,6 +1333,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <span class="meta-value" style="color: var(--color-success)">${career.growth.split(' ')[0]}</span>
             </div>
           </div>
+          ${readinessHtml}
           <div style="display: flex; gap: 0.5rem;">
             <button class="btn btn-secondary bookmark-btn" style="flex: 1; font-size: 0.85rem;" data-id="${career.id}">${bookmarkIconHtml}</button>
             <button class="btn btn-primary explore-details-btn" style="flex: 1.2; font-size: 0.85rem;" data-id="${career.id}">${labelViewPath}</button>
@@ -1573,6 +1615,157 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const skillQuizData = {
+    "python-beginners": [
+      { q: "What is the output of print(type([]))?", options: ["<class 'tuple'>", "<class 'list'>", "<class 'dict'>", "<class 'set'>"], correct: 1 },
+      { q: "Which keyword is used to define a function in Python?", options: ["func", "def", "function", "define"], correct: 1 },
+      { q: "How do you start a comment in Python?", options: ["//", "/*", "#", "--"], correct: 2 },
+      { q: "What data type is the result of 3 / 2 in Python 3?", options: ["int", "float", "double", "long"], correct: 1 },
+      { q: "Which method adds an element to the end of a list?", options: ["append()", "push()", "add()", "insert()"], correct: 0 }
+    ],
+    "javascript-beginners": [
+      { q: "Which keyword declares a block-scoped variable in JavaScript?", options: ["var", "let", "dim", "string"], correct: 1 },
+      { q: "What does DOM stand for?", options: ["Document Object Model", "Data Object Mode", "Digital Ordinance Module", "Desktop Object Main"], correct: 0 },
+      { q: "What is the result of typeof NaN in JavaScript?", options: ["undefined", "number", "string", "null"], correct: 1 },
+      { q: "Which method converts a JSON string into a JS object?", options: ["JSON.stringify()", "JSON.parse()", "JSON.toObject()", "JSON.convert()"], correct: 1 },
+      { q: "What is the correct syntax for an arrow function?", options: ["() => {}", "function() => {}", "def () => {}", "() -> {}"], correct: 0 }
+    ],
+    "web-dev-apna": [
+      { q: "Which HTML tag is used for the main title heading?", options: ["<h6>", "<head>", "<h1>", "<title>"], correct: 2 },
+      { q: "Which CSS property changes text color?", options: ["font-color", "color", "text-style", "background-color"], correct: 1 },
+      { q: "What does CSS Flexbox property justify-content: center do?", options: ["Aligns vertically", "Aligns horizontally along main axis", "Adds padding", "Fixes position"], correct: 1 },
+      { q: "Which HTML attribute opens a link in a new tab?", options: ["target='_blank'", "newtab='true'", "href='_new'", "open='blank'"], correct: 0 },
+      { q: "What is the CSS Box Model component inside the border?", options: ["Margin", "Padding", "Outline", "Shadow"], correct: 1 }
+    ],
+    "react-beginners": [
+      { q: "Which Hook is used for state management in React functional components?", options: ["useEffect", "useState", "useContext", "useRef"], correct: 1 },
+      { q: "What is JSX in React?", options: ["JavaScript XML syntax extension", "Java Special eXtension", "JSON Transfer XML", "Style Sheet Extension"], correct: 0 },
+      { q: "How do you pass data from parent to child component in React?", options: ["State", "Props", "Redux", "Cookies"], correct: 1 },
+      { q: "When does useEffect(() => {}, []) run?", options: ["On every render", "Only once after initial mount", "Only on unmount", "Never"], correct: 1 },
+      { q: "What is Virtual DOM in React?", options: ["Physical memory buffer", "In-memory lightweight copy of real DOM", "Browser extension", "Database cache"], correct: 1 }
+    ],
+    "dsa-gate": [
+      { q: "What is the time complexity of Binary Search?", options: ["O(N)", "O(N log N)", "O(log N)", "O(1)"], correct: 2 },
+      { q: "Which data structure operates on LIFO (Last In First Out)?", options: ["Queue", "Stack", "Tree", "Graph"], correct: 1 },
+      { q: "What is the worst-case time complexity of Quick Sort?", options: ["O(N log N)", "O(N^2)", "O(N)", "O(1)"], correct: 1 },
+      { q: "Which traversal technique visits Root -> Left -> Right?", options: ["In-order", "Pre-order", "Post-order", "Level-order"], correct: 1 },
+      { q: "What is used to detect cycles in a Linked List?", options: ["Binary Search", "Floyd's Fast & Slow Pointers", "Dijkstra Algorithm", "Kruskal Algorithm"], correct: 1 }
+    ],
+    "git-github-mastery": [
+      { q: "Which command initializes a new local Git repository?", options: ["git start", "git init", "git new", "git create"], correct: 1 },
+      { q: "Which command stages modified files for commit?", options: ["git commit", "git push", "git add", "git stage"], correct: 2 },
+      { q: "What command creates and switches to a new branch?", options: ["git branch -new", "git checkout -b", "git switch -create", "git make branch"], correct: 1 },
+      { q: "What does git pull do?", options: ["Only fetches changes", "Fetches and merges remote changes into local branch", "Uploads code to GitHub", "Deletes remote branch"], correct: 1 },
+      { q: "What is a Pull Request (PR) on GitHub?", options: ["A request to delete code", "A proposed set of changes submitted for code review", "A database query", "A local commit"], correct: 1 }
+    ],
+    "default": [
+      { q: "What is the primary benefit of mastering this skill?", options: ["Earn certifications and build portfolio projects", "Memorize textbook terms", "Copy-paste code without understanding", "Avoid practical coding"], correct: 0 },
+      { q: "How should you practice complex programming or technical topics?", options: ["Build hands-on projects and write code daily", "Read once without running code", "Skip debugging", "Never ask questions"], correct: 0 },
+      { q: "What does Big-O notation measure?", options: ["File download speed", "Algorithm time & space complexity growth", "Screen resolution", "Memory RAM size"], correct: 1 },
+      { q: "Why is version control important in technical team workflows?", options: ["Track code history, collaborate safely, and revert bugs", "Make code run faster", "Encrypt passwords", "Generate graphics"], correct: 0 },
+      { q: "What is the best way to prepare for technical industry interviews?", options: ["Solve algorithmic problems & explain your logic clearly", "Guess random answers", "Rely on shortcuts", "Skip practice"], correct: 0 }
+    ]
+  };
+
+  function openSkillQuizModal(skillId) {
+    const skill = appData.skills.find(s => s.id === skillId);
+    if (!skill) return;
+
+    const isHindi = (state.language === 'hi');
+    const questions = skillQuizData[skillId] || skillQuizData['default'];
+    let currentIdx = 0;
+    let score = 0;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.zIndex = '10000';
+
+    function renderQuestion() {
+      if (currentIdx >= questions.length) {
+        const passScore = score >= 3;
+        const bonusXP = passScore ? 50 : 20;
+        state.userXP += bonusXP;
+        saveState();
+
+        const titleText = isHindi ? 'ज्ञानाकलन पूर्ण!' : 'Skill Assessment Complete!';
+        const scoreMsg = isHindi 
+          ? `आपका स्कोर: ${score} / ${questions.length}. +${bonusXP} XP दिए गए!` 
+          : `Your Score: ${score} / ${questions.length}. +${bonusXP} Knowledge XP Awarded!`;
+
+        const statusBadge = passScore 
+          ? `<span style="background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; padding: 0.35rem 0.85rem; border-radius: 20px; font-size: 0.85rem; font-weight: 800;">🌟 ${isHindi ? 'प्रमाणित मास्टर' : 'Certified Master'}</span>`
+          : `<span style="background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; padding: 0.35rem 0.85rem; border-radius: 20px; font-size: 0.85rem; font-weight: 800;">💪 ${isHindi ? 'पुनः प्रयास करें' : 'Keep Practicing'}</span>`;
+
+        overlay.innerHTML = `
+          <div class="modal-content glass-card" style="max-width: 500px; text-align: center; padding: 2rem;">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">${passScore ? '🏆' : '📚'}</div>
+            <h2 class="gradient-text">${titleText}</h2>
+            <div style="margin: 1rem 0;">${statusBadge}</div>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1rem;">${scoreMsg}</p>
+            <div style="display: flex; gap: 0.75rem; justify-content: center;">
+              ${passScore ? `<button class="btn btn-primary" id="claim-cert-from-quiz-btn" style="background: linear-gradient(135deg, #d4af37, #b8860b); color: #000; font-weight: 800; border: none;">${isHindi ? '🎓 प्रमाण पत्र देखें' : '🎓 View Certificate'}</button>` : ''}
+              <button class="btn btn-secondary" id="close-quiz-btn">${isHindi ? '✕ बंद करें' : '✕ Close'}</button>
+            </div>
+          </div>
+        `;
+
+        const certBtn = overlay.querySelector('#claim-cert-from-quiz-btn');
+        if (certBtn) {
+          certBtn.addEventListener('click', () => {
+            document.body.removeChild(overlay);
+            openCertificateModal(skillId);
+          });
+        }
+        overlay.querySelector('#close-quiz-btn').addEventListener('click', () => {
+          document.body.removeChild(overlay);
+        });
+        return;
+      }
+
+      const q = questions[currentIdx];
+      let optionsHtml = '';
+      q.options.forEach((opt, idx) => {
+        optionsHtml += `
+          <button class="quiz-opt-btn btn btn-secondary" data-idx="${idx}" style="width: 100%; text-align: left; padding: 0.75rem 1rem; margin-bottom: 0.5rem; font-size: 0.88rem; justify-content: flex-start;">
+            ${String.fromCharCode(65 + idx)}. ${opt}
+          </button>
+        `;
+      });
+
+      overlay.innerHTML = `
+        <div class="modal-content glass-card" style="max-width: 550px; padding: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase;">${skill.image} ${skill.title}</span>
+            <span style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 700;">${currentIdx + 1} / ${questions.length}</span>
+          </div>
+
+          <h3 style="font-size: 1.1rem; margin-bottom: 1.25rem; line-height: 1.5; color: #fff;">${q.q}</h3>
+
+          <div style="margin-bottom: 1.5rem;">
+            ${optionsHtml}
+          </div>
+        </div>
+      `;
+
+      overlay.querySelectorAll('.quiz-opt-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const chosenIdx = parseInt(btn.getAttribute('data-idx'));
+          if (chosenIdx === q.correct) {
+            score++;
+          }
+          currentIdx++;
+          renderQuestion();
+        });
+      });
+    }
+
+    document.body.appendChild(overlay);
+    renderQuestion();
+  }
+
   function openCertificateModal(skillId) {
     const skill = appData.skills.find(s => s.id === skillId);
     if (!skill) return;
@@ -1731,11 +1924,24 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
       });
 
+      const quizBtnText = isHindi ? "📝 अंतिम ज्ञानाकलन क्विज़ लें (+50 XP)" : "📝 Take End-of-Track Practice Quiz (+50 XP)";
+      const quizBannerHtml = `
+        <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 10px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <div style="font-size: 0.85rem; color: #fff; font-weight: 600;">
+            🧪 ${isHindi ? 'ज्ञान का परीक्षण करें और +50 XP अर्जित करें!' : 'Test your mastery with 5 practice questions and earn +50 Knowledge XP!'}
+          </div>
+          <button class="btn btn-secondary start-skill-quiz-btn" data-id="${skill.id}" style="padding: 0.45rem 0.9rem; font-size: 0.8rem; font-weight: 700; border-color: var(--color-primary); color: #fff;">
+            ${quizBtnText}
+          </button>
+        </div>
+      `;
+
       modalBody.innerHTML = `
         <h2 class="modal-title">${displayTitle}</h2>
         <div class="modal-subtitle">${displaySubtitle}</div>
 
         ${certBannerHtml}
+        ${quizBannerHtml}
 
         <div class="module-list" style="margin-bottom: 2rem;">
           ${modulesHtml}
@@ -1749,6 +1955,14 @@ document.addEventListener('DOMContentLoaded', () => {
         modalClaimCertBtn.addEventListener('click', () => {
           closeModal();
           openCertificateModal(skill.id);
+        });
+      }
+
+      const startQuizBtn = modalBody.querySelector('.start-skill-quiz-btn');
+      if (startQuizBtn) {
+        startQuizBtn.addEventListener('click', () => {
+          closeModal();
+          openSkillQuizModal(skill.id);
         });
       }
 
