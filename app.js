@@ -1679,16 +1679,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Open selected video
             videoContainer.style.display = 'block';
             if (videoId) {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+              iframe.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=1`;
             }
             btn.innerHTML = closeText;
-
-            // Auto-check module checkbox when student opens video
-            const checkbox = moduleItem.querySelector('.module-checkbox');
-            if (checkbox && !checkbox.checked) {
-              checkbox.checked = true;
-              checkbox.dispatchEvent(new Event('change'));
-            }
           } else {
             videoContainer.style.display = 'none';
             iframe.src = '';
@@ -3115,6 +3108,31 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCommunity();
     alert(state.language === 'hi' ? 'आपकी प्रोफ़ाइल और काम सफलतापूर्वक सहेजे गए!' : 'Your profile & works portfolio saved successfully!');
   }
+
+  // --- AUTOMATIC VIDEO COMPLETION LISTENER ---
+  window.addEventListener('message', (event) => {
+    try {
+      if (typeof event.data === 'string') {
+        const data = JSON.parse(event.data);
+        if (data.event === 'infoDelivery' && data.info && data.info.playerState === 0) {
+          // playerState 0 = ENDED (video finished playing to the end)
+          const openContainer = document.querySelector('.video-container[style*="block"]');
+          if (openContainer) {
+            const moduleItem = openContainer.closest('.module-item');
+            if (moduleItem) {
+              const checkbox = moduleItem.querySelector('.module-checkbox');
+              if (checkbox && !checkbox.checked) {
+                checkbox.checked = true;
+                checkbox.dispatchEvent(new Event('change'));
+              }
+            }
+          }
+        }
+      }
+    } catch (err) {
+      // Ignore non-JSON postMessages from extensions/third-parties
+    }
+  });
 
   // --- KICKSTART ---
   init();
