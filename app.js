@@ -1426,6 +1426,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const displayTitle = (isHindi && skillTranslations[skill.title]) ? skillTranslations[skill.title] : skill.title;
 
+      let certBtnHtml = '';
+      if (progressPercent === 100) {
+        const certLabel = isHindi ? '🎓 प्रमाण पत्र प्राप्त करें' : '🎓 Claim Certificate';
+        certBtnHtml = `<button class="btn btn-secondary claim-cert-btn" data-id="${skill.id}" style="border-color: #d4af37; color: #ffe066; margin-top: 0.5rem; width: 100%; font-weight: 700;">${certLabel}</button>`;
+      }
+
       skillsHtml += `
         <div class="glass-card skill-card">
           <div class="skill-card-header">
@@ -1440,13 +1446,14 @@ document.addEventListener('DOMContentLoaded', () => {
               <span>${progressPercent}%</span>
             </div>
             <div class="skill-progress-bar">
-              <div class="skill-progress-fill" style="width: ${progressPercent}%; background: var(--color-secondary)"></div>
+              <div class="skill-progress-fill" style="width: ${progressPercent}%; background: ${progressPercent === 100 ? '#d4af37' : 'var(--color-secondary)'}"></div>
             </div>
           </div>
 
           <button class="btn btn-primary start-skill-btn" style="width: 100%;" data-id="${skill.id}">
             ${btnText}
           </button>
+          ${certBtnHtml}
         </div>
       `;
     });
@@ -1458,6 +1465,99 @@ document.addEventListener('DOMContentLoaded', () => {
         const id = btn.getAttribute('data-id');
         openSkillRoadmapModal(id);
       });
+    });
+
+    container.querySelectorAll('.claim-cert-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.getAttribute('data-id');
+        openCertificateModal(id);
+      });
+    });
+  }
+
+  function openCertificateModal(skillId) {
+    const skill = appData.skills.find(s => s.id === skillId);
+    if (!skill) return;
+
+    const isHindi = (state.language === 'hi');
+    const skillTitle = (isHindi && skillTranslations[skill.title]) ? skillTranslations[skill.title] : skill.title;
+    
+    let userName = 'Student';
+    const activeEmail = localStorage.getItem('pathfinder_active_email');
+    if (activeEmail) {
+      const usersDb = JSON.parse(localStorage.getItem('pathfinder_users') || '{}');
+      if (usersDb[activeEmail] && usersDb[activeEmail].name) {
+        userName = usersDb[activeEmail].name;
+      }
+    }
+    const issueDate = new Date().toLocaleDateString(isHindi ? 'hi-IN' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    const certId = 'PF-CERT-' + skillId.toUpperCase().replace(/-/g, '').slice(0, 8) + '-' + Math.floor(1000 + Math.random() * 9000);
+
+    const overlay = document.createElement('div');
+    overlay.className = 'certificate-modal-overlay';
+    overlay.id = 'certificate-modal-overlay';
+
+    overlay.innerHTML = `
+      <div style="max-width: 800px; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+        <div class="certificate-action-bar" style="display: flex; gap: 1rem; width: 100%; justify-content: flex-end;">
+          <button class="btn btn-primary" id="print-cert-btn" style="padding: 0.5rem 1.25rem; font-weight: 700; background: linear-gradient(135deg, #d4af37, #b8860b); color: #000; border: none;">
+            ${isHindi ? '🖨️ प्रमाण पत्र प्रिंट / डाउनलोड करें' : '🖨️ Print / Download PDF Certificate'}
+          </button>
+          <button class="btn btn-secondary" id="close-cert-btn" style="padding: 0.5rem 1rem;">
+            ${isHindi ? '✕ बंद करें' : '✕ Close'}
+          </button>
+        </div>
+
+        <div class="certificate-paper">
+          <div class="certificate-header-seal">📜</div>
+          <div class="certificate-title">${isHindi ? 'पाथफाइंडर उपलब्धि प्रमाण पत्र' : 'PATHFINDER CERTIFICATE OF COMPLETION'}</div>
+          <div class="certificate-subtitle">${isHindi ? 'कौशल दक्षता सत्यापन' : 'OFFICIAL SKILL MASTERY VERIFICATION'}</div>
+
+          <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 1rem;">
+            ${isHindi ? 'यह प्रमाणित किया जाता है कि' : 'This is to certify that'}
+          </div>
+
+          <div class="certificate-recipient">${userName}</div>
+
+          <div class="certificate-body-text">
+            ${isHindi 
+              ? 'ने पाथफाइंडर प्लेटफॉर्म पर सभी मील के पत्थर सफलतापूर्वक पूरे कर लिए हैं और निम्नलिखित कौशल पाठ्यक्रम में पूर्ण महारत हासिल की है:'
+              : 'has successfully completed all learning milestones and demonstrated full technical mastery in the following course track:'
+            }
+          </div>
+
+          <div class="certificate-skill-title">${skill.image} ${skillTitle}</div>
+
+          <div class="certificate-footer-grid">
+            <div class="certificate-signature-box">
+              <div class="certificate-signature-line">Google DeepMind Antigravity</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 600;">Authorized Pathfinder Evaluator</div>
+            </div>
+            <div class="certificate-meta-box">
+              <div><strong>${isHindi ? 'जारी तिथि:' : 'Issued Date:'}</strong> ${issueDate}</div>
+              <div><strong>${isHindi ? 'प्रमाण पत्र आईडी:' : 'Certificate ID:'}</strong> ${certId}</div>
+              <div style="color: var(--color-success); font-weight: 700; margin-top: 0.2rem;">✓ Verifiable Credential</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    overlay.querySelector('#print-cert-btn').addEventListener('click', () => {
+      window.print();
+    });
+
+    overlay.querySelector('#close-cert-btn').addEventListener('click', () => {
+      document.body.removeChild(overlay);
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        document.body.removeChild(overlay);
+      }
     });
   }
 
@@ -1480,6 +1580,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const closeBtnText = isHindi ? "रोडमैप बंद करें" : "Close Roadmap";
       const watchText = isHindi ? "🎥 देखें" : "🎥 Watch";
       const closeText = isHindi ? "✕ बंद करें" : "✕ Close";
+
+      // Check for 100% completion
+      const totalMods = skill.modules.length;
+      const completedModsCount = skill.modules.filter(m => state.completedModules.includes(m.id)).length;
+      let certBannerHtml = '';
+      if (completedModsCount === totalMods && totalMods > 0) {
+        const certBannerText = isHindi 
+          ? "🎉 बधाई हो! आपने यह पाठ्यक्रम पूर्ण कर लिया है। अपना आधिकारिक प्रमाण पत्र दावा करें!" 
+          : "🎉 Congratulations! You have completed 100% of this course track. Claim your official certificate!";
+        const claimBtnText = isHindi ? "🎓 प्रमाण पत्र देखें / दावा करें" : "🎓 View / Claim Certificate";
+        certBannerHtml = `
+          <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(139, 92, 246, 0.15)); border: 1px solid #d4af37; border-radius: 10px; padding: 1rem; margin-bottom: 1.25rem; text-align: center;">
+            <p style="margin-bottom: 0.75rem; font-weight: 600; color: #ffe066; font-size: 0.9rem;">${certBannerText}</p>
+            <button class="btn btn-primary modal-claim-cert-btn" data-id="${skill.id}" style="background: linear-gradient(135deg, #d4af37, #b8860b); color: #000; font-weight: 800; border: none;">
+              ${claimBtnText}
+            </button>
+          </div>
+        `;
+      }
 
       let modulesHtml = '';
       skill.modules.forEach(mod => {
@@ -1519,12 +1638,22 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2 class="modal-title">${displayTitle}</h2>
         <div class="modal-subtitle">${displaySubtitle}</div>
 
+        ${certBannerHtml}
+
         <div class="module-list" style="margin-bottom: 2rem;">
           ${modulesHtml}
         </div>
 
         <button class="btn btn-primary" id="close-modal-btn" style="width: 100%">${closeBtnText}</button>
       `;
+
+      const modalClaimCertBtn = modalBody.querySelector('.modal-claim-cert-btn');
+      if (modalClaimCertBtn) {
+        modalClaimCertBtn.addEventListener('click', () => {
+          closeModal();
+          openCertificateModal(skill.id);
+        });
+      }
 
       // Add video toggle listeners
       const toggleVideoBtns = modalBody.querySelectorAll('.toggle-video-btn');
