@@ -1615,56 +1615,1519 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const skillQuizData = {
+    const skillQuizData = {
     "python-beginners": [
-      { q: "What is the output of print(type([]))?", options: ["<class 'tuple'>", "<class 'list'>", "<class 'dict'>", "<class 'set'>"], correct: 1 },
-      { q: "Which keyword is used to define a function in Python?", options: ["func", "def", "function", "define"], correct: 1 },
-      { q: "How do you start a comment in Python?", options: ["//", "/*", "#", "--"], correct: 2 },
-      { q: "What data type is the result of 3 / 2 in Python 3?", options: ["int", "float", "double", "long"], correct: 1 },
-      { q: "Which method adds an element to the end of a list?", options: ["append()", "push()", "add()", "insert()"], correct: 0 }
-    ],
+      {
+            "q": "What is the output of print(type([]))?",
+            "options": [
+                  "<class 'tuple'>",
+                  "<class 'list'>",
+                  "<class 'dict'>",
+                  "<class 'set'>"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which keyword is used to define a function in Python?",
+            "options": [
+                  "func",
+                  "def",
+                  "function",
+                  "define"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "How do you start a comment in Python?",
+            "options": [
+                  "//",
+                  "/*",
+                  "#",
+                  "--"
+            ],
+            "correct": 2
+      },
+      {
+            "q": "What data type is the result of 3 / 2 in Python 3?",
+            "options": [
+                  "int",
+                  "float",
+                  "double",
+                  "long"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which method adds an element to the end of a list?",
+            "options": [
+                  "append()",
+                  "push()",
+                  "add()",
+                  "insert()"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is the output of bool('False') in Python?",
+            "options": [
+                  "False",
+                  "True",
+                  "None",
+                  "Error"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which collection type is immutable in Python?",
+            "options": [
+                  "list",
+                  "dict",
+                  "tuple",
+                  "set"
+            ],
+            "correct": 2
+      },
+      {
+            "q": "What does len({'a': 1, 'b': 2}) return?",
+            "options": [
+                  "1",
+                  "2",
+                  "4",
+                  "Error"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which method converts a string to lowercase?",
+            "options": [
+                  "toLower()",
+                  "lower()",
+                  "lowercase()",
+                  "casefold()"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "How do you open a file for reading in Python?",
+            "options": [
+                  "open('file.txt', 'w')",
+                  "open('file.txt', 'r')",
+                  "read('file.txt')",
+                  "file.open()"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the output of 2 ** 3 in Python?",
+            "options": [
+                  "6",
+                  "8",
+                  "9",
+                  "5"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which operator performs floor division?",
+            "options": [
+                  "/",
+                  "//",
+                  "%",
+                  "**"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the output of list(range(3))?",
+            "options": [
+                  "[1, 2, 3]",
+                  "[0, 1, 2]",
+                  "[0, 1, 2, 3]",
+                  "[1, 2]"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which module in Python is used for random number generation?",
+            "options": [
+                  "math",
+                  "random",
+                  "rand",
+                  "os"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "How do you catch exceptions in Python?",
+            "options": [
+                  "try / catch",
+                  "try / except",
+                  "do / handle",
+                  "catch / throw"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the output of 'Python'[1:4]?",
+            "options": [
+                  "Pyt",
+                  "yth",
+                  "ytho",
+                  "pyt"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which keyword is used to return a value from a function?",
+            "options": [
+                  "yield",
+                  "return",
+                  "send",
+                  "output"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is self in Python class methods?",
+            "options": [
+                  "A reserved global keyword",
+                  "Reference to the instance of the class",
+                  "A static method decorator",
+                  "A list object"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which function converts a string to an integer?",
+            "options": [
+                  "str()",
+                  "int()",
+                  "parse()",
+                  "to_int()"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the result of 10 % 3?",
+            "options": [
+                  "3",
+                  "1",
+                  "0",
+                  "3.33"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which method removes and returns the last item of a list?",
+            "options": [
+                  "pop()",
+                  "remove()",
+                  "delete()",
+                  "extract()"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What keyword creates an anonymous inline function?",
+            "options": [
+                  "def",
+                  "lambda",
+                  "inline",
+                  "func"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "How do you check if key 'x' exists in dictionary 'd'?",
+            "options": [
+                  "d.has('x')",
+                  "'x' in d",
+                  "d.contains('x')",
+                  "exists(d, 'x')"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is PIP in Python?",
+            "options": [
+                  "Python Image Processing",
+                  "Package Installer for Python",
+                  "Python Integrated Platform",
+                  "Protocol Interface Provider"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which method removes leading and trailing whitespace from a string?",
+            "options": [
+                  "clean()",
+                  "strip()",
+                  "trim()",
+                  "cut()"
+            ],
+            "correct": 1
+      }
+],
+    "python-english": [
+      {
+            "q": "What is the output of print(type([]))?",
+            "options": [
+                  "<class 'tuple'>",
+                  "<class 'list'>",
+                  "<class 'dict'>",
+                  "<class 'set'>"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which keyword is used to define a function in Python?",
+            "options": [
+                  "func",
+                  "def",
+                  "function",
+                  "define"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "How do you start a comment in Python?",
+            "options": [
+                  "//",
+                  "/*",
+                  "#",
+                  "--"
+            ],
+            "correct": 2
+      },
+      {
+            "q": "What data type is the result of 3 / 2 in Python 3?",
+            "options": [
+                  "int",
+                  "float",
+                  "double",
+                  "long"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which method adds an element to the end of a list?",
+            "options": [
+                  "append()",
+                  "push()",
+                  "add()",
+                  "insert()"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is the output of bool('False') in Python?",
+            "options": [
+                  "False",
+                  "True",
+                  "None",
+                  "Error"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which collection type is immutable in Python?",
+            "options": [
+                  "list",
+                  "dict",
+                  "tuple",
+                  "set"
+            ],
+            "correct": 2
+      },
+      {
+            "q": "What does len({'a': 1, 'b': 2}) return?",
+            "options": [
+                  "1",
+                  "2",
+                  "4",
+                  "Error"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which method converts a string to lowercase?",
+            "options": [
+                  "toLower()",
+                  "lower()",
+                  "lowercase()",
+                  "casefold()"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "How do you open a file for reading in Python?",
+            "options": [
+                  "open('file.txt', 'w')",
+                  "open('file.txt', 'r')",
+                  "read('file.txt')",
+                  "file.open()"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the output of 2 ** 3 in Python?",
+            "options": [
+                  "6",
+                  "8",
+                  "9",
+                  "5"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which operator performs floor division?",
+            "options": [
+                  "/",
+                  "//",
+                  "%",
+                  "**"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the output of list(range(3))?",
+            "options": [
+                  "[1, 2, 3]",
+                  "[0, 1, 2]",
+                  "[0, 1, 2, 3]",
+                  "[1, 2]"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which module in Python is used for random number generation?",
+            "options": [
+                  "math",
+                  "random",
+                  "rand",
+                  "os"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "How do you catch exceptions in Python?",
+            "options": [
+                  "try / catch",
+                  "try / except",
+                  "do / handle",
+                  "catch / throw"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the output of 'Python'[1:4]?",
+            "options": [
+                  "Pyt",
+                  "yth",
+                  "ytho",
+                  "pyt"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which keyword is used to return a value from a function?",
+            "options": [
+                  "yield",
+                  "return",
+                  "send",
+                  "output"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is self in Python class methods?",
+            "options": [
+                  "A reserved global keyword",
+                  "Reference to the instance of the class",
+                  "A static method decorator",
+                  "A list object"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which function converts a string to an integer?",
+            "options": [
+                  "str()",
+                  "int()",
+                  "parse()",
+                  "to_int()"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the result of 10 % 3?",
+            "options": [
+                  "3",
+                  "1",
+                  "0",
+                  "3.33"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which method removes and returns the last item of a list?",
+            "options": [
+                  "pop()",
+                  "remove()",
+                  "delete()",
+                  "extract()"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What keyword creates an anonymous inline function?",
+            "options": [
+                  "def",
+                  "lambda",
+                  "inline",
+                  "func"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "How do you check if key 'x' exists in dictionary 'd'?",
+            "options": [
+                  "d.has('x')",
+                  "'x' in d",
+                  "d.contains('x')",
+                  "exists(d, 'x')"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is PIP in Python?",
+            "options": [
+                  "Python Image Processing",
+                  "Package Installer for Python",
+                  "Python Integrated Platform",
+                  "Protocol Interface Provider"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which method removes leading and trailing whitespace from a string?",
+            "options": [
+                  "clean()",
+                  "strip()",
+                  "trim()",
+                  "cut()"
+            ],
+            "correct": 1
+      }
+],
     "javascript-beginners": [
-      { q: "Which keyword declares a block-scoped variable in JavaScript?", options: ["var", "let", "dim", "string"], correct: 1 },
-      { q: "What does DOM stand for?", options: ["Document Object Model", "Data Object Mode", "Digital Ordinance Module", "Desktop Object Main"], correct: 0 },
-      { q: "What is the result of typeof NaN in JavaScript?", options: ["undefined", "number", "string", "null"], correct: 1 },
-      { q: "Which method converts a JSON string into a JS object?", options: ["JSON.stringify()", "JSON.parse()", "JSON.toObject()", "JSON.convert()"], correct: 1 },
-      { q: "What is the correct syntax for an arrow function?", options: ["() => {}", "function() => {}", "def () => {}", "() -> {}"], correct: 0 }
-    ],
+      {
+            "q": "Which keyword declares a block-scoped variable in JavaScript?",
+            "options": [
+                  "var",
+                  "let",
+                  "dim",
+                  "string"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does DOM stand for?",
+            "options": [
+                  "Document Object Model",
+                  "Data Object Mode",
+                  "Digital Ordinance Module",
+                  "Desktop Object Main"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is the result of typeof NaN in JavaScript?",
+            "options": [
+                  "undefined",
+                  "number",
+                  "string",
+                  "null"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which method converts a JSON string into a JS object?",
+            "options": [
+                  "JSON.stringify()",
+                  "JSON.parse()",
+                  "JSON.toObject()",
+                  "JSON.convert()"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the correct syntax for an arrow function?",
+            "options": [
+                  "() => {}",
+                  "function() => {}",
+                  "def () => {}",
+                  "() -> {}"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is the output of 1 + '2' in JavaScript?",
+            "options": [
+                  "3",
+                  "'12'",
+                  "NaN",
+                  "TypeError"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which array method creates a new array with results of calling a function on every element?",
+            "options": [
+                  "forEach()",
+                  "map()",
+                  "filter()",
+                  "reduce()"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does '===' compare in JavaScript?",
+            "options": [
+                  "Value only",
+                  "Type only",
+                  "Both value and type",
+                  "Memory reference"
+            ],
+            "correct": 2
+      },
+      {
+            "q": "How do you select an element by ID in JavaScript?",
+            "options": [
+                  "document.getById()",
+                  "document.getElementById()",
+                  "document.selectId()",
+                  "document.querySelector(#id)"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What method attaches an event handler to an element?",
+            "options": [
+                  "addEventListener()",
+                  "attachEvent()",
+                  "onEvent()",
+                  "listen()"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Which keyword defines an asynchronous function?",
+            "options": [
+                  "async",
+                  "defer",
+                  "promise",
+                  "await"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is a Promise in JavaScript?",
+            "options": [
+                  "A synchronous loop",
+                  "An object representing eventual completion of an async operation",
+                  "A variable declaration",
+                  "A DOM node"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does Array.prototype.filter() return?",
+            "options": [
+                  "A single value",
+                  "A new array containing elements that pass the test",
+                  "A boolean",
+                  "Index position"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which keyword handles exceptions in JS?",
+            "options": [
+                  "try...catch",
+                  "do...while",
+                  "throw...error",
+                  "check...fail"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is localStorage in the browser?",
+            "options": [
+                  "Temporary server session",
+                  "Persistent key-value web storage in browser",
+                  "Database cache",
+                  "RAM buffer"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "How do you parse an integer from a string?",
+            "options": [
+                  "parseInt()",
+                  "Number.parse()",
+                  "int()",
+                  "toInteger()"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What does event.preventDefault() do?",
+            "options": [
+                  "Stops event bubbling",
+                  "Prevents default browser action for the event",
+                  "Deletes event listener",
+                  "Refreshes page"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the scope of a 'const' variable?",
+            "options": [
+                  "Global",
+                  "Block scope",
+                  "Function scope only",
+                  "Module scope"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which method merges two or more arrays?",
+            "options": [
+                  "concat()",
+                  "combine()",
+                  "merge()",
+                  "append()"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What does typeof null return in JS (legacy bug)?",
+            "options": [
+                  "null",
+                  "object",
+                  "undefined",
+                  "number"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What method stops event propagation up the DOM tree?",
+            "options": [
+                  "event.stopPropagation()",
+                  "event.halt()",
+                  "event.cancel()",
+                  "event.freeze()"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "How do you convert an object to a JSON string?",
+            "options": [
+                  "JSON.stringify()",
+                  "JSON.convert()",
+                  "Object.toJSON()",
+                  "String.fromObject()"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Which statement exits a loop prematurely?",
+            "options": [
+                  "exit",
+                  "break",
+                  "continue",
+                  "stop"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the result of Boolean('')?",
+            "options": [
+                  "true",
+                  "false",
+                  "null",
+                  "undefined"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does the 'this' keyword refer to in standard methods?",
+            "options": [
+                  "The global window always",
+                  "The object calling the method",
+                  "The HTML document",
+                  "The script tag"
+            ],
+            "correct": 1
+      }
+],
     "web-dev-apna": [
-      { q: "Which HTML tag is used for the main title heading?", options: ["<h6>", "<head>", "<h1>", "<title>"], correct: 2 },
-      { q: "Which CSS property changes text color?", options: ["font-color", "color", "text-style", "background-color"], correct: 1 },
-      { q: "What does CSS Flexbox property justify-content: center do?", options: ["Aligns vertically", "Aligns horizontally along main axis", "Adds padding", "Fixes position"], correct: 1 },
-      { q: "Which HTML attribute opens a link in a new tab?", options: ["target='_blank'", "newtab='true'", "href='_new'", "open='blank'"], correct: 0 },
-      { q: "What is the CSS Box Model component inside the border?", options: ["Margin", "Padding", "Outline", "Shadow"], correct: 1 }
-    ],
-    "react-beginners": [
-      { q: "Which Hook is used for state management in React functional components?", options: ["useEffect", "useState", "useContext", "useRef"], correct: 1 },
-      { q: "What is JSX in React?", options: ["JavaScript XML syntax extension", "Java Special eXtension", "JSON Transfer XML", "Style Sheet Extension"], correct: 0 },
-      { q: "How do you pass data from parent to child component in React?", options: ["State", "Props", "Redux", "Cookies"], correct: 1 },
-      { q: "When does useEffect(() => {}, []) run?", options: ["On every render", "Only once after initial mount", "Only on unmount", "Never"], correct: 1 },
-      { q: "What is Virtual DOM in React?", options: ["Physical memory buffer", "In-memory lightweight copy of real DOM", "Browser extension", "Database cache"], correct: 1 }
-    ],
-    "dsa-gate": [
-      { q: "What is the time complexity of Binary Search?", options: ["O(N)", "O(N log N)", "O(log N)", "O(1)"], correct: 2 },
-      { q: "Which data structure operates on LIFO (Last In First Out)?", options: ["Queue", "Stack", "Tree", "Graph"], correct: 1 },
-      { q: "What is the worst-case time complexity of Quick Sort?", options: ["O(N log N)", "O(N^2)", "O(N)", "O(1)"], correct: 1 },
-      { q: "Which traversal technique visits Root -> Left -> Right?", options: ["In-order", "Pre-order", "Post-order", "Level-order"], correct: 1 },
-      { q: "What is used to detect cycles in a Linked List?", options: ["Binary Search", "Floyd's Fast & Slow Pointers", "Dijkstra Algorithm", "Kruskal Algorithm"], correct: 1 }
-    ],
-    "git-github-mastery": [
-      { q: "Which command initializes a new local Git repository?", options: ["git start", "git init", "git new", "git create"], correct: 1 },
-      { q: "Which command stages modified files for commit?", options: ["git commit", "git push", "git add", "git stage"], correct: 2 },
-      { q: "What command creates and switches to a new branch?", options: ["git branch -new", "git checkout -b", "git switch -create", "git make branch"], correct: 1 },
-      { q: "What does git pull do?", options: ["Only fetches changes", "Fetches and merges remote changes into local branch", "Uploads code to GitHub", "Deletes remote branch"], correct: 1 },
-      { q: "What is a Pull Request (PR) on GitHub?", options: ["A request to delete code", "A proposed set of changes submitted for code review", "A database query", "A local commit"], correct: 1 }
-    ],
+      {
+            "q": "Which HTML tag is used for the main title heading?",
+            "options": [
+                  "<h6>",
+                  "<head>",
+                  "<h1>",
+                  "<title>"
+            ],
+            "correct": 2
+      },
+      {
+            "q": "Which CSS property changes text color?",
+            "options": [
+                  "font-color",
+                  "color",
+                  "text-style",
+                  "background-color"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does CSS Flexbox property justify-content: center do?",
+            "options": [
+                  "Aligns vertically",
+                  "Aligns horizontally along main axis",
+                  "Adds padding",
+                  "Fixes position"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which HTML attribute opens a link in a new tab?",
+            "options": [
+                  "target='_blank'",
+                  "newtab='true'",
+                  "href='_new'",
+                  "open='blank'"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is the CSS Box Model component inside the border?",
+            "options": [
+                  "Margin",
+                  "Padding",
+                  "Outline",
+                  "Shadow"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS unit is relative to the root font size?",
+            "options": [
+                  "em",
+                  "rem",
+                  "px",
+                  "vh"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What tag is used to embed an image in HTML?",
+            "options": [
+                  "<image>",
+                  "<img>",
+                  "<pic>",
+                  "<src>"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS position value keeps an element relative to the viewport when scrolling?",
+            "options": [
+                  "absolute",
+                  "fixed",
+                  "relative",
+                  "static"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does HTML stand for?",
+            "options": [
+                  "Hyper Text Markup Language",
+                  "High Tech Multi Language",
+                  "Hyperlink Text Processing",
+                  "Home Tool Markup Language"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Which CSS display value creates a 2-dimensional layout grid?",
+            "options": [
+                  "flex",
+                  "grid",
+                  "inline-block",
+                  "table"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the purpose of alt attribute in <img> tags?",
+            "options": [
+                  "Tooltips",
+                  "Alternative text for accessibility & broken images",
+                  "Image resolution",
+                  "Filter effect"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS property sets background opacity/transparency?",
+            "options": [
+                  "opacity",
+                  "transparency",
+                  "filter",
+                  "visibility"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What does semantic HTML mean?",
+            "options": [
+                  "Using tags that convey meaning about content structure",
+                  "Writing fast code",
+                  "Using CSS animations",
+                  "Minifying files"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Which CSS property controls element stacking order?",
+            "options": [
+                  "z-index",
+                  "order",
+                  "stack",
+                  "layer"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is the default display mode of a <div> element?",
+            "options": [
+                  "inline",
+                  "block",
+                  "flex",
+                  "inline-block"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which tag defines an unordered bulleted list?",
+            "options": [
+                  "<ol>",
+                  "<ul>",
+                  "<li>",
+                  "<dl>"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS property is used for rounded corners?",
+            "options": [
+                  "corner-radius",
+                  "border-radius",
+                  "box-radius",
+                  "curve"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What media query feature detects screen width?",
+            "options": [
+                  "max-width",
+                  "screen-size",
+                  "device-pixels",
+                  "resolution"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Which HTML tag is used for bullet items inside list tags?",
+            "options": [
+                  "<item>",
+                  "<li>",
+                  "<bullet>",
+                  "<list>"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS property adds spacing OUTSIDE the border?",
+            "options": [
+                  "padding",
+                  "margin",
+                  "spacing",
+                  "gap"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does meta viewport tag control on mobile browsers?",
+            "options": [
+                  "Screen scaling and viewport width",
+                  "SEO keyword rank",
+                  "Favicon size",
+                  "Font download speed"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Which attribute specifies where to send form data on submit?",
+            "options": [
+                  "method",
+                  "action",
+                  "target",
+                  "dest"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS pseudo-class styles an element when hovered?",
+            "options": [
+                  ":focus",
+                  ":hover",
+                  ":active",
+                  ":visited"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What tag is used for embedding a video in HTML5?",
+            "options": [
+                  "<media>",
+                  "<video>",
+                  "<movie>",
+                  "<embed>"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does CSS stand for?",
+            "options": [
+                  "Cascading Style Sheets",
+                  "Creative Style System",
+                  "Computer Sheet Styles",
+                  "Colorful Style Sheets"
+            ],
+            "correct": 0
+      }
+],
+    "web-dev-delta": [
+      {
+            "q": "Which HTML tag is used for the main title heading?",
+            "options": [
+                  "<h6>",
+                  "<head>",
+                  "<h1>",
+                  "<title>"
+            ],
+            "correct": 2
+      },
+      {
+            "q": "Which CSS property changes text color?",
+            "options": [
+                  "font-color",
+                  "color",
+                  "text-style",
+                  "background-color"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does CSS Flexbox property justify-content: center do?",
+            "options": [
+                  "Aligns vertically",
+                  "Aligns horizontally along main axis",
+                  "Adds padding",
+                  "Fixes position"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which HTML attribute opens a link in a new tab?",
+            "options": [
+                  "target='_blank'",
+                  "newtab='true'",
+                  "href='_new'",
+                  "open='blank'"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is the CSS Box Model component inside the border?",
+            "options": [
+                  "Margin",
+                  "Padding",
+                  "Outline",
+                  "Shadow"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS unit is relative to the root font size?",
+            "options": [
+                  "em",
+                  "rem",
+                  "px",
+                  "vh"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What tag is used to embed an image in HTML?",
+            "options": [
+                  "<image>",
+                  "<img>",
+                  "<pic>",
+                  "<src>"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS position value keeps an element relative to the viewport when scrolling?",
+            "options": [
+                  "absolute",
+                  "fixed",
+                  "relative",
+                  "static"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does HTML stand for?",
+            "options": [
+                  "Hyper Text Markup Language",
+                  "High Tech Multi Language",
+                  "Hyperlink Text Processing",
+                  "Home Tool Markup Language"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Which CSS display value creates a 2-dimensional layout grid?",
+            "options": [
+                  "flex",
+                  "grid",
+                  "inline-block",
+                  "table"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What is the purpose of alt attribute in <img> tags?",
+            "options": [
+                  "Tooltips",
+                  "Alternative text for accessibility & broken images",
+                  "Image resolution",
+                  "Filter effect"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS property sets background opacity/transparency?",
+            "options": [
+                  "opacity",
+                  "transparency",
+                  "filter",
+                  "visibility"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What does semantic HTML mean?",
+            "options": [
+                  "Using tags that convey meaning about content structure",
+                  "Writing fast code",
+                  "Using CSS animations",
+                  "Minifying files"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Which CSS property controls element stacking order?",
+            "options": [
+                  "z-index",
+                  "order",
+                  "stack",
+                  "layer"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is the default display mode of a <div> element?",
+            "options": [
+                  "inline",
+                  "block",
+                  "flex",
+                  "inline-block"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which tag defines an unordered bulleted list?",
+            "options": [
+                  "<ol>",
+                  "<ul>",
+                  "<li>",
+                  "<dl>"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS property is used for rounded corners?",
+            "options": [
+                  "corner-radius",
+                  "border-radius",
+                  "box-radius",
+                  "curve"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What media query feature detects screen width?",
+            "options": [
+                  "max-width",
+                  "screen-size",
+                  "device-pixels",
+                  "resolution"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Which HTML tag is used for bullet items inside list tags?",
+            "options": [
+                  "<item>",
+                  "<li>",
+                  "<bullet>",
+                  "<list>"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS property adds spacing OUTSIDE the border?",
+            "options": [
+                  "padding",
+                  "margin",
+                  "spacing",
+                  "gap"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does meta viewport tag control on mobile browsers?",
+            "options": [
+                  "Screen scaling and viewport width",
+                  "SEO keyword rank",
+                  "Favicon size",
+                  "Font download speed"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Which attribute specifies where to send form data on submit?",
+            "options": [
+                  "method",
+                  "action",
+                  "target",
+                  "dest"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Which CSS pseudo-class styles an element when hovered?",
+            "options": [
+                  ":focus",
+                  ":hover",
+                  ":active",
+                  ":visited"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What tag is used for embedding a video in HTML5?",
+            "options": [
+                  "<media>",
+                  "<video>",
+                  "<movie>",
+                  "<embed>"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "What does CSS stand for?",
+            "options": [
+                  "Cascading Style Sheets",
+                  "Creative Style System",
+                  "Computer Sheet Styles",
+                  "Colorful Style Sheets"
+            ],
+            "correct": 0
+      }
+],
     "default": [
-      { q: "What is the primary benefit of mastering this skill?", options: ["Earn certifications and build portfolio projects", "Memorize textbook terms", "Copy-paste code without understanding", "Avoid practical coding"], correct: 0 },
-      { q: "How should you practice complex programming or technical topics?", options: ["Build hands-on projects and write code daily", "Read once without running code", "Skip debugging", "Never ask questions"], correct: 0 },
-      { q: "What does Big-O notation measure?", options: ["File download speed", "Algorithm time & space complexity growth", "Screen resolution", "Memory RAM size"], correct: 1 },
-      { q: "Why is version control important in technical team workflows?", options: ["Track code history, collaborate safely, and revert bugs", "Make code run faster", "Encrypt passwords", "Generate graphics"], correct: 0 },
-      { q: "What is the best way to prepare for technical industry interviews?", options: ["Solve algorithmic problems & explain your logic clearly", "Guess random answers", "Rely on shortcuts", "Skip practice"], correct: 0 }
-    ]
+      {
+            "q": "What is the primary benefit of mastering this skill?",
+            "options": [
+                  "Earn certifications and build portfolio projects",
+                  "Memorize textbook terms",
+                  "Copy-paste code without understanding",
+                  "Avoid practical coding"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "How should you practice complex programming or technical topics?",
+            "options": [
+                  "Build hands-on projects and write code daily",
+                  "Read once without running code",
+                  "Skip debugging",
+                  "Never ask questions"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What does Big-O notation measure?",
+            "options": [
+                  "File download speed",
+                  "Algorithm time & space complexity growth",
+                  "Screen resolution",
+                  "Memory RAM size"
+            ],
+            "correct": 1
+      },
+      {
+            "q": "Why is version control important in technical team workflows?",
+            "options": [
+                  "Track code history, collaborate safely, and revert bugs",
+                  "Make code run faster",
+                  "Encrypt passwords",
+                  "Generate graphics"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is the best way to prepare for technical industry interviews?",
+            "options": [
+                  "Solve algorithmic problems & explain your logic clearly",
+                  "Guess random answers",
+                  "Rely on shortcuts",
+                  "Skip practice"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What does DRY principle stand for in software engineering?",
+            "options": [
+                  "Don't Repeat Yourself",
+                  "Do Run Yearly",
+                  "Data Read Yield",
+                  "Deploy Rapidly Yourself"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is refactoring in programming?",
+            "options": [
+                  "Restructuring code without changing external behavior",
+                  "Adding new features",
+                  "Deleting tests",
+                  "Creating databases"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Why are automated unit tests valuable?",
+            "options": [
+                  "Catch regressions early and verify functionality",
+                  "Replace documentation",
+                  "Make code compile faster",
+                  "Increase file size"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is an API?",
+            "options": [
+                  "Application Programming Interface",
+                  "Automated Process Integration",
+                  "App Public Index",
+                  "Advanced Program Instruction"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is debugging?",
+            "options": [
+                  "Identifying and fixing bugs/errors in code",
+                  "Installing operating systems",
+                  "Writing design specs",
+                  "Formatting text"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is CI/CD in DevOps?",
+            "options": [
+                  "Continuous Integration & Continuous Deployment",
+                  "Code Inspection & Code Delivery",
+                  "Central Input & Central Data",
+                  "Computer Interface Design"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is Agile software development?",
+            "options": [
+                  "Iterative development focused on collaboration & feedback",
+                  "Waterfall planning with rigid specifications",
+                  "Solo coding without reviews",
+                  "Outsourcing code"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Why is code documentation useful?",
+            "options": [
+                  "Helps maintainers understand design and usage",
+                  "Increases CPU speed",
+                  "Required by compiler",
+                  "Deletes redundant code"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is open-source software?",
+            "options": [
+                  "Software whose source code is publicly accessible and modifiable",
+                  "Paid commercial software",
+                  "Unlicensed secret code",
+                  "Hardware firmware"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is an algorithm?",
+            "options": [
+                  "A step-by-step procedure to solve a problem",
+                  "A hardware component",
+                  "A programming language",
+                  "A network server"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is data validation?",
+            "options": [
+                  "Checking that input data is clean, correct, and useful",
+                  "Deleting old files",
+                  "Formatting CSS",
+                  "Compiling C++"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is an IDE?",
+            "options": [
+                  "Integrated Development Environment",
+                  "Internal Data Engine",
+                  "Interactive Display Editor",
+                  "Indexed Database Entry"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "Why is responsive web design important?",
+            "options": [
+                  "Ensures websites look and function well across devices",
+                  "Reduces server hosting fees",
+                  "Encrypts user passwords",
+                  "Disables JavaScript"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is cloud computing?",
+            "options": [
+                  "On-demand delivery of computing services over the Internet",
+                  "Local hard drive storage",
+                  "Bluetooth file transfer",
+                  "Offline caching"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is object-oriented programming (OOP)?",
+            "options": [
+                  "Programming paradigm based on objects containing data and methods",
+                  "Assembly language instructions",
+                  "Database query syntax",
+                  "Styling sheets"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is SQL used for?",
+            "options": [
+                  "Managing & querying relational databases",
+                  "Designing web page UI",
+                  "Writing mobile apps",
+                  "Building games"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is cybersecurity?",
+            "options": [
+                  "Protecting systems, networks, and data from digital attacks",
+                  "Designing graphics",
+                  "Typing fast",
+                  "Printing documents"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is a framework in coding?",
+            "options": [
+                  "A platform providing reusable foundation & tools for building applications",
+                  "A physical computer case",
+                  "A text editor theme",
+                  "A browser extension"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is Git staging area?",
+            "options": [
+                  "Preparation zone before committing changes",
+                  "Remote GitHub server",
+                  "Trash bin",
+                  "Production deployment server"
+            ],
+            "correct": 0
+      },
+      {
+            "q": "What is the ultimate goal of learning on Pathfinder?",
+            "options": [
+                  "Build real skills, gain confidence, and achieve career success",
+                  "Collect badges only",
+                  "Memorize definitions",
+                  "None of the above"
+            ],
+            "correct": 0
+      }
+]
   };
 
   function openSkillQuizModal(skillId) {
@@ -1851,6 +3314,105 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function openSkillQuizModal(skillId) {
+    const skill = appData.skills.find(s => s.id === skillId);
+    if (!skill) return;
+
+    const isHindi = (state.language === 'hi');
+    const questions = skillQuizData[skillId] || skillQuizData['default'];
+    let currentIdx = 0;
+    let score = 0;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.zIndex = '10000';
+
+    function renderQuestion() {
+      if (currentIdx >= questions.length) {
+        const passScore = score >= 18;
+        const bonusXP = passScore ? 150 : 50;
+        state.userXP += bonusXP;
+        saveState();
+
+        const titleText = isHindi ? 'अंतिम कौशल परीक्षा पूर्ण!' : 'Final Skill Exam Complete!';
+        const scoreMsg = isHindi 
+          ? `आपका स्कोर: ${score} / ${questions.length}. +${bonusXP} XP दिए गए!` 
+          : `Your Score: ${score} / ${questions.length}. +${bonusXP} Knowledge XP Awarded!`;
+
+        const statusBadge = passScore 
+          ? `<span style="background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; padding: 0.35rem 0.85rem; border-radius: 20px; font-size: 0.85rem; font-weight: 800;">🌟 ${isHindi ? 'प्रमाणित मास्टर' : 'Certified Master'}</span>`
+          : `<span style="background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; padding: 0.35rem 0.85rem; border-radius: 20px; font-size: 0.85rem; font-weight: 800;">💪 ${isHindi ? 'पुनः प्रयास करें' : 'Keep Practicing'}</span>`;
+
+        overlay.innerHTML = `
+          <div class="modal-content glass-card" style="max-width: 500px; text-align: center; padding: 2rem;">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">${passScore ? '🏆' : '📚'}</div>
+            <h2 class="gradient-text">${titleText}</h2>
+            <div style="margin: 1rem 0;">${statusBadge}</div>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1rem;">${scoreMsg}</p>
+            <div style="display: flex; gap: 0.75rem; justify-content: center;">
+              ${passScore ? `<button class="btn btn-primary" id="claim-cert-from-quiz-btn" style="background: linear-gradient(135deg, #d4af37, #b8860b); color: #000; font-weight: 800; border: none;">${isHindi ? '🎓 प्रमाण पत्र देखें' : '🎓 View Certificate'}</button>` : ''}
+              <button class="btn btn-secondary" id="close-quiz-btn">${isHindi ? '✕ बंद करें' : '✕ Close'}</button>
+            </div>
+          </div>
+        `;
+
+        const certBtn = overlay.querySelector('#claim-cert-from-quiz-btn');
+        if (certBtn) {
+          certBtn.addEventListener('click', () => {
+            document.body.removeChild(overlay);
+            openCertificateModal(skillId);
+          });
+        }
+        overlay.querySelector('#close-quiz-btn').addEventListener('click', () => {
+          document.body.removeChild(overlay);
+        });
+        return;
+      }
+
+      const q = questions[currentIdx];
+      let optionsHtml = '';
+      q.options.forEach((opt, idx) => {
+        optionsHtml += `
+          <button class="quiz-opt-btn btn btn-secondary" data-idx="${idx}" style="width: 100%; text-align: left; padding: 0.75rem 1rem; margin-bottom: 0.5rem; font-size: 0.88rem; justify-content: flex-start;">
+            ${String.fromCharCode(65 + idx)}. ${opt}
+          </button>
+        `;
+      });
+
+      overlay.innerHTML = `
+        <div class="modal-content glass-card" style="max-width: 580px; width: 92%; padding: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase;">${skill.image} ${skill.title}</span>
+            <span style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 700;">Question ${currentIdx + 1} / ${questions.length}</span>
+          </div>
+
+          <h3 style="font-size: 1.1rem; margin-bottom: 1.25rem; line-height: 1.5; color: #fff;">${q.q}</h3>
+
+          <div style="margin-bottom: 1.5rem;">
+            ${optionsHtml}
+          </div>
+        </div>
+      `;
+
+      overlay.querySelectorAll('.quiz-opt-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const chosenIdx = parseInt(btn.getAttribute('data-idx'));
+          if (chosenIdx === q.correct) {
+            score++;
+          }
+          currentIdx++;
+          renderQuestion();
+        });
+      });
+    }
+
+    document.body.appendChild(overlay);
+    renderQuestion();
+  }
+
   function openSkillRoadmapModal(skillId) {
     try {
       console.log('Opening roadmap modal for skill:', skillId);
@@ -1924,17 +3486,33 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
       });
 
-      const quizBtnText = isHindi ? "📝 अंतिम ज्ञानाकलन क्विज़ लें (+50 XP)" : "📝 Take End-of-Track Practice Quiz (+50 XP)";
-      const quizBannerHtml = `
-        <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 10px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
-          <div style="font-size: 0.85rem; color: #fff; font-weight: 600;">
-            🧪 ${isHindi ? 'ज्ञान का परीक्षण करें और +50 XP अर्जित करें!' : 'Test your mastery with 5 practice questions and earn +50 Knowledge XP!'}
+      const isCourseCompleted = (completedModsCount === totalMods && totalMods > 0);
+      let quizBannerHtml = '';
+      if (isCourseCompleted) {
+        const quizBtnText = isHindi ? "🎓 अंतिम कौशल परीक्षा लें (25 प्रश्न | +150 XP)" : "🎓 Take Final Skill Mastery Exam (25 Questions | +150 XP)";
+        quizBannerHtml = `
+          <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(6, 182, 212, 0.15)); border: 1px solid rgba(139, 92, 246, 0.4); border-radius: 10px; padding: 0.85rem 1.1rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <div style="font-size: 0.85rem; color: #fff; font-weight: 600;">
+              🧪 ${isHindi ? '25 प्रश्नों की परीक्षा के साथ अपनी तकनीकी दक्षता साबित करें और +150 XP अर्जित करें!' : 'Prove your technical mastery with a 25-question exam and earn +150 Knowledge XP!'}
+            </div>
+            <button class="btn btn-primary start-skill-quiz-btn" data-id="${skill.id}" style="padding: 0.5rem 1rem; font-size: 0.82rem; font-weight: 800; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); color: #fff;">
+              ${quizBtnText}
+            </button>
           </div>
-          <button class="btn btn-secondary start-skill-quiz-btn" data-id="${skill.id}" style="padding: 0.45rem 0.9rem; font-size: 0.8rem; font-weight: 700; border-color: var(--color-primary); color: #fff;">
-            ${quizBtnText}
-          </button>
-        </div>
-      `;
+        `;
+      } else {
+        const lockedText = isHindi ? "🔒 100% पूरा करके परीक्षा अनलॉक करें" : "🔒 Complete All Modules to Unlock Exam (100% Required)";
+        quizBannerHtml = `
+          <div style="background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.2); border-radius: 10px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">
+              🔒 ${isHindi ? 'अंतिम 25-प्रश्नों की परीक्षा केवल 100% पाठ्यक्रम पूरा होने पर अनलॉक होती है।' : 'The final 25-question mastery exam unlocks after completing all course modules (100%).'}
+            </div>
+            <button class="btn btn-secondary" disabled style="padding: 0.45rem 0.85rem; font-size: 0.78rem; opacity: 0.6; cursor: not-allowed;">
+              ${lockedText}
+            </button>
+          </div>
+        `;
+      }
 
       modalBody.innerHTML = `
         <h2 class="modal-title">${displayTitle}</h2>
