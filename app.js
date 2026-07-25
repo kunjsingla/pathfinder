@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     authMode: localStorage.getItem('pathfinder_auth_mode') || 'firebase'
   };
 
+  function loadUserState(email, dataObj = null) {
     const todayStr = new Date().toISOString().split('T')[0];
     let loadedState = {};
 
