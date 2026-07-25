@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     userXP: 0,
     completedModules: [],
     bookmarkedCareers: [],
+    passedExams: [],
     quizAnswers: {},
     quizCurrentQuestion: 0,
     activeSkillId: null,
@@ -73,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     state.userXP = userState.userXP || 0;
     state.completedModules = userState.completedModules || [];
     state.bookmarkedCareers = userState.bookmarkedCareers || [];
+    state.passedExams = userState.passedExams || [];
     state.quizAnswers = {};
     state.quizCurrentQuestion = 0;
 
@@ -718,6 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
         userXP: state.userXP,
         completedModules: state.completedModules,
         bookmarkedCareers: state.bookmarkedCareers,
+        passedExams: state.passedExams || [],
         streakCount: state.streakCount || 1,
         lastLoginDate: state.lastLoginDate
       };
@@ -1565,10 +1568,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const displayTitle = (isHindi && skillTranslations[skill.title]) ? skillTranslations[skill.title] : skill.title;
 
+      const hasPassedExam = (state.passedExams || []).includes(skill.id);
       let certBtnHtml = '';
       if (progressPercent === 100) {
-        const certLabel = isHindi ? '🎓 प्रमाण पत्र प्राप्त करें' : '🎓 Claim Certificate';
-        certBtnHtml = `<button class="btn btn-secondary claim-cert-btn" data-id="${skill.id}" style="border-color: #d4af37; color: #ffe066; margin-top: 0.5rem; width: 100%; font-weight: 700;">${certLabel}</button>`;
+        if (hasPassedExam) {
+          const certLabel = isHindi ? '🎓 प्रमाण पत्र देखें / प्रिंट करें' : '🎓 View / Claim Certificate';
+          certBtnHtml = `<button class="btn btn-secondary claim-cert-btn" data-id="${skill.id}" style="border-color: #d4af37; color: #ffe066; margin-top: 0.5rem; width: 100%; font-weight: 700;">${certLabel}</button>`;
+        } else {
+          const certLockedLabel = isHindi ? '🔒 प्रमाण पत्र के लिए 25-Q परीक्षा पास करें' : '🔒 Pass 25-Q Exam for Certificate';
+          certBtnHtml = `<button class="btn btn-secondary claim-cert-locked-btn" data-id="${skill.id}" style="border-color: rgba(239, 68, 68, 0.5); color: #f87171; margin-top: 0.5rem; width: 100%; font-weight: 700;">${certLockedLabel}</button>`;
+        }
       }
 
       skillsHtml += `
@@ -1611,6 +1620,18 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
         const id = btn.getAttribute('data-id');
         openCertificateModal(id);
+      });
+    });
+
+    container.querySelectorAll('.claim-cert-locked-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.getAttribute('data-id');
+        alert(isHindi 
+          ? "प्रमाण पत्र अनलॉक करने के लिए आपको 25 प्रश्नों की अंतिम परीक्षा में कम से कम 70% अंक (18/25) प्राप्त करने होंगे!" 
+          : "You must pass the 25-Question Final Exam (70%+ score / 18 out of 25 required) before claiming your Certificate!"
+        );
+        openSkillQuizModal(id);
       });
     });
   }
@@ -3148,9 +3169,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderQuestion() {
       if (currentIdx >= questions.length) {
-        const passScore = score >= 3;
-        const bonusXP = passScore ? 50 : 20;
+        const passScore = score >= 18;
+        const bonusXP = passScore ? 150 : 50;
         state.userXP += bonusXP;
+        if (passScore) {
+          if (!state.passedExams) state.passedExams = [];
+          if (!state.passedExams.includes(skillId)) {
+            state.passedExams.push(skillId);
+          }
+        }
         saveState();
 
         const titleText = isHindi ? 'ज्ञानाकलन पूर्ण!' : 'Skill Assessment Complete!';
@@ -3234,6 +3261,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!skill) return;
 
     const isHindi = (state.language === 'hi');
+    const hasPassedExam = (state.passedExams || []).includes(skillId);
+
+    if (!hasPassedExam) {
+      alert(isHindi 
+        ? "प्रमाण पत्र अनलॉक करने के लिए आपको 25 प्रश्नों की अंतिम परीक्षा में कम से कम 70% अंक (18/25) प्राप्त करने होंगे!" 
+        : "You must pass the 25-Question Final Exam (70%+ score / 18 out of 25 required) before you can claim your official Certificate!"
+      );
+      openSkillQuizModal(skillId);
+      return;
+    }
+
     const skillTitle = (isHindi && skillTranslations[skill.title]) ? skillTranslations[skill.title] : skill.title;
     
     let userName = 'Student';
