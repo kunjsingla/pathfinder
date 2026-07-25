@@ -7985,70 +7985,70 @@ const data = {
         "title": "Lesson 1: Introduction to Version Control & Git Architecture",
         "desc": "Understand distributed version control systems, working trees, staging areas, and local repositories.",
         "checked": false,
-        "videoId": "RGOj5yH7evE"
+        "videoId": "ez3GgRqhLvA"
       },
       {
         "id": "git-2",
         "title": "Lesson 2: Git Setup, Configuration & Basic Commands",
         "desc": "Configure user credentials, initialize repositories, track files, stage changes, and write clean commit messages.",
         "checked": false,
-        "videoId": "RGOj5yH7evE"
+        "videoId": "ez3GgRqhLvA"
       },
       {
         "id": "git-3",
         "title": "Lesson 3: Navigating Git History, Logs, Diffing & Resetting",
         "desc": "Inspect commit logs, compare file diffs, unstage files, and understand git checkout, revert, and reset.",
         "checked": false,
-        "videoId": "RGOj5yH7evE"
+        "videoId": "ez3GgRqhLvA"
       },
       {
         "id": "git-4",
         "title": "Lesson 4: Branching Strategies & Feature Workflow",
         "desc": "Create, switch, rename, and delete branches to isolate feature development without breaking main code.",
         "checked": false,
-        "videoId": "RGOj5yH7evE"
+        "videoId": "ez3GgRqhLvA"
       },
       {
         "id": "git-5",
         "title": "Lesson 5: Resolving Merge Conflicts & Rebase vs Merge",
         "desc": "Identify merge conflict markers, resolve code collisions manually, and understand git rebase workflows.",
         "checked": false,
-        "videoId": "RGOj5yH7evE"
+        "videoId": "ez3GgRqhLvA"
       },
       {
         "id": "git-6",
         "title": "Lesson 6: GitHub Remote Repositories, Push, Pull & Fetch",
         "desc": "Connect local repos to GitHub, configure SSH keys, push local commits, and fetch/pull remote updates.",
         "checked": false,
-        "videoId": "RGOj5yH7evE"
+        "videoId": "ez3GgRqhLvA"
       },
       {
         "id": "git-7",
         "title": "Lesson 7: Open Source Collaboration: Forking & Pull Requests (PRs)",
         "desc": "Fork open-source projects, open feature Pull Requests, address code review feedback, and merge PRs.",
         "checked": false,
-        "videoId": "RGOj5yH7evE"
+        "videoId": "ez3GgRqhLvA"
       },
       {
         "id": "git-8",
         "title": "Lesson 8: Advanced Git Tools: Stashing, Cherry-Picking & Bisecting",
         "desc": "Temporarily stash uncommitted work, cherry-pick specific commits across branches, and find bugs with bisect.",
         "checked": false,
-        "videoId": "RGOj5yH7evE"
+        "videoId": "ez3GgRqhLvA"
       },
       {
         "id": "git-9",
         "title": "Lesson 9: GitHub Actions CI/CD & Repository Security",
         "desc": "Set up automated test workflows, configure branch protection rules, and scan repos for secret leaks.",
         "checked": false,
-        "videoId": "RGOj5yH7evE"
+        "videoId": "ez3GgRqhLvA"
       },
       {
         "id": "git-10",
         "title": "Lesson 10: Building & Hosting Live Websites with GitHub Pages",
         "desc": "Deploy static web applications, set up custom domains, and showcase projects on your developer profile.",
         "checked": false,
-        "videoId": "RGOj5yH7evE"
+        "videoId": "ez3GgRqhLvA"
       }
     ]
   },

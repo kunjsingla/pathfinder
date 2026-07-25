@@ -1702,8 +1702,8 @@ document.addEventListener('DOMContentLoaded', () => {
               iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLxCzCOWd7aiEwaANNt3OqJPVIxwp2ebiT&autoplay=1`;
             } else if (state.activeSkillId === 'ml-beginners') {
               iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLeo1K3hjS3uvCeTYTeyfe0-rN5r8zn9rw&autoplay=1`;
-            } else {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?start=${startTime}&autoplay=1`;
+            } else if (videoId) {
+              iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
             }
             btn.innerHTML = closeText;
           } else {
