@@ -1678,31 +1678,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Open selected video
             videoContainer.style.display = 'block';
-            if (state.activeSkillId === 'python-beginners') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg&autoplay=1`;
-            } else if (state.activeSkillId === 'java-beginners') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLQEaRBV9gAFsR15tNo2QLF9d2qc-c018p&autoplay=1`;
-            } else if (state.activeSkillId === 'python-english') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLsyeobzWxl7omDoEYrrf3oXvXxa6MPgek&autoplay=1`;
-            } else if (state.activeSkillId === 'cpp-beginners') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLxCzCOWd7aiF6yRNI5OHQsnUJQfl7Geqj&autoplay=1`;
-            } else if (state.activeSkillId === 'arduino-beginners') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLwWF-ICTWmB7-b9bsE3UcQzz-7ipI5tbR&autoplay=1`;
-            } else if (state.activeSkillId === 'javascript-beginners') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLGjplNEQ1it_oTvuLRNqXfz_v_0pq6unW&autoplay=1`;
-            } else if (state.activeSkillId === 'web-dev-apna') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLfqMhTWNBTe0PY9xunOzsP5kmYIz2Hu7i&autoplay=1`;
-            } else if (state.activeSkillId === 'web-dev-delta') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLfqMhTWNBTe3H6c9OGXb5_6wcc1Mca52n&autoplay=1`;
-            } else if (state.activeSkillId === 'react-beginners') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&autoplay=1`;
-            } else if (state.activeSkillId === 'dbms-gate') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y&autoplay=1`;
-            } else if (state.activeSkillId === 'dsa-gate') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLxCzCOWd7aiEwaANNt3OqJPVIxwp2ebiT&autoplay=1`;
-            } else if (state.activeSkillId === 'ml-beginners') {
-              iframe.src = `https://www.youtube.com/embed/${videoId}?list=PLeo1K3hjS3uvCeTYTeyfe0-rN5r8zn9rw&autoplay=1`;
-            } else if (videoId) {
+            if (videoId) {
               iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
             }
             btn.innerHTML = closeText;
