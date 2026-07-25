@@ -48,6 +48,9 @@
         </ul>
       </nav>
       <div class="user-profile-badge" id="user-profile-widget">
+        <div class="user-streak" id="user-streak-badge" style="display: flex; align-items: center; gap: 0.25rem; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; padding: 0.25rem 0.55rem; border-radius: 12px; font-size: 0.8rem; font-weight: 700; margin-right: 0.4rem; cursor: default;" title="Daily Learning Streak">
+          <span>🔥</span> <span id="user-streak-val">1d</span>
+        </div>
         <div class="user-avatar" id="user-avatar-lbl">S</div>
         <div class="user-xp" id="user-xp-val">0 XP</div>
         
@@ -294,6 +297,20 @@
           <button class="btn btn-primary" id="open-profile-editor-btn" style="padding: 0.65rem 1.25rem; font-size: 0.9rem;">
             ✏️ <span data-translate="community_edit_btn">Edit My Profile & Works</span>
           </button>
+        </div>
+
+        <!-- Leaderboard Section -->
+        <div class="detail-section" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(6, 182, 212, 0.08)); border: 1px solid rgba(139, 92, 246, 0.25); padding: 1.25rem; border-radius: 12px; margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 style="margin: 0; font-family: var(--font-title); font-size: 1.15rem; color: #ffe066; display: flex; align-items: center; gap: 0.5rem;">
+              🏆 <span id="leaderboard-title-lbl">Community XP Leaderboard</span>
+            </h3>
+            <span style="font-size: 0.75rem; color: var(--text-secondary);" id="leaderboard-subtitle-lbl">Top Learners Ranked by Total XP & Course Badges</span>
+          </div>
+
+          <div id="community-leaderboard-container" style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <!-- Dynamically populated top learners -->
+          </div>
         </div>
 
         <!-- Filter & Search Controls -->

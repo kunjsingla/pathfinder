@@ -44,51 +44,62 @@ document.addEventListener('DOMContentLoaded', () => {
     authMode: localStorage.getItem('pathfinder_auth_mode') || 'firebase'
   };
 
-  function loadUserState(email, dataObj = null) {
-    if (dataObj) {
-      state.userXP = dataObj.userXP || 0;
-      state.completedModules = dataObj.completedModules || [];
-      state.bookmarkedCareers = dataObj.bookmarkedCareers || [];
-      state.quizAnswers = {};
-      state.quizCurrentQuestion = 0;
-      updateUIForUser(email, dataObj.profile);
-      updateXPBadge();
-      setupPortfolio();
-      return;
-    }
+    const todayStr = new Date().toISOString().split('T')[0];
+    let loadedState = {};
 
-    if (useFirebase && state.authMode === 'firebase' && activeEmail) {
+    if (dataObj) {
+      loadedState = dataObj;
+    } else if (useFirebase && state.authMode === 'firebase' && activeEmail) {
       db.collection('users').doc(email).get().then(userDoc => {
         const profile = userDoc.exists ? userDoc.data() : { name: 'Student', age: 'N/A', email };
         db.collection('states').doc(email).get().then(stateDoc => {
           const userState = stateDoc.exists ? stateDoc.data() : { userXP: 0, completedModules: [], bookmarkedCareers: [] };
-
-          state.userXP = userState.userXP || 0;
-          state.completedModules = userState.completedModules || [];
-          state.bookmarkedCareers = userState.bookmarkedCareers || [];
-          state.quizAnswers = {};
-          state.quizCurrentQuestion = 0;
-
-          updateUIForUser(email, profile);
-          updateXPBadge();
-          setupPortfolio();
+          applyLoadedState(email, profile, userState, todayStr);
         });
       }).catch(err => {
         console.error("Error loading user state from Firebase:", err);
       });
       return;
+    } else {
+      const userState = JSON.parse(localStorage.getItem(`pathfinder_state_${email}`) || '{}');
+      const user = usersDb[email] || { name: 'Guest Student', age: 'N/A', email: 'guest@example.com' };
+      applyLoadedState(email, user, userState, todayStr);
+      return;
     }
+  }
 
-    const userState = JSON.parse(localStorage.getItem(`pathfinder_state_${email}`) || '{}');
+  function applyLoadedState(email, userProfile, userState, todayStr) {
     state.userXP = userState.userXP || 0;
     state.completedModules = userState.completedModules || [];
     state.bookmarkedCareers = userState.bookmarkedCareers || [];
     state.quizAnswers = {};
     state.quizCurrentQuestion = 0;
 
-    const user = usersDb[email] || { name: 'Guest Student', age: 'N/A', email: 'guest@example.com' };
-    updateUIForUser(email, user);
+    let userStreak = userState.streakCount || 1;
+    let lastLogin = userState.lastLoginDate;
+
+    if (!lastLogin) {
+      userStreak = 1;
+    } else if (lastLogin !== todayStr) {
+      const lastDate = new Date(lastLogin);
+      const todayDate = new Date(todayStr);
+      const diffTime = Math.abs(todayDate - lastDate);
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+      if (diffDays === 1) {
+        userStreak += 1;
+        state.userXP += 10; // Daily streak bonus!
+      } else if (diffDays > 1) {
+        userStreak = 1;
+      }
+    }
+
+    state.streakCount = userStreak;
+    state.lastLoginDate = todayStr;
+
+    updateUIForUser(email, userProfile);
     updateXPBadge();
+    updateStreakBadge();
     setupPortfolio();
   }
 
@@ -705,18 +716,103 @@ document.addEventListener('DOMContentLoaded', () => {
       const userState = {
         userXP: state.userXP,
         completedModules: state.completedModules,
-        bookmarkedCareers: state.bookmarkedCareers
+        bookmarkedCareers: state.bookmarkedCareers,
+        streakCount: state.streakCount || 1,
+        lastLoginDate: state.lastLoginDate
       };
       localStorage.setItem(`pathfinder_state_${activeEmail}`, JSON.stringify(userState));
+
+      if (useFirebase && db && state.authMode === 'firebase') {
+        db.collection('states').doc(activeEmail).set(userState, { merge: true }).catch(err => console.error("Error saving state to Firebase:", err));
+      }
     }
     updateXPBadge();
-    setupPortfolio(); // refresh portfolio items
+    updateStreakBadge();
+    setupPortfolio();
   }
 
   function updateXPBadge() {
     if (xpBadge) {
       xpBadge.textContent = `${state.userXP} XP`;
     }
+  }
+
+  function updateStreakBadge() {
+    const streakVal = document.getElementById('user-streak-val');
+    if (streakVal) {
+      streakVal.textContent = `${state.streakCount || 1}d`;
+    }
+  }
+
+  function renderLeaderboard() {
+    const container = document.getElementById('community-leaderboard-container');
+    if (!container) return;
+
+    const isHindi = (state.language === 'hi');
+    const titleLbl = document.getElementById('leaderboard-title-lbl');
+    const subtitleLbl = document.getElementById('leaderboard-subtitle-lbl');
+
+    if (titleLbl) titleLbl.textContent = isHindi ? "समुदाय XP लीडरबोर्ड" : "Community XP Leaderboard";
+    if (subtitleLbl) subtitleLbl.textContent = isHindi ? "कुल XP और कोर्स बैज के आधार पर शीर्ष शिक्षार्थी" : "Top Learners Ranked by Total XP & Course Badges";
+
+    let leaderboardUsers = [];
+    const allUsers = JSON.parse(localStorage.getItem('pathfinder_users') || '{}');
+
+    Object.keys(allUsers).forEach(email => {
+      const u = allUsers[email];
+      const uState = JSON.parse(localStorage.getItem(`pathfinder_state_${email}`) || '{}');
+      leaderboardUsers.push({
+        name: u.name || 'Student',
+        email: email,
+        xp: uState.userXP || 0,
+        completedCount: (uState.completedModules || []).length,
+        streak: uState.streakCount || 1
+      });
+    });
+
+    if (activeEmail && !leaderboardUsers.some(u => u.email === activeEmail)) {
+      leaderboardUsers.push({
+        name: document.getElementById('dropdown-user-name') ? document.getElementById('dropdown-user-name').textContent : 'Student',
+        email: activeEmail,
+        xp: state.userXP || 0,
+        completedCount: (state.completedModules || []).length,
+        streak: state.streakCount || 1
+      });
+    }
+
+    leaderboardUsers.sort((a, b) => b.xp - a.xp);
+    const topLearners = leaderboardUsers.slice(0, 5);
+
+    let html = '';
+    topLearners.forEach((user, index) => {
+      let rankBadge = `#${index + 1}`;
+      let rankColor = 'var(--text-secondary)';
+      if (index === 0) { rankBadge = '🥇'; rankColor = '#ffe066'; }
+      else if (index === 1) { rankBadge = '🥈'; rankColor = '#e2e8f0'; }
+      else if (index === 2) { rankBadge = '🥉'; rankColor = '#cd7f32'; }
+
+      const initials = user.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() || 'S';
+      const streakLabel = `${user.streak || 1}d 🔥`;
+
+      html += `
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.6rem 0.85rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; min-width: 0;">
+            <span style="font-size: 1.2rem; font-weight: 800; min-width: 28px; text-align: center; color: ${rankColor};">${rankBadge}</span>
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.75rem; color: #fff; flex-shrink: 0;">${initials}</div>
+            <div style="min-width: 0;">
+              <h5 style="margin: 0; font-size: 0.85rem; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${user.name}</h5>
+              <span style="font-size: 0.7rem; color: var(--text-secondary);">${user.completedCount} ${isHindi ? 'मॉड्यूल पूर्ण' : 'modules completed'}</span>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0;">
+            <span style="font-size: 0.75rem; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.15rem 0.45rem; border-radius: 6px; font-weight: 700;">${streakLabel}</span>
+            <span style="font-size: 0.85rem; font-weight: 800; color: var(--color-secondary);">${user.xp} XP</span>
+          </div>
+        </div>
+      `;
+    });
+
+    container.innerHTML = html;
   }
 
   // --- ROUTER / NAVIGATION ---
@@ -2714,6 +2810,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderCommunity() {
+    renderLeaderboard();
     const container = document.getElementById('community-grid-container');
     if (!container) return;
 
