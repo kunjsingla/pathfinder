@@ -1682,6 +1682,13 @@ document.addEventListener('DOMContentLoaded', () => {
               iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
             }
             btn.innerHTML = closeText;
+
+            // Auto-check module checkbox when student opens video
+            const checkbox = moduleItem.querySelector('.module-checkbox');
+            if (checkbox && !checkbox.checked) {
+              checkbox.checked = true;
+              checkbox.dispatchEvent(new Event('change'));
+            }
           } else {
             videoContainer.style.display = 'none';
             iframe.src = '';
