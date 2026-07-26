@@ -676,6 +676,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupAuthEvents();
     updateXPBadge();
     setupNavigation();
+    setupResumeBuilder();
     setupAssessment();
     setupCareerExplorer();
     setupSkillsHub();
@@ -5061,6 +5062,374 @@ document.addEventListener('DOMContentLoaded', () => {
       // Ignore non-JSON postMessages from extensions/third-parties
     }
   });
+
+  
+  // --- AI-POWERED INTERACTIVE RESUME / CV BUILDER ---
+  const resumeInterviewQuestions = [
+    // --- SECTION 1: PERSONAL & CONTACT INFO (Q1-Q5) ---
+    { section: "Section 1: Contact & Personal Info", key: "fullName", q: "Welcome to the AI Resume Builder! Let's start with your Full Name as you'd like it to appear on your CV.", placeholder: "e.g. Kunj Singla" },
+    { section: "Section 1: Contact & Personal Info", key: "professionalTitle", q: "What is your target Professional Title or Headline?", placeholder: "e.g. Full Stack Web Developer & Software Engineering Student" },
+    { section: "Section 1: Contact & Personal Info", key: "email", q: "What is your primary Email Address for recruiters to contact you?", placeholder: "e.g. kunj@example.com" },
+    { section: "Section 1: Contact & Personal Info", key: "phone", q: "What is your Phone Number or WhatsApp contact?", placeholder: "e.g. +91 98765 43210" },
+    { section: "Section 1: Contact & Personal Info", key: "location", q: "Where are you located (City, Country)?", placeholder: "e.g. New Delhi, India" },
+
+    // --- SECTION 2: ONLINE PROFILES & LINKS (Q6-Q7) ---
+    { section: "Section 2: Professional Links", key: "github", q: "Provide your GitHub profile URL or username so employers can see your code repositories.", placeholder: "e.g. github.com/kunjsingla" },
+    { section: "Section 2: Professional Links", key: "linkedin", q: "Provide your LinkedIn profile URL or portfolio website link.", placeholder: "e.g. linkedin.com/in/kunjsingla" },
+
+    // --- SECTION 3: PROFESSIONAL SUMMARY (Q8-Q10) ---
+    { section: "Section 3: Executive Summary", key: "summaryRole", q: "In 1 sentence, what type of job or internship role are you actively seeking?", placeholder: "e.g. Entry-level Software Engineer or Web Development Intern" },
+    { section: "Section 3: Executive Summary", key: "summaryHighlights", q: "What are your top 3 core strengths or technical specialties?", placeholder: "e.g. Problem Solving, React.js Frontend, REST APIs" },
+    { section: "Section 3: Executive Summary", key: "summaryGoal", q: "Describe your career aspiration or value proposition for prospective employers.", placeholder: "e.g. Passionate about building fast, accessible web applications and solving complex algorithmic challenges." },
+
+    // --- SECTION 4: TECHNICAL SKILLS & PATHFINDER INTEGRATION (Q11-Q15) ---
+    { section: "Section 4: Technical Skills", key: "languages", q: "List the Programming Languages you are proficient in.", placeholder: "e.g. JavaScript, Python, C++, HTML5, CSS3, SQL" },
+    { section: "Section 4: Technical Skills", key: "frameworks", q: "Which Web Frameworks or Libraries do you use?", placeholder: "e.g. React.js, Node.js, Express, Bootstrap, Flexbox" },
+    { section: "Section 4: Technical Skills", key: "tools", q: "What Developer Tools, Platforms, or Databases do you work with?", placeholder: "e.g. Git, GitHub, VS Code, Firebase, MySQL, MongoDB" },
+    { section: "Section 4: Technical Skills", key: "autoImportSkills", q: "Would you like me to automatically import all your completed Pathfinder Skill Badges & Course Milestones into your CV?", placeholder: "Type 'Yes' to import Pathfinder certificates!" },
+    { section: "Section 4: Technical Skills", key: "softSkills", q: "List 3-4 Key Soft Skills or Professional Attributes.", placeholder: "e.g. Analytical Thinking, Team Collaboration, Adaptability, Communication" },
+
+    // --- SECTION 5: KEY PROJECTS (Q16-Q23) ---
+    { section: "Section 5: Projects & Work", key: "proj1Title", q: "Name your primary or favorite Technical Project.", placeholder: "e.g. Pathfinder - AI Career & Skill Guidance Platform" },
+    { section: "Section 5: Projects & Work", key: "proj1Tech", q: "What technologies or languages did you use to build Project 1?", placeholder: "e.g. JavaScript ES6, HTML5, Vanilla CSS, Firebase" },
+    { section: "Section 5: Projects & Work", key: "proj1Desc", q: "Write 1-2 bullet points describing key features or problem solved by Project 1.", placeholder: "e.g. Built an interactive career assessment matching engine and 27 skill roadmap tracks." },
+    { section: "Section 5: Projects & Work", key: "proj1Link", q: "Link or repository URL for Project 1 (or skip).", placeholder: "e.g. github.com/kunjsingla/pathfinder" },
+
+    { section: "Section 5: Projects & Work", key: "proj2Title", q: "Name a second project or application you built.", placeholder: "e.g. E-Commerce Order Management System" },
+    { section: "Section 5: Projects & Work", key: "proj2Tech", q: "Technologies used for Project 2?", placeholder: "e.g. Python, SQL, Flask" },
+    { section: "Section 5: Projects & Work", key: "proj2Desc", q: "Write 1-2 bullet points describing Project 2 features or impact.", placeholder: "e.g. Automated order processing and database tracking with 99% uptime." },
+    { section: "Section 5: Projects & Work", key: "proj2Link", q: "Link or repository URL for Project 2 (or skip).", placeholder: "e.g. github.com/kunjsingla/order1" },
+
+    // --- SECTION 6: WORK EXPERIENCE / INTERNSHIPS (Q24-Q29) ---
+    { section: "Section 6: Experience & Leadership", key: "exp1Role", q: "Have you held an Internship, Job, or Leadership position? Enter Job Title (or type 'Student').", placeholder: "e.g. Frontend Web Developer Intern or Student Leader" },
+    { section: "Section 6: Experience & Leadership", key: "exp1Company", q: "Company, Organization, or Club Name?", placeholder: "e.g. TechCorp Solutions or College Coding Club" },
+    { section: "Section 6: Experience & Leadership", key: "exp1Dates", q: "Dates of employment / involvement?", placeholder: "e.g. Jan 2025 - Present" },
+    { section: "Section 6: Experience & Leadership", key: "exp1Bullet1", q: "Describe your main responsibility or achievement in bullet 1.", placeholder: "e.g. Developed responsive UI components and reduced page load times by 25%." },
+    { section: "Section 6: Experience & Leadership", key: "exp1Bullet2", q: "Describe a second responsibility or achievement (or skip).", placeholder: "e.g. Collaborated in an Agile team of 5 developers using Git version control." },
+    { section: "Section 6: Experience & Leadership", key: "exp1Location", q: "City/Location of Company or 'Remote'?", placeholder: "e.g. Remote or New Delhi" },
+
+    // --- SECTION 7: EDUCATION & ACADEMICS (Q30-Q34) ---
+    { section: "Section 7: Education", key: "eduDegree", q: "What is your Current Degree, Diploma, or School Level?", placeholder: "e.g. B.Tech in Computer Science & Engineering" },
+    { section: "Section 7: Education", key: "eduInstitute", q: "Name of your School, College, or University.", placeholder: "e.g. State Technological University" },
+    { section: "Section 7: Education", key: "eduDates", q: "Graduation Year or expected completion dates?", placeholder: "e.g. 2024 - 2028" },
+    { section: "Section 7: Education", key: "eduScore", q: "CGPA, Grade, or Academic Honors (or skip).", placeholder: "e.g. 8.8 / 10 CGPA" },
+    { section: "Section 7: Education", key: "eduCourses", q: "Mention relevant coursework or academic focus areas.", placeholder: "e.g. Data Structures, Web Technology, DBMS, Software Engineering" },
+
+    // --- SECTION 8: CERTIFICATIONS & FINAL FINISH (Q35-Q36) ---
+    { section: "Section 8: Certifications & Finish", key: "certifications", q: "List any additional Certifications or Accomplishments.", placeholder: "e.g. Pathfinder Verified Master, FreeCodeCamp Responsive Web Design" },
+    { section: "Section 8: Certifications & Finish", key: "hobbies", q: "Any Hobbies or Extracurricular Activities to highlight?", placeholder: "e.g. Hackathons, Competitive Coding, Blogging, Chess" }
+  ];
+
+  let currentResumeQIndex = 0;
+  let resumeData = JSON.parse(localStorage.getItem('pathfinder_resume_data') || '{}');
+
+  function setupResumeBuilder() {
+    const form = document.getElementById('resume-chat-form');
+    const input = document.getElementById('resume-chat-input');
+    const skipBtn = document.getElementById('resume-skip-btn');
+    const autoImportBtn = document.getElementById('resume-autoimport-btn');
+    const resetBtn = document.getElementById('reset-resume-interview-btn');
+    const printBtn = document.getElementById('print-resume-btn');
+
+    if (!form || !input) return;
+
+    // Load saved user name/email if blank
+    if (!resumeData.fullName && activeEmail) {
+      const u = usersDb[activeEmail];
+      if (u && u.name) resumeData.fullName = u.name;
+      if (u && u.email) resumeData.email = u.email;
+    }
+
+    renderResumePaper(resumeData);
+    showCurrentResumeQuestion();
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+
+      submitResumeAnswer(text);
+      input.value = '';
+    });
+
+    if (skipBtn) {
+      skipBtn.addEventListener('click', () => {
+        submitResumeAnswer('[Skipped]');
+      });
+    }
+
+    if (autoImportBtn) {
+      autoImportBtn.addEventListener('click', () => {
+        autoImportPathfinderSkills();
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (confirm('Reset AI Resume Interview and start from Question 1?')) {
+          currentResumeQIndex = 0;
+          resumeData = {};
+          localStorage.removeItem('pathfinder_resume_data');
+          const messages = document.getElementById('resume-chat-messages');
+          if (messages) messages.innerHTML = '';
+          renderResumePaper(resumeData);
+          showCurrentResumeQuestion();
+        }
+      });
+    }
+
+    if (printBtn) {
+      printBtn.addEventListener('click', () => {
+        window.print();
+      });
+    }
+  }
+
+  function showCurrentResumeQuestion() {
+    const messages = document.getElementById('resume-chat-messages');
+    const sectionLbl = document.getElementById('resume-q-section');
+    const progressLbl = document.getElementById('resume-q-progress-text');
+    const progressFill = document.getElementById('resume-progress-fill');
+    const input = document.getElementById('resume-chat-input');
+
+    if (!messages) return;
+
+    if (currentResumeQIndex >= resumeInterviewQuestions.length) {
+      // Completed all questions
+      if (sectionLbl) sectionLbl.textContent = "Interview Completed!";
+      if (progressLbl) progressLbl.textContent = `Completed 36 of 36`;
+      if (progressFill) progressFill.style.width = `100%`;
+
+      appendResumeBubble("🎉 Excellent! All 36 questions are complete. Your ATS Resume preview is fully generated! You can click '🖨️ Print / Save PDF Resume' to download it.", 'bot');
+      return;
+    }
+
+    const qObj = resumeInterviewQuestions[currentResumeQIndex];
+    if (sectionLbl) sectionLbl.textContent = qObj.section;
+    if (progressLbl) progressLbl.textContent = `Question ${currentResumeQIndex + 1} of ${resumeInterviewQuestions.length}`;
+    if (progressFill) {
+      const pct = Math.round(((currentResumeQIndex + 1) / resumeInterviewQuestions.length) * 100);
+      progressFill.style.width = `${pct}%`;
+    }
+
+    if (input) input.placeholder = qObj.placeholder || "Type your answer...";
+
+    appendResumeBubble(qObj.q, 'bot');
+  }
+
+  function submitResumeAnswer(ans) {
+    const qObj = resumeInterviewQuestions[currentResumeQIndex];
+    if (!qObj) return;
+
+    appendResumeBubble(ans, 'user');
+
+    if (ans !== '[Skipped]') {
+      resumeData[qObj.key] = ans;
+      localStorage.setItem('pathfinder_resume_data', JSON.stringify(resumeData));
+    }
+
+    renderResumePaper(resumeData);
+
+    currentResumeQIndex++;
+    setTimeout(() => {
+      showCurrentResumeQuestion();
+    }, 300);
+  }
+
+  function autoImportPathfinderSkills() {
+    let pathfinderBadges = [];
+    appData.skills.forEach(sk => {
+      const totalMods = sk.modules.length;
+      const doneMods = sk.modules.filter(m => state.completedModules.includes(m.id)).length;
+      if (totalMods > 0 && doneMods === totalMods) {
+        const isMaster = (state.passedExams || []).includes(sk.id);
+        pathfinderBadges.push(`${sk.title} ${isMaster ? '(Certified Master)' : ''}`);
+      }
+    });
+
+    if (pathfinderBadges.length === 0) {
+      alert("No 100% completed Pathfinder skill tracks found yet. Complete skill modules to auto-import them!");
+      return;
+    }
+
+    const importedStr = pathfinderBadges.join(', ');
+    resumeData.certifications = (resumeData.certifications ? resumeData.certifications + ', ' : '') + `Pathfinder Verified Credentials (${importedStr})`;
+    localStorage.setItem('pathfinder_resume_data', JSON.stringify(resumeData));
+
+    renderResumePaper(resumeData);
+    appendResumeBubble(`⚡ Auto-Imported ${pathfinderBadges.length} Pathfinder Skill Credentials: ${importedStr}`, 'bot');
+  }
+
+  function appendResumeBubble(text, sender) {
+    const messages = document.getElementById('resume-chat-messages');
+    if (!messages) return;
+
+    const bubble = document.createElement('div');
+    bubble.style.padding = '0.65rem 0.9rem';
+    bubble.style.borderRadius = '10px';
+    bubble.style.fontSize = '0.85rem';
+    bubble.style.lineHeight = '1.45';
+    bubble.style.maxWidth = '88%';
+
+    if (sender === 'user') {
+      bubble.style.background = 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))';
+      bubble.style.color = '#fff';
+      bubble.style.alignSelf = 'flex-end';
+      bubble.style.borderBottomRightRadius = '2px';
+    } else {
+      bubble.style.background = 'rgba(255, 255, 255, 0.05)';
+      bubble.style.border = '1px solid var(--border-color)';
+      bubble.style.color = 'var(--text-primary)';
+      bubble.style.alignSelf = 'flex-start';
+      bubble.style.borderBottomLeftRadius = '2px';
+    }
+
+    bubble.textContent = text;
+    messages.appendChild(bubble);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function renderResumePaper(data, theme = 'modern') {
+    const paper = document.getElementById('resume-paper');
+    if (!paper) return;
+
+    const name = data.fullName || 'YOUR FULL NAME';
+    const title = data.professionalTitle || 'Software Engineer & Career Explorer';
+    const email = data.email || 'student@example.com';
+    const phone = data.phone || '+91 98765 43210';
+    const location = data.location || 'New Delhi, India';
+    const github = data.github || '';
+    const linkedin = data.linkedin || '';
+
+    const summary = (data.summaryRole || data.summaryHighlights || data.summaryGoal) 
+      ? `${data.summaryRole || ''} ${data.summaryHighlights ? 'Specializing in ' + data.summaryHighlights + '.' : ''} ${data.summaryGoal || ''}`.trim()
+      : 'Motivated technology student with strong foundation in software engineering, web development, and problem solving. Passionate about building impactful applications.';
+
+    let pathfinderBadges = [];
+    appData.skills.forEach(sk => {
+      const totalMods = sk.modules.length;
+      const doneMods = sk.modules.filter(m => state.completedModules.includes(m.id)).length;
+      if (totalMods > 0 && doneMods === totalMods) {
+        const isMaster = (state.passedExams || []).includes(sk.id);
+        pathfinderBadges.push(`${sk.image} ${sk.title} ${isMaster ? '(Certified Master)' : ''}`);
+      }
+    });
+
+    let languages = data.languages || 'JavaScript, Python, C++, HTML5, CSS3, SQL';
+    let frameworks = data.frameworks || 'React.js, Node.js, Express, Flexbox';
+    let tools = data.tools || 'Git, GitHub, VS Code, Firebase';
+    let softSkills = data.softSkills || 'Problem Solving, Teamwork, Communication, Time Management';
+
+    let projectsHtml = '';
+    if (data.proj1Title) {
+      projectsHtml += `
+        <div style="margin-bottom: 0.75rem;">
+          <div style="display: flex; justify-content: space-between; font-weight: 700; color: #0f172a;">
+            <span>${data.proj1Title} ${data.proj1Tech ? '<span style="font-size: 0.75rem; color: #64748b; font-weight: 400;">| ' + data.proj1Tech + '</span>' : ''}</span>
+            ${data.proj1Link ? `<span style="font-size: 0.75rem; color: #2563eb;">${data.proj1Link}</span>` : ''}
+          </div>
+          ${data.proj1Desc ? `<p style="margin: 0.2rem 0 0 0; color: #334155; font-size: 0.8rem;">• ${data.proj1Desc}</p>` : ''}
+        </div>
+      `;
+    }
+    if (data.proj2Title) {
+      projectsHtml += `
+        <div style="margin-bottom: 0.75rem;">
+          <div style="display: flex; justify-content: space-between; font-weight: 700; color: #0f172a;">
+            <span>${data.proj2Title} ${data.proj2Tech ? '<span style="font-size: 0.75rem; color: #64748b; font-weight: 400;">| ' + data.proj2Tech + '</span>' : ''}</span>
+            ${data.proj2Link ? `<span style="font-size: 0.75rem; color: #2563eb;">${data.proj2Link}</span>` : ''}
+          </div>
+          ${data.proj2Desc ? `<p style="margin: 0.2rem 0 0 0; color: #334155; font-size: 0.8rem;">• ${data.proj2Desc}</p>` : ''}
+        </div>
+      `;
+    }
+
+    let expHtml = '';
+    if (data.exp1Role) {
+      expHtml += `
+        <div style="margin-bottom: 0.75rem;">
+          <div style="display: flex; justify-content: space-between; font-weight: 700; color: #0f172a;">
+            <span>${data.exp1Role} ${data.exp1Company ? '<span style="font-weight: 600; color: #475569;">at ' + data.exp1Company + '</span>' : ''}</span>
+            <span style="font-size: 0.75rem; color: #64748b;">${data.exp1Dates || ''} ${data.exp1Location ? '(' + data.exp1Location + ')' : ''}</span>
+          </div>
+          ${data.exp1Bullet1 ? `<p style="margin: 0.2rem 0 0 0; color: #334155; font-size: 0.8rem;">• ${data.exp1Bullet1}</p>` : ''}
+          ${data.exp1Bullet2 ? `<p style="margin: 0.1rem 0 0 0; color: #334155; font-size: 0.8rem;">• ${data.exp1Bullet2}</p>` : ''}
+        </div>
+      `;
+    }
+
+    let eduHtml = '';
+    if (data.eduDegree || data.eduInstitute) {
+      eduHtml = `
+        <div style="display: flex; justify-content: space-between; font-weight: 700; color: #0f172a;">
+          <span>${data.eduDegree || 'Degree'} <span style="font-weight: 400; color: #475569;">- ${data.eduInstitute || 'Institution'}</span></span>
+          <span style="font-size: 0.75rem; color: #64748b;">${data.eduDates || ''}</span>
+        </div>
+        ${data.eduScore ? `<div style="font-size: 0.78rem; color: #334155;">Grade/Honors: ${data.eduScore}</div>` : ''}
+        ${data.eduCourses ? `<div style="font-size: 0.78rem; color: #64748b;">Coursework: ${data.eduCourses}</div>` : ''}
+      `;
+    }
+
+    let certsList = [];
+    if (data.certifications) certsList.push(data.certifications);
+    if (pathfinderBadges.length > 0) {
+      certsList.push(`Pathfinder Verified Credentials: ${pathfinderBadges.join(', ')}`);
+    }
+
+    paper.innerHTML = `
+      <div style="border-bottom: 2px solid #2563eb; padding-bottom: 1rem; margin-bottom: 1.25rem;">
+        <h1 style="margin: 0; font-size: 1.8rem; font-weight: 800; color: #0f172a; letter-spacing: -0.5px; text-transform: uppercase;">${name}</h1>
+        <div style="font-size: 0.95rem; font-weight: 600; color: #2563eb; margin-top: 0.15rem;">${title}</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; font-size: 0.78rem; color: #475569; margin-top: 0.4rem;">
+          <span>📧 ${email}</span>
+          <span>📞 ${phone}</span>
+          <span>📍 ${location}</span>
+          ${github ? `<span>💻 ${github}</span>` : ''}
+          ${linkedin ? `<span>🔗 ${linkedin}</span>` : ''}
+        </div>
+      </div>
+
+      <div style="margin-bottom: 1.1rem;">
+        <h4 style="margin: 0 0 0.4rem 0; font-size: 0.85rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.2rem;">Professional Summary</h4>
+        <p style="margin: 0; color: #334155; font-size: 0.82rem; line-height: 1.5;">${summary}</p>
+      </div>
+
+      <div style="margin-bottom: 1.1rem;">
+        <h4 style="margin: 0 0 0.4rem 0; font-size: 0.85rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.2rem;">Technical Skills & Competencies</h4>
+        <div style="font-size: 0.8rem; color: #334155; display: flex; flex-direction: column; gap: 0.25rem;">
+          <div><strong>Languages:</strong> ${languages}</div>
+          <div><strong>Frameworks & Libraries:</strong> ${frameworks}</div>
+          <div><strong>Tools & Databases:</strong> ${tools}</div>
+          <div><strong>Professional Skills:</strong> ${softSkills}</div>
+          ${pathfinderBadges.length > 0 ? `<div style="color: #2563eb;"><strong>Pathfinder Verified Skills:</strong> ${pathfinderBadges.join(' • ')}</div>` : ''}
+        </div>
+      </div>
+
+      ${projectsHtml ? `
+      <div style="margin-bottom: 1.1rem;">
+        <h4 style="margin: 0 0 0.45rem 0; font-size: 0.85rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.2rem;">Key Projects</h4>
+        ${projectsHtml}
+      </div>` : ''}
+
+      ${expHtml ? `
+      <div style="margin-bottom: 1.1rem;">
+        <h4 style="margin: 0 0 0.45rem 0; font-size: 0.85rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.2rem;">Experience & Leadership</h4>
+        ${expHtml}
+      </div>` : ''}
+
+      ${eduHtml ? `
+      <div style="margin-bottom: 1.1rem;">
+        <h4 style="margin: 0 0 0.45rem 0; font-size: 0.85rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.2rem;">Education</h4>
+        ${eduHtml}
+      </div>` : ''}
+
+      ${certsList.length > 0 ? `
+      <div style="margin-bottom: 0.5rem;">
+        <h4 style="margin: 0 0 0.45rem 0; font-size: 0.85rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.2rem;">Certifications & Honors</h4>
+        <div style="font-size: 0.8rem; color: #334155; line-height: 1.5;">${certsList.join(' • ')}</div>
+      </div>` : ''}
+    `;
+  }
 
   // --- KICKSTART ---
   init();

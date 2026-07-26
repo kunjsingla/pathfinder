@@ -34,6 +34,7 @@
           <li><a class="nav-item" data-tab="advisor" id="nav-advisor" data-translate="nav_advisor">AI Advisor</a></li>
           <li><a class="nav-item" data-tab="portfolio" id="nav-portfolio" data-translate="nav_portfolio">My Portfolio</a></li>
           <li><a class="nav-item" data-tab="community" id="nav-community" data-translate="nav_community">Community</a></li>
+          <li><a class="nav-item" data-tab="resume" id="nav-resume" data-translate="nav_resume">AI CV Builder</a></li>
           <li><a class="nav-item" data-tab="feedback" id="nav-feedback" data-translate="nav_feedback">Reviews & Suggestions</a></li>
           <li style="position: relative;" id="nav-more-wrapper">
             <a class="nav-item nav-more-trigger" id="nav-more-btn" data-translate="nav_more" style="cursor: pointer;">More ▾</a>
@@ -328,6 +329,74 @@
         <!-- Community Grid Container -->
         <div id="community-grid-container" class="explorer-grid">
           <!-- Dynamically populated profiles -->
+        </div>
+      </section>
+
+      <!-- 8. AI-POWERED INTERACTIVE RESUME / CV BUILDER VIEW -->
+      <section id="resume-view" class="view-panel">
+        <div class="view-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div>
+            <h1 class="gradient-text" data-translate="resume_title">🤖 AI Interactive Resume / CV Builder</h1>
+            <p data-translate="resume_desc">Answer AI-guided questions to craft an ATS-friendly, professional CV incorporating your Pathfinder skills.</p>
+          </div>
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <button class="btn btn-secondary" id="reset-resume-interview-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🔄 Reset Interview</button>
+            <button class="btn btn-primary" id="print-resume-btn" style="padding: 0.5rem 1.25rem; font-size: 0.85rem; font-weight: 700; background: linear-gradient(135deg, #10b981, #059669); border: none;">🖨️ Print / Save PDF Resume</button>
+          </div>
+        </div>
+
+        <!-- Resume Split View Container -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start;">
+
+          <!-- Left Column: AI Interactive Interview Chat Box -->
+          <div class="glass-card" style="padding: 1.25rem; display: flex; flex-direction: column; height: 720px; border: 1px solid var(--border-color);">
+            
+            <!-- Progress Bar Header -->
+            <div style="margin-bottom: 1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                <span id="resume-q-section" style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase;">Section 1: Personal Info</span>
+                <span id="resume-q-progress-text" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Question 1 of 35</span>
+              </div>
+              <div style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden;">
+                <div id="resume-progress-fill" style="width: 3%; height: 100%; background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); transition: width 0.3s ease;"></div>
+              </div>
+            </div>
+
+            <!-- Chat History Messages Container -->
+            <div id="resume-chat-messages" style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 0.85rem; padding-right: 0.5rem; margin-bottom: 1rem;">
+              <!-- Dynamic interview bubbles -->
+            </div>
+
+            <!-- Chat Answer Input Form -->
+            <form id="resume-chat-form" onsubmit="return false;" style="display: flex; flex-direction: column; gap: 0.6rem; margin-top: auto;">
+              <div style="display: flex; gap: 0.5rem;">
+                <input type="text" id="resume-chat-input" class="chat-input" placeholder="Type your answer here..." style="flex: 1; border-radius: 8px; padding: 0.65rem 1rem;" autocomplete="off">
+                <button type="submit" class="btn btn-primary" id="resume-send-btn" style="padding: 0.65rem 1.25rem;">Send ➔</button>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <button type="button" class="btn btn-secondary" id="resume-skip-btn" style="padding: 0.3rem 0.75rem; font-size: 0.75rem;">⏭️ Skip Question</button>
+                <button type="button" class="btn btn-secondary" id="resume-autoimport-btn" style="padding: 0.3rem 0.75rem; font-size: 0.75rem; border-color: var(--color-secondary); color: var(--color-secondary);">⚡ Auto-Import Pathfinder Skills</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Column: Live Resume Preview Paper -->
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.25rem 0.5rem;">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">📄 Live ATS Resume Preview</span>
+              <div style="display: flex; gap: 0.5rem;">
+                <button class="btn btn-secondary resume-theme-btn active" data-theme="modern" style="padding: 0.25rem 0.65rem; font-size: 0.75rem;">Modern</button>
+                <button class="btn btn-secondary resume-theme-btn" data-theme="classic" style="padding: 0.25rem 0.65rem; font-size: 0.75rem;">Classic</button>
+                <button class="btn btn-secondary resume-theme-btn" data-theme="minimal" style="padding: 0.25rem 0.65rem; font-size: 0.75rem;">Minimal</button>
+              </div>
+            </div>
+
+            <!-- Resume Paper Preview Card -->
+            <div id="resume-paper" class="resume-paper-container" style="background: #ffffff; color: #1e293b; padding: 2.2rem; border-radius: 8px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,0.5); min-height: 680px; font-size: 0.85rem; line-height: 1.5; overflow-y: auto;">
+              <!-- Dynamically updated CV HTML -->
+            </div>
+          </div>
+
         </div>
       </section>
 
