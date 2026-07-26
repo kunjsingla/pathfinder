@@ -676,6 +676,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupAuthEvents();
     updateXPBadge();
     setupNavigation();
+    setupPWA();
     setupResumeBuilder();
     setupAssessment();
     setupCareerExplorer();
@@ -5429,6 +5430,59 @@ document.addEventListener('DOMContentLoaded', () => {
         <div style="font-size: 0.8rem; color: #334155; line-height: 1.5;">${certsList.join(' • ')}</div>
       </div>` : ''}
     `;
+  }
+
+  
+  // --- PROGRESSIVE WEB APP (PWA) INSTALLATION ---
+  let deferredPWAInstallPrompt = null;
+
+  function setupPWA() {
+    const installBtn = document.getElementById('install-pwa-btn');
+
+    // Register Service Worker for Offline Mode & PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').then((reg) => {
+          console.log('Pathfinder PWA: Service Worker registered successfully.', reg.scope);
+        }).catch((err) => {
+          console.error('Pathfinder PWA: Service Worker registration failed:', err);
+        });
+      });
+    }
+
+    // Capture PWA Install Prompt
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPWAInstallPrompt = e;
+      if (installBtn) {
+        installBtn.style.display = 'inline-flex';
+        const isHindi = (state.language === 'hi');
+        installBtn.textContent = isHindi ? '📲 ऐप इंस्टॉल करें' : '📲 Install App';
+      }
+    });
+
+    if (installBtn) {
+      installBtn.addEventListener('click', () => {
+        if (!deferredPWAInstallPrompt) {
+          alert('Pathfinder App is already installed or your browser does not support auto-install.');
+          return;
+        }
+        deferredPWAInstallPrompt.prompt();
+        deferredPWAInstallPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the PWA install prompt');
+            installBtn.style.display = 'none';
+          }
+          deferredPWAInstallPrompt = null;
+        });
+      });
+    }
+
+    // Hide install button when app is running as installed standalone app
+    window.addEventListener('appinstalled', () => {
+      console.log('Pathfinder App installed successfully!');
+      if (installBtn) installBtn.style.display = 'none';
+    });
   }
 
   // --- KICKSTART ---

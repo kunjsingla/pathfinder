@@ -6,6 +6,12 @@
   <meta name="description" content="Discover your ideal career path, match your interests, learn in-demand skills, and consult with our virtual AI advisor on Pathfinder.">
   <title>Pathfinder | Discover Careers & Learn Skills</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#8b5cf6">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Pathfinder">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -49,6 +55,7 @@
         </ul>
       </nav>
       <div class="user-profile-badge" id="user-profile-widget">
+        <button class="btn btn-secondary" id="install-pwa-btn" style="display: none; padding: 0.25rem 0.6rem; font-size: 0.78rem; font-weight: 700; border-color: var(--color-secondary); color: var(--color-secondary); margin-right: 0.4rem;">📲 Install App</button>
         <div class="user-streak" id="user-streak-badge" style="display: flex; align-items: center; gap: 0.25rem; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; padding: 0.25rem 0.55rem; border-radius: 12px; font-size: 0.8rem; font-weight: 700; margin-right: 0.4rem; cursor: default;" title="Daily Learning Streak">
           <span>🔥</span> <span id="user-streak-val">1d</span>
         </div>
